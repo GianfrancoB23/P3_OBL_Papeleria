@@ -1,0 +1,14 @@
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.Test\bin\Debug\net8.0\Papeleria.Test.exe
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.Test\bin\Debug\net8.0\Papeleria.Test.deps.json
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.Test\bin\Debug\net8.0\Papeleria.Test.runtimeconfig.json
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.Test\bin\Debug\net8.0\Papeleria.Test.dll
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.Test\bin\Debug\net8.0\Papeleria.Test.pdb
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.Test\obj\Debug\net8.0\Papeleria.Test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.Test\obj\Debug\net8.0\Papeleria.Test.AssemblyInfoInputs.cache
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.Test\obj\Debug\net8.0\Papeleria.Test.AssemblyInfo.cs
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.Test\obj\Debug\net8.0\Papeleria.Test.csproj.CoreCompileInputs.cache
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.Test\obj\Debug\net8.0\Papeleria.Test.dll
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.Test\obj\Debug\net8.0\refint\Papeleria.Test.dll
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.Test\obj\Debug\net8.0\Papeleria.Test.pdb
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.Test\obj\Debug\net8.0\Papeleria.Test.genruntimeconfig.cache
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.Test\obj\Debug\net8.0\ref\Papeleria.Test.dll

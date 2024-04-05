@@ -1,0 +1,4 @@
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.AccesoDatos\obj\Debug\net8.0\Papeleria.AccesoDatos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.AccesoDatos\obj\Debug\net8.0\Papeleria.AccesoDatos.AssemblyInfoInputs.cache
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.AccesoDatos\obj\Debug\net8.0\Papeleria.AccesoDatos.AssemblyInfo.cs
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.AccesoDatos\obj\Debug\net8.0\Papeleria.AccesoDatos.csproj.CoreCompileInputs.cache

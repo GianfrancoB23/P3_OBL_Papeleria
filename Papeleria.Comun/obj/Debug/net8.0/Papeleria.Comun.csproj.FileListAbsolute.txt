@@ -1,0 +1,11 @@
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.Comun\bin\Debug\net8.0\Papeleria.Comun.deps.json
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.Comun\bin\Debug\net8.0\Papeleria.Comun.dll
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.Comun\bin\Debug\net8.0\Papeleria.Comun.pdb
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.Comun\obj\Debug\net8.0\Papeleria.Comun.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.Comun\obj\Debug\net8.0\Papeleria.Comun.AssemblyInfoInputs.cache
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.Comun\obj\Debug\net8.0\Papeleria.Comun.AssemblyInfo.cs
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.Comun\obj\Debug\net8.0\Papeleria.Comun.csproj.CoreCompileInputs.cache
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.Comun\obj\Debug\net8.0\Papeleria.Comun.dll
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.Comun\obj\Debug\net8.0\refint\Papeleria.Comun.dll
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.Comun\obj\Debug\net8.0\Papeleria.Comun.pdb
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.Comun\obj\Debug\net8.0\ref\Papeleria.Comun.dll

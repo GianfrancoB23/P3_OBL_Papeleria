@@ -1,0 +1,8 @@
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.WebMvc\obj\Debug\net8.0\Papeleria.WebMvc.csproj.AssemblyReference.cache
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.WebMvc\obj\Debug\net8.0\Papeleria.WebMvc.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.WebMvc\obj\Debug\net8.0\Papeleria.WebMvc.AssemblyInfoInputs.cache
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.WebMvc\obj\Debug\net8.0\Papeleria.WebMvc.AssemblyInfo.cs
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.WebMvc\obj\Debug\net8.0\Papeleria.WebMvc.csproj.CoreCompileInputs.cache
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.WebMvc\obj\Debug\net8.0\Papeleria.WebMvc.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.WebMvc\obj\Debug\net8.0\Papeleria.WebMvc.RazorAssemblyInfo.cache
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.WebMvc\obj\Debug\net8.0\Papeleria.WebMvc.RazorAssemblyInfo.cs

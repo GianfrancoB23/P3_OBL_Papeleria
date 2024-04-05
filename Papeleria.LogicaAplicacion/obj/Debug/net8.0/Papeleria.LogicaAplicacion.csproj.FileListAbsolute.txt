@@ -1,0 +1,4 @@
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.LogicaAplicacion\obj\Debug\net8.0\Papeleria.LogicaAplicacion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.LogicaAplicacion\obj\Debug\net8.0\Papeleria.LogicaAplicacion.AssemblyInfoInputs.cache
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.LogicaAplicacion\obj\Debug\net8.0\Papeleria.LogicaAplicacion.AssemblyInfo.cs
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.LogicaAplicacion\obj\Debug\net8.0\Papeleria.LogicaAplicacion.csproj.CoreCompileInputs.cache
