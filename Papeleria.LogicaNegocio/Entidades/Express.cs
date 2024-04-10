@@ -1,38 +1,42 @@
 using Empresa.LogicaDeNegocio.Entidades;
+using Papeleria.LogicaNegocio.Entidades.ValueObjects.Pedidos;
 using System;
 
 namespace Empresa.LogicaDeNegocio.Entidades
 {
-	public class Express : Pedido
+    public class Express : Pedido
 	{
-		public DateTime entregaPrometida{ get; set; }
 
-		public void CambiarFechaPrometida()
-		{
+        public override double CalcularRecargoYFijar()
+        {
+            return base.CalcularRecargoYFijar();
+        }
 
-		}
+        public override void CalcularYFijarPrecio(IVA iva)
+        {
+            base.CalcularYFijarPrecio(iva);
+        }
 
-		public bool EsValido()
-		{
-			return null;
-		}
+        public override void CambiarFechaPrometida()
+        {
+            base.CambiarFechaPrometida();
+        }
 
-		public void CalcularYFijarPrecio(IVA iva)
-		{
+        public override bool Equals(object? obj)
+        {
+            return base.Equals(obj);
+        }
 
-		}
+        public override bool Equals(Pedido? other)
+        {
+            return base.Equals(other);
+        }
 
-		public void CambiarFechaPrometida()
-		{
-
-		}
-
-		public double + CalcularRecargoYFijar()
-		{
-			return 0;
-		}
-
-	}
+        public override void esValido()
+        {
+            base.esValido();
+        }
+    }
 
 }
 

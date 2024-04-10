@@ -1,39 +1,49 @@
-using Papeleria.LogicaNegocio.Entidades.ValueObjects;
+using Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes;
 using Papeleria.LogicaNegocio.InterfacesEntidades;
 using System.Collections.Generic;
 
 namespace Empresa.LogicaDeNegocio.Entidades
 {
-    public class Cliente
+    public class Cliente: IValidable<Cliente>, IEquatable<Cliente>, IEntity
 	{
-		public RUT rut{ get; set; }
+        public int Id { get; set; }
+        public RUT rut{ get; set; }
 
 		public RazonSocial razonSocial{ get; set; }
 
-		public Direccion direccion{ get; set; }
+		public DireccionCliente direccion{ get; set; }
 
-		public List<Pedido> pedidos{ get; set; }
+		public List<Pedido> pedidos{ get; set; } = new List<Pedido>();
 
-		private RUT rUT;
+        public Cliente(RUT rut, RazonSocial razonSocial, DireccionCliente direccion, List<Pedido> pedidos)
+        {
+            this.rut = rut;
+            this.razonSocial = razonSocial;
+            this.direccion = direccion;
+        }
 
-		private RazonSocial razonSocial;
+        public Cliente()
+        {
+            
+        }
 
-		private IValidable iValidable;
+        public void esValido()
+        {
+            throw new NotImplementedException();
+        }
 
-		private IEntity iEntity;
+        public bool Equals(Cliente? other)
+        {
+            if (other == null) return false;
+            return this.rut == other.rut;
+        }
+        public override bool Equals(object? obj)
+        {
+            if (obj == null) return false;
+            return this.Equals(obj as Cliente);
 
-		private Direccion direccion;
-
-		private Pedido pedido;
-
-		private IEquatable_T_ iEquatable_T_;
-
-		public bool EsValido()
-		{
-			return null;
-		}
-
-	}
+        }
+    }
 
 }
 

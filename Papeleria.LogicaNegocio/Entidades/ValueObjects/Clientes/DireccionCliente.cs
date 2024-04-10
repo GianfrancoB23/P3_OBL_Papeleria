@@ -1,9 +1,9 @@
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaNegocio.InterfacesEntidades;
 
-namespace Papeleria.LogicaNegocio.Entidades.ValueObjects
+namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes
 {
-    public class Direccion
+    public class DireccionCliente : IValidable<DireccionCliente>    
     {
         public string calle { get; set; }
 
@@ -13,20 +13,15 @@ namespace Papeleria.LogicaNegocio.Entidades.ValueObjects
 
         public int distancia { get; set; }
 
-        private IValidable iValidable;
-
-        private Cliente cliente;
-
-        public bool EsValido()
-        {
-            return null;
-        }
-
         public void CalcularYFijarDistancia()
         {
 
         }
 
+        public void esValido()
+        {
+            throw new NotImplementedException();
+        }
     }
 
 }

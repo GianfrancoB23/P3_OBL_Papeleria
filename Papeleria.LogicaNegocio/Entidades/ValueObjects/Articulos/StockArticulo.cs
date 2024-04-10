@@ -1,19 +1,13 @@
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaNegocio.InterfacesEntidades;
 
-namespace Papeleria.LogicaNegocio.Entidades.ValueObjects
+namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Articulos
 {
-    public class StockArticulo
+    public class StockArticulo : IValidable<StockArticulo>
     {
         public Articulo articulo { get; set; }
 
         public int cantidad { get; set; }
-
-        private Articulo articulo;
-
-        private IValidable iValidable;
-
-        private Articulo articulo;
 
         public int StockActual()
         {
@@ -30,11 +24,10 @@ namespace Papeleria.LogicaNegocio.Entidades.ValueObjects
 
         }
 
-        public bool EsValido()
+        public void esValido()
         {
-            return null;
+            throw new NotImplementedException();
         }
-
     }
 
 }
