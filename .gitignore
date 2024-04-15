@@ -403,3 +403,4 @@ FodyWeavers.xsd
 *.dtbcache.v2
 
 .vs/*
+.vs/
