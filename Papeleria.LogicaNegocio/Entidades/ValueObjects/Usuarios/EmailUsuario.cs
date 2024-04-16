@@ -1,20 +1,39 @@
 using Empresa.LogicaDeNegocio.Entidades;
+using Papeleria.LogicaNegocio.Excepciones.Usuario.UsuarioExcepcions.Email;
 using Papeleria.LogicaNegocio.InterfacesEntidades;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Drawing;
 
 namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Usuario
 {
-    public class EmailUsuario : IValidable<EmailUsuario>, IEquatable<EmailUsuario>
+    [ComplexType]
+    public record EmailUsuario :IValidable<EmailUsuario>, IEquatable<EmailUsuario>
     {
-        public string direccion { get; set; }
-
-        public bool Equals(EmailUsuario? other)
+        public string Direccion { get; set; }
+        public EmailUsuario(string direccion) {
+            if (direccion == null)
+            {
+                throw new ArgumentNullException(nameof(direccion), "No puede ser nulo");
+            }
+            esValido();
+            direccion = direccion;
+        }
+        public void esValido(EmailUsuario emailUsuario)
         {
-            throw new NotImplementedException();
+            if (emailUsuario == null) {
+               throw new EmailNuloException("El email no puede ser nulo.");
+            }
+            if (emailUsuario.Direccion.Length < 6 || !emailUsuario.Direccion.Contains("@")) { 
+                throw new EmailNoValidoException("Email no válido. Largo mínimo 6 y debe incluir un arroba.");
+            }
+            if (emailUsuario.Direccion.IndexOf("@") == 0 || emailUsuario.Direccion.IndexOf("@") == emailUsuario.Direccion.Length-1) {
+                throw new EmailNoValidoException("Email no válido. No puede contener @ en el principio o en el final.");
+            }
         }
 
         public void esValido()
         {
-            throw new NotImplementedException();
+            esValido(this);
         }
     }
 }

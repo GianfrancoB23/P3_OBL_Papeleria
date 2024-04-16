@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Papeleria.Comun\Papeleria.Comun.csproj" />
+  </ItemGroup>
+
 </Project>

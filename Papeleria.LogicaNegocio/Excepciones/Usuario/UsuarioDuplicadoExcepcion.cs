@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Papeleria.LogicaNegocio.Excepciones.Usuario
 {
-    internal class UsuarioDuplicadoExcepcion
+    public class UsuarioDuplicadoExcepcion:Exception
     {
     }
 }
