@@ -3,18 +3,15 @@ using IEmpresa.AccesoDatos.RepositorioMemoria;
 using IEmpresa.AccesoDatos.RepostiorioEF;
 using System.Collections.Generic;
 using System;
+using Empresa.LogicaDeNegocio.Entidades;
 
 namespace Empresa.LogicaDeNegocio.InterfacesRepositorios
 {
-	public interface IRepositorioPedidos : IRepositorio_T_
-	{
-		private RepositorioPedidos Memoria repositorioPedidos Memoria;
+	public interface IRepositorioPedidos : IRepositorio<Pedido>
+    {
+		public IEnumerable<Pedido> GetPedidosSuperen(Double monto);
 
-		private RepositorioPedidosEF repositorioPedidosEF;
-
-		IEnumerable<Pedido> GetPedidosSuperen(Double monto);
-
-		IEnumerable<Pedido> GetPedidosAnuladosYOrdenadosXFecha();
+		public IEnumerable<Pedido> GetPedidosAnuladosYOrdenadosXFecha();
 
 	}
 
