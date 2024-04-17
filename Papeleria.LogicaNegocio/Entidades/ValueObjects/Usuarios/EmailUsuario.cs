@@ -16,7 +16,7 @@ namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Usuario
                 throw new ArgumentNullException(nameof(direccion), "No puede ser nulo");
             }
             esValido();
-            direccion = direccion;
+            Direccion = direccion;
         }
         public void esValido(EmailUsuario emailUsuario)
         {

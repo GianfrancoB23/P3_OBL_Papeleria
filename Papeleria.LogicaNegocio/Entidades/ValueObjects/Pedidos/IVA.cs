@@ -3,9 +3,9 @@ using Papeleria.LogicaNegocio.InterfacesEntidades;
 
 namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Pedidos
 {
-    public class IVA : IValidable<IVA>
+    public record IVA : IValidable<IVA>
     {
-        public double valor { get; set; }
+        public double valor { get; init; }
 
         public void esValido()
         {

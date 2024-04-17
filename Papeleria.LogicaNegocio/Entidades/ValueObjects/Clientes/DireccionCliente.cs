@@ -1,26 +1,41 @@
 using Empresa.LogicaDeNegocio.Entidades;
+using Papeleria.LogicaNegocio.Excepciones.Cliente.ClienteValueObjects.Direccion;
 using Papeleria.LogicaNegocio.InterfacesEntidades;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes
 {
-    public class DireccionCliente : IValidable<DireccionCliente>    
+    public record DireccionCliente : IValidable<DireccionCliente>    
     {
-        public string calle { get; set; }
+        public string Calle { get; init; }
 
-        public int numero { get; set; }
+        public int Numero { get; init; }
 
-        public string ciudad { get; set; }
+        public string Ciudad { get; init; }
 
-        public int distancia { get; set; }
+        public int Distancia { get; init; }
 
-        public void CalcularYFijarDistancia()
+        public DireccionCliente(string calle, int numero, string ciudad, int distancia)
         {
+            if (Calle == null || Ciudad == null || numero == null) { throw new DireccionNuloException("Debe ingresar todos los campos para direccion"); }
+            Calle = calle;
+            Numero = numero;
+            Ciudad = ciudad;
+            Distancia = CalcularYFijarDistancia();
 
+        }
+
+        public int CalcularYFijarDistancia()
+        {
+            return 0;
         }
 
         public void esValido()
         {
-            throw new NotImplementedException();
+            if(Calle == null || Ciudad == null) { throw new DireccionNuloException("Debe ingresar todos los campos para direccion"); }
+            if(Numero <= 0) { throw new DireccionNoValidoException("El número debe ser 1 o mayor");  }
+            if(!Calle.Any(c => char.IsDigit(c)) { throw new DireccionNoValidoException("Nombre de la calle no puede contener números"); }
+            if(!Ciudad.Any(c => char.IsDigit(c)) { throw new DireccionNoValidoException("Ciudad no puede contener números"); }
         }
     }
 

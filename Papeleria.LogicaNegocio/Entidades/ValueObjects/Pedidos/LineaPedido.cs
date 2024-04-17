@@ -3,7 +3,7 @@ using Papeleria.LogicaNegocio.InterfacesEntidades;
 
 namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Pedidos
 {
-    public class LineaPedido : IValidable<LineaPedido>, IEquatable<LineaPedido>
+    public record LineaPedido : IValidable<LineaPedido>, IEquatable<LineaPedido>
     {
         public int cantidad { get; set; }
         public double precioUnitarioVigente { get; set; }
