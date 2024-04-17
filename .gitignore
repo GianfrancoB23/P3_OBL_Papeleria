@@ -404,3 +404,6 @@ FodyWeavers.xsd
 
 .vs/*
 .vs/
+*.vsidx
+*.cache
+*.editorconfig
