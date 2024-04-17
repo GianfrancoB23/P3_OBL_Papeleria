@@ -2,7 +2,7 @@ using Empresa.LogicaDeNegocio.InterfacesRepositorios;
 
 namespace IEmpresa.AccesoDatos.RepositorioMemoria
 {
-	public class RepositorioLineas Memoria
+	public class RepositorioLineas
 	{
 		private IRepositorioLineas iRepositorioLineas;
 

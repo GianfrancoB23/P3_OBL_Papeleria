@@ -1,15 +1,30 @@
 using Empresa.LogicaDeNegocio.Entidades;
+using Papeleria.LogicaNegocio.Excepciones.Articulo.ArticulosValueObjects.DescripcionArticulo;
 using Papeleria.LogicaNegocio.InterfacesEntidades;
+using System.Drawing;
 
 namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Articulos
 {
-    public class DescripcionArticulo : IValidable<DescripcionArticulo>
+    public record DescripcionArticulo : IValidable<DescripcionArticulo>
     {
-        public string descripcion { get; set; }
+        public string Descripcion { get; init; }
+        public DescripcionArticulo()
+        {
+            
+        }
+
+        public DescripcionArticulo(string descripcion)
+        {
+
+            Descripcion = descripcion;
+            esValido();
+        }
 
         public void esValido()
         {
-            throw new NotImplementedException();
+            if (Descripcion.Length < 5) { 
+                throw new DescripcionArticuloNoValidoException("La descripcion no puede ser menor a 5 caracteres.");
+            }
         }
     }
 

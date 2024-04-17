@@ -1,10 +1,8 @@
-using Empresa.LogicaDeNegocio.InterfacesRepositorios;
-
 namespace IEmpresa.AccesoDatos.RepositorioMemoria
 {
-	public class RepositorioArticulos Memoria
+    public class RepositorioArticulos
 	{
-		private IRepositorioArticulos iRepositorioArticulos;
+        private IRepositorioArticulos iRepositorioArticulos;
 
 	}
 

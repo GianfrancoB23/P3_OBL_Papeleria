@@ -3,6 +3,7 @@
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Usuario;
 using Papeleria.LogicaNegocio.Excepciones.Usuario;
+using Papeleria.LogicaNegocio.Excepciones.Usuario.UsuarioExcepcions.Constrasenia;
 using Papeleria.LogicaNegocio.InterfacesEntidades;
 
 namespace Empresa.LogicaDeNegocio.Sistema
@@ -28,7 +29,10 @@ namespace Empresa.LogicaDeNegocio.Sistema
         }
         public bool Equals(Usuario? other)
         {
-            throw new NotImplementedException();
+            if (other == null)
+                throw new ArgumentNullException("Debe incluir el autor a comparar");
+
+            return this.Id == other.Id || this.Email == other.Email;
         }
 
         public void esValido()
@@ -48,13 +52,11 @@ namespace Empresa.LogicaDeNegocio.Sistema
                 throw new UsuarioNoValidoExcepcion("La contraseña no puede ser nula para crear el usuario.");
             }
         }
-        public void ModificarDatos(Usuario obj)
+        public void ModificarContraseña(string contrasenia)
         {
-            if (obj == null)
-                throw new UsuarioNuloExcepcion("El usuario al que desea modificar los datos no puede ser nulo.");
-            esValido(obj);
-            this.NombreCompleto = new NombreCompleto(obj.NombreCompleto.Nombre, obj.NombreCompleto.Apellido);
-            this.Contrasenia = new ContraseniaUsuario(obj.Contrasenia.Valor);
+            if (contrasenia == null)
+                throw new ContraseniaNuloException("La contraseña no puede ser nula.");
+            this.Contrasenia = new ContraseniaUsuario(contrasenia);
         }
     }
 

@@ -1,33 +1,32 @@
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Articulos;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Pedidos;
+using Papeleria.LogicaNegocio.Excepciones.Articulo;
+using Papeleria.LogicaNegocio.Excepciones.Articulo.ArticulosValueObjects.CodigoProveedor;
+using Papeleria.LogicaNegocio.Excepciones.Articulo.ArticulosValueObjects.DescripcionArticulo;
+using Papeleria.LogicaNegocio.Excepciones.Usuario.UsuarioExcepcions.Nombre;
 using Papeleria.LogicaNegocio.InterfacesEntidades;
 using System.Collections.Generic;
+using System.Timers;
 
 namespace Empresa.LogicaDeNegocio.Entidades
 {
     public class Articulo : IValidable<Articulo>, IEquatable<Articulo>, IEntity
 	{
         public int Id { get; set; }
-        public CodigoProveedorArticulos codigoProveedor{ get; set; }
+		public NombreArticulo NombreArticulo{ get; set; }
+        public CodigoProveedorArticulos CodigoProveedor{ get; set; }
+		public DescripcionArticulo Descripcion{ get; set; }
+		public int PrecioVP{ get; set; }
+		public StockArticulo Stock{ get; set; }
 
-		public NombreArticulo nombreArticulo{ get; set; }
-
-		public DescripcionArticulo descripcion{ get; set; }
-
-		public int precioVP{ get; set; }
-
-		public StockArticulo stock{ get; set; }
-
-
-		private ICollection<LineaPedido> linea = new List<LineaPedido>();
-
-        public Articulo(CodigoProveedorArticulos codigoProveedor, NombreArticulo nombre, DescripcionArticulo descripcion, int precioVP, StockArticulo stock)
+        public Articulo(long codigoProveedor, string nombre, string descripcion, int precioVP, int stock)
         {
-            this.codigoProveedor = codigoProveedor;
-            this.nombreArticulo = nombre;
-            this.descripcion = descripcion;
-            this.precioVP = precioVP;
-            this.stock = stock;
+            this.CodigoProveedor = new CodigoProveedorArticulos(codigoProveedor);
+            this.NombreArticulo = new NombreArticulo(nombre);
+            this.Descripcion = new DescripcionArticulo(descripcion);
+            this.PrecioVP = precioVP;
+            this.Stock = new StockArticulo(stock);
+            esValido();
         }
 
         public Articulo()
@@ -35,26 +34,26 @@ namespace Empresa.LogicaDeNegocio.Entidades
             
         }
 
-        public void RestarStock()
-		{
-
-		}
-
         public bool Equals(Articulo? other)
         {
             if (other == null) return false;
-            return this.nombreArticulo == other.nombreArticulo;
-        }
-        public override bool Equals(object? obj)
-        {
-            if (obj == null) return false;
-            return this.Equals(obj as Articulo);
-
+            return this.NombreArticulo == other.NombreArticulo;
         }
 
         public void esValido()
         {
-            throw new NotImplementedException();
+            if (CodigoProveedor==null) {
+                throw new CodigoProveedorNuloException("El codigo de proveedor no puede ser nulo.");
+            }
+            if (NombreArticulo==null) {
+                throw new NombreNuloException("El nombre del articulo no puede ser nulo.");
+            }
+            if (Descripcion==null) { 
+                throw new DescripcionArticuloNuloException("La descripcion no puede ser nula.");
+            }
+        }
+        public void CambiarPrecioVP(int nuevoPrecio){
+            PrecioVP = nuevoPrecio;
         }
     }
 }

@@ -1,22 +1,31 @@
 using Empresa.LogicaDeNegocio.Entidades;
+using Papeleria.LogicaNegocio.Excepciones.Articulo.ArticulosValueObjects.CodigoProveedor;
 using Papeleria.LogicaNegocio.InterfacesEntidades;
 
 namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Articulos
 {
-    public class CodigoProveedorArticulos : IValidable<CodigoProveedorArticulos>, IEquatable<CodigoProveedorArticulos>
+    public record CodigoProveedorArticulos : IValidable<CodigoProveedorArticulos>
     {
-        public long codigo { get; set; }
+        public long codigo { get; init; }
+        public CodigoProveedorArticulos()
+        {
+            
+        }
 
-        private Articulo articulo;
+        public CodigoProveedorArticulos(long codigo)
+        {
+            if (codigo == null) {
+                throw new CodigoProveedorNuloException("El codigo no puede ser nulo");
+            }
+            this.codigo = codigo;
+            esValido();
+        }
 
         public void esValido()
         {
-            throw new NotImplementedException();
-        }
-
-        public bool Equals(CodigoProveedorArticulos? other)
-        {
-            throw new NotImplementedException();
+            if (codigo.ToString().Length != 13) {
+                throw new CodigoProveedorNoValidoException("No puede tener un largo distinto de 13 digitos.");
+            }
         }
     }
 

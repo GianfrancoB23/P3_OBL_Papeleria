@@ -1,20 +1,30 @@
 using Empresa.LogicaDeNegocio.Entidades;
+using Papeleria.LogicaNegocio.Excepciones.Articulo;
+using Papeleria.LogicaNegocio.Excepciones.Articulo.ArticulosValueObjects.NombreArticulo;
 using Papeleria.LogicaNegocio.InterfacesEntidades;
 
 namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Articulos
 {
-    public class NombreArticulo : IValidable<NombreArticulo>, IEquatable<NombreArticulo>
+    public record NombreArticulo : IValidable<NombreArticulo>, IEquatable<NombreArticulo>
     {
-        public string nombre { get; set; }
+        public string Nombre { get; init; }
 
-        public bool Equals(NombreArticulo? other)
+        public NombreArticulo(string nombre)
         {
-            throw new NotImplementedException();
+            Nombre = nombre;
+            esValido();
         }
 
+        public NombreArticulo()
+        {
+            
+        }
         public void esValido()
         {
-            throw new NotImplementedException();
+            if (Nombre == null || Nombre.Length<1) { 
+                throw new NombreArticuloNuloException("El nombre del articulo no puede ser nulo o vacio.");
+            }
+            
         }
     }
 

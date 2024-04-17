@@ -12,3 +12,4 @@ C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.Test\obj\Debug\net8.0\re
 C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.Test\obj\Debug\net8.0\Papeleria.Test.pdb
 C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.Test\obj\Debug\net8.0\Papeleria.Test.genruntimeconfig.cache
 C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.Test\obj\Debug\net8.0\ref\Papeleria.Test.dll
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.Test\obj\Debug\net8.0\Papeleria.Test.sourcelink.json

@@ -2,3 +2,5 @@ C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.AccesoDatos\obj\Debug\ne
 C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.AccesoDatos\obj\Debug\net8.0\Papeleria.AccesoDatos.AssemblyInfoInputs.cache
 C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.AccesoDatos\obj\Debug\net8.0\Papeleria.AccesoDatos.AssemblyInfo.cs
 C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.AccesoDatos\obj\Debug\net8.0\Papeleria.AccesoDatos.csproj.CoreCompileInputs.cache
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.AccesoDatos\obj\Debug\net8.0\Papeleria.AccesoDatos.csproj.AssemblyReference.cache
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.AccesoDatos\obj\Debug\net8.0\Papeleria.AccesoDatos.sourcelink.json

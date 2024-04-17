@@ -6,3 +6,4 @@ C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.WebMvc\obj\Debug\net8.0\
 C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.WebMvc\obj\Debug\net8.0\Papeleria.WebMvc.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.WebMvc\obj\Debug\net8.0\Papeleria.WebMvc.RazorAssemblyInfo.cache
 C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.WebMvc\obj\Debug\net8.0\Papeleria.WebMvc.RazorAssemblyInfo.cs
+C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.WebMvc\obj\Debug\net8.0\Papeleria.WebMvc.sourcelink.json

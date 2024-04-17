@@ -1,32 +1,60 @@
 using Empresa.LogicaDeNegocio.Entidades;
+using Papeleria.LogicaNegocio.Excepciones.Articulo.ArticulosValueObjects.StockArticulo;
 using Papeleria.LogicaNegocio.InterfacesEntidades;
 
 namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Articulos
 {
-    public class StockArticulo : IValidable<StockArticulo>
+    public record StockArticulo
     {
-        public Articulo articulo { get; set; }
-
         public int cantidad { get; set; }
 
+        public StockArticulo(int cantidad)
+        {
+            this.cantidad = cantidad;
+        }
+
+        public StockArticulo()
+        {
+
+        }
         public int StockActual()
         {
-            return 0;
+            return cantidad;
         }
 
-        public void RestarStock()
+        public void RestarStock(int ctd)
         {
-
+            if (ctd > cantidad)
+            {
+                throw new StockArticuloNoValidoException("La cantidad a restar no puede ser mayor al stock actual.");
+            }
+            else if (ctd < 1)
+            {
+                throw new StockArticuloNoValidoException("La cantidad a restar no puede ser menor a 1.");
+            }
+            else if (ctd == null)
+            {
+                throw new StockArticuloNuloException("El stock a restar no puede ser nulo");
+            }
+            else
+            {
+                cantidad -= ctd;
+            }
         }
 
-        public void SumarStock()
+        public void SumarStock(int ctd)
         {
-
-        }
-
-        public void esValido()
-        {
-            throw new NotImplementedException();
+            if (ctd < 1)
+            {
+                throw new StockArticuloNoValidoException("La cantidad a sumar no puede ser menor a 1.");
+            }
+            else if (ctd == null)
+            {
+                throw new StockArticuloNuloException("El stock a sumar no puede ser nulo");
+            }
+            else { 
+                cantidad += ctd;
+            }
         }
     }
 

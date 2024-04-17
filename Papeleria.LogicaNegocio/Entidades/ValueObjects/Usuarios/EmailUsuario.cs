@@ -9,7 +9,7 @@ namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Usuario
     [ComplexType]
     public record EmailUsuario :IValidable<EmailUsuario>, IEquatable<EmailUsuario>
     {
-        public string Direccion { get; set; }
+        public string Direccion { get; init; }
         public EmailUsuario(string direccion) {
             if (direccion == null)
             {

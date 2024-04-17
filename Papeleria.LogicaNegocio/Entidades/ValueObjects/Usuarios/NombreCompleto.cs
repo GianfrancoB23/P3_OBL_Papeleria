@@ -7,8 +7,8 @@ namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Usuario
 {
     public record NombreCompleto : IValidable<NombreCompleto>
     {
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
+        public string Nombre { get; init; }
+        public string Apellido { get; init; }
 
         public NombreCompleto(string nombre, string apellido)
         {
