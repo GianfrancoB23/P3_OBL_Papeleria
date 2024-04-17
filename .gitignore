@@ -407,5 +407,5 @@ FodyWeavers.xsd
 *.vsidx
 *.cache
 *.editorconfig
-*/obj/
-*/bin/
+**/obj/
+**/bin/
