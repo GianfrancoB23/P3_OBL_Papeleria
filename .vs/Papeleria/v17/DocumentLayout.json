@@ -1,82 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\",
+  "WorkspaceRootPath": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|c:\\users\\admfacs-bonanni\\desktop\\p3\\papeleria\\papeleria.logicanegocio\\entidades\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|solutionrelative:papeleria.logicanegocio\\entidades\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|d:\\ort\\ati\\p3\\p3_obl_papeleria\\papeleria.logicanegocio\\entidades\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|solutionrelative:papeleria.logicanegocio\\entidades\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|c:\\users\\admfacs-bonanni\\desktop\\p3\\papeleria\\papeleria.logicanegocio\\entidades\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|d:\\ort\\ati\\p3\\p3_obl_papeleria\\papeleria.logicanegocio\\entidades\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|solutionrelative:papeleria.logicanegocio\\entidades\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|c:\\users\\admfacs-bonanni\\desktop\\p3\\papeleria\\papeleria.logicanegocio\\entidades\\valueobjects\\pedidos\\lineapedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|solutionrelative:papeleria.logicanegocio\\entidades\\valueobjects\\pedidos\\lineapedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|d:\\ort\\ati\\p3\\p3_obl_papeleria\\papeleria.logicanegocio\\excepciones\\pedido\\pedidoduplicadoexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|solutionrelative:papeleria.logicanegocio\\excepciones\\pedido\\pedidoduplicadoexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|c:\\users\\admfacs-bonanni\\desktop\\p3\\papeleria\\papeleria.logicanegocio\\entidades\\valueobjects\\articulos\\stockarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|solutionrelative:papeleria.logicanegocio\\entidades\\valueobjects\\articulos\\stockarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|d:\\ort\\ati\\p3\\p3_obl_papeleria\\papeleria.logicanegocio\\excepciones\\pedido\\pedidonuloexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|solutionrelative:papeleria.logicanegocio\\excepciones\\pedido\\pedidonuloexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|c:\\users\\admfacs-bonanni\\desktop\\p3\\papeleria\\papeleria.logicanegocio\\excepciones\\articulo\\articulosvalueobjects\\stockarticulo\\stockarticuloduplicadoexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|solutionrelative:papeleria.logicanegocio\\excepciones\\articulo\\articulosvalueobjects\\stockarticulo\\stockarticuloduplicadoexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|d:\\ort\\ati\\p3\\p3_obl_papeleria\\papeleria.logicanegocio\\excepciones\\pedido\\pedidonovalidoexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|solutionrelative:papeleria.logicanegocio\\excepciones\\pedido\\pedidonovalidoexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|c:\\users\\admfacs-bonanni\\desktop\\p3\\papeleria\\papeleria.logicanegocio\\excepciones\\articulo\\articulonovalidoexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|solutionrelative:papeleria.logicanegocio\\excepciones\\articulo\\articulonovalidoexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|c:\\users\\admfacs-bonanni\\desktop\\p3\\papeleria\\papeleria.logicanegocio\\entidades\\valueobjects\\articulos\\descripcionarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|solutionrelative:papeleria.logicanegocio\\entidades\\valueobjects\\articulos\\descripcionarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|c:\\users\\admfacs-bonanni\\desktop\\p3\\papeleria\\papeleria.logicanegocio\\entidades\\valueobjects\\articulos\\nombrearticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|solutionrelative:papeleria.logicanegocio\\entidades\\valueobjects\\articulos\\nombrearticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|c:\\users\\admfacs-bonanni\\desktop\\p3\\papeleria\\papeleria.logicanegocio\\entidades\\valueobjects\\articulos\\codigoproveedorarticulos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|solutionrelative:papeleria.logicanegocio\\entidades\\valueobjects\\articulos\\codigoproveedorarticulos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|c:\\users\\admfacs-bonanni\\desktop\\p3\\papeleria\\papeleria.logicanegocio\\entidades\\valueobjects\\usuarios\\contraseniausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|solutionrelative:papeleria.logicanegocio\\entidades\\valueobjects\\usuarios\\contraseniausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|c:\\users\\admfacs-bonanni\\desktop\\p3\\papeleria\\papeleria.logicanegocio\\entidades\\valueobjects\\usuarios\\emailusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|solutionrelative:papeleria.logicanegocio\\entidades\\valueobjects\\usuarios\\emailusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|c:\\users\\admfacs-bonanni\\desktop\\p3\\papeleria\\papeleria.logicanegocio\\excepciones\\articulo\\articulosvalueobjects\\descripcionarticulo\\descripcionarticulonovalidoexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|solutionrelative:papeleria.logicanegocio\\excepciones\\articulo\\articulosvalueobjects\\descripcionarticulo\\descripcionarticulonovalidoexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EA76E32-13B6-4BE9-BE7B-9CBA4979719B}|Papeleria.AccesoDatos\\Papeleria.AccesoDatos.csproj|c:\\users\\admfacs-bonanni\\desktop\\p3\\papeleria\\papeleria.accesodatos\\memoria\\repositorioclientes memoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EA76E32-13B6-4BE9-BE7B-9CBA4979719B}|Papeleria.AccesoDatos\\Papeleria.AccesoDatos.csproj|solutionrelative:papeleria.accesodatos\\memoria\\repositorioclientes memoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EA76E32-13B6-4BE9-BE7B-9CBA4979719B}|Papeleria.AccesoDatos\\Papeleria.AccesoDatos.csproj|c:\\users\\admfacs-bonanni\\desktop\\p3\\papeleria\\papeleria.accesodatos\\memoria\\repositoriolineas memoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EA76E32-13B6-4BE9-BE7B-9CBA4979719B}|Papeleria.AccesoDatos\\Papeleria.AccesoDatos.csproj|solutionrelative:papeleria.accesodatos\\memoria\\repositoriolineas memoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EA76E32-13B6-4BE9-BE7B-9CBA4979719B}|Papeleria.AccesoDatos\\Papeleria.AccesoDatos.csproj|c:\\users\\admfacs-bonanni\\desktop\\p3\\papeleria\\papeleria.accesodatos\\memoria\\repositorioarticulos memoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6EA76E32-13B6-4BE9-BE7B-9CBA4979719B}|Papeleria.AccesoDatos\\Papeleria.AccesoDatos.csproj|solutionrelative:papeleria.accesodatos\\memoria\\repositorioarticulos memoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|c:\\users\\admfacs-bonanni\\desktop\\p3\\papeleria\\papeleria.logicanegocio\\excepciones\\usuario\\usuarionuloexcepcion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|solutionrelative:papeleria.logicanegocio\\excepciones\\usuario\\usuarionuloexcepcion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|c:\\users\\admfacs-bonanni\\desktop\\p3\\papeleria\\papeleria.logicanegocio\\excepciones\\usuario\\usuarioduplicadoexcepcion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|solutionrelative:papeleria.logicanegocio\\excepciones\\usuario\\usuarioduplicadoexcepcion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|c:\\users\\admfacs-bonanni\\desktop\\p3\\papeleria\\papeleria.logicanegocio\\excepciones\\usuario\\usuarionovalidoexcepcion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|solutionrelative:papeleria.logicanegocio\\excepciones\\usuario\\usuarionovalidoexcepcion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3CA0077C-7F59-4E94-B434-2B7B95CC5D2C}|Papeleria.Comun\\Papeleria.Comun.csproj|c:\\users\\admfacs-bonanni\\desktop\\p3\\papeleria\\papeleria.comun\\utilidadesstring.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3CA0077C-7F59-4E94-B434-2B7B95CC5D2C}|Papeleria.Comun\\Papeleria.Comun.csproj|solutionrelative:papeleria.comun\\utilidadesstring.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|d:\\ort\\ati\\p3\\p3_obl_papeleria\\papeleria.logicanegocio\\entidades\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|solutionrelative:papeleria.logicanegocio\\entidades\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -86,24 +34,59 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "LineaPedido.cs",
-              "DocumentMoniker": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\Entidades\\ValueObjects\\Pedidos\\LineaPedido.cs",
-              "RelativeDocumentMoniker": "Papeleria.LogicaNegocio\\Entidades\\ValueObjects\\Pedidos\\LineaPedido.cs",
-              "ToolTip": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\Entidades\\ValueObjects\\Pedidos\\LineaPedido.cs",
-              "RelativeToolTip": "Papeleria.LogicaNegocio\\Entidades\\ValueObjects\\Pedidos\\LineaPedido.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAFAAAA",
+              "Title": "PedidoDuplicadoException.cs",
+              "DocumentMoniker": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaNegocio\\Excepciones\\Pedido\\PedidoDuplicadoException.cs",
+              "RelativeDocumentMoniker": "Papeleria.LogicaNegocio\\Excepciones\\Pedido\\PedidoDuplicadoException.cs",
+              "ToolTip": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaNegocio\\Excepciones\\Pedido\\PedidoDuplicadoException.cs",
+              "RelativeToolTip": "Papeleria.LogicaNegocio\\Excepciones\\Pedido\\PedidoDuplicadoException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T00:43:09.157Z",
+              "WhenOpened": "2024-04-17T14:40:50.462Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PedidoNuloException.cs",
+              "DocumentMoniker": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaNegocio\\Excepciones\\Pedido\\PedidoNuloException.cs",
+              "RelativeDocumentMoniker": "Papeleria.LogicaNegocio\\Excepciones\\Pedido\\PedidoNuloException.cs",
+              "ToolTip": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaNegocio\\Excepciones\\Pedido\\PedidoNuloException.cs",
+              "RelativeToolTip": "Papeleria.LogicaNegocio\\Excepciones\\Pedido\\PedidoNuloException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-17T14:40:40.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PedidoNoValidoException.cs",
+              "DocumentMoniker": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaNegocio\\Excepciones\\Pedido\\PedidoNoValidoException.cs",
+              "RelativeDocumentMoniker": "Papeleria.LogicaNegocio\\Excepciones\\Pedido\\PedidoNoValidoException.cs",
+              "ToolTip": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaNegocio\\Excepciones\\Pedido\\PedidoNoValidoException.cs",
+              "RelativeToolTip": "Papeleria.LogicaNegocio\\Excepciones\\Pedido\\PedidoNoValidoException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-17T14:40:00.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Articulo.cs",
+              "DocumentMoniker": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaNegocio\\Entidades\\Articulo.cs",
+              "RelativeDocumentMoniker": "Papeleria.LogicaNegocio\\Entidades\\Articulo.cs",
+              "ToolTip": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaNegocio\\Entidades\\Articulo.cs",
+              "RelativeToolTip": "Papeleria.LogicaNegocio\\Entidades\\Articulo.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAcwAwAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-17T14:19:02.328Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -115,233 +98,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "StockArticulo.cs",
-              "DocumentMoniker": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\Entidades\\ValueObjects\\Articulos\\StockArticulo.cs",
-              "RelativeDocumentMoniker": "Papeleria.LogicaNegocio\\Entidades\\ValueObjects\\Articulos\\StockArticulo.cs",
-              "ToolTip": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\Entidades\\ValueObjects\\Articulos\\StockArticulo.cs",
-              "RelativeToolTip": "Papeleria.LogicaNegocio\\Entidades\\ValueObjects\\Articulos\\StockArticulo.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAAABAAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T00:23:20.909Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CodigoProveedorArticulos.cs",
-              "DocumentMoniker": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\Entidades\\ValueObjects\\Articulos\\CodigoProveedorArticulos.cs",
-              "RelativeDocumentMoniker": "Papeleria.LogicaNegocio\\Entidades\\ValueObjects\\Articulos\\CodigoProveedorArticulos.cs",
-              "ToolTip": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\Entidades\\ValueObjects\\Articulos\\CodigoProveedorArticulos.cs",
-              "RelativeToolTip": "Papeleria.LogicaNegocio\\Entidades\\ValueObjects\\Articulos\\CodigoProveedorArticulos.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBEAAABBAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T00:05:54.951Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "DescripcionArticuloNoValidoException.cs",
-              "DocumentMoniker": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\Excepciones\\Articulo\\ArticulosValueObjects\\DescripcionArticulo\\DescripcionArticuloNoValidoException.cs",
-              "RelativeDocumentMoniker": "Papeleria.LogicaNegocio\\Excepciones\\Articulo\\ArticulosValueObjects\\DescripcionArticulo\\DescripcionArticuloNoValidoException.cs",
-              "ToolTip": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\Excepciones\\Articulo\\ArticulosValueObjects\\DescripcionArticulo\\DescripcionArticuloNoValidoException.cs",
-              "RelativeToolTip": "Papeleria.LogicaNegocio\\Excepciones\\Articulo\\ArticulosValueObjects\\DescripcionArticulo\\DescripcionArticuloNoValidoException.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABBAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T23:27:30.339Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DescripcionArticulo.cs",
-              "DocumentMoniker": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\Entidades\\ValueObjects\\Articulos\\DescripcionArticulo.cs",
-              "RelativeDocumentMoniker": "Papeleria.LogicaNegocio\\Entidades\\ValueObjects\\Articulos\\DescripcionArticulo.cs",
-              "ToolTip": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\Entidades\\ValueObjects\\Articulos\\DescripcionArticulo.cs",
-              "RelativeToolTip": "Papeleria.LogicaNegocio\\Entidades\\ValueObjects\\Articulos\\DescripcionArticulo.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAcAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T23:25:16.871Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "NombreArticulo.cs",
-              "DocumentMoniker": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\Entidades\\ValueObjects\\Articulos\\NombreArticulo.cs",
-              "RelativeDocumentMoniker": "Papeleria.LogicaNegocio\\Entidades\\ValueObjects\\Articulos\\NombreArticulo.cs",
-              "ToolTip": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\Entidades\\ValueObjects\\Articulos\\NombreArticulo.cs",
-              "RelativeToolTip": "Papeleria.LogicaNegocio\\Entidades\\ValueObjects\\Articulos\\NombreArticulo.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBgAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T23:24:54.46Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Articulo.cs",
-              "DocumentMoniker": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\Entidades\\Articulo.cs",
-              "RelativeDocumentMoniker": "Papeleria.LogicaNegocio\\Entidades\\Articulo.cs",
-              "ToolTip": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\Entidades\\Articulo.cs",
-              "RelativeToolTip": "Papeleria.LogicaNegocio\\Entidades\\Articulo.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwCgAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T22:21:25.746Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\Entidades\\Usuario.cs",
-              "RelativeDocumentMoniker": "Papeleria.LogicaNegocio\\Entidades\\Usuario.cs",
-              "ToolTip": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\Entidades\\Usuario.cs",
-              "RelativeToolTip": "Papeleria.LogicaNegocio\\Entidades\\Usuario.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAAAwBwAAAAJAAAA",
+              "Title": "Pedido.cs",
+              "DocumentMoniker": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaNegocio\\Entidades\\Pedido.cs",
+              "RelativeDocumentMoniker": "Papeleria.LogicaNegocio\\Entidades\\Pedido.cs",
+              "ToolTip": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaNegocio\\Entidades\\Pedido.cs",
+              "RelativeToolTip": "Papeleria.LogicaNegocio\\Entidades\\Pedido.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAcwDoAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T00:17:09.24Z",
+              "WhenOpened": "2024-04-17T14:07:00.656Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ArticuloNoValidoException.cs",
-              "DocumentMoniker": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\Excepciones\\Articulo\\ArticuloNoValidoException.cs",
-              "RelativeDocumentMoniker": "Papeleria.LogicaNegocio\\Excepciones\\Articulo\\ArticuloNoValidoException.cs",
-              "ToolTip": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\Excepciones\\Articulo\\ArticuloNoValidoException.cs",
-              "RelativeToolTip": "Papeleria.LogicaNegocio\\Excepciones\\Articulo\\ArticuloNoValidoException.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA2AAAA",
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaNegocio\\Entidades\\Cliente.cs",
+              "RelativeDocumentMoniker": "Papeleria.LogicaNegocio\\Entidades\\Cliente.cs",
+              "ToolTip": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaNegocio\\Entidades\\Cliente.cs",
+              "RelativeToolTip": "Papeleria.LogicaNegocio\\Entidades\\Cliente.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAiwCwAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T00:18:16.281Z",
+              "WhenOpened": "2024-04-17T13:56:25.1Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "StockArticuloDuplicadoException.cs",
-              "DocumentMoniker": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\Excepciones\\Articulo\\ArticulosValueObjects\\StockArticulo\\StockArticuloDuplicadoException.cs",
-              "RelativeDocumentMoniker": "Papeleria.LogicaNegocio\\Excepciones\\Articulo\\ArticulosValueObjects\\StockArticulo\\StockArticuloDuplicadoException.cs",
-              "ToolTip": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\Excepciones\\Articulo\\ArticulosValueObjects\\StockArticulo\\StockArticuloDuplicadoException.cs",
-              "RelativeToolTip": "Papeleria.LogicaNegocio\\Excepciones\\Articulo\\ArticulosValueObjects\\StockArticulo\\StockArticuloDuplicadoException.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA8AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-17T00:29:48.34Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "EmailUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\Entidades\\ValueObjects\\Usuarios\\EmailUsuario.cs",
-              "RelativeDocumentMoniker": "Papeleria.LogicaNegocio\\Entidades\\ValueObjects\\Usuarios\\EmailUsuario.cs",
-              "ToolTip": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\Entidades\\ValueObjects\\Usuarios\\EmailUsuario.cs",
-              "RelativeToolTip": "Papeleria.LogicaNegocio\\Entidades\\ValueObjects\\Usuarios\\EmailUsuario.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T23:56:00.07Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ContraseniaUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\Entidades\\ValueObjects\\Usuarios\\ContraseniaUsuario.cs",
-              "RelativeDocumentMoniker": "Papeleria.LogicaNegocio\\Entidades\\ValueObjects\\Usuarios\\ContraseniaUsuario.cs",
-              "ToolTip": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\Entidades\\ValueObjects\\Usuarios\\ContraseniaUsuario.cs",
-              "RelativeToolTip": "Papeleria.LogicaNegocio\\Entidades\\ValueObjects\\Usuarios\\ContraseniaUsuario.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T22:55:09.315Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "RepositorioClientes Memoria.cs",
-              "DocumentMoniker": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.AccesoDatos\\Memoria\\RepositorioClientes Memoria.cs",
-              "RelativeDocumentMoniker": "Papeleria.AccesoDatos\\Memoria\\RepositorioClientes Memoria.cs",
-              "ToolTip": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.AccesoDatos\\Memoria\\RepositorioClientes Memoria.cs",
-              "RelativeToolTip": "Papeleria.AccesoDatos\\Memoria\\RepositorioClientes Memoria.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T22:08:56.596Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "RepositorioLineas Memoria.cs",
-              "DocumentMoniker": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.AccesoDatos\\Memoria\\RepositorioLineas Memoria.cs",
-              "RelativeDocumentMoniker": "Papeleria.AccesoDatos\\Memoria\\RepositorioLineas Memoria.cs",
-              "ToolTip": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.AccesoDatos\\Memoria\\RepositorioLineas Memoria.cs",
-              "RelativeToolTip": "Papeleria.AccesoDatos\\Memoria\\RepositorioLineas Memoria.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T22:08:47.899Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "RepositorioArticulos Memoria.cs",
-              "DocumentMoniker": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.AccesoDatos\\Memoria\\RepositorioArticulos Memoria.cs",
-              "RelativeDocumentMoniker": "Papeleria.AccesoDatos\\Memoria\\RepositorioArticulos Memoria.cs",
-              "ToolTip": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.AccesoDatos\\Memoria\\RepositorioArticulos Memoria.cs",
-              "RelativeToolTip": "Papeleria.AccesoDatos\\Memoria\\RepositorioArticulos Memoria.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T22:07:57.242Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "UsuarioNuloExcepcion.cs",
-              "DocumentMoniker": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\Excepciones\\Usuario\\UsuarioNuloExcepcion.cs",
-              "RelativeDocumentMoniker": "Papeleria.LogicaNegocio\\Excepciones\\Usuario\\UsuarioNuloExcepcion.cs",
-              "ToolTip": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\Excepciones\\Usuario\\UsuarioNuloExcepcion.cs",
-              "RelativeToolTip": "Papeleria.LogicaNegocio\\Excepciones\\Usuario\\UsuarioNuloExcepcion.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T00:22:22.116Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "UsuarioDuplicadoExcepcion.cs",
-              "DocumentMoniker": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\Excepciones\\Usuario\\UsuarioDuplicadoExcepcion.cs",
-              "RelativeDocumentMoniker": "Papeleria.LogicaNegocio\\Excepciones\\Usuario\\UsuarioDuplicadoExcepcion.cs",
-              "ToolTip": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\Excepciones\\Usuario\\UsuarioDuplicadoExcepcion.cs",
-              "RelativeToolTip": "Papeleria.LogicaNegocio\\Excepciones\\Usuario\\UsuarioDuplicadoExcepcion.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T00:22:13.761Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "UsuarioNoValidoExcepcion.cs",
-              "DocumentMoniker": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\Excepciones\\Usuario\\UsuarioNoValidoExcepcion.cs",
-              "RelativeDocumentMoniker": "Papeleria.LogicaNegocio\\Excepciones\\Usuario\\UsuarioNoValidoExcepcion.cs",
-              "ToolTip": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\Excepciones\\Usuario\\UsuarioNoValidoExcepcion.cs",
-              "RelativeToolTip": "Papeleria.LogicaNegocio\\Excepciones\\Usuario\\UsuarioNoValidoExcepcion.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T00:22:01.487Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "UtilidadesString.cs",
-              "DocumentMoniker": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.Comun\\UtilidadesString.cs",
-              "RelativeDocumentMoniker": "Papeleria.Comun\\UtilidadesString.cs",
-              "ToolTip": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.Comun\\UtilidadesString.cs",
-              "RelativeToolTip": "Papeleria.Comun\\UtilidadesString.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T00:13:07.26Z"
             }
           ]
         }

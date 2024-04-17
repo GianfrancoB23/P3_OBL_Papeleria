@@ -1,4 +1,7 @@
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes;
+using Papeleria.LogicaNegocio.Excepciones.Cliente.ClienteValueObjects.Direccion;
+using Papeleria.LogicaNegocio.Excepciones.Cliente.ClienteValueObjects.RazonSocial;
+using Papeleria.LogicaNegocio.Excepciones.Cliente.ClienteValueObjects.RUT;
 using Papeleria.LogicaNegocio.InterfacesEntidades;
 using System.Collections.Generic;
 
@@ -13,13 +16,15 @@ namespace Empresa.LogicaDeNegocio.Entidades
 
 		public DireccionCliente direccion{ get; set; }
 
-		public List<Pedido> pedidos{ get; set; } = new List<Pedido>();
+		public List<Pedido> pedidos{ get; set; }
 
-        public Cliente(RUT rut, RazonSocial razonSocial, DireccionCliente direccion, List<Pedido> pedidos)
+        public Cliente(long rut, string razonSocial, string calle, int numero, string ciudad, int distancia)
         {
-            this.rut = rut;
-            this.razonSocial = razonSocial;
-            this.direccion = direccion;
+            this.rut = new RUT(rut);
+            this.razonSocial = new RazonSocial(razonSocial);
+            this.direccion = new DireccionCliente(calle, numero, ciudad, distancia);
+            this.pedidos = new List<Pedido>();
+            esValido();
         }
 
         public Cliente()
@@ -29,7 +34,18 @@ namespace Empresa.LogicaDeNegocio.Entidades
 
         public void esValido()
         {
-            throw new NotImplementedException();
+            if (rut == null) {
+                throw new RutNuloException("El RUT no puede ser nulo.");
+            }
+            if (razonSocial == null) {
+                throw new RazonSocialNuloException("La razon social no puede ser nula.");
+            }
+            if (direccion == null)
+            {
+                throw new DireccionNuloException("La direccion no puede ser nula.");
+            }
+
+
         }
 
         public bool Equals(Cliente? other)

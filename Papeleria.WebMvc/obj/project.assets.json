@@ -5706,19 +5706,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\admfacs-bonanni\\.nuget\\packages\\": {}
+    "C:\\Users\\Gianfranco Bonanni\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.WebMvc\\Papeleria.WebMvc.csproj",
+      "projectUniqueName": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.WebMvc\\Papeleria.WebMvc.csproj",
       "projectName": "Papeleria.WebMvc",
-      "projectPath": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.WebMvc\\Papeleria.WebMvc.csproj",
-      "packagesPath": "C:\\Users\\admfacs-bonanni\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.WebMvc\\obj\\",
+      "projectPath": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.WebMvc\\Papeleria.WebMvc.csproj",
+      "packagesPath": "C:\\Users\\Gianfranco Bonanni\\.nuget\\packages\\",
+      "outputPath": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.WebMvc\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\admfacs-bonanni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Gianfranco Bonanni\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5732,8 +5732,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj": {
-              "projectPath": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj"
+            "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj": {
+              "projectPath": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj"
             }
           }
         }
@@ -5777,7 +5777,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

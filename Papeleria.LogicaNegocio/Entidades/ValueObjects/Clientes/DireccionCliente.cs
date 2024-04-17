@@ -21,11 +21,11 @@ namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes
             Calle = calle;
             Numero = numero;
             Ciudad = ciudad;
-            Distancia = CalcularYFijarDistancia();
+            Distancia = CalcularYFijarDistancia(distancia);
 
         }
 
-        public int CalcularYFijarDistancia()
+        public int CalcularYFijarDistancia(int distancia)
         {
             return 0;
         }

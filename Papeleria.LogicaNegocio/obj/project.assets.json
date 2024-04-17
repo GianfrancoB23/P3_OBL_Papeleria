@@ -27,19 +27,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\admfacs-bonanni\\.nuget\\packages\\": {}
+    "C:\\Users\\Gianfranco Bonanni\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj",
+      "projectUniqueName": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj",
       "projectName": "Papeleria.LogicaNegocio",
-      "projectPath": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj",
-      "packagesPath": "C:\\Users\\admfacs-bonanni\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\obj\\",
+      "projectPath": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj",
+      "packagesPath": "C:\\Users\\Gianfranco Bonanni\\.nuget\\packages\\",
+      "outputPath": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaNegocio\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\admfacs-bonanni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Gianfranco Bonanni\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -53,8 +53,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.Comun\\Papeleria.Comun.csproj": {
-              "projectPath": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.Comun\\Papeleria.Comun.csproj"
+            "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.Comun\\Papeleria.Comun.csproj": {
+              "projectPath": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.Comun\\Papeleria.Comun.csproj"
             }
           }
         }
@@ -89,7 +89,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

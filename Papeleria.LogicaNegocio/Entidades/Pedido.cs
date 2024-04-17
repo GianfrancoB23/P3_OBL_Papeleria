@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Pedidos;
+using Papeleria.LogicaNegocio.Excepciones.Pedido;
 using Papeleria.LogicaNegocio.InterfacesEntidades;
 
 namespace Empresa.LogicaDeNegocio.Entidades
@@ -24,33 +25,36 @@ namespace Empresa.LogicaDeNegocio.Entidades
 
         public Pedido()
         {
-            
+            this.fechaPedido = DateTime.Now;
+            this.lineas = new List<LineaPedido>();
         }
 
-        public Pedido(DateTime fechaPedido, Cliente cliente, List<LineaPedido> lineas, double precioFinal, double recargo, IVA iva)
+        public Pedido(Cliente cliente, double precioFinal, IVA iva)
         {
-            this.fechaPedido = fechaPedido;
+            this.fechaPedido = DateTime.Now;
             this.cliente = cliente;
-            this.lineas = lineas;
+            this.lineas = new List<LineaPedido>();
             this.precioFinal = precioFinal;
-            this.recargo = recargo;
+            this.recargo = CalcularRecargoYFijar();
+            this.entregaPrometida = FijarFechaPrometida();
             this.iva = iva;
         }
 
-        public virtual void CalcularYFijarPrecio(IVA iva)
-		{
+        public abstract void CalcularYFijarPrecio(IVA iva);
+        public abstract DateTime FijarFechaPrometida();
+        public abstract DateTime CambiarFechaPrometida();
 
-		}
+        public abstract double CalcularRecargoYFijar();
 
-		public virtual void CambiarFechaPrometida()
-		{
-
-		}
-
-		public virtual double CalcularRecargoYFijar()
-		{
-			return 0;
-		}
+        public virtual void AgregarLineaPedido(Articulo articulo, int cantidad) {
+            try {
+                LineaPedido pedido = new LineaPedido(articulo,cantidad);
+                lineas.Add(pedido);
+            }catch(Exception ex)
+            {
+                throw new PedidoNoValidoException(ex.Message);
+            }
+        }
 
         public virtual void esValido()
         {

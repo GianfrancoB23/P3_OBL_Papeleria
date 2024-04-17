@@ -1,21 +1,38 @@
 using Empresa.LogicaDeNegocio.Entidades;
+using Papeleria.LogicaNegocio.Excepciones.Articulo;
+using Papeleria.LogicaNegocio.Excepciones.Articulo.ArticulosValueObjects.Linea;
 using Papeleria.LogicaNegocio.InterfacesEntidades;
 
 namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Pedidos
 {
-    public record LineaPedido : IValidable<LineaPedido>, IEquatable<LineaPedido>
+    public record LineaPedido : IValidable<LineaPedido>
     {
-        public int cantidad { get; set; }
-        public double precioUnitarioVigente { get; set; }
+        public Articulo Articulo { get; set; }
+        public int Cantidad { get; set; }
+        public double PrecioUnitarioVigente { get; set; }
 
-        public bool Equals(LineaPedido? other)
+        public LineaPedido(Articulo articulo, int cantidad)
         {
-            throw new NotImplementedException();
+            this.Articulo = articulo;
+            this.Cantidad = cantidad;
+            this.PrecioUnitarioVigente = articulo.PrecioVP;
+            esValido();
+        }
+
+        public LineaPedido()
+        {
+            
         }
 
         public void esValido()
         {
-            throw new NotImplementedException();
+            if (Articulo == null) { 
+                throw new ArticuloNuloException("El articulo no puede ser nulo en la linea del pedido.");
+            }
+            if (Cantidad == null || Cantidad<1)
+            {
+                throw new LineaNuloException("La cantindad no puede ser nulo o menor a 1");
+            }
         }
     }
 
