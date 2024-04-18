@@ -7,3 +7,12 @@ C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.WebMvc\obj\Debug\net8.0\
 C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.WebMvc\obj\Debug\net8.0\Papeleria.WebMvc.RazorAssemblyInfo.cache
 C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.WebMvc\obj\Debug\net8.0\Papeleria.WebMvc.RazorAssemblyInfo.cs
 C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.WebMvc\obj\Debug\net8.0\Papeleria.WebMvc.sourcelink.json
+D:\ORT\ATI\P3\P3_OBL_Papeleria\Papeleria.WebMvc\obj\Debug\net8.0\Papeleria.WebMvc.csproj.AssemblyReference.cache
+D:\ORT\ATI\P3\P3_OBL_Papeleria\Papeleria.WebMvc\obj\Debug\net8.0\Papeleria.WebMvc.GeneratedMSBuildEditorConfig.editorconfig
+D:\ORT\ATI\P3\P3_OBL_Papeleria\Papeleria.WebMvc\obj\Debug\net8.0\Papeleria.WebMvc.AssemblyInfoInputs.cache
+D:\ORT\ATI\P3\P3_OBL_Papeleria\Papeleria.WebMvc\obj\Debug\net8.0\Papeleria.WebMvc.AssemblyInfo.cs
+D:\ORT\ATI\P3\P3_OBL_Papeleria\Papeleria.WebMvc\obj\Debug\net8.0\Papeleria.WebMvc.csproj.CoreCompileInputs.cache
+D:\ORT\ATI\P3\P3_OBL_Papeleria\Papeleria.WebMvc\obj\Debug\net8.0\Papeleria.WebMvc.MvcApplicationPartsAssemblyInfo.cache
+D:\ORT\ATI\P3\P3_OBL_Papeleria\Papeleria.WebMvc\obj\Debug\net8.0\Papeleria.WebMvc.RazorAssemblyInfo.cache
+D:\ORT\ATI\P3\P3_OBL_Papeleria\Papeleria.WebMvc\obj\Debug\net8.0\Papeleria.WebMvc.RazorAssemblyInfo.cs
+D:\ORT\ATI\P3\P3_OBL_Papeleria\Papeleria.WebMvc\obj\Debug\net8.0\Papeleria.WebMvc.sourcelink.json

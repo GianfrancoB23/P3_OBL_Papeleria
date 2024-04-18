@@ -1,10 +1,12 @@
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaNegocio.Excepciones.Articulo.ArticulosValueObjects.DescripcionArticulo;
 using Papeleria.LogicaNegocio.InterfacesEntidades;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Drawing;
 
 namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Articulos
 {
+    [ComplexType]
     public record DescripcionArticulo : IValidable<DescripcionArticulo>
     {
         public string Descripcion { get; init; }

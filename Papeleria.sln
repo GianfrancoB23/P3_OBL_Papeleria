@@ -3,17 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Papeleria.LogicaNegocio", "Papeleria.LogicaNegocio\Papeleria.LogicaNegocio.csproj", "{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Papeleria.LogicaNegocio", "Papeleria.LogicaNegocio\Papeleria.LogicaNegocio.csproj", "{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Papeleria.Test", "Papeleria.Test\Papeleria.Test.csproj", "{A2B43F19-22D4-46B6-BF25-9703D0C55A68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Papeleria.Test", "Papeleria.Test\Papeleria.Test.csproj", "{A2B43F19-22D4-46B6-BF25-9703D0C55A68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Papeleria.AccesoDatos", "Papeleria.AccesoDatos\Papeleria.AccesoDatos.csproj", "{6EA76E32-13B6-4BE9-BE7B-9CBA4979719B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Papeleria.AccesoDatos", "Papeleria.AccesoDatos\Papeleria.AccesoDatos.csproj", "{6EA76E32-13B6-4BE9-BE7B-9CBA4979719B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Papeleria.LogicaAplicacion", "Papeleria.LogicaAplicacion\Papeleria.LogicaAplicacion.csproj", "{EDFEE3E7-7AB1-4081-B5EA-6248C9BAF702}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Papeleria.LogicaAplicacion", "Papeleria.LogicaAplicacion\Papeleria.LogicaAplicacion.csproj", "{EDFEE3E7-7AB1-4081-B5EA-6248C9BAF702}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Papeleria.Comun", "Papeleria.Comun\Papeleria.Comun.csproj", "{3CA0077C-7F59-4E94-B434-2B7B95CC5D2C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Papeleria.WebMvc", "Papeleria.WebMvc\Papeleria.WebMvc.csproj", "{E0358169-865C-40EB-AE30-32754E7F938B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Papeleria.Comun", "Papeleria.Comun\Papeleria.Comun.csproj", "{3CA0077C-7F59-4E94-B434-2B7B95CC5D2C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +39,6 @@ Global
 		{3CA0077C-7F59-4E94-B434-2B7B95CC5D2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CA0077C-7F59-4E94-B434-2B7B95CC5D2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CA0077C-7F59-4E94-B434-2B7B95CC5D2C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E0358169-865C-40EB-AE30-32754E7F938B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E0358169-865C-40EB-AE30-32754E7F938B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E0358169-865C-40EB-AE30-32754E7F938B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E0358169-865C-40EB-AE30-32754E7F938B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

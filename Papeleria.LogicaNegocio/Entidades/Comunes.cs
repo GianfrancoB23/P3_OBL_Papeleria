@@ -20,7 +20,7 @@ namespace Empresa.LogicaDeNegocio.Entidades
             throw new NotImplementedException();
         }
 
-        public override DateTime CambiarFechaPrometida()
+        public override void CambiarEntregaPrometida(int dias)
         {
             throw new NotImplementedException();
         }
@@ -40,7 +40,7 @@ namespace Empresa.LogicaDeNegocio.Entidades
             base.esValido();
         }
 
-        public override DateTime FijarFechaPrometida()
+        public override TimeSpan FijarEntregaPrometida(int dias)
         {
             throw new NotImplementedException();
         }

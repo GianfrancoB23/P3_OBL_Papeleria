@@ -2,21 +2,42 @@ using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaNegocio.Excepciones.Usuario.UsuarioExcepcions.Constrasenia;
 using Papeleria.LogicaNegocio.Excepciones.Usuario.UsuarioExcepcions.Email;
 using Papeleria.LogicaNegocio.InterfacesEntidades;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 
 namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Usuario
 {
+    [ComplexType]
     public record ContraseniaUsuario : IValidable<ContraseniaUsuario>
     {
         public string Valor { get; set; }
         public ContraseniaUsuario(string contrasenia)
         {
-            esValido(contrasenia);
             Valor = contrasenia;
+            esValido();
         }
-        public void esValido(string contrasenia) {
+        public ContraseniaUsuario()
+        {
+            
+        }
+        //public void esValido(string contrasenia) {
+        //    if (Valor == null)
+        //    {
+        //        throw new ContraseniaNuloException("La contrasenia no puede ser nula.");
+        //    }
+        //    if (Valor.Length < 6)
+        //    {
+        //        throw new ContraseniaNoValidoException("La contraseña debe contener un largo minimo de 6 caracteres.");
+        //    }
+        //    if (!Regex.IsMatch(Valor, @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[.,;!])[A-Za-z\d.,;!]+$"))
+        //    {
+        //        throw new ContraseniaNoValidoException("La contraseña debe contener al menos una letra mayúscula, una minúscula, un dígito y un carácter de puntuación: punto, punto y coma, coma, signo de admiración de cierre.");
+        //    }
+        //}
+        public void esValido()
+        {
             if (Valor == null)
             {
                 throw new ContraseniaNuloException("La contrasenia no puede ser nula.");
@@ -29,10 +50,6 @@ namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Usuario
             {
                 throw new ContraseniaNoValidoException("La contraseña debe contener al menos una letra mayúscula, una minúscula, un dígito y un carácter de puntuación: punto, punto y coma, coma, signo de admiración de cierre.");
             }
-        }
-        public void esValido()
-        {
-            esValido(this.Valor);
         }
         public string Encriptar(string contrasenia)
         {

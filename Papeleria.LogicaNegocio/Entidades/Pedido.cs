@@ -14,15 +14,12 @@ namespace Empresa.LogicaDeNegocio.Entidades
 
 		public Cliente cliente{ get; set; }
 
-		public List<LineaPedido> lineas{ get; set; }
-
+		public ICollection<LineaPedido> lineas { get; set; }
+		public double recargo{ get; set; }
+		public IVA iva { get; set; }
+        public TimeSpan entregaPrometida { get; set; }
 		public double precioFinal{ get; set; }
 
-		public double recargo{ get; set; }
-
-        public DateTime entregaPrometida { get; set; }
-
-		public IVA iva { get; set; }
 
         public Pedido()
         {
@@ -30,21 +27,21 @@ namespace Empresa.LogicaDeNegocio.Entidades
             this.lineas = new List<LineaPedido>();
         }
 
-        public Pedido(Cliente cliente, IVA iva)
+        public Pedido(Cliente cliente, int dias, IVA iva)
         {
             this.fechaPedido = DateTime.Now;
             this.cliente = cliente;
             this.lineas = new List<LineaPedido>();
-            this.precioFinal = CalcularYFijarPrecio(iva);
             this.recargo = CalcularRecargoYFijar();
-            this.entregaPrometida = FijarFechaPrometida();
             this.iva = iva;
+            this.entregaPrometida = FijarEntregaPrometida(dias);
+            this.precioFinal = CalcularYFijarPrecio(iva);
             esValido();
         }
 
         public abstract double CalcularYFijarPrecio(IVA iva);
-        public abstract DateTime FijarFechaPrometida();
-        public abstract DateTime CambiarFechaPrometida();
+        public abstract TimeSpan FijarEntregaPrometida(int dias);
+        public abstract void CambiarEntregaPrometida(int dias);
 
         public abstract double CalcularRecargoYFijar();
 

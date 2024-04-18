@@ -1,9 +1,11 @@
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaNegocio.Excepciones.Articulo.ArticulosValueObjects.CodigoProveedor;
 using Papeleria.LogicaNegocio.InterfacesEntidades;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Articulos
 {
+    [ComplexType]
     public record CodigoProveedorArticulos : IValidable<CodigoProveedorArticulos>
     {
         public long codigo { get; init; }

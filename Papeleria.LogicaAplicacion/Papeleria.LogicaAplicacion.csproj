@@ -7,7 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="InterfacesCasosUso\" />
+    <Folder Include="ImplementacionCasosUso\Comun\" />
+    <Folder Include="ImplementacionCasosUso\Express\" />
+    <Folder Include="ImplementacionCasosUso\LineaPedido\" />
+    <Folder Include="InterfacesCasosUso\Articulo\" />
+    <Folder Include="InterfacesCasosUso\Cliente\" />
+    <Folder Include="InterfacesCasosUso\Comun\" />
+    <Folder Include="InterfacesCasosUso\Express\" />
+    <Folder Include="InterfacesCasosUso\LineaPedido\" />
+    <Folder Include="InterfacesCasosUso\Usuario\" />
+    <Folder Include="InterfacesCasosUso\Pedido\" />
   </ItemGroup>
 
   <ItemGroup>

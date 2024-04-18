@@ -17,123 +17,123 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Papeleria.WebMvc
 build_property.RootNamespace = Papeleria.WebMvc
-build_property.ProjectDir = C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.WebMvc\
+build_property.ProjectDir = D:\ORT\ATI\P3\P3_OBL_Papeleria\Papeleria.WebMvc\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\admfacs-bonanni\Desktop\P3\Papeleria\Papeleria.WebMvc
+build_property.MSBuildProjectDirectory = D:\ORT\ATI\P3\P3_OBL_Papeleria\Papeleria.WebMvc
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/admfacs-bonanni/Desktop/P3/Papeleria/Papeleria.WebMvc/Views/Articulos/Create.cshtml]
+[D:/ORT/ATI/P3/P3_OBL_Papeleria/Papeleria.WebMvc/Views/Articulos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWN1bG9zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admfacs-bonanni/Desktop/P3/Papeleria/Papeleria.WebMvc/Views/Articulos/Delete.cshtml]
+[D:/ORT/ATI/P3/P3_OBL_Papeleria/Papeleria.WebMvc/Views/Articulos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWN1bG9zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admfacs-bonanni/Desktop/P3/Papeleria/Papeleria.WebMvc/Views/Articulos/Details.cshtml]
+[D:/ORT/ATI/P3/P3_OBL_Papeleria/Papeleria.WebMvc/Views/Articulos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWN1bG9zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admfacs-bonanni/Desktop/P3/Papeleria/Papeleria.WebMvc/Views/Articulos/Edit.cshtml]
+[D:/ORT/ATI/P3/P3_OBL_Papeleria/Papeleria.WebMvc/Views/Articulos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWN1bG9zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admfacs-bonanni/Desktop/P3/Papeleria/Papeleria.WebMvc/Views/Articulos/Index.cshtml]
+[D:/ORT/ATI/P3/P3_OBL_Papeleria/Papeleria.WebMvc/Views/Articulos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWN1bG9zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admfacs-bonanni/Desktop/P3/Papeleria/Papeleria.WebMvc/Views/Clientes/Create.cshtml]
+[D:/ORT/ATI/P3/P3_OBL_Papeleria/Papeleria.WebMvc/Views/Clientes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admfacs-bonanni/Desktop/P3/Papeleria/Papeleria.WebMvc/Views/Clientes/Delete.cshtml]
+[D:/ORT/ATI/P3/P3_OBL_Papeleria/Papeleria.WebMvc/Views/Clientes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admfacs-bonanni/Desktop/P3/Papeleria/Papeleria.WebMvc/Views/Clientes/Details.cshtml]
+[D:/ORT/ATI/P3/P3_OBL_Papeleria/Papeleria.WebMvc/Views/Clientes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admfacs-bonanni/Desktop/P3/Papeleria/Papeleria.WebMvc/Views/Clientes/Edit.cshtml]
+[D:/ORT/ATI/P3/P3_OBL_Papeleria/Papeleria.WebMvc/Views/Clientes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admfacs-bonanni/Desktop/P3/Papeleria/Papeleria.WebMvc/Views/Clientes/Index.cshtml]
+[D:/ORT/ATI/P3/P3_OBL_Papeleria/Papeleria.WebMvc/Views/Clientes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admfacs-bonanni/Desktop/P3/Papeleria/Papeleria.WebMvc/Views/Home/Index.cshtml]
+[D:/ORT/ATI/P3/P3_OBL_Papeleria/Papeleria.WebMvc/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admfacs-bonanni/Desktop/P3/Papeleria/Papeleria.WebMvc/Views/Home/Privacy.cshtml]
+[D:/ORT/ATI/P3/P3_OBL_Papeleria/Papeleria.WebMvc/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admfacs-bonanni/Desktop/P3/Papeleria/Papeleria.WebMvc/Views/Pedidos/Create.cshtml]
+[D:/ORT/ATI/P3/P3_OBL_Papeleria/Papeleria.WebMvc/Views/Pedidos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admfacs-bonanni/Desktop/P3/Papeleria/Papeleria.WebMvc/Views/Pedidos/Delete.cshtml]
+[D:/ORT/ATI/P3/P3_OBL_Papeleria/Papeleria.WebMvc/Views/Pedidos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admfacs-bonanni/Desktop/P3/Papeleria/Papeleria.WebMvc/Views/Pedidos/Details.cshtml]
+[D:/ORT/ATI/P3/P3_OBL_Papeleria/Papeleria.WebMvc/Views/Pedidos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admfacs-bonanni/Desktop/P3/Papeleria/Papeleria.WebMvc/Views/Pedidos/Edit.cshtml]
+[D:/ORT/ATI/P3/P3_OBL_Papeleria/Papeleria.WebMvc/Views/Pedidos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admfacs-bonanni/Desktop/P3/Papeleria/Papeleria.WebMvc/Views/Pedidos/Index.cshtml]
+[D:/ORT/ATI/P3/P3_OBL_Papeleria/Papeleria.WebMvc/Views/Pedidos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admfacs-bonanni/Desktop/P3/Papeleria/Papeleria.WebMvc/Views/Shared/_Error.cshtml]
+[D:/ORT/ATI/P3/P3_OBL_Papeleria/Papeleria.WebMvc/Views/Shared/_Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9FcnJvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admfacs-bonanni/Desktop/P3/Papeleria/Papeleria.WebMvc/Views/Shared/_Mensajes.cshtml]
+[D:/ORT/ATI/P3/P3_OBL_Papeleria/Papeleria.WebMvc/Views/Shared/_Mensajes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NZW5zYWplcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admfacs-bonanni/Desktop/P3/Papeleria/Papeleria.WebMvc/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/ORT/ATI/P3/P3_OBL_Papeleria/Papeleria.WebMvc/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admfacs-bonanni/Desktop/P3/Papeleria/Papeleria.WebMvc/Views/Usuarios/Create.cshtml]
+[D:/ORT/ATI/P3/P3_OBL_Papeleria/Papeleria.WebMvc/Views/Usuarios/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admfacs-bonanni/Desktop/P3/Papeleria/Papeleria.WebMvc/Views/Usuarios/Delete.cshtml]
+[D:/ORT/ATI/P3/P3_OBL_Papeleria/Papeleria.WebMvc/Views/Usuarios/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admfacs-bonanni/Desktop/P3/Papeleria/Papeleria.WebMvc/Views/Usuarios/Details.cshtml]
+[D:/ORT/ATI/P3/P3_OBL_Papeleria/Papeleria.WebMvc/Views/Usuarios/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admfacs-bonanni/Desktop/P3/Papeleria/Papeleria.WebMvc/Views/Usuarios/Edit.cshtml]
+[D:/ORT/ATI/P3/P3_OBL_Papeleria/Papeleria.WebMvc/Views/Usuarios/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admfacs-bonanni/Desktop/P3/Papeleria/Papeleria.WebMvc/Views/Usuarios/Index.cshtml]
+[D:/ORT/ATI/P3/P3_OBL_Papeleria/Papeleria.WebMvc/Views/Usuarios/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admfacs-bonanni/Desktop/P3/Papeleria/Papeleria.WebMvc/Views/_ViewImports.cshtml]
+[D:/ORT/ATI/P3/P3_OBL_Papeleria/Papeleria.WebMvc/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admfacs-bonanni/Desktop/P3/Papeleria/Papeleria.WebMvc/Views/_ViewStart.cshtml]
+[D:/ORT/ATI/P3/P3_OBL_Papeleria/Papeleria.WebMvc/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admfacs-bonanni/Desktop/P3/Papeleria/Papeleria.WebMvc/Views/Shared/_Layout.cshtml]
+[D:/ORT/ATI/P3/P3_OBL_Papeleria/Papeleria.WebMvc/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-5mfyo3tf66

@@ -18,4 +18,4 @@ namespace Papeleria.LogicaNegocio.Excepciones.Cliente.ClienteValueObjects.RazonS
         protected RazonSocialDuplicadoException(SerializationInfo info, StreamingContext context) : base(info, context) { }
     }
 }
-}
+

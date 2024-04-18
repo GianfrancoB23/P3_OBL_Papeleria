@@ -1,9 +1,11 @@
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaNegocio.Excepciones.Cliente.ClienteValueObjects.RUT;
 using Papeleria.LogicaNegocio.InterfacesEntidades;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes
 {
+    [ComplexType]
     public record RUT : IValidable<RUT>, IEquatable<RUT>
     {
         public long Rut { get; init; }
