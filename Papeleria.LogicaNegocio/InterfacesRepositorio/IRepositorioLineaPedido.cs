@@ -1,4 +1,4 @@
-﻿using Papeleria.LogicaNegocio.Entidades.ValueObjects.Pedidos;
+﻿using Papeleria.LogicaNegocio.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;

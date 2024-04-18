@@ -1,5 +1,5 @@
 ﻿using Empresa.LogicaDeNegocio.Entidades;
-using Papeleria.LogicaNegocio.Entidades.ValueObjects.Pedidos;
+using Papeleria.LogicaNegocio.Entidades;
 using Papeleria.LogicaNegocio.InterfacesRepositorio;
 using System;
 using System.Collections.Generic;

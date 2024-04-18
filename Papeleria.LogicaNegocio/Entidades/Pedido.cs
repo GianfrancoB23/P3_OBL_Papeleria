@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Papeleria.LogicaNegocio.Entidades;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Pedidos;
 using Papeleria.LogicaNegocio.Excepciones.Cliente;
 using Papeleria.LogicaNegocio.Excepciones.Pedido;

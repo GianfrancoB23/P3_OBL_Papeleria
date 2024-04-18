@@ -4,11 +4,11 @@ using Papeleria.LogicaNegocio.Excepciones.Articulo.ArticulosValueObjects.Linea;
 using Papeleria.LogicaNegocio.InterfacesEntidades;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Pedidos
+namespace Papeleria.LogicaNegocio.Entidades
 {
-    [ComplexType]
-    public record LineaPedido : IValidable<LineaPedido>
+    public class LineaPedido : IValidable<LineaPedido>, IEntity
     {
+        public int Id { get; set; }
         public Articulo Articulo { get; set; }
         public int Cantidad { get; set; }
         public double PrecioUnitarioVigente { get; set; }
