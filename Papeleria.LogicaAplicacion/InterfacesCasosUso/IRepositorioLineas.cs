@@ -7,9 +7,6 @@ namespace Empresa.LogicaDeNegocio.InterfacesRepositorios
 {
 	public interface IRepositorioLineas : IRepositorio<LineaPedido>
     {
-		private RepositorioLineas Memoria repositorioLineas Memoria;
-
-		private RepositorioLineasEF repositorioLineasEF;
 
 	}
 
