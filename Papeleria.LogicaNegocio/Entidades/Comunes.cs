@@ -3,7 +3,7 @@ using System;
 
 namespace Empresa.LogicaDeNegocio.Entidades
 {
-    public class Comun : Pedido
+    public class Comunes : Pedido
     {
         public override void AgregarLineaPedido(Articulo articulo, int cantidad)
         {

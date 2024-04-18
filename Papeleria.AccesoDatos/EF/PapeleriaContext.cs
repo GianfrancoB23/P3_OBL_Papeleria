@@ -18,7 +18,7 @@ namespace Papeleria.AccesoDatos.EF
         public DbSet<Usuario> Usuarios{ get; set; }
         public DbSet<Pedido> Pedidos{ get; set; }
         public DbSet<Express> Expresses{ get; set; }
-        public DbSet<Comun> Comuns{ get; set; }
+        public DbSet<Comunes> Comuns{ get; set; }
         public DbSet<LineaPedido> LineasPedidos { get; set;}
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
