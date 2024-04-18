@@ -1,6 +1,5 @@
 using Empresa.LogicaDeNegocio.InterfacesRepositorios;
-using IEmpresa.AccesoDatos.RepositorioMemoria;
-using IEmpresa.AccesoDatos.RepostiorioEF;
+
 using System.Collections.Generic;
 using System;
 using Empresa.LogicaDeNegocio.Entidades;

@@ -8,9 +8,6 @@ namespace Empresa.LogicaDeNegocio.InterfacesRepositorios
 {
 	public interface IRepositorioClientes : IRepositorio<Cliente>
     {
-		private RepositorioClientes Memoria repositorioClientes Memoria;
-
-		private RepositorioClientesEF repositorioClientesEF;
 
 		IEnumerable<Cliente> GetClientesPorPedido(int idPedido);
 

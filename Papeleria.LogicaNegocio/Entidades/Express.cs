@@ -5,21 +5,31 @@ using System;
 namespace Empresa.LogicaDeNegocio.Entidades
 {
     public class Express : Pedido
-	{
-
+    {
+        public bool EntregaEnElDia { get; set; }
         public override double CalcularRecargoYFijar()
         {
-            return base.CalcularRecargoYFijar();
+            throw new NotImplementedException();
         }
 
-        public override void CalcularYFijarPrecio(IVA iva)
+        public override double CalcularYFijarPrecio(IVA iva)
         {
-            base.CalcularYFijarPrecio(iva);
+            throw new NotImplementedException();
         }
 
-        public override void CambiarFechaPrometida()
+        public override DateTime CambiarFechaPrometida()
         {
-            base.CambiarFechaPrometida();
+            throw new NotImplementedException();
+        }
+
+        public override DateTime FijarFechaPrometida()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void AgregarLineaPedido(Articulo articulo, int cantidad)
+        {
+            base.AgregarLineaPedido(articulo, cantidad);
         }
 
         public override bool Equals(object? obj)
@@ -27,14 +37,14 @@ namespace Empresa.LogicaDeNegocio.Entidades
             return base.Equals(obj);
         }
 
-        public override bool Equals(Pedido? other)
-        {
-            return base.Equals(other);
-        }
-
         public override void esValido()
         {
             base.esValido();
+        }
+
+        public override bool Equals(Pedido? other)
+        {
+            return base.Equals(other);
         }
     }
 

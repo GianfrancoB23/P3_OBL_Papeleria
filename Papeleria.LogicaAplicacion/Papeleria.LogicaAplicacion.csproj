@@ -10,4 +10,9 @@
     <Folder Include="InterfacesCasosUso\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Papeleria.AccesoDatos\Papeleria.AccesoDatos.csproj" />
+    <ProjectReference Include="..\Papeleria.LogicaNegocio\Papeleria.LogicaNegocio.csproj" />
+  </ItemGroup>
+
 </Project>

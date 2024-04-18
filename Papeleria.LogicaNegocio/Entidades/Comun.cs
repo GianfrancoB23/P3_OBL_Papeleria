@@ -5,19 +5,24 @@ namespace Empresa.LogicaDeNegocio.Entidades
 {
     public class Comun : Pedido
     {
+        public override void AgregarLineaPedido(Articulo articulo, int cantidad)
+        {
+            base.AgregarLineaPedido(articulo, cantidad);
+        }
+
         public override double CalcularRecargoYFijar()
         {
-            return base.CalcularRecargoYFijar();
+            throw new NotImplementedException();
         }
 
-        public override void CalcularYFijarPrecio(IVA iva)
+        public override double CalcularYFijarPrecio(IVA iva)
         {
-            base.CalcularYFijarPrecio(iva);
+            throw new NotImplementedException();
         }
 
-        public override void CambiarFechaPrometida()
+        public override DateTime CambiarFechaPrometida()
         {
-            base.CambiarFechaPrometida();
+            throw new NotImplementedException();
         }
 
         public override bool Equals(object? obj)
@@ -33,6 +38,16 @@ namespace Empresa.LogicaDeNegocio.Entidades
         public override void esValido()
         {
             base.esValido();
+        }
+
+        public override DateTime FijarFechaPrometida()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string? ToString()
+        {
+            return base.ToString();
         }
     }
 

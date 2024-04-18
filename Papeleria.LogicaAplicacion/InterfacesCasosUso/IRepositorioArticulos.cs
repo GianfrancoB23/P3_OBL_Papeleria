@@ -8,9 +8,6 @@ namespace Empresa.LogicaDeNegocio.InterfacesRepositorios
 {
 	public interface IRepositorioArticulos : IRepositorio<Articulo>
 	{
-		private RepositorioArticulos Memoria repositorioArticulos Memoria;
-
-		private RepositorioArticulosEF repositorioArticulosEF;
 
 		IEnumerable<Articulo> GetArticulosOrdenadosAlfabeticamente();
 

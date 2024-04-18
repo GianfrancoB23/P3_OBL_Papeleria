@@ -1,7 +1,5 @@
 using Empresa.LogicaDeNegocio.InterfacesRepositorios;
 using Empresa.LogicaDeNegocio.Sistema;
-using IEmpresa.AccesoDatos.RepositorioMemoria;
-using IEmpresa.AccesoDatos.RepostiorioEF;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Usuario;
 
 namespace Empresa.LogicaDeNegocio.InterfacesRepositorios

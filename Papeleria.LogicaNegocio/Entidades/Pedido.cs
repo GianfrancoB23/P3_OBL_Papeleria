@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Pedidos;
+using Papeleria.LogicaNegocio.Excepciones.Cliente;
 using Papeleria.LogicaNegocio.Excepciones.Pedido;
 using Papeleria.LogicaNegocio.InterfacesEntidades;
 
@@ -29,18 +30,19 @@ namespace Empresa.LogicaDeNegocio.Entidades
             this.lineas = new List<LineaPedido>();
         }
 
-        public Pedido(Cliente cliente, double precioFinal, IVA iva)
+        public Pedido(Cliente cliente, IVA iva)
         {
             this.fechaPedido = DateTime.Now;
             this.cliente = cliente;
             this.lineas = new List<LineaPedido>();
-            this.precioFinal = precioFinal;
+            this.precioFinal = CalcularYFijarPrecio(iva);
             this.recargo = CalcularRecargoYFijar();
             this.entregaPrometida = FijarFechaPrometida();
             this.iva = iva;
+            esValido();
         }
 
-        public abstract void CalcularYFijarPrecio(IVA iva);
+        public abstract double CalcularYFijarPrecio(IVA iva);
         public abstract DateTime FijarFechaPrometida();
         public abstract DateTime CambiarFechaPrometida();
 
@@ -58,12 +60,16 @@ namespace Empresa.LogicaDeNegocio.Entidades
 
         public virtual void esValido()
         {
-            throw new NotImplementedException();
+            if (cliente == null) {
+                throw new ClienteNuloException("El cliente no puede ser nulo.");
+            }
         }
 
         public virtual bool Equals(Pedido? other)
         {
-            throw new NotImplementedException();
+            if (other == null)
+                throw new PedidoNuloException("Debe incluir el pedido a comparar");
+            return this.Id == other.Id;
         }
 
     }
