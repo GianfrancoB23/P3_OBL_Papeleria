@@ -1,5 +1,6 @@
 ﻿using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes;
+using Papeleria.LogicaNegocio.Excepciones.Cliente;
 using Papeleria.LogicaNegocio.InterfacesRepositorio;
 using System;
 using System.Collections.Generic;
@@ -11,9 +12,19 @@ namespace Papeleria.AccesoDatos.EF
 {
     public class RepositorioClienteEF : IRepositorioCliente
     {
+        private PapeleriaContext _db = new PapeleriaContext();
         public void Add(Cliente obj)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _db.Clientes.Add(obj);
+                _db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+
+                throw new ClienteNoValidoException(ex.Message);
+            }
         }
 
         public IEnumerable<Cliente> GetAll()

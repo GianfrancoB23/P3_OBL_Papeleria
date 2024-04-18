@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6EA76E32-13B6-4BE9-BE7B-9CBA4979719B}|Papeleria.AccesoDatos\\Papeleria.AccesoDatos.csproj|d:\\ort\\ati\\p3\\p3_obl_papeleria\\papeleria.accesodatos\\ef\\repositorioclienteef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EA76E32-13B6-4BE9-BE7B-9CBA4979719B}|Papeleria.AccesoDatos\\Papeleria.AccesoDatos.csproj|solutionrelative:papeleria.accesodatos\\ef\\repositorioclienteef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|d:\\ort\\ati\\p3\\p3_obl_papeleria\\papeleria.logicanegocio\\entidades\\lineapedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|solutionrelative:papeleria.logicanegocio\\entidades\\lineapedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -34,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,7 +54,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "RepositorioClienteEF.cs",
+              "DocumentMoniker": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.AccesoDatos\\EF\\RepositorioClienteEF.cs",
+              "RelativeDocumentMoniker": "Papeleria.AccesoDatos\\EF\\RepositorioClienteEF.cs",
+              "ToolTip": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.AccesoDatos\\EF\\RepositorioClienteEF.cs",
+              "RelativeToolTip": "Papeleria.AccesoDatos\\EF\\RepositorioClienteEF.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-18T17:14:18.969Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Usuario.cs",
               "DocumentMoniker": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaNegocio\\Entidades\\Usuario.cs",
               "RelativeDocumentMoniker": "Papeleria.LogicaNegocio\\Entidades\\Usuario.cs",
@@ -63,7 +80,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "LineaPedido.cs",
               "DocumentMoniker": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaNegocio\\Entidades\\LineaPedido.cs",
               "RelativeDocumentMoniker": "Papeleria.LogicaNegocio\\Entidades\\LineaPedido.cs",
@@ -76,7 +93,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Comunes.cs",
               "DocumentMoniker": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaNegocio\\Entidades\\Comunes.cs",
               "RelativeDocumentMoniker": "Papeleria.LogicaNegocio\\Entidades\\Comunes.cs",
@@ -89,7 +106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Express.cs",
               "DocumentMoniker": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaNegocio\\Entidades\\Express.cs",
               "RelativeDocumentMoniker": "Papeleria.LogicaNegocio\\Entidades\\Express.cs",
@@ -102,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Pedido.cs",
               "DocumentMoniker": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaNegocio\\Entidades\\Pedido.cs",
               "RelativeDocumentMoniker": "Papeleria.LogicaNegocio\\Entidades\\Pedido.cs",
@@ -115,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "PapeleriaContext.cs",
               "DocumentMoniker": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.AccesoDatos\\EF\\PapeleriaContext.cs",
               "RelativeDocumentMoniker": "Papeleria.AccesoDatos\\EF\\PapeleriaContext.cs",
