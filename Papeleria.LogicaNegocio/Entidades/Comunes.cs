@@ -6,7 +6,10 @@ namespace Empresa.LogicaDeNegocio.Entidades
 {
     public class Comunes : Pedido
     {
-        public class Comunes() { } : base();
+        public Comunes(): base()
+        {
+
+        }
         public override void AgregarLineaPedido(Articulo articulo, int cantidad)
         {
             base.AgregarLineaPedido(articulo, cantidad);
