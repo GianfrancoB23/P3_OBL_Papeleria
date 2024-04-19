@@ -13,7 +13,5 @@ namespace Papeleria.LogicaNegocio.InterfacesRepositorio
     public interface IRepositorioUsuario:IRepositorio<Usuario>
     {
         public Usuario GetUsuarioPorEmail(EmailUsuario email);
-        public IEnumerable<Usuario> GetUsuarios();
-        public Usuario GetUsuario(int idUsuario);
     }
 }

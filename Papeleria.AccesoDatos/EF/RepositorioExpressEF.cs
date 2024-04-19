@@ -1,4 +1,5 @@
 ﻿using Empresa.LogicaDeNegocio.Entidades;
+using Papeleria.LogicaNegocio.Excepciones.Pedido;
 using Papeleria.LogicaNegocio.InterfacesRepositorio;
 using System;
 using System.Collections.Generic;
@@ -13,8 +14,16 @@ namespace Papeleria.AccesoDatos.EF
         private PapeleriaContext _db = new PapeleriaContext();
         public void Add(Express obj)
         {
-            _db.Expresses.Add(obj);
-            _db.SaveChanges();
+            try
+            {
+                _db.Expresses.Add(obj);
+                _db.SaveChanges();
+            }
+            catch (Exception ex)   
+            {
+                throw new PedidoNoValidoException(ex.Message);
+            }
+            
         }
 
         public IEnumerable<Express> GetAll()

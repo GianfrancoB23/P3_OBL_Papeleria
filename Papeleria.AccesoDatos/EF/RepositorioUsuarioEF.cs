@@ -3,6 +3,7 @@ using Empresa.LogicaDeNegocio.Sistema;
 using Microsoft.EntityFrameworkCore;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Usuario;
+using Papeleria.LogicaNegocio.Excepciones.Usuario;
 using Papeleria.LogicaNegocio.InterfacesRepositorio;
 using System;
 using System.Collections.Generic;
@@ -17,8 +18,15 @@ namespace Papeleria.AccesoDatos.EF
         private PapeleriaContext _db=new PapeleriaContext();
         public void Add(Usuario obj)
         {
-            _db.Usuarios.Add(obj);
-            _db.SaveChanges();
+            try
+            {
+                _db.Usuarios.Add(obj);
+                _db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new UsuarioNoValidoExcepcion(ex.Message);
+            }
         }
 
         public IEnumerable<Usuario> GetAll()
@@ -34,12 +42,18 @@ namespace Papeleria.AccesoDatos.EF
 
         public void Remove(int id)
         {
-            throw new NotImplementedException();
+            var usuario = _db.Usuarios.FirstOrDefault(u => u.Id == id);
+            if (usuario != null)
+            {
+                _db.Usuarios.Remove(usuario);
+                _db.SaveChanges();
+            }
         }
 
         public void Remove(Usuario obj)
         {
-            throw new NotImplementedException();
+            _db.Usuarios.Remove(obj);
+            _db.SaveChanges();
         }
 
         public void Update(int id, Usuario obj)
@@ -48,17 +62,7 @@ namespace Papeleria.AccesoDatos.EF
         }
         public Usuario GetUsuarioPorEmail(EmailUsuario email)
         {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<Usuario> GetUsuarios()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Usuario GetUsuario(int idUsuario)
-        {
-            throw new NotImplementedException();
+            return _db.Usuarios.FirstOrDefault(u => u.Email.Direccion == email.Direccion);
         }
 
         public IEnumerable<Usuario> GetObjectsByID(List<int> ids)

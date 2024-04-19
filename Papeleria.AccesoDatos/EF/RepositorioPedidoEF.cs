@@ -1,6 +1,7 @@
 ﻿using Empresa.LogicaDeNegocio.Entidades;
 using Microsoft.EntityFrameworkCore;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes;
+using Papeleria.LogicaNegocio.Excepciones.Pedido;
 using Papeleria.LogicaNegocio.InterfacesRepositorio;
 using System;
 using System.Collections.Generic;
@@ -15,8 +16,16 @@ namespace Papeleria.AccesoDatos.EF
         private PapeleriaContext _db = new PapeleriaContext();
         public void Add(Pedido obj)
         {
-            _db.Pedidos.Add(obj);
-            _db.SaveChanges();
+            try
+            {
+                _db.Pedidos.Add(obj);
+                _db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new PedidoNoValidoException(ex.Message);
+            }
+            
         }
 
         public IEnumerable<Pedido> GetAll()
@@ -40,16 +49,6 @@ namespace Papeleria.AccesoDatos.EF
             throw new NotImplementedException();
         }
 
-        public Pedido GetPedidoById(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<Pedido> GetPedidos()
-        {
-            throw new NotImplementedException();
-        }
-
         public IEnumerable<Pedido> GetPedidosPorCliente(Cliente cliente)
         {
             throw new NotImplementedException();
@@ -67,7 +66,7 @@ namespace Papeleria.AccesoDatos.EF
 
         public IEnumerable<Pedido> GetPedidosPorRUT(RUT rut)
         {
-            throw new NotImplementedException();
+            return _db.Pedidos.Where(p => p.cliente.rut.Rut == rut.Rut).ToList();
         }
 
         public IEnumerable<Pedido> GetPedidosQueSuperenMonto(double monto)
@@ -79,12 +78,18 @@ namespace Papeleria.AccesoDatos.EF
 
         public void Remove(int id)
         {
-            throw new NotImplementedException();
+            var pedido = _db.Pedidos.FirstOrDefault(p => p.Id == id);
+            if (pedido != null)
+            {
+                _db.Pedidos.Remove(pedido);
+                _db.SaveChanges();
+            }
         }
 
         public void Remove(Pedido obj)
         {
-            throw new NotImplementedException();
+            _db.Pedidos.Remove(obj);
+            _db.SaveChanges();
         }
 
         public void Update(int id, Pedido obj)

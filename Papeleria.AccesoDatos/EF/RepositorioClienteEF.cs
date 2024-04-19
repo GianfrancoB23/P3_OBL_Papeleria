@@ -37,7 +37,8 @@ namespace Papeleria.AccesoDatos.EF
 
         public Cliente GetById(int id)
         {
-            throw new NotImplementedException();
+            Cliente? cliente = _db.Clientes.FirstOrDefault(cli => cli.Id == id);
+            return cliente;
         }
 
         public Cliente GetCliente(int idCliente)

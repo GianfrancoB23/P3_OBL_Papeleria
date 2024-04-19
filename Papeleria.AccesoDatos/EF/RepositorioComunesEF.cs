@@ -1,5 +1,6 @@
 ﻿using Empresa.LogicaDeNegocio.Entidades;
 using Empresa.LogicaDeNegocio.Sistema;
+using Papeleria.LogicaNegocio.Excepciones.Pedido;
 using Papeleria.LogicaNegocio.InterfacesRepositorio;
 using System;
 using System.Collections.Generic;
@@ -14,8 +15,16 @@ namespace Papeleria.AccesoDatos.EF
         private PapeleriaContext _db = new PapeleriaContext();
         public void Add(Comunes obj)
         {
-            _db.Comuns.Add(obj);
-            _db.SaveChanges();
+            try
+            {
+                _db.Comuns.Add(obj);
+                _db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+
+                throw new PedidoNoValidoException(ex.Message);
+            }
         }
 
         public IEnumerable<Comunes> GetAll()

@@ -1,4 +1,5 @@
 ﻿using Empresa.LogicaDeNegocio.Entidades;
+using Empresa.LogicaDeNegocio.Sistema;
 using Papeleria.LogicaNegocio.Entidades;
 using Papeleria.LogicaNegocio.Excepciones.Cliente;
 using Papeleria.LogicaNegocio.InterfacesRepositorio;
@@ -34,7 +35,7 @@ namespace Papeleria.AccesoDatos.EF
 
         public IEnumerable<LineaPedido> GetAll()
         {
-            throw new NotImplementedException();
+            return _db.LineasPedidos.ToList();
         }
 
         public IEnumerable<LineaPedido> GetByArticulo(Articulo articulo)
@@ -44,7 +45,8 @@ namespace Papeleria.AccesoDatos.EF
 
         public LineaPedido GetById(int id)
         {
-            throw new NotImplementedException();
+            LineaPedido? lineaPedido= _db.LineasPedidos.FirstOrDefault(lnPd => lnPd.Id == id);
+            return lineaPedido;
         }
 
         public IEnumerable<LineaPedido> GetObjectsByID(List<int> ids)

@@ -11,7 +11,6 @@ namespace Papeleria.LogicaNegocio.InterfacesRepositorio
     public interface IRepositorioArticulo:IRepositorio<Articulo>
     {
         public IEnumerable<Articulo> GetArticulosOrdenadosAlfabeticamente();
-        public IEnumerable<Articulo> GetArticuloByCodigo(CodigoProveedorArticulos codigo);
-        public IEnumerable<Articulo> GetAllArticulos();
+        public Articulo GetArticuloByCodigo(CodigoProveedorArticulos codigo);
     }
 }

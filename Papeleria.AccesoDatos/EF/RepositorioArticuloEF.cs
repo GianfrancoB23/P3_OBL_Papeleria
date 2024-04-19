@@ -1,5 +1,7 @@
 ﻿using Empresa.LogicaDeNegocio.Entidades;
+using Papeleria.LogicaNegocio.Entidades;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Articulos;
+using Papeleria.LogicaNegocio.Excepciones.Articulo;
 using Papeleria.LogicaNegocio.InterfacesRepositorio;
 using System;
 using System.Collections.Generic;
@@ -14,22 +16,26 @@ namespace Papeleria.AccesoDatos.EF
         private PapeleriaContext _db = new PapeleriaContext();
         public void Add(Articulo obj)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _db.Articulos.Add(obj);
+                _db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new ArticuloNoValidoException(ex.Message);
+            }
         }
 
         public IEnumerable<Articulo> GetAll()
         {
-            throw new NotImplementedException();
+            return _db.Articulos.ToList();
         }
 
-        public IEnumerable<Articulo> GetAllArticulos()
+        public Articulo GetArticuloByCodigo(CodigoProveedorArticulos codigo)
         {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<Articulo> GetArticuloByCodigo(CodigoProveedorArticulos codigo)
-        {
-            throw new NotImplementedException();
+            Articulo? articulo = _db.Articulos.FirstOrDefault(art => art.CodigoProveedor.codigo == codigo.codigo);
+            return articulo;
         }
 
         public IEnumerable<Articulo> GetArticulosOrdenadosAlfabeticamente()
@@ -39,7 +45,8 @@ namespace Papeleria.AccesoDatos.EF
 
         public Articulo GetById(int id)
         {
-            throw new NotImplementedException();
+            Articulo? articulo = _db.Articulos.FirstOrDefault(art => art.Id == id);
+            return articulo;
         }
 
         public IEnumerable<Articulo> GetObjectsByID(List<int> ids)
