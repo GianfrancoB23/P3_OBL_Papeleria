@@ -28,7 +28,7 @@ namespace Empresa.LogicaDeNegocio.Entidades
             this.lineas = new List<LineaPedido>();
         }
 
-        public Pedido(Cliente cliente, int dias, IVA iva)
+        public Pedido(Cliente cliente, int dias, IVA iva, LineaPedido linea)
         {
             this.fechaPedido = DateTime.Now;
             this.cliente = cliente;
@@ -36,21 +36,37 @@ namespace Empresa.LogicaDeNegocio.Entidades
             this.recargo = CalcularRecargoYFijar();
             this.iva = iva;
             this.entregaPrometida = FijarEntregaPrometida(dias);
-            this.precioFinal = CalcularYFijarPrecio(iva);
+            this.precioFinal = CalcularYFijarPrecio(iva, linea);
             esValido();
         }
 
-        public abstract double CalcularYFijarPrecio(IVA iva);
+        public abstract double CalcularYFijarPrecio(IVA iva, LineaPedido linea);
         public abstract TimeSpan FijarEntregaPrometida(int dias);
         public abstract void CambiarEntregaPrometida(int dias);
 
         public abstract double CalcularRecargoYFijar();
 
-        public virtual void AgregarLineaPedido(Articulo articulo, int cantidad) {
-            try {
-                LineaPedido pedido = new LineaPedido(articulo,cantidad);
+        public virtual void AgregarLineaPedido(Articulo articulo, int cantidad)
+        {
+            try
+            {
+                LineaPedido pedido = new LineaPedido(articulo, cantidad);
                 lineas.Add(pedido);
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
+            {
+                throw new PedidoNoValidoException(ex.Message);
+            }
+        }
+
+
+        public virtual void AgregarLineaPedido(LineaPedido linea)
+        {
+            try
+            {
+                lineas.Add(linea);
+            }
+            catch (Exception ex)
             {
                 throw new PedidoNoValidoException(ex.Message);
             }

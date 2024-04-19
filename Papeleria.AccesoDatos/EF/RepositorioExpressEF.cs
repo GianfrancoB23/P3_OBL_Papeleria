@@ -25,6 +25,11 @@ namespace Papeleria.AccesoDatos.EF
             throw new NotImplementedException();
         }
 
+        public IEnumerable<Express> GetObjectsByID(List<int> ids)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Remove(int id)
         {
             throw new NotImplementedException();

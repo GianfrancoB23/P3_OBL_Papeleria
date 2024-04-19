@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Papeleria.LogicaAplicacion"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Papeleria.Comun", "Papeleria.Comun\Papeleria.Comun.csproj", "{3CA0077C-7F59-4E94-B434-2B7B95CC5D2C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Papeleria.MVC", "Papeleria.MVC\Papeleria.MVC.csproj", "{F26EA81B-6699-4965-A722-8F222CD6030F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{3CA0077C-7F59-4E94-B434-2B7B95CC5D2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CA0077C-7F59-4E94-B434-2B7B95CC5D2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CA0077C-7F59-4E94-B434-2B7B95CC5D2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F26EA81B-6699-4965-A722-8F222CD6030F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F26EA81B-6699-4965-A722-8F222CD6030F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F26EA81B-6699-4965-A722-8F222CD6030F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F26EA81B-6699-4965-A722-8F222CD6030F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

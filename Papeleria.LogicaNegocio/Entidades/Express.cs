@@ -1,4 +1,5 @@
 using Empresa.LogicaDeNegocio.Entidades;
+using Papeleria.LogicaNegocio.Entidades;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Pedidos;
 using Papeleria.LogicaNegocio.Excepciones.Pedido;
 using System;
@@ -13,28 +14,43 @@ namespace Empresa.LogicaDeNegocio.Entidades
             
         }
 
-        public Express(Cliente cliente, int dias, IVA iva, bool entregaEnElDia):base(cliente,dias,iva)
+        public Express(Cliente cliente, int dias, IVA iva, LineaPedido linea, bool entregaEnElDia):base(cliente,dias,iva,linea)
         {
-            EntregaEnElDia = entregaEnElDia;
+            this.EntregaEnElDia = entregaEnElDia;
+            this.fechaPedido = DateTime.Now;
+            this.cliente = cliente;
+            this.lineas = new List<LineaPedido>();
+            AgregarLineaPedido(linea);
+            this.recargo = CalcularRecargoYFijar();
+            this.iva = iva;
+            this.entregaPrometida = FijarEntregaPrometida(dias);
+            this.precioFinal = CalcularYFijarPrecio(iva, linea);
+            esValido();
         }
 
         public override double CalcularRecargoYFijar()
         {
-            double recargo = 0.10;
+            this.recargo = 0.10;
             if (EntregaEnElDia) {
-                recargo = 0.15;
+                this.recargo = 0.15;
             }
             return recargo;
         }
 
-        public override double CalcularYFijarPrecio(IVA iva)
+        public override double CalcularYFijarPrecio(IVA iva, LineaPedido linea)
         {
-            throw new NotImplementedException();
+            double precioInicial = linea.PrecioUnitarioVigente * linea.Cantidad;
+            this.precioFinal = (precioInicial * (1+iva.valor)) * (1 + recargo);
+            return precioFinal;
         }
 
         public override void AgregarLineaPedido(Articulo articulo, int cantidad)
         {
             base.AgregarLineaPedido(articulo, cantidad);
+        }
+        public override void AgregarLineaPedido(LineaPedido linea)
+        {
+            base.AgregarLineaPedido(linea);
         }
 
         public override bool Equals(object? obj)
@@ -58,7 +74,9 @@ namespace Empresa.LogicaDeNegocio.Entidades
             {
                 throw new PedidoNoValidoException("No puede haber dias negativos para la entrega");
             }
-            if (dias < 5 && !EntregaEnElDia || dias<5) {
+            //if (dias > 5 && !EntregaEnElDia || dias>5)
+            if (dias > 5)
+            {
                 throw new PedidoNoValidoException("La entrega prometida no puede ser superior a 5 dias en pedidos express");
             }
             if (EntregaEnElDia) { 

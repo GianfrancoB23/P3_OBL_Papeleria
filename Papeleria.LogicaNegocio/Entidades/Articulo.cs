@@ -16,7 +16,7 @@ namespace Empresa.LogicaDeNegocio.Entidades
 		public NombreArticulo NombreArticulo{ get; set; }
         public CodigoProveedorArticulos CodigoProveedor{ get; set; }
 		public DescripcionArticulo Descripcion{ get; set; }
-		public int PrecioVP{ get; set; }
+		public double PrecioVP{ get; set; }
 		public StockArticulo Stock{ get; set; }
 
         public Articulo(long codigoProveedor, string nombre, string descripcion, int precioVP, int stock)

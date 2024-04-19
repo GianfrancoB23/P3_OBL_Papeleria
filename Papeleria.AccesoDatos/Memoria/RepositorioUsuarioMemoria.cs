@@ -1,6 +1,7 @@
 ﻿using Empresa.LogicaDeNegocio.Entidades;
 using Empresa.LogicaDeNegocio.Sistema;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes;
+using Papeleria.LogicaNegocio.Entidades.ValueObjects.Usuario;
 using Papeleria.LogicaNegocio.Excepciones.Usuario;
 using Papeleria.LogicaNegocio.InterfacesRepositorio;
 using System;
@@ -32,32 +33,22 @@ namespace Papeleria.AccesoDatos.Memoria
             throw new NotImplementedException();
         }
 
-        public Cliente GetCliente(int idCliente)
+        public IEnumerable<Usuario> GetObjectsByID(List<int> ids)
         {
             throw new NotImplementedException();
         }
 
-        public Cliente GetClientePorDireccion(DireccionCliente direccionCliente)
+        public Usuario GetUsuario(int idUsuario)
         {
             throw new NotImplementedException();
         }
 
-        public Cliente GetClientePorRazon(RazonSocial rsocial)
+        public Usuario GetUsuarioPorEmail(EmailUsuario email)
         {
             throw new NotImplementedException();
         }
 
-        public Cliente GetClientePorRUT(RUT rut)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<Cliente> GetClientes()
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<Cliente> GetClientesPorPedido(int idPedido)
+        public IEnumerable<Usuario> GetUsuarios()
         {
             throw new NotImplementedException();
         }

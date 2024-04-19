@@ -16,12 +16,27 @@ namespace Papeleria.AccesoDatos.Memoria
             throw new NotImplementedException();
         }
 
+        public LineaPedido Get(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<LineaPedido> GetAll()
         {
             throw new NotImplementedException();
         }
 
+        public IEnumerable<LineaPedido> GetByArticulo(Articulo articulo)
+        {
+            throw new NotImplementedException();
+        }
+
         public LineaPedido GetById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<LineaPedido> GetObjectsByID(List<int> ids)
         {
             throw new NotImplementedException();
         }

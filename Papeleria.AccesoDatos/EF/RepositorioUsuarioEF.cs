@@ -1,6 +1,8 @@
 ﻿using Empresa.LogicaDeNegocio.Entidades;
 using Empresa.LogicaDeNegocio.Sistema;
+using Microsoft.EntityFrameworkCore;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes;
+using Papeleria.LogicaNegocio.Entidades.ValueObjects.Usuario;
 using Papeleria.LogicaNegocio.InterfacesRepositorio;
 using System;
 using System.Collections.Generic;
@@ -21,12 +23,13 @@ namespace Papeleria.AccesoDatos.EF
 
         public IEnumerable<Usuario> GetAll()
         {
-            throw new NotImplementedException();
+            return _db.Usuarios.ToList();
         }
 
         public Usuario GetById(int id)
         {
-            throw new NotImplementedException();
+            Usuario? usuario = _db.Usuarios.FirstOrDefault(usr => usr.Id == id);
+            return usuario;
         }
 
         public void Remove(int id)
@@ -43,33 +46,22 @@ namespace Papeleria.AccesoDatos.EF
         {
             throw new NotImplementedException();
         }
-
-        public IEnumerable<Cliente> GetClientesPorPedido(int idPedido)
+        public Usuario GetUsuarioPorEmail(EmailUsuario email)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Cliente> GetClientes()
+        public IEnumerable<Usuario> GetUsuarios()
         {
             throw new NotImplementedException();
         }
 
-        public Cliente GetClientePorRUT(RUT rut)
+        public Usuario GetUsuario(int idUsuario)
         {
             throw new NotImplementedException();
         }
 
-        public Cliente GetClientePorRazon(RazonSocial rsocial)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Cliente GetClientePorDireccion(DireccionCliente direccionCliente)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Cliente GetCliente(int idCliente)
+        public IEnumerable<Usuario> GetObjectsByID(List<int> ids)
         {
             throw new NotImplementedException();
         }

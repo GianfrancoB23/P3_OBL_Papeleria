@@ -1,6 +1,7 @@
 ﻿using Empresa.LogicaDeNegocio.Entidades;
 using Empresa.LogicaDeNegocio.Sistema;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes;
+using Papeleria.LogicaNegocio.Entidades.ValueObjects.Usuario;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +12,8 @@ namespace Papeleria.LogicaNegocio.InterfacesRepositorio
 {
     public interface IRepositorioUsuario:IRepositorio<Usuario>
     {
-        IEnumerable<Cliente> GetClientesPorPedido(int idPedido);
-        public IEnumerable<Cliente> GetClientes();
-        public Cliente GetClientePorRUT(RUT rut);
-        public Cliente GetClientePorRazon(RazonSocial rsocial);
-        public Cliente GetClientePorDireccion(DireccionCliente direccionCliente);
-        public Cliente GetCliente(int idCliente);
+        public Usuario GetUsuarioPorEmail(EmailUsuario email);
+        public IEnumerable<Usuario> GetUsuarios();
+        public Usuario GetUsuario(int idUsuario);
     }
 }

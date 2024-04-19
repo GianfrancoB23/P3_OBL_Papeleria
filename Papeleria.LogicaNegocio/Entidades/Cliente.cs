@@ -1,3 +1,4 @@
+using Empresa.LogicaDeNegocio.Sistema;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes;
 using Papeleria.LogicaNegocio.Excepciones.Cliente.ClienteValueObjects.Direccion;
 using Papeleria.LogicaNegocio.Excepciones.Cliente.ClienteValueObjects.RazonSocial;
@@ -18,12 +19,12 @@ namespace Empresa.LogicaDeNegocio.Entidades
 
 		public List<Pedido> pedidos{ get; set; }
 
-        public Cliente(long rut, string razonSocial, string calle, int numero, string ciudad, int distancia)
+        public Cliente(long rut, string razonSocial, string calle, int numero, string ciudad)
         {
             this.rut = new RUT(rut);
             this.razonSocial = new RazonSocial(razonSocial);
-            this.direccion = new DireccionCliente(calle, numero, ciudad, distancia);
-            this.pedidos = new List<Pedido>();
+            this.direccion = new DireccionCliente(calle, numero, ciudad);
+           this.pedidos = new List<Pedido>();
             esValido();
         }
 
@@ -46,6 +47,13 @@ namespace Empresa.LogicaDeNegocio.Entidades
             }
 
 
+        }
+        public void Update(Cliente obj)
+        {
+            esValido();
+            rut = obj.rut;
+            razonSocial = obj.razonSocial;
+            direccion = obj.direccion;
         }
 
         public bool Equals(Cliente? other)

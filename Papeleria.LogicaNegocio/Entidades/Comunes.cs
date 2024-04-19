@@ -1,3 +1,4 @@
+using Papeleria.LogicaNegocio.Entidades;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Pedidos;
 using System;
 
@@ -15,7 +16,7 @@ namespace Empresa.LogicaDeNegocio.Entidades
             throw new NotImplementedException();
         }
 
-        public override double CalcularYFijarPrecio(IVA iva)
+        public override double CalcularYFijarPrecio(IVA iva, LineaPedido linea)
         {
             throw new NotImplementedException();
         }

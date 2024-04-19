@@ -1,4 +1,6 @@
-﻿using Papeleria.LogicaNegocio.Entidades;
+﻿using Empresa.LogicaDeNegocio.Entidades;
+using Papeleria.LogicaNegocio.Entidades;
+using Papeleria.LogicaNegocio.Excepciones.Cliente;
 using Papeleria.LogicaNegocio.InterfacesRepositorio;
 using System;
 using System.Collections.Generic;
@@ -10,7 +12,22 @@ namespace Papeleria.AccesoDatos.EF
 {
     public class RepositorioLineaPedidoEF : IRepositorioLineaPedido
     {
+        private PapeleriaContext _db = new PapeleriaContext();
         public void Add(LineaPedido obj)
+        {
+            try
+            {
+                _db.LineasPedidos.Add(obj);
+                _db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+
+                throw new ClienteNoValidoException(ex.Message);
+            }
+        }
+
+        public LineaPedido Get(int id)
         {
             throw new NotImplementedException();
         }
@@ -20,7 +37,17 @@ namespace Papeleria.AccesoDatos.EF
             throw new NotImplementedException();
         }
 
+        public IEnumerable<LineaPedido> GetByArticulo(Articulo articulo)
+        {
+            throw new NotImplementedException();
+        }
+
         public LineaPedido GetById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<LineaPedido> GetObjectsByID(List<int> ids)
         {
             throw new NotImplementedException();
         }

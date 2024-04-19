@@ -17,13 +17,13 @@ namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes
 
         public int Distancia { get; init; }
 
-        public DireccionCliente(string calle, int numero, string ciudad, int distancia)
+        public DireccionCliente(string calle, int numero, string ciudad)
         {
-            if (Calle == null || Ciudad == null || numero == null) { throw new DireccionNuloException("Debe ingresar todos los campos para direccion"); }
+            if (calle == null || ciudad == null || numero == null) { throw new DireccionNuloException("Debe ingresar todos los campos para direccion"); }
             Calle = calle;
             Numero = numero;
             Ciudad = ciudad;
-            Distancia = CalcularYFijarDistancia(distancia);
+            Distancia = CalcularYFijarDistancia();
 
         }
         public DireccionCliente()
@@ -31,9 +31,9 @@ namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes
             
         }
 
-        public int CalcularYFijarDistancia(int distancia)
+        public int CalcularYFijarDistancia()
         {
-            return 0;
+            return 20;
         }
 
         public void esValido()

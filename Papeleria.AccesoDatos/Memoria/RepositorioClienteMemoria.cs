@@ -56,6 +56,11 @@ namespace Papeleria.AccesoDatos.Memoria
             throw new NotImplementedException();
         }
 
+        public IEnumerable<Cliente> GetObjectsByID(List<int> ids)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Remove(int id)
         {
             throw new NotImplementedException();

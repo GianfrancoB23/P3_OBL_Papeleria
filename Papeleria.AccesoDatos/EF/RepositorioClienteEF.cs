@@ -1,4 +1,7 @@
 ﻿using Empresa.LogicaDeNegocio.Entidades;
+using Empresa.LogicaDeNegocio.Sistema;
+using Microsoft.EntityFrameworkCore;
+using Papeleria.AccesoDatos.Excepciones;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes;
 using Papeleria.LogicaNegocio.Excepciones.Cliente;
 using Papeleria.LogicaNegocio.InterfacesRepositorio;
@@ -29,7 +32,7 @@ namespace Papeleria.AccesoDatos.EF
 
         public IEnumerable<Cliente> GetAll()
         {
-            throw new NotImplementedException();
+            return _db.Clientes.ToList();
         }
 
         public Cliente GetById(int id)
@@ -67,6 +70,11 @@ namespace Papeleria.AccesoDatos.EF
             throw new NotImplementedException();
         }
 
+        public IEnumerable<Cliente> GetObjectsByID(List<int> ids)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Remove(int id)
         {
             throw new NotImplementedException();
@@ -79,7 +87,23 @@ namespace Papeleria.AccesoDatos.EF
 
         public void Update(int id, Cliente obj)
         {
-            throw new NotImplementedException();
+            if (id == null || obj == null)
+            {
+                throw new ArgumentNullRepositorioException("No se recibió ningun usuario.");
+            }
+
+            Cliente cliente = GetById(id);
+
+            try
+            {
+                cliente.Update(obj);
+                _db.Clientes.Update(cliente);
+                _db.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                throw new InfraException("Hubo un problema, reintente.");
+            }
         }
     }
 }

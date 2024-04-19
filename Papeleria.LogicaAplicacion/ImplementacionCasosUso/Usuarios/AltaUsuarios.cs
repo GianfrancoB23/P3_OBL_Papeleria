@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Empresa.LogicaDeNegocio.Sistema;
+using Papeleria.LogicaAplicacion.Interaces;
+using Papeleria.LogicaNegocio.InterfacesRepositorio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +9,18 @@ using System.Threading.Tasks;
 
 namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Usuarios
 {
-    internal class AltaUsuarios
+    public class AltaUsuarios : IAlta<Usuario>
     {
+        private IRepositorioUsuario _repo;
+
+        public AltaUsuarios(IRepositorioUsuario repo)
+        {
+            _repo = repo;
+        }
+
+        public void Crear(Usuario obj)
+        {
+            _repo.Add(obj);
+        }
     }
 }

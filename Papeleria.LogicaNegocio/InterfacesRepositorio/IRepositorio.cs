@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace Papeleria.LogicaNegocio.InterfacesRepositorio
 {
-    public interface IRepositorio<T> where T : class
+    public interface IRepositorio<T>
     {
-        T GetById(int id);
-        void Add(T obj);
-        void Update(int id, T obj);
-        void Remove(int id);
-        void Remove(T obj);
-        IEnumerable<T> GetAll();
+        public T GetById(int id);
+        public void Add(T obj);
+        public void Update(int id, T obj);
+        public void Remove(int id);
+        public void Remove(T obj);
+        public IEnumerable<T> GetAll();
+        public IEnumerable<T> GetObjectsByID(List<int> ids);
     }
 }

@@ -56,6 +56,51 @@ namespace Papeleria.AccesoDatos.Memoria
             throw new NotImplementedException();
         }
 
+        public IEnumerable<Pedido> GetObjectsByID(List<int> ids)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Pedido GetPedido(Pedido pedido)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Pedido GetPedidoById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Pedido> GetPedidos()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Pedido> GetPedidosPorCliente(Cliente cliente)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Pedido> GetPedidosPorDireccion(DireccionCliente direccionPedido)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Pedido> GetPedidosPorRazon(RazonSocial rsocial)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Pedido> GetPedidosPorRUT(RUT rut)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Pedido> GetPedidosQueSuperenMonto(double monto)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Remove(int id)
         {
             throw new NotImplementedException();

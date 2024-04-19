@@ -1,4 +1,5 @@
 ﻿using Empresa.LogicaDeNegocio.Entidades;
+using Microsoft.EntityFrameworkCore;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes;
 using Papeleria.LogicaNegocio.InterfacesRepositorio;
 using System;
@@ -11,14 +12,16 @@ namespace Papeleria.AccesoDatos.EF
 {
     public class RepositorioPedidoEF : IRepositorioPedido
     {
+        private PapeleriaContext _db = new PapeleriaContext();
         public void Add(Pedido obj)
         {
-            throw new NotImplementedException();
+            _db.Pedidos.Add(obj);
+            _db.SaveChanges();
         }
 
         public IEnumerable<Pedido> GetAll()
         {
-            throw new NotImplementedException();
+            return _db.Pedidos.ToList();
         }
 
         public Pedido GetById(int id)
@@ -26,32 +29,47 @@ namespace Papeleria.AccesoDatos.EF
             throw new NotImplementedException();
         }
 
-        public Cliente GetCliente(int idCliente)
+        public IEnumerable<Pedido> GetObjectsByID(List<int> ids)
         {
             throw new NotImplementedException();
         }
 
-        public Cliente GetClientePorDireccion(DireccionCliente direccionCliente)
+        public Pedido GetPedido(Pedido pedido)
         {
             throw new NotImplementedException();
         }
 
-        public Cliente GetClientePorRazon(RazonSocial rsocial)
+        public Pedido GetPedidoById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Cliente GetClientePorRUT(RUT rut)
+        public IEnumerable<Pedido> GetPedidos()
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Cliente> GetClientes()
+        public IEnumerable<Pedido> GetPedidosPorCliente(Cliente cliente)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Cliente> GetClientesPorPedido(int idPedido)
+        public IEnumerable<Pedido> GetPedidosPorDireccion(DireccionCliente direccionPedido)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Pedido> GetPedidosPorRazon(RazonSocial rsocial)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Pedido> GetPedidosPorRUT(RUT rut)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Pedido> GetPedidosQueSuperenMonto(double monto)
         {
             throw new NotImplementedException();
         }
