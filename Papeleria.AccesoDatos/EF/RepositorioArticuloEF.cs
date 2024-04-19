@@ -11,6 +11,7 @@ namespace Papeleria.AccesoDatos.EF
 {
     public class RepositorioArticuloEF : IRepositorioArticulo
     {
+        private PapeleriaContext _db = new PapeleriaContext();
         public void Add(Articulo obj)
         {
             throw new NotImplementedException();

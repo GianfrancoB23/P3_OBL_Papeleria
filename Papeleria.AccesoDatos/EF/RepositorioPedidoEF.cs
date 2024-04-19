@@ -26,7 +26,8 @@ namespace Papeleria.AccesoDatos.EF
 
         public Pedido GetById(int id)
         {
-            throw new NotImplementedException();
+            Pedido? pedido= _db.Pedidos.FirstOrDefault(pedido => pedido.Id == id);
+            return pedido;
         }
 
         public IEnumerable<Pedido> GetObjectsByID(List<int> ids)
@@ -71,7 +72,9 @@ namespace Papeleria.AccesoDatos.EF
 
         public IEnumerable<Pedido> GetPedidosQueSuperenMonto(double monto)
         {
-            throw new NotImplementedException();
+            List<Pedido> lista = new List<Pedido>();
+            Pedido? pedido = _db.Pedidos.FirstOrDefault(pedido => pedido.precioFinal > monto);
+            return lista;
         }
 
         public void Remove(int id)

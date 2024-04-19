@@ -1,4 +1,5 @@
 ﻿using Empresa.LogicaDeNegocio.Entidades;
+using Empresa.LogicaDeNegocio.Sistema;
 using Papeleria.LogicaNegocio.InterfacesRepositorio;
 using System;
 using System.Collections.Generic;
@@ -10,19 +11,22 @@ namespace Papeleria.AccesoDatos.EF
 {
     public class RepositorioComunesEF : IRepositorioComun
     {
+        private PapeleriaContext _db = new PapeleriaContext();
         public void Add(Comunes obj)
         {
-            throw new NotImplementedException();
+            _db.Comuns.Add(obj);
+            _db.SaveChanges();
         }
 
         public IEnumerable<Comunes> GetAll()
         {
-            throw new NotImplementedException();
+            return _db.Comuns.ToList();
         }
 
         public Comunes GetById(int id)
         {
-            throw new NotImplementedException();
+            Comunes? comun = _db.Comuns.FirstOrDefault(pedido => pedido.Id == id);
+            return comun;
         }
 
         public IEnumerable<Comunes> GetObjectsByID(List<int> ids)

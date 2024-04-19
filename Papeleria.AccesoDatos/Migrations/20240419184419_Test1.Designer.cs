@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Papeleria.AccesoDatos.EF;
 
@@ -12,9 +13,11 @@ using Papeleria.AccesoDatos.EF;
 namespace Papeleria.AccesoDatos.Migrations
 {
     [DbContext(typeof(PapeleriaContext))]
-    partial class PapeleriaContextModelSnapshot : ModelSnapshot
+    [Migration("20240419184419_Test1")]
+    partial class Test1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -10,19 +10,22 @@ namespace Papeleria.AccesoDatos.EF
 {
     public class RepositorioExpressEF : IRepositorioExpress
     {
+        private PapeleriaContext _db = new PapeleriaContext();
         public void Add(Express obj)
         {
-            throw new NotImplementedException();
+            _db.Expresses.Add(obj);
+            _db.SaveChanges();
         }
 
         public IEnumerable<Express> GetAll()
         {
-            throw new NotImplementedException();
+            return _db.Expresses.ToList();
         }
 
         public Express GetById(int id)
         {
-            throw new NotImplementedException();
+            Express? express = _db.Expresses.FirstOrDefault(pedido => pedido.Id == id);
+            return express;
         }
 
         public IEnumerable<Express> GetObjectsByID(List<int> ids)
