@@ -71,9 +71,9 @@ namespace Papeleria.AccesoDatos.EF
 
         public IEnumerable<Pedido> GetPedidosQueSuperenMonto(double monto)
         {
-            List<Pedido> lista = new List<Pedido>();
-            Pedido? pedido = _db.Pedidos.FirstOrDefault(pedido => pedido.precioFinal > monto);
-            return lista;
+
+            IEnumerable<Pedido> pedidos = _db.Pedidos.Where(pedido => pedido.precioFinal >= monto);
+            return pedidos;
         }
 
         public void Remove(int id)

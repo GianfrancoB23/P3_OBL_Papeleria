@@ -33,6 +33,7 @@ namespace Empresa.LogicaDeNegocio.Entidades
             this.fechaPedido = DateTime.Now;
             this.cliente = cliente;
             this.lineas = new List<LineaPedido>();
+            lineas.Add(linea);
             this.recargo = CalcularRecargoYFijar();
             this.iva = iva;
             this.entregaPrometida = FijarEntregaPrometida(dias);

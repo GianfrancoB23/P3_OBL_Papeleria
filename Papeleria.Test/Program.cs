@@ -22,10 +22,8 @@ namespace Papeleria.Test
 
             Articulo a = new Articulo(1234567898765, "papa", "ssssssssss", 1500, 20);
 
-            IVA iva = new IVA(22);
             Cliente c = new Cliente(123456789101, "Pepsi Sociedad Anonima", "Avenida Millan", 5285, "Montevideo");
-            LineaPedido p = new LineaPedido(a, 10);
-            Express pedido = new Express(c, 3, iva, p, true);
+            Express pedido = new Express(c, 3, new IVA(22), new LineaPedido(a, 10), true);
 
             Console.WriteLine("Email");
             string email = Console.ReadLine();
@@ -39,7 +37,6 @@ namespace Papeleria.Test
 
             AgregarUsuario(usuario);
             AgregarCliente(c);
-            AgregarLineaPedido(p);
             AgregarPedido((Pedido) pedido);
         }
         static void AgregarUsuario(Usuario usuario)
