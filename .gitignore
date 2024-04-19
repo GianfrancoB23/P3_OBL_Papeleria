@@ -409,3 +409,6 @@ FodyWeavers.xsd
 *.editorconfig
 **/obj/
 **/bin/
+*.v2
+.vs/Papeleria/v17/.suo
+/.vs
