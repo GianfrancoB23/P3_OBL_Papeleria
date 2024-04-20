@@ -26,11 +26,6 @@ namespace Papeleria.AccesoDatos.Memoria
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Articulo> GetArticuloByCodigo(CodigoProveedorArticulos codigo)
-        {
-            throw new NotImplementedException();
-        }
-
         public IEnumerable<Articulo> GetArticulosOrdenadosAlfabeticamente()
         {
             throw new NotImplementedException();
@@ -57,6 +52,11 @@ namespace Papeleria.AccesoDatos.Memoria
         }
 
         public void Update(int id, Articulo obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Articulo GetArticuloByCodigo(CodigoProveedorArticulos codigo)
         {
             throw new NotImplementedException();
         }
