@@ -1,6 +1,7 @@
 ﻿using Empresa.LogicaDeNegocio.Sistema;
 using Papeleria.AccesoDatos.EF;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuario;
+using Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos;
 using Papeleria.LogicaAplicacion.Interaces;
 using Papeleria.LogicaAplicacion.InterfacesCasosUso.Usuarios;
 using Papeleria.LogicaNegocio.Excepciones.Usuario;
@@ -26,10 +27,10 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Usuarios
         public void Ejecutar(UsuarioAltaDto dto)
         {
             if (dto == null)
-                throw new UsuarioDuplicadoExcepcion("Duplicado");
-            else
-                AutoResetEvent autor AutorMappers.FromDto(dto);
-                _repoUsuarios.Add(autor);
+                throw new UsuarioNuloExcepcion("Nulo");
+
+            Usuario usuario = UsuariosMappers.FromDto(dto);
+            _repoUsuarios.Add(usuario);
         }
     }
 }

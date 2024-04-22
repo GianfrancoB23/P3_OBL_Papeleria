@@ -15,12 +15,12 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
 {
     public class UsuariosMappers
     {
-        public Usuario FromDto(UsuarioAltaDto dto) {
-            if (dto == null) throw new UsuarioNuloExcepcion("Los datos del DTO son nulos");
+        public static Usuario FromDto(UsuarioAltaDto dto) {
+            if (dto == null) throw new UsuarioNuloExcepcion(nameof(dto));
             return new Usuario(dto.Email,dto.Nombre,dto.Apellido,dto.Contrasenia);
         }
 
-        public UsuarioListadosDto ToDto(Usuario usuario) {
+        public static UsuarioListadosDto ToDto(Usuario usuario) {
             if (usuario == null) throw new UsuarioNuloExcepcion();
             return new UsuarioListadosDto()
             {
@@ -30,6 +30,13 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
                 Apellido = usuario.NombreCompleto.Apellido,
                 Contrasenia = usuario.Contrasenia.Valor
             };
+        }
+
+        public static IEnumerable<UsuarioListadosDto> FromLista(IEnumerable<Usuario> usuarios) {
+            if (usuarios == null) { 
+                throw new UsuarioNuloExcepcion("La lista de usuarios no puede ser nula");
+            }
+            return usuarios.Select(usuario => ToDto(usuario));
         }
         //https://vimeopro.com/universidadortfi/fi-5212-programacion-3-cabella-69235-p3-m3a-remoto/video/929607409
         //1:36:07

@@ -15,10 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Papeleria.AccesoDatos\Papeleria.AccesoDatos.csproj" />
-    <ProjectReference Include="..\Papeleria.Comun\Papeleria.Comun.csproj" />
     <ProjectReference Include="..\Papeleria.LogicaAplicacion\Papeleria.LogicaAplicacion.csproj" />
-    <ProjectReference Include="..\Papeleria.LogicaNegocio\Papeleria.LogicaNegocio.csproj" />
   </ItemGroup>
 
 </Project>
