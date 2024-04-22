@@ -412,3 +412,8 @@ FodyWeavers.xsd
 *.v2
 .vs/Papeleria/v17/.suo
 /.vs
+*.v2
+/.vs
+/.vs/ProjectEvaluation
+/.vs/Papeleria/DesignTimeBuild
+/.vs/Papeleria/v17
