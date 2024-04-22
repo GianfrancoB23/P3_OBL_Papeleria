@@ -1,6 +1,8 @@
 ﻿using Empresa.LogicaDeNegocio.Sistema;
 using Papeleria.AccesoDatos.EF;
+using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuario;
 using Papeleria.LogicaAplicacion.Interaces;
+using Papeleria.LogicaAplicacion.InterfacesCasosUso.Usuarios;
 using Papeleria.LogicaNegocio.Excepciones.Usuario;
 using Papeleria.LogicaNegocio.InterfacesRepositorio;
 using System;
@@ -11,17 +13,23 @@ using System.Threading.Tasks;
 
 namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Usuarios
 {
-    public class AltaUsuarios : IAlta<Usuario>
+    public class AltaUsuarios : IAltaUsuario
     {
-        private IRepositorioUsuario _repo = new RepositorioUsuarioEF();
+        private IRepositorioUsuario _repoUsuarios;
         private IListar<Usuario> _buscarUsuario = new BuscarUsuario();
 
-        public void Crear(Usuario obj)
+        public AltaUsuarios(IRepositorioUsuario repo)
         {
-            if (_buscarUsuario.ListarUno(obj.Id) == null)
-                _repo.Add(obj);
-            else
+            _repoUsuarios = repo;
+        }
+
+        public void Ejecutar(UsuarioAltaDto dto)
+        {
+            if (dto == null)
                 throw new UsuarioDuplicadoExcepcion("Duplicado");
+            else
+                AutoResetEvent autor AutorMappers.FromDto(dto);
+                _repoUsuarios.Add(autor);
         }
     }
 }
