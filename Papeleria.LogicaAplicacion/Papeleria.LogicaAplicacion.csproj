@@ -15,8 +15,8 @@
     <Folder Include="InterfacesCasosUso\Comun\" />
     <Folder Include="InterfacesCasosUso\Express\" />
     <Folder Include="InterfacesCasosUso\LineaPedido\" />
-    <Folder Include="InterfacesCasosUso\Usuario\" />
     <Folder Include="InterfacesCasosUso\Pedido\" />
+    <Folder Include="InterfacesCasosUso\Usuario\" />
   </ItemGroup>
 
   <ItemGroup>

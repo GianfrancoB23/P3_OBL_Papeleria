@@ -46,17 +46,24 @@ namespace Papeleria.AccesoDatos.EF
 
         public Pedido GetPedido(Pedido pedido)
         {
-            throw new NotImplementedException();
+            Pedido pedidoEncontrado = _db.Pedidos.FirstOrDefault(p => p.Id == pedido.Id);
+            if (pedidoEncontrado != null)
+            {
+                return pedidoEncontrado;
+            }
+            return null;
         }
 
         public IEnumerable<Pedido> GetPedidosPorCliente(Cliente cliente)
         {
-            throw new NotImplementedException();
+            List<Pedido> pedidosCliente = _db.Pedidos.Where(p => p.cliente.Id == cliente.Id).ToList();
+            return pedidosCliente;
         }
 
         public IEnumerable<Pedido> GetPedidosPorDireccion(DireccionCliente direccionPedido)
         {
-            throw new NotImplementedException();
+            var pedidosPorDireccion = _db.Pedidos.Where(p => p.cliente.direccion == direccionPedido).ToList();
+            return pedidosPorDireccion;
         }
 
         public IEnumerable<Pedido> GetPedidosPorRazon(RazonSocial rsocial)

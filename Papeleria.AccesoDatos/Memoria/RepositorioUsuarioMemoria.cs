@@ -53,6 +53,11 @@ namespace Papeleria.AccesoDatos.Memoria
             throw new NotImplementedException();
         }
 
+        public void ModificarContrasenia(int id, ContraseniaUsuario contraseniaNueva)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Remove(int id)
         {
             throw new NotImplementedException();
