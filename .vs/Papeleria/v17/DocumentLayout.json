@@ -1,8 +1,54 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\",
+  "WorkspaceRootPath": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EDFEE3E7-7AB1-4081-B5EA-6248C9BAF702}|Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj|d:\\ort\\ati\\p3\\p3_obl_papeleria\\papeleria.logicaaplicacion\\datatransferobjects\\mapeosdatos\\usuariosmappers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDFEE3E7-7AB1-4081-B5EA-6248C9BAF702}|Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj|solutionrelative:papeleria.logicaaplicacion\\datatransferobjects\\mapeosdatos\\usuariosmappers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFEE3E7-7AB1-4081-B5EA-6248C9BAF702}|Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj|d:\\ort\\ati\\p3\\p3_obl_papeleria\\papeleria.logicaaplicacion\\datatransferobjects\\dtos\\usuarios\\usuarioaltadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDFEE3E7-7AB1-4081-B5EA-6248C9BAF702}|Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj|solutionrelative:papeleria.logicaaplicacion\\datatransferobjects\\dtos\\usuarios\\usuarioaltadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFEE3E7-7AB1-4081-B5EA-6248C9BAF702}|Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj|d:\\ort\\ati\\p3\\p3_obl_papeleria\\papeleria.logicaaplicacion\\datatransferobjects\\dtos\\usuarios\\usuariolistadosdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDFEE3E7-7AB1-4081-B5EA-6248C9BAF702}|Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj|solutionrelative:papeleria.logicaaplicacion\\datatransferobjects\\dtos\\usuarios\\usuariolistadosdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|d:\\ort\\ati\\p3\\p3_obl_papeleria\\papeleria.logicanegocio\\entidades\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{671D4EF8-60B2-4E1D-A64C-3541C73EF27F}|Papeleria.LogicaNegocio\\Papeleria.LogicaNegocio.csproj|solutionrelative:papeleria.logicanegocio\\entidades\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFEE3E7-7AB1-4081-B5EA-6248C9BAF702}|Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj|d:\\ort\\ati\\p3\\p3_obl_papeleria\\papeleria.logicaaplicacion\\implementacioncasosuso\\usuarios\\altausuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDFEE3E7-7AB1-4081-B5EA-6248C9BAF702}|Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj|solutionrelative:papeleria.logicaaplicacion\\implementacioncasosuso\\usuarios\\altausuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFEE3E7-7AB1-4081-B5EA-6248C9BAF702}|Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj|d:\\ort\\ati\\p3\\p3_obl_papeleria\\papeleria.logicaaplicacion\\interfacescasosuso\\usuarios\\ialtausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDFEE3E7-7AB1-4081-B5EA-6248C9BAF702}|Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj|solutionrelative:papeleria.logicaaplicacion\\interfacescasosuso\\usuarios\\ialtausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFEE3E7-7AB1-4081-B5EA-6248C9BAF702}|Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj|d:\\ort\\ati\\p3\\p3_obl_papeleria\\papeleria.logicaaplicacion\\interfacescasodeusogeneral\\ialta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDFEE3E7-7AB1-4081-B5EA-6248C9BAF702}|Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj|solutionrelative:papeleria.logicaaplicacion\\interfacescasodeusogeneral\\ialta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA76E32-13B6-4BE9-BE7B-9CBA4979719B}|Papeleria.AccesoDatos\\Papeleria.AccesoDatos.csproj|d:\\ort\\ati\\p3\\p3_obl_papeleria\\papeleria.accesodatos\\ef\\repositoriousuarioef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EA76E32-13B6-4BE9-BE7B-9CBA4979719B}|Papeleria.AccesoDatos\\Papeleria.AccesoDatos.csproj|solutionrelative:papeleria.accesodatos\\ef\\repositoriousuarioef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFEE3E7-7AB1-4081-B5EA-6248C9BAF702}|Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj|d:\\ort\\ati\\p3\\p3_obl_papeleria\\papeleria.logicaaplicacion\\implementacioncasosuso\\usuarios\\buscarusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDFEE3E7-7AB1-4081-B5EA-6248C9BAF702}|Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj|solutionrelative:papeleria.logicaaplicacion\\implementacioncasosuso\\usuarios\\buscarusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFEE3E7-7AB1-4081-B5EA-6248C9BAF702}|Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj|d:\\ort\\ati\\p3\\p3_obl_papeleria\\papeleria.logicaaplicacion\\interfacescasodeusogeneral\\ilistar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDFEE3E7-7AB1-4081-B5EA-6248C9BAF702}|Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj|solutionrelative:papeleria.logicaaplicacion\\interfacescasodeusogeneral\\ilistar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFEE3E7-7AB1-4081-B5EA-6248C9BAF702}|Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj|d:\\ort\\ati\\p3\\p3_obl_papeleria\\papeleria.logicaaplicacion\\interfacescasodeusogeneral\\iupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDFEE3E7-7AB1-4081-B5EA-6248C9BAF702}|Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj|solutionrelative:papeleria.logicaaplicacion\\interfacescasodeusogeneral\\iupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDFEE3E7-7AB1-4081-B5EA-6248C9BAF702}|Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj|d:\\ort\\ati\\p3\\p3_obl_papeleria\\papeleria.logicaaplicacion\\interfacescasodeusogeneral\\iremove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDFEE3E7-7AB1-4081-B5EA-6248C9BAF702}|Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj|solutionrelative:papeleria.logicaaplicacion\\interfacescasodeusogeneral\\iremove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -12,128 +58,59 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Pedido.cs",
-              "DocumentMoniker": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\Papeleria.LogicaNegocio\\Entidades\\Pedido.cs",
-              "RelativeDocumentMoniker": "Papeleria.LogicaNegocio\\Entidades\\Pedido.cs",
-              "ToolTip": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\Papeleria.LogicaNegocio\\Entidades\\Pedido.cs",
-              "RelativeToolTip": "Papeleria.LogicaNegocio\\Entidades\\Pedido.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAYwCUAAAAbAAAA",
+              "DocumentIndex": 2,
+              "Title": "UsuarioListadosDto.cs",
+              "DocumentMoniker": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaAplicacion\\DataTransferObjects\\Dtos\\Usuarios\\UsuarioListadosDto.cs",
+              "RelativeDocumentMoniker": "Papeleria.LogicaAplicacion\\DataTransferObjects\\Dtos\\Usuarios\\UsuarioListadosDto.cs",
+              "ToolTip": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaAplicacion\\DataTransferObjects\\Dtos\\Usuarios\\UsuarioListadosDto.cs",
+              "RelativeToolTip": "Papeleria.LogicaAplicacion\\DataTransferObjects\\Dtos\\Usuarios\\UsuarioListadosDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T19:47:17.075Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RepositorioUsuarioEF.cs",
-              "DocumentMoniker": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\Papeleria.AccesoDatos\\EF\\RepositorioUsuarioEF.cs",
-              "RelativeDocumentMoniker": "Papeleria.AccesoDatos\\EF\\RepositorioUsuarioEF.cs",
-              "ToolTip": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\Papeleria.AccesoDatos\\EF\\RepositorioUsuarioEF.cs",
-              "RelativeToolTip": "Papeleria.AccesoDatos\\EF\\RepositorioUsuarioEF.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAxwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T19:19:32.436Z",
+              "WhenOpened": "2024-04-22T14:38:47.819Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "RepositorioClienteEF.cs",
-              "DocumentMoniker": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\Papeleria.AccesoDatos\\EF\\RepositorioClienteEF.cs",
-              "RelativeDocumentMoniker": "Papeleria.AccesoDatos\\EF\\RepositorioClienteEF.cs",
-              "ToolTip": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\Papeleria.AccesoDatos\\EF\\RepositorioClienteEF.cs",
-              "RelativeToolTip": "Papeleria.AccesoDatos\\EF\\RepositorioClienteEF.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaNegocio\\Entidades\\Usuario.cs",
+              "RelativeDocumentMoniker": "Papeleria.LogicaNegocio\\Entidades\\Usuario.cs",
+              "ToolTip": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaNegocio\\Entidades\\Usuario.cs",
+              "RelativeToolTip": "Papeleria.LogicaNegocio\\Entidades\\Usuario.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T19:19:24.619Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RepositorioComunesEF.cs",
-              "DocumentMoniker": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\Papeleria.AccesoDatos\\EF\\RepositorioComunesEF.cs",
-              "RelativeDocumentMoniker": "Papeleria.AccesoDatos\\EF\\RepositorioComunesEF.cs",
-              "ToolTip": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\Papeleria.AccesoDatos\\EF\\RepositorioComunesEF.cs",
-              "RelativeToolTip": "Papeleria.AccesoDatos\\EF\\RepositorioComunesEF.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T19:19:24.198Z",
+              "WhenOpened": "2024-04-22T14:37:55.889Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RepositorioPedidoEF.cs",
-              "DocumentMoniker": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\Papeleria.AccesoDatos\\EF\\RepositorioPedidoEF.cs",
-              "RelativeDocumentMoniker": "Papeleria.AccesoDatos\\EF\\RepositorioPedidoEF.cs",
-              "ToolTip": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\Papeleria.AccesoDatos\\EF\\RepositorioPedidoEF.cs",
-              "RelativeToolTip": "Papeleria.AccesoDatos\\EF\\RepositorioPedidoEF.cs",
-              "ViewState": "AQIAAD8AAAAAAAAAAAAMwE8AAAAiAAAA",
+              "Title": "UsuariosMappers.cs",
+              "DocumentMoniker": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaAplicacion\\DataTransferObjects\\MapeosDatos\\UsuariosMappers.cs",
+              "RelativeDocumentMoniker": "Papeleria.LogicaAplicacion\\DataTransferObjects\\MapeosDatos\\UsuariosMappers.cs",
+              "ToolTip": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaAplicacion\\DataTransferObjects\\MapeosDatos\\UsuariosMappers.cs",
+              "RelativeToolTip": "Papeleria.LogicaAplicacion\\DataTransferObjects\\MapeosDatos\\UsuariosMappers.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACIAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T19:18:16.207Z",
+              "WhenOpened": "2024-04-22T14:37:01.801Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\Papeleria.Test\\Program.cs",
-              "RelativeDocumentMoniker": "Papeleria.Test\\Program.cs",
-              "ToolTip": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\Papeleria.Test\\Program.cs",
-              "RelativeToolTip": "Papeleria.Test\\Program.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAQwCcAAAAhAAAA",
+              "DocumentIndex": 1,
+              "Title": "UsuarioAltaDto.cs",
+              "DocumentMoniker": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaAplicacion\\DataTransferObjects\\Dtos\\Usuarios\\UsuarioAltaDto.cs",
+              "RelativeDocumentMoniker": "Papeleria.LogicaAplicacion\\DataTransferObjects\\Dtos\\Usuarios\\UsuarioAltaDto.cs",
+              "ToolTip": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaAplicacion\\DataTransferObjects\\Dtos\\Usuarios\\UsuarioAltaDto.cs",
+              "RelativeToolTip": "Papeleria.LogicaAplicacion\\DataTransferObjects\\Dtos\\Usuarios\\UsuarioAltaDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T19:13:59.004Z",
+              "WhenOpened": "2024-04-22T14:32:30.26Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "RepositorioExpressEF.cs",
-              "DocumentMoniker": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\Papeleria.AccesoDatos\\EF\\RepositorioExpressEF.cs",
-              "RelativeDocumentMoniker": "Papeleria.AccesoDatos\\EF\\RepositorioExpressEF.cs",
-              "ToolTip": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\Papeleria.AccesoDatos\\EF\\RepositorioExpressEF.cs",
-              "RelativeToolTip": "Papeleria.AccesoDatos\\EF\\RepositorioExpressEF.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAcwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T19:18:11.334Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Express.cs",
-              "DocumentMoniker": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\Papeleria.LogicaNegocio\\Entidades\\Express.cs",
-              "RelativeDocumentMoniker": "Papeleria.LogicaNegocio\\Entidades\\Express.cs",
-              "ToolTip": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\Papeleria.LogicaNegocio\\Entidades\\Express.cs",
-              "RelativeToolTip": "Papeleria.LogicaNegocio\\Entidades\\Express.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T19:18:07.686Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\Papeleria.MVC\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Papeleria.MVC\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\Papeleria.MVC\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Papeleria.MVC\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T19:17:28.237Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Bookmark",
@@ -144,43 +121,107 @@
               "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Pedido.cs",
-              "DocumentMoniker": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\Entidades\\Pedido.cs",
-              "RelativeDocumentMoniker": "Papeleria.LogicaNegocio\\Entidades\\Pedido.cs",
-              "ToolTip": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.LogicaNegocio\\Entidades\\Pedido.cs",
-              "RelativeToolTip": "Papeleria.LogicaNegocio\\Entidades\\Pedido.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAQAAAA",
+              "DocumentIndex": 5,
+              "Title": "IAltaUsuario.cs",
+              "DocumentMoniker": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaAplicacion\\InterfacesCasosUso\\Usuarios\\IAltaUsuario.cs",
+              "RelativeDocumentMoniker": "Papeleria.LogicaAplicacion\\InterfacesCasosUso\\Usuarios\\IAltaUsuario.cs",
+              "ToolTip": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaAplicacion\\InterfacesCasosUso\\Usuarios\\IAltaUsuario.cs",
+              "RelativeToolTip": "Papeleria.LogicaAplicacion\\InterfacesCasosUso\\Usuarios\\IAltaUsuario.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T20:37:32.848Z",
+              "WhenOpened": "2024-04-22T14:31:00.57Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RepositorioPedidoEF.cs",
-              "DocumentMoniker": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.AccesoDatos\\EF\\RepositorioPedidoEF.cs",
-              "RelativeDocumentMoniker": "Papeleria.AccesoDatos\\EF\\RepositorioPedidoEF.cs",
-              "ToolTip": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.AccesoDatos\\EF\\RepositorioPedidoEF.cs",
-              "RelativeToolTip": "Papeleria.AccesoDatos\\EF\\RepositorioPedidoEF.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAgwBgAAAANAAAA",
+              "DocumentIndex": 8,
+              "Title": "BuscarUsuario.cs",
+              "DocumentMoniker": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaAplicacion\\ImplementacionCasosUso\\Usuarios\\BuscarUsuario.cs",
+              "RelativeDocumentMoniker": "Papeleria.LogicaAplicacion\\ImplementacionCasosUso\\Usuarios\\BuscarUsuario.cs",
+              "ToolTip": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaAplicacion\\ImplementacionCasosUso\\Usuarios\\BuscarUsuario.cs",
+              "RelativeToolTip": "Papeleria.LogicaAplicacion\\ImplementacionCasosUso\\Usuarios\\BuscarUsuario.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T19:46:02.903Z",
+              "WhenOpened": "2024-04-22T03:26:26.108Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IUpdate.cs",
+              "DocumentMoniker": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaAplicacion\\InterfacesCasoDeUsoGeneral\\IUpdate.cs",
+              "RelativeDocumentMoniker": "Papeleria.LogicaAplicacion\\InterfacesCasoDeUsoGeneral\\IUpdate.cs",
+              "ToolTip": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaAplicacion\\InterfacesCasoDeUsoGeneral\\IUpdate.cs",
+              "RelativeToolTip": "Papeleria.LogicaAplicacion\\InterfacesCasoDeUsoGeneral\\IUpdate.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T02:59:20.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IListar.cs",
+              "DocumentMoniker": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaAplicacion\\InterfacesCasoDeUsoGeneral\\IListar.cs",
+              "RelativeDocumentMoniker": "Papeleria.LogicaAplicacion\\InterfacesCasoDeUsoGeneral\\IListar.cs",
+              "ToolTip": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaAplicacion\\InterfacesCasoDeUsoGeneral\\IListar.cs",
+              "RelativeToolTip": "Papeleria.LogicaAplicacion\\InterfacesCasoDeUsoGeneral\\IListar.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T02:59:13.311Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AltaUsuarios.cs",
+              "DocumentMoniker": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaAplicacion\\ImplementacionCasosUso\\Usuarios\\AltaUsuarios.cs",
+              "RelativeDocumentMoniker": "Papeleria.LogicaAplicacion\\ImplementacionCasosUso\\Usuarios\\AltaUsuarios.cs",
+              "ToolTip": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaAplicacion\\ImplementacionCasosUso\\Usuarios\\AltaUsuarios.cs",
+              "RelativeToolTip": "Papeleria.LogicaAplicacion\\ImplementacionCasosUso\\Usuarios\\AltaUsuarios.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB4AAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T02:54:14.222Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "RepositorioUsuarioEF.cs",
-              "DocumentMoniker": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.AccesoDatos\\EF\\RepositorioUsuarioEF.cs",
+              "DocumentMoniker": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.AccesoDatos\\EF\\RepositorioUsuarioEF.cs",
               "RelativeDocumentMoniker": "Papeleria.AccesoDatos\\EF\\RepositorioUsuarioEF.cs",
-              "ToolTip": "C:\\Users\\admfacs-bonanni\\Desktop\\P3\\Papeleria\\Papeleria.AccesoDatos\\EF\\RepositorioUsuarioEF.cs",
+              "ToolTip": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.AccesoDatos\\EF\\RepositorioUsuarioEF.cs",
               "RelativeToolTip": "Papeleria.AccesoDatos\\EF\\RepositorioUsuarioEF.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAAAIwA8AAAA7AAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T18:32:17.678Z",
+              "WhenOpened": "2024-04-22T03:38:50.089Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IAlta.cs",
+              "DocumentMoniker": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaAplicacion\\InterfacesCasoDeUsoGeneral\\IAlta.cs",
+              "RelativeDocumentMoniker": "Papeleria.LogicaAplicacion\\InterfacesCasoDeUsoGeneral\\IAlta.cs",
+              "ToolTip": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaAplicacion\\InterfacesCasoDeUsoGeneral\\IAlta.cs",
+              "RelativeToolTip": "Papeleria.LogicaAplicacion\\InterfacesCasoDeUsoGeneral\\IAlta.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T02:58:51.402Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IRemove.cs",
+              "DocumentMoniker": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaAplicacion\\InterfacesCasoDeUsoGeneral\\IRemove.cs",
+              "RelativeDocumentMoniker": "Papeleria.LogicaAplicacion\\InterfacesCasoDeUsoGeneral\\IRemove.cs",
+              "ToolTip": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaAplicacion\\InterfacesCasoDeUsoGeneral\\IRemove.cs",
+              "RelativeToolTip": "Papeleria.LogicaAplicacion\\InterfacesCasoDeUsoGeneral\\IRemove.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T02:59:19.754Z"
             }
           ]
         }

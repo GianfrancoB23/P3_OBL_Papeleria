@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Usuario;
 using Papeleria.LogicaNegocio.Excepciones.Usuario;
+using Papeleria.LogicaNegocio.Excepciones.Usuario.UsuarioExcepcions.Constrasenia;
 using Papeleria.LogicaNegocio.InterfacesRepositorio;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,7 @@ namespace Papeleria.AccesoDatos.EF
 {
     public class RepositorioUsuarioEF : IRepositorioUsuario
     {
-        private PapeleriaContext _db=new PapeleriaContext();
+        private PapeleriaContext _db = new PapeleriaContext();
         public void Add(Usuario obj)
         {
             try
@@ -58,7 +59,26 @@ namespace Papeleria.AccesoDatos.EF
 
         public void Update(int id, Usuario obj)
         {
-            throw new NotImplementedException();
+            var usuario = _db.Usuarios.FirstOrDefault(u => u.Id == id);
+
+            if (usuario != null)
+            {
+                try
+                {
+                    usuario.NombreCompleto = new NombreCompleto(obj.NombreCompleto.Nombre, obj.NombreCompleto.Apellido);
+                    usuario.Contrasenia = new ContraseniaUsuario(obj.Contrasenia.Valor);
+                    _db.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+
+                    throw new UsuarioNoValidoExcepcion(ex.Message);
+                }
+            }
+            else
+            {
+                throw new UsuarioNuloExcepcion("El usuario no existe");
+            }
         }
         public Usuario GetUsuarioPorEmail(EmailUsuario email)
         {
@@ -68,6 +88,28 @@ namespace Papeleria.AccesoDatos.EF
         public IEnumerable<Usuario> GetObjectsByID(List<int> ids)
         {
             throw new NotImplementedException();
+        }
+
+        public void ModificarContrasenia(int id, ContraseniaUsuario contraseniaNueva)
+        {
+            var usuario = _db.Usuarios.FirstOrDefault(u => u.Id == id);
+
+            if (usuario != null)
+            {
+                try
+                {
+                    usuario.Contrasenia = new ContraseniaUsuario(contraseniaNueva.Valor);
+                    _db.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    throw new ContraseniaNoValidoException(ex.Message);
+                }
+            }
+            else
+            {
+                throw new UsuarioNuloExcepcion("El usuario no existe");
+            }
         }
     }
 }
