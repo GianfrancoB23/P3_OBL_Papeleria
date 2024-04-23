@@ -16,9 +16,47 @@ namespace Papeleria.AccesoDatos.EF
 {
     public class RepositorioUsuarioEF : IRepositorioUsuario
     {
-        private PapeleriaContext _db = new PapeleriaContext();
+        private PapeleriaContext _db { get; set; }
+        public RepositorioUsuarioEF(PapeleriaContext db) { 
+            _db = db; 
+        }
+
+        public Usuario GetUsuarioPorEmail(EmailUsuario email)
+        {
+            return _db.Usuarios.FirstOrDefault(u => u.Email.Direccion == email.Direccion);
+        }
+
+        public void ModificarContrasenia(int id, ContraseniaUsuario contraseniaNueva)
+        {
+            var usuario = _db.Usuarios.FirstOrDefault(u => u.Id == id);
+
+            if (usuario != null)
+            {
+                try
+                {
+                    usuario.Contrasenia = new ContraseniaUsuario(contraseniaNueva.Valor);
+                    _db.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    throw new ContraseniaNoValidoException(ex.Message);
+                }
+            }
+            else
+            {
+                throw new UsuarioNuloExcepcion("El usuario no existe");
+            }
+        }
+
+        public Usuario GetById(int id)
+        {
+            Usuario? usuario = _db.Usuarios.FirstOrDefault(usr => usr.Id == id);
+            return usuario;
+        }
+
         public void Add(Usuario obj)
         {
+            if (obj == null) throw new UsuarioNuloExcepcion("El usuario es nulo");
             try
             {
                 _db.Usuarios.Add(obj);
@@ -28,33 +66,6 @@ namespace Papeleria.AccesoDatos.EF
             {
                 throw new UsuarioNoValidoExcepcion(ex.Message);
             }
-        }
-
-        public IEnumerable<Usuario> GetAll()
-        {
-            return _db.Usuarios.ToList();
-        }
-
-        public Usuario GetById(int id)
-        {
-            Usuario? usuario = _db.Usuarios.FirstOrDefault(usr => usr.Id == id);
-            return usuario;
-        }
-
-        public void Remove(int id)
-        {
-            var usuario = _db.Usuarios.FirstOrDefault(u => u.Id == id);
-            if (usuario != null)
-            {
-                _db.Usuarios.Remove(usuario);
-                _db.SaveChanges();
-            }
-        }
-
-        public void Remove(Usuario obj)
-        {
-            _db.Usuarios.Remove(obj);
-            _db.SaveChanges();
         }
 
         public void Update(int id, Usuario obj)
@@ -80,36 +91,31 @@ namespace Papeleria.AccesoDatos.EF
                 throw new UsuarioNuloExcepcion("El usuario no existe");
             }
         }
-        public Usuario GetUsuarioPorEmail(EmailUsuario email)
+
+        public void Remove(int id)
         {
-            return _db.Usuarios.FirstOrDefault(u => u.Email.Direccion == email.Direccion);
+            var usuario = _db.Usuarios.FirstOrDefault(u => u.Id == id);
+            if (usuario != null)
+            {
+                _db.Usuarios.Remove(usuario);
+                _db.SaveChanges();
+            }
+        }
+
+        public void Remove(Usuario obj)
+        {
+            _db.Usuarios.Remove(obj);
+            _db.SaveChanges();
+        }
+
+        public IEnumerable<Usuario> GetAll()
+        {
+            return _db.Usuarios.ToList();
         }
 
         public IEnumerable<Usuario> GetObjectsByID(List<int> ids)
         {
             throw new NotImplementedException();
-        }
-
-        public void ModificarContrasenia(int id, ContraseniaUsuario contraseniaNueva)
-        {
-            var usuario = _db.Usuarios.FirstOrDefault(u => u.Id == id);
-
-            if (usuario != null)
-            {
-                try
-                {
-                    usuario.Contrasenia = new ContraseniaUsuario(contraseniaNueva.Valor);
-                    _db.SaveChanges();
-                }
-                catch (Exception ex)
-                {
-                    throw new ContraseniaNoValidoException(ex.Message);
-                }
-            }
-            else
-            {
-                throw new UsuarioNuloExcepcion("El usuario no existe");
-            }
         }
     }
 }

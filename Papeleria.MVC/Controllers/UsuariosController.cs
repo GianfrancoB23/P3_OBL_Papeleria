@@ -1,14 +1,31 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Papeleria.AccesoDatos.EF;
+using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuario;
+using Papeleria.LogicaAplicacion.ImplementacionCasosUso.Usuarios;
+using Papeleria.LogicaAplicacion.InterfacesCasosUso.Usuarios;
+using Papeleria.LogicaNegocio.InterfacesRepositorio;
 
 namespace Papeleria.MVC.Controllers
 {
     public class UsuariosController : Controller
     {
+        private static IRepositorioUsuario _repoUsuarios = new RepositorioUsuarioEF(new PapeleriaContext());
+        private static IAltaUsuario _altaUsuario;
+        private static IGetAllUsuarios _getAllUsuarios;
+        public UsuariosController() { 
+            _altaUsuario = new AltaUsuarios(_repoUsuarios);
+            _getAllUsuarios = new GetAllUsuarios(_repoUsuarios);
+        }
         // GET: UsuariosController
         public ActionResult Index()
         {
-            return View();
+            var usuarios = _getAllUsuarios.Ejecutar();
+            if (usuarios == null || usuarios.Count()==0) {
+                ViewBag.Mensaje = "No existen usuarios";
+            }
+            ViewBag.Mensaje = $"Usuario creado - {usuarios.Count()} en total.";
+            return View(usuarios);
         }
 
         // GET: UsuariosController/Details/5
@@ -26,14 +43,17 @@ namespace Papeleria.MVC.Controllers
         // POST: UsuariosController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(UsuarioAltaDto autorDto)
         {
             try
             {
+                _altaUsuario.Ejecutar(autorDto);
+                TempData["Mensaje"] = "Usuario creado";
                 return RedirectToAction(nameof(Index));
             }
-            catch
+            catch (Exception ex)
             {
+                ViewBag.Error = ex.Message;
                 return View();
             }
         }
