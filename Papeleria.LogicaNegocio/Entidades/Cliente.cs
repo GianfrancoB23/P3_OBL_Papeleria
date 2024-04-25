@@ -5,12 +5,15 @@ using Papeleria.LogicaNegocio.Excepciones.Cliente.ClienteValueObjects.RazonSocia
 using Papeleria.LogicaNegocio.Excepciones.Cliente.ClienteValueObjects.RUT;
 using Papeleria.LogicaNegocio.InterfacesEntidades;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Empresa.LogicaDeNegocio.Entidades
 {
     public class Cliente: IValidable<Cliente>, IEquatable<Cliente>, IEntity
 	{
-        public int Id { get; set; }
+
+        //public int Id { get; set; }
+        [Key]
         public RUT rut{ get; set; }
 
 		public RazonSocial razonSocial{ get; set; }
