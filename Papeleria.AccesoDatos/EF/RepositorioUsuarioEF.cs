@@ -76,8 +76,7 @@ namespace Papeleria.AccesoDatos.EF
             {
                 try
                 {
-                    usuario.NombreCompleto = new NombreCompleto(obj.NombreCompleto.Nombre, obj.NombreCompleto.Apellido);
-                    usuario.Contrasenia = new ContraseniaUsuario(obj.Contrasenia.Valor);
+                    usuario.ModificarDatos(obj); 
                     _db.SaveChanges();
                 }
                 catch (Exception ex)

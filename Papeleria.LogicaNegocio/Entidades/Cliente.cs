@@ -12,7 +12,7 @@ namespace Empresa.LogicaDeNegocio.Entidades
     public class Cliente: IValidable<Cliente>, IEquatable<Cliente>, IEntity
 	{
 
-        //public int Id { get; set; }
+        public int Id { get; set; }
         [Key]
         public RUT rut{ get; set; }
 

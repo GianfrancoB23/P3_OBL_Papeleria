@@ -1,5 +1,10 @@
 ﻿using Empresa.LogicaDeNegocio.Sistema;
+using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
+using Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos;
 using Papeleria.LogicaAplicacion.Interaces;
+using Papeleria.LogicaAplicacion.InterfacesCasosUso.Usuarios;
+using Papeleria.LogicaNegocio.Excepciones.Usuario;
+using Papeleria.LogicaNegocio.InterfacesRepositorio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,32 +13,26 @@ using System.Threading.Tasks;
 
 namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Usuarios
 {
-    public class BuscarUsuario : IListar<Usuario>
+    public class BuscarUsuario : IGetUsuario
     {
-        public IEnumerable<Usuario> ListarPorNombre(string name)
-        {
-            throw new NotImplementedException();
-        }
+        private IRepositorioUsuario _repoUsuarios;
 
-        public List<Usuario> ListarSeleccionPorId(List<int> ids)
+        public BuscarUsuario(IRepositorioUsuario repo)
         {
-            throw new NotImplementedException();
+            _repoUsuarios = repo;
         }
-
-        public IEnumerable<Usuario> ListarTodo()
+        public UsuarioListadosDto GetById(int id)
         {
-            throw new NotImplementedException();
-        }
-
-        public Usuario ListarUno(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Usuario ListarUnoPorNombre(string nombre)
-        {
-            throw new NotImplementedException();
+            var usu = _repoUsuarios.GetById(id);
+            if (usu == null)
+            {
+                throw new UsuarioNuloExcepcion("No hay autor con ese id");
+            }
+            var usuDto = UsuariosMappers.ToDto(usu);
+            return usuDto;
         }
     }
+        
+
 }
 

@@ -19,7 +19,13 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
             if (dto == null) throw new UsuarioNuloExcepcion(nameof(dto));
             return new Usuario(dto.Email,dto.Nombre,dto.Apellido,dto.Contrasenia);
         }
-
+        public static Usuario FromDtoUpdate(UsuarioModificarDto dto)
+        {
+            if (dto == null) throw new UsuarioNuloExcepcion(nameof(dto));
+            var usuario = new Usuario(dto.Email, dto.Nombre, dto.Apellido, dto.Contrasenia);
+            usuario.Id = dto.Id;
+            return usuario;
+        }
         public static UsuarioListadosDto ToDto(Usuario usuario) {
             if (usuario == null) throw new UsuarioNuloExcepcion();
             return new UsuarioListadosDto()

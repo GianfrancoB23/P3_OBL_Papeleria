@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Papeleria.AccesoDatos.EF;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuario;
+using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
 using Papeleria.LogicaAplicacion.ImplementacionCasosUso.Usuarios;
 using Papeleria.LogicaAplicacion.InterfacesCasosUso.Usuarios;
 using Papeleria.LogicaNegocio.InterfacesRepositorio;
@@ -13,9 +14,14 @@ namespace Papeleria.MVC.Controllers
         private static IRepositorioUsuario _repoUsuarios = new RepositorioUsuarioEF(new PapeleriaContext());
         private static IAltaUsuario _altaUsuario;
         private static IGetAllUsuarios _getAllUsuarios;
+        private static IModificarUsuario _modificarUsuario;
+        private static IGetUsuario _getUsuario;
         public UsuariosController() { 
             _altaUsuario = new AltaUsuarios(_repoUsuarios);
             _getAllUsuarios = new GetAllUsuarios(_repoUsuarios);
+            _modificarUsuario = new ModificarUsuario(_repoUsuarios);
+            _getUsuario = new BuscarUsuario(_repoUsuarios);
+
         }
         // GET: UsuariosController
         public ActionResult Index()
@@ -59,18 +65,29 @@ namespace Papeleria.MVC.Controllers
         }
 
         // GET: UsuariosController/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(int? id)
         {
-            return View();
+            UsuarioListadosDto dto = _getUsuario.GetById(id.GetValueOrDefault());
+            UsuarioModificarDto mod = new UsuarioModificarDto() {
+                Id = dto.Id,
+                Nombre = dto.Nombre,
+                Apellido = dto.Apellido,
+                Email = dto.Email,
+                Contrasenia = dto.Contrasenia
+            };
+            if (dto == null)
+                return View();
+            return View(mod);
         }
 
         // POST: UsuariosController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id, UsuarioModificarDto usu)
         {
             try
             {
+                _modificarUsuario.Ejecutar(id, usu);
                 return RedirectToAction(nameof(Index));
             }
             catch

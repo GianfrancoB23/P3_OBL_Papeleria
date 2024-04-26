@@ -17,7 +17,6 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Usuarios
     public class AltaUsuarios : IAltaUsuario
     {
         private IRepositorioUsuario _repoUsuarios;
-        private IListar<Usuario> _buscarUsuario = new BuscarUsuario();
 
         public AltaUsuarios(IRepositorioUsuario repo)
         {
