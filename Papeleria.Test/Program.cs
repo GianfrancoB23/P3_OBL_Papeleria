@@ -13,9 +13,9 @@ namespace Papeleria.Test
     internal class Program
     {
         static IRepositorioUsuario _repoUsuarios = new RepositorioUsuarioEF(new PapeleriaContext());
-        static IRepositorioCliente _repoClientes = new RepositorioClienteEF();
-        static IRepositorioPedido _repoPedidos = new RepositorioPedidoEF();
-        static IRepositorioLineaPedido _repoLineasPedidos = new RepositorioLineaPedidoEF();
+        static IRepositorioCliente _repoClientes = new RepositorioClienteEF(new PapeleriaContext());
+        static IRepositorioPedido _repoPedidos = new RepositorioPedidoEF(new PapeleriaContext());
+        static IRepositorioLineaPedido _repoLineasPedidos = new RepositorioLineaPedidoEF(new PapeleriaContext());
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
