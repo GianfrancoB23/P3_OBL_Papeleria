@@ -1,4 +1,7 @@
+using Empresa.LogicaDeNegocio.Sistema;
 using Microsoft.AspNetCore.Mvc;
+using Papeleria.AccesoDatos.EF;
+using Papeleria.LogicaNegocio.InterfacesRepositorio;
 using Papeleria.MVC.Models;
 using System.Diagnostics;
 
@@ -6,6 +9,8 @@ namespace Papeleria.MVC.Controllers
 {
     public class HomeController : Controller
     {
+        private static IRepositorioUsuario _repoUsuarios = new RepositorioUsuarioEF(new PapeleriaContext());
+
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -15,18 +20,56 @@ namespace Papeleria.MVC.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            if (HttpContext.Session.GetInt32("LogueadoID") != null)
+            {
+                return RedirectToAction("Index", "Usuarios");
+
+            }
+            else
+            {
+                return View();
+            }
         }
 
-        public IActionResult Privacy()
+        public IActionResult Login()
         {
-            return View();
+            if (HttpContext.Session.GetInt32("LogueadoID") != null)
+            {
+                return RedirectToAction("Index", "Publicacion");
+            }
+            else
+            {
+                return View();
+            }
         }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        [HttpPost]
+        public IActionResult Login(string Email, string Contrasenia)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            Usuario usuLogin = _repoUsuarios.Login(Email, Contrasenia);
+            if (usuLogin != null)
+            {
+                HttpContext.Session.SetInt32("LogueadoID", usuLogin.Id);
+                HttpContext.Session.SetString("LogueadoEmail", usuLogin.Email.Direccion);
+                return RedirectToAction("Index", "Usuarios");
+            }
+            else
+            {
+                TempData["Error"] = "Error en los datos ingresados";
+                return RedirectToAction("Index", "Home");
+            }
+        }
+        public IActionResult Logout()
+        {
+            if (HttpContext.Session.GetInt32("LogueadoID") != null)
+            {
+                HttpContext.Session.Clear();
+                return RedirectToAction("Index", "Home");
+
+            }
+            else
+            {
+                return RedirectToAction("Index", "Home");
+            }
         }
     }
 }

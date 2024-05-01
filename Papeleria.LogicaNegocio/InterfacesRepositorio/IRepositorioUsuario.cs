@@ -12,7 +12,8 @@ namespace Papeleria.LogicaNegocio.InterfacesRepositorio
 {
     public interface IRepositorioUsuario:IRepositorio<Usuario>
     {
-        public Usuario GetUsuarioPorEmail(EmailUsuario email);
+        public Usuario GetUsuarioPorEmail(string email);
         public void ModificarContrasenia(int id, ContraseniaUsuario contraseniaNueva);
+        public Usuario Login(string email, string contrasenia);
     }
 }

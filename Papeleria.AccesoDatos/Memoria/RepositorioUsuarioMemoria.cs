@@ -48,7 +48,17 @@ namespace Papeleria.AccesoDatos.Memoria
             throw new NotImplementedException();
         }
 
+        public Usuario GetUsuarioPorEmail(string email)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<Usuario> GetUsuarios()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Usuario Login(string email, string contrasenia)
         {
             throw new NotImplementedException();
         }

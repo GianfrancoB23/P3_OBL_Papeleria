@@ -16,7 +16,9 @@ namespace Papeleria.MVC.Controllers
         private static IGetAllUsuarios _getAllUsuarios;
         private static IModificarUsuario _modificarUsuario;
         private static IGetUsuario _getUsuario;
-        public UsuariosController() { 
+        private static IBorrarUsuario _borrarUsuario;
+        public UsuariosController()
+        {
             _altaUsuario = new AltaUsuarios(_repoUsuarios);
             _getAllUsuarios = new GetAllUsuarios(_repoUsuarios);
             _modificarUsuario = new ModificarUsuario(_repoUsuarios);
@@ -26,24 +28,27 @@ namespace Papeleria.MVC.Controllers
         // GET: UsuariosController
         public ActionResult Index()
         {
-            var usuarios = _getAllUsuarios.Ejecutar();
-            if (usuarios == null || usuarios.Count()==0) {
-                ViewBag.Mensaje = "No existen usuarios";
+            if (HttpContext.Session.GetInt32("LogueadoID") != null)
+            {
+                var usuarios = _getAllUsuarios.Ejecutar();
+                if (usuarios == null || usuarios.Count() == 0)
+                {
+                    ViewBag.Mensaje = "No existen usuarios";
+                }
+                ViewBag.Mensaje = $"Usuarios en total: {usuarios.Count()}.";
+                return View(usuarios);
             }
-            ViewBag.Mensaje = $"Usuario creado - {usuarios.Count()} en total.";
-            return View(usuarios);
-        }
-
-        // GET: UsuariosController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
+            return RedirectToAction("Index", "Home");
         }
 
         // GET: UsuariosController/Create
         public ActionResult Create()
         {
-            return View();
+            if (HttpContext.Session.GetInt32("LogueadoID") != null)
+            {
+                return View();
+            }
+            return RedirectToAction("Index", "Home");
         }
 
         // POST: UsuariosController/Create
@@ -67,17 +72,22 @@ namespace Papeleria.MVC.Controllers
         // GET: UsuariosController/Edit/5
         public ActionResult Edit(int? id)
         {
-            UsuarioListadosDto dto = _getUsuario.GetById(id.GetValueOrDefault());
-            UsuarioModificarDto mod = new UsuarioModificarDto() {
-                Id = dto.Id,
-                Nombre = dto.Nombre,
-                Apellido = dto.Apellido,
-                Email = dto.Email,
-                Contrasenia = dto.Contrasenia
-            };
-            if (dto == null)
-                return View();
-            return View(mod);
+            if (HttpContext.Session.GetInt32("LogueadoID") != null)
+            {
+                UsuarioListadosDto dto = _getUsuario.GetById(id.GetValueOrDefault());
+                UsuarioModificarDto mod = new UsuarioModificarDto()
+                {
+                    Id = dto.Id,
+                    Nombre = dto.Nombre,
+                    Apellido = dto.Apellido,
+                    Email = dto.Email,
+                    Contrasenia = dto.Contrasenia
+                };
+                if (dto == null)
+                    return View();
+                return View(mod);
+            }
+            return RedirectToAction("Index", "Home");
         }
 
         // POST: UsuariosController/Edit/5
@@ -97,19 +107,35 @@ namespace Papeleria.MVC.Controllers
         }
 
         // GET: UsuariosController/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Delete(int? id)
         {
-            return View();
+            if (HttpContext.Session.GetInt32("LogueadoID") != null)
+            {
+                UsuarioListadosDto dto = _getUsuario.GetById(id.GetValueOrDefault());
+                if (dto == null)
+                    return RedirectToAction("Index", "Usuarios");
+                return View(dto);
+            }
+            return RedirectToAction("Index", "Home");
         }
 
         // POST: UsuariosController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(int? id, IFormCollection collection, bool IsChecked)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                if (IsChecked)
+                {
+                    UsuarioListadosDto borrar = _getUsuario.GetById(id.GetValueOrDefault());
+                    
+                }
+                else
+                {
+                    ViewBag.msg = "Debe seleccionar el checkbox";
+                }
+                return RedirectToAction("ListarMiembros", "Usuario");
             }
             catch
             {

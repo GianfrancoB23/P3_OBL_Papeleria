@@ -12,7 +12,7 @@ namespace Papeleria.Test
 {
     internal class Program
     {
-        static IRepositorioUsuario _repoUsuarios = new RepositorioUsuarioEF();
+        static IRepositorioUsuario _repoUsuarios = new RepositorioUsuarioEF(new PapeleriaContext());
         static IRepositorioCliente _repoClientes = new RepositorioClienteEF();
         static IRepositorioPedido _repoPedidos = new RepositorioPedidoEF();
         static IRepositorioLineaPedido _repoLineasPedidos = new RepositorioLineaPedidoEF();

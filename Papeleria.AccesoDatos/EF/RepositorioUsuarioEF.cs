@@ -17,13 +17,14 @@ namespace Papeleria.AccesoDatos.EF
     public class RepositorioUsuarioEF : IRepositorioUsuario
     {
         private PapeleriaContext _db { get; set; }
-        public RepositorioUsuarioEF(PapeleriaContext db) { 
-            _db = db; 
+        public RepositorioUsuarioEF(PapeleriaContext db)
+        {
+            _db = db;
         }
 
-        public Usuario GetUsuarioPorEmail(EmailUsuario email)
+        public Usuario GetUsuarioPorEmail(string email)
         {
-            return _db.Usuarios.FirstOrDefault(u => u.Email.Direccion == email.Direccion);
+            return _db.Usuarios.FirstOrDefault(u => u.Email.Direccion == email);
         }
 
         public void ModificarContrasenia(int id, ContraseniaUsuario contraseniaNueva)
@@ -76,7 +77,7 @@ namespace Papeleria.AccesoDatos.EF
             {
                 try
                 {
-                    usuario.ModificarDatos(obj); 
+                    usuario.ModificarDatos(obj);
                     _db.SaveChanges();
                 }
                 catch (Exception ex)
@@ -115,6 +116,27 @@ namespace Papeleria.AccesoDatos.EF
         public IEnumerable<Usuario> GetObjectsByID(List<int> ids)
         {
             throw new NotImplementedException();
+        }
+
+        public Usuario Login(string email, string contrasenia)
+        {
+            try
+            {
+                Usuario usu = GetUsuarioPorEmail(email);
+                if (usu != null)
+                {
+                    if (usu.Email.Direccion == email && usu.Contrasenia.Valor == contrasenia)
+                    {
+                        return usu;
+                    }
+                }
+                return null;
+
+            }
+            catch (UsuarioNoValidoExcepcion ex)
+            {
+                throw new UsuarioNoValidoExcepcion("");
+            }
         }
     }
 }
