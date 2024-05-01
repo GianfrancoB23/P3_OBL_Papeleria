@@ -21,3 +21,7 @@
 {
     <div class="alert alert-info">@TempData["Mensaje"]</div>
 }
+@if (TempData["MensajeOK"] != null)
+{
+    <div class="alert alert-success">@TempData["MensajeOK"]</div>
+}

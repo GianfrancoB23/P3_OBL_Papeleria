@@ -23,6 +23,7 @@ namespace Papeleria.MVC.Controllers
             _getAllUsuarios = new GetAllUsuarios(_repoUsuarios);
             _modificarUsuario = new ModificarUsuario(_repoUsuarios);
             _getUsuario = new BuscarUsuario(_repoUsuarios);
+            _borrarUsuario = new BorrarUsuario(_repoUsuarios);
 
         }
         // GET: UsuariosController
@@ -59,7 +60,7 @@ namespace Papeleria.MVC.Controllers
             try
             {
                 _altaUsuario.Ejecutar(autorDto);
-                TempData["Mensaje"] = "Usuario creado";
+                TempData["MensajeOK"] = "Usuario creado";
                 return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)
@@ -112,9 +113,20 @@ namespace Papeleria.MVC.Controllers
             if (HttpContext.Session.GetInt32("LogueadoID") != null)
             {
                 UsuarioListadosDto dto = _getUsuario.GetById(id.GetValueOrDefault());
+                UsuarioBorrarDto borrar = new UsuarioBorrarDto() 
+                {
+                    Id = dto.Id,
+                    Nombre = dto.Nombre,
+                    Apellido = dto.Apellido,
+                    Email = dto.Email,
+                    Contrasenia = dto.Contrasenia
+                };
                 if (dto == null)
                     return RedirectToAction("Index", "Usuarios");
-                return View(dto);
+                if (dto.Id == HttpContext.Session.GetInt32("LogueadoID"))
+                    TempData["Error"] = "No se puede borrar el usuario loggueado";
+                    return RedirectToAction(nameof(Index));
+                return View(borrar);
             }
             return RedirectToAction("Index", "Home");
         }
@@ -122,20 +134,19 @@ namespace Papeleria.MVC.Controllers
         // POST: UsuariosController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int? id, IFormCollection collection, bool IsChecked)
+        public ActionResult Delete(int id, UsuarioBorrarDto borrar, bool IsChecked)
         {
             try
             {
                 if (IsChecked)
                 {
-                    UsuarioListadosDto borrar = _getUsuario.GetById(id.GetValueOrDefault());
-                    
+                    _borrarUsuario.Ejecutar(id, borrar);
                 }
                 else
                 {
                     ViewBag.msg = "Debe seleccionar el checkbox";
                 }
-                return RedirectToAction("ListarMiembros", "Usuario");
+                return RedirectToAction("Index", "Usuarios");
             }
             catch
             {
