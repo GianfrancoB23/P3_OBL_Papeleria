@@ -13,7 +13,12 @@ namespace Papeleria.AccesoDatos.EF
 {
     public class RepositorioLineaPedidoEF : IRepositorioLineaPedido
     {
-        private PapeleriaContext _db = new PapeleriaContext();
+        private PapeleriaContext _db { get; set; }
+        public RepositorioLineaPedidoEF(PapeleriaContext db)
+        {
+            _db = db;
+        }
+
         public void Add(LineaPedido obj)
         {
             try
