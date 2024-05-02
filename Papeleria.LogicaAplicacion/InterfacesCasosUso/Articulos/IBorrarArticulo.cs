@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Papeleria.LogicaAplicacion.InterfacesCasosUso.Usuarios
+namespace Papeleria.LogicaAplicacion.InterfacesCasosUso.Articulos
 {
-    public interface IBorrarUsuario
+    public interface IBorrarArticulo
     {
         void Ejecutar(int id, ArticuloBorrarDto usu);
     }

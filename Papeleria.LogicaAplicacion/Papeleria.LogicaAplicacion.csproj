@@ -10,7 +10,6 @@
     <Folder Include="ImplementacionCasosUso\Comun\" />
     <Folder Include="ImplementacionCasosUso\Express\" />
     <Folder Include="ImplementacionCasosUso\LineaPedido\" />
-    <Folder Include="InterfacesCasosUso\Articulos\" />
     <Folder Include="InterfacesCasosUso\Comunes\" />
     <Folder Include="InterfacesCasosUso\Expresses\" />
     <Folder Include="InterfacesCasosUso\LineasPedidos\" />

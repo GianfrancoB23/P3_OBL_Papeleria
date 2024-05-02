@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Articulos
 {
-    internal class AutorAltaDto
+    public class ArticuloBorrarDTO
     {
     }
 }

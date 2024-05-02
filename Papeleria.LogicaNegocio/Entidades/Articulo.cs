@@ -19,7 +19,7 @@ namespace Empresa.LogicaDeNegocio.Entidades
 		public double PrecioVP{ get; set; }
 		public StockArticulo Stock{ get; set; }
 
-        public Articulo(long codigoProveedor, string nombre, string descripcion, int precioVP, int stock)
+        public Articulo(long codigoProveedor, string nombre, string descripcion, double precioVP, int stock)
         {
             this.CodigoProveedor = new CodigoProveedorArticulos(codigoProveedor);
             this.NombreArticulo = new NombreArticulo(nombre);

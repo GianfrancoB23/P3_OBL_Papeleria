@@ -26,7 +26,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Usuarios
             var usu = _repoUsuarios.GetById(id);
             if (usu == null)
             {
-                throw new UsuarioNuloExcepcion("No hay autor con ese id");
+                throw new UsuarioNuloExcepcion("No hay usuario con ese id");
             }
             var usuDto = UsuariosMappers.ToDto(usu);
             return usuDto;

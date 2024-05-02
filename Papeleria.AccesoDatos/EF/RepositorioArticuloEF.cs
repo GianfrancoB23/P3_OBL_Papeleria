@@ -13,7 +13,9 @@ namespace Papeleria.AccesoDatos.EF
 {
     public class RepositorioArticuloEF : IRepositorioArticulo
     {
-        private PapeleriaContext _db = new PapeleriaContext();
+        private PapeleriaContext _db { get; set; }
+
+        public RepositorioArticuloEF(PapeleriaContext db) { _db = db; }
         public void Add(Articulo obj)
         {
             try
