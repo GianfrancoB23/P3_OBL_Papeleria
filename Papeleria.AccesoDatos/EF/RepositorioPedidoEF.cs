@@ -73,7 +73,7 @@ namespace Papeleria.AccesoDatos.EF
 
         public IEnumerable<Pedido> GetPedidosPorRazon(RazonSocial rsocial)
         {
-            throw new NotImplementedException();
+            return _db.Pedidos.Where(p => p.cliente.razonSocial.Equals(rsocial)).ToList();
         }
 
         public IEnumerable<Pedido> GetPedidosPorRUT(RUT rut)

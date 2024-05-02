@@ -1,5 +1,6 @@
 using Papeleria.LogicaNegocio.Entidades;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Pedidos;
+using Papeleria.LogicaNegocio.Excepciones.Pedido;
 using System;
 
 namespace Empresa.LogicaDeNegocio.Entidades
@@ -17,17 +18,33 @@ namespace Empresa.LogicaDeNegocio.Entidades
 
         public override double CalcularRecargoYFijar()
         {
-            throw new NotImplementedException();
+            // Recargo del 5% si la distancia a la dirección de entrega supera los 100 km
+            if (cliente.direccion.Distancia > 100)
+            {
+                return 0.05;
+            }
+            return 0;
         }
 
         public override double CalcularYFijarPrecio(IVA iva, LineaPedido linea)
         {
-            throw new NotImplementedException();
+            double precioInicial = linea.PrecioUnitarioVigente * linea.Cantidad;
+            double recargoDistancia = CalcularRecargoYFijar();
+            this.precioFinal = (precioInicial * (1 + iva.valor)) * (1 + recargoDistancia);
+            return precioFinal;
         }
 
         public override void CambiarEntregaPrometida(int dias)
         {
-            throw new NotImplementedException();
+            if (dias < 7)
+            {
+                throw new PedidoNoValidoException("No puede haber entregas 'COMUN' menor a una semana.");
+            }
+            if (dias == null)
+            {
+                throw new PedidoNuloException("La cantidad de días no puede ser nula en un pedido COMUN.");
+            }
+            entregaPrometida = new TimeSpan(dias, 0, 0, 0);
         }
 
         public override bool Equals(object? obj)
@@ -47,7 +64,15 @@ namespace Empresa.LogicaDeNegocio.Entidades
 
         public override TimeSpan FijarEntregaPrometida(int dias)
         {
-            throw new NotImplementedException();
+            if (dias < 7)
+            {
+                throw new PedidoNoValidoException("No puede haber entregas 'COMUN' menor a una semana.");
+            }
+            if (dias == null)
+            {
+                throw new PedidoNuloException("La cantidad de dias no puede ser nulo en un pedido COMUN.");
+            }
+            return new TimeSpan(dias, 0, 0, 0);
         }
 
         public override string? ToString()

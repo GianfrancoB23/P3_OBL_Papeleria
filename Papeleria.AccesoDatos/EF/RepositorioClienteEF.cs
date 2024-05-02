@@ -16,9 +16,11 @@ namespace Papeleria.AccesoDatos.EF
     public class RepositorioClienteEF : IRepositorioCliente
     {
         private PapeleriaContext _db { get; set; }
-        public RepositorioClienteEF(PapeleriaContext db)
+        private IRepositorioPedido _repositorioPedido { get; set; }
+        public RepositorioClienteEF(PapeleriaContext db, IRepositorioPedido repositorioPedido)
         {
             _db = db;
+            _repositorioPedido = repositorioPedido;
         }
 
         public void Add(Cliente obj)
@@ -48,32 +50,40 @@ namespace Papeleria.AccesoDatos.EF
 
         public Cliente GetCliente(int idCliente)
         {
-            throw new NotImplementedException();
+            return _db.Clientes.FirstOrDefault(cli => cli.Id == idCliente);
         }
 
         public Cliente GetClientePorDireccion(DireccionCliente direccionCliente)
         {
-            throw new NotImplementedException();
+            return _db.Clientes.FirstOrDefault(cli => cli.direccion.Equals(direccionCliente));
         }
 
-        public Cliente GetClientePorRazon(RazonSocial rsocial)
+        public Cliente GetClientePorRazon(string rsocial)
         {
-            throw new NotImplementedException();
+            var cliente = _db.Clientes.FirstOrDefault(cli => cli.razonSocial.RazonSoc.Equals(rsocial));
+            return cliente;
         }
 
-        public Cliente GetClientePorRUT(RUT rut)
+        public Cliente GetClientePorRUT(long rut)
         {
-            throw new NotImplementedException();
+            return _db.Clientes.FirstOrDefault(cli => cli.rut.Rut.Equals(rut));
         }
 
         public IEnumerable<Cliente> GetClientes()
         {
-            throw new NotImplementedException();
+            return _db.Clientes.ToList();
         }
 
         public IEnumerable<Cliente> GetClientesPorPedido(int idPedido)
         {
-            throw new NotImplementedException();
+            return _db.Clientes.Where(cli => cli.pedidos.Any(pedido => pedido.Id == idPedido)).ToList();
+        }
+
+        public IEnumerable<Cliente> GetClientesPedidoSupereMonto(double monto)
+        {
+            var pedidos = _repositorioPedido.GetPedidosQueSuperenMonto(monto);
+            var clientes = pedidos.Select(pedido => pedido.cliente).Distinct();
+            return clientes;
         }
 
         public IEnumerable<Cliente> GetObjectsByID(List<int> ids)
@@ -83,12 +93,21 @@ namespace Papeleria.AccesoDatos.EF
 
         public void Remove(int id)
         {
-            throw new NotImplementedException();
+            var cliente = GetById(id);
+            if (cliente != null)
+            {
+                _db.Clientes.Remove(cliente);
+                _db.SaveChanges();
+            }
         }
 
         public void Remove(Cliente obj)
         {
-            throw new NotImplementedException();
+            if (obj != null)
+            {
+                _db.Clientes.Remove(obj);
+                _db.SaveChanges();
+            }
         }
 
         public void Update(int id, Cliente obj)

@@ -1,0 +1,94 @@
+﻿@model IEnumerable<Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Clientes.ClienteListadosDto>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<h1>BUSCAR PUBLICACIONES</h1>
+<hr />
+@* <form method="post">
+    <input type="text" placeholder="Ingrese razon social" name="razonSocial" /><input type="submit" value="Filtrar" />
+</form>
+<br />
+<form method="post">
+    <input type="number" placeholder="Ingrese un monto" name="monto" /><input type="submit" value="Filtrar" />
+</form> *@
+
+<form method="post">
+    <input type="text" placeholder="Ingrese razón social" name="razonSocial" />
+    <input type="submit" value="Filtrar X Razon" name="submitButton" />
+</form>
+<br />
+<form method="post">
+    <input type="number" placeholder="Ingrese un monto" name="monto" />
+    <input type="submit" value="Filtrar X Monto" name="submitButton" />
+</form>
+
+
+
+<p>
+    @if (@TempData["ResultadoBuscarClientes"] != null)
+    {
+        @TempData["ResultadoBuscarClientes"].ToString()
+    }
+</p>
+<hr />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.rut)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.razonSocial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Calle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Numero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ciudad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Distancia)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rut)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.razonSocial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Calle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ciudad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Distancia)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

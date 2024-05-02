@@ -1,5 +1,6 @@
 using Empresa.LogicaDeNegocio.Sistema;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 using Papeleria.AccesoDatos.EF;
 using Papeleria.LogicaNegocio.InterfacesRepositorio;
 using Papeleria.MVC.Models;
@@ -20,6 +21,10 @@ namespace Papeleria.MVC.Controllers
 
         public IActionResult Index()
         {
+            //Comentar si no queres entrar directo 
+            Usuario usuLogin = _repoUsuarios.Login("prueba@prueba.com", "Prueba123!");
+            HttpContext.Session.SetInt32("LogueadoID", usuLogin.Id);
+
             if (HttpContext.Session.GetInt32("LogueadoID") != null)
             {
                 return RedirectToAction("Index", "Usuarios");

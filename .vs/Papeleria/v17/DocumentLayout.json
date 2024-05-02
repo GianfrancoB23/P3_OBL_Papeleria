@@ -3,39 +3,12 @@
   "WorkspaceRootPath": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F26EA81B-6699-4965-A722-8F222CD6030F}|Papeleria.MVC\\Papeleria.MVC.csproj|d:\\ort\\ati\\p3\\p3_obl_papeleria\\papeleria.mvc\\views\\shared\\_mensajes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F26EA81B-6699-4965-A722-8F222CD6030F}|Papeleria.MVC\\Papeleria.MVC.csproj|solutionrelative:papeleria.mvc\\views\\shared\\_mensajes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F26EA81B-6699-4965-A722-8F222CD6030F}|Papeleria.MVC\\Papeleria.MVC.csproj|d:\\ort\\ati\\p3\\p3_obl_papeleria\\papeleria.mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F26EA81B-6699-4965-A722-8F222CD6030F}|Papeleria.MVC\\Papeleria.MVC.csproj|solutionrelative:papeleria.mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F26EA81B-6699-4965-A722-8F222CD6030F}|Papeleria.MVC\\Papeleria.MVC.csproj|d:\\ort\\ati\\p3\\p3_obl_papeleria\\papeleria.mvc\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F26EA81B-6699-4965-A722-8F222CD6030F}|Papeleria.MVC\\Papeleria.MVC.csproj|solutionrelative:papeleria.mvc\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F26EA81B-6699-4965-A722-8F222CD6030F}|Papeleria.MVC\\Papeleria.MVC.csproj|d:\\ort\\ati\\p3\\p3_obl_papeleria\\papeleria.mvc\\views\\usuarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F26EA81B-6699-4965-A722-8F222CD6030F}|Papeleria.MVC\\Papeleria.MVC.csproj|solutionrelative:papeleria.mvc\\views\\usuarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/PapeleriaOBL/True/SqlTable/dbo.Usuarios.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDFEE3E7-7AB1-4081-B5EA-6248C9BAF702}|Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj|d:\\ort\\ati\\p3\\p3_obl_papeleria\\papeleria.logicaaplicacion\\implementacioncasosuso\\usuarios\\borrarusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDFEE3E7-7AB1-4081-B5EA-6248C9BAF702}|Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj|solutionrelative:papeleria.logicaaplicacion\\implementacioncasosuso\\usuarios\\borrarusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F26EA81B-6699-4965-A722-8F222CD6030F}|Papeleria.MVC\\Papeleria.MVC.csproj|d:\\ort\\ati\\p3\\p3_obl_papeleria\\papeleria.mvc\\views\\usuarios\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F26EA81B-6699-4965-A722-8F222CD6030F}|Papeleria.MVC\\Papeleria.MVC.csproj|solutionrelative:papeleria.mvc\\views\\usuarios\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDFEE3E7-7AB1-4081-B5EA-6248C9BAF702}|Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj|d:\\ort\\ati\\p3\\p3_obl_papeleria\\papeleria.logicaaplicacion\\interfacescasosuso\\usuarios\\iborrarusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDFEE3E7-7AB1-4081-B5EA-6248C9BAF702}|Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj|solutionrelative:papeleria.logicaaplicacion\\interfacescasosuso\\usuarios\\iborrarusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDFEE3E7-7AB1-4081-B5EA-6248C9BAF702}|Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj|d:\\ort\\ati\\p3\\p3_obl_papeleria\\papeleria.logicaaplicacion\\implementacioncasosuso\\usuarios\\buscarusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDFEE3E7-7AB1-4081-B5EA-6248C9BAF702}|Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj|solutionrelative:papeleria.logicaaplicacion\\implementacioncasosuso\\usuarios\\buscarusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDFEE3E7-7AB1-4081-B5EA-6248C9BAF702}|Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj|d:\\ort\\ati\\p3\\p3_obl_papeleria\\papeleria.logicaaplicacion\\datatransferobjects\\mapeosdatos\\usuariosmappers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDFEE3E7-7AB1-4081-B5EA-6248C9BAF702}|Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj|solutionrelative:papeleria.logicaaplicacion\\datatransferobjects\\mapeosdatos\\usuariosmappers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,63 +35,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "_Mensajes.cshtml",
-              "DocumentMoniker": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.MVC\\Views\\Shared\\_Mensajes.cshtml",
-              "RelativeDocumentMoniker": "Papeleria.MVC\\Views\\Shared\\_Mensajes.cshtml",
-              "ToolTip": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.MVC\\Views\\Shared\\_Mensajes.cshtml*",
-              "RelativeToolTip": "Papeleria.MVC\\Views\\Shared\\_Mensajes.cshtml*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAA5AAAA",
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.MVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Papeleria.MVC\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.MVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Papeleria.MVC\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB4AAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-01T22:44:58.382Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.MVC\\Views\\Usuarios\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Papeleria.MVC\\Views\\Usuarios\\Delete.cshtml",
-              "ToolTip": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.MVC\\Views\\Usuarios\\Delete.cshtml",
-              "RelativeToolTip": "Papeleria.MVC\\Views\\Usuarios\\Delete.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-01T22:36:43.259Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "dbo.Usuarios [Datos]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/PapeleriaOBL/True/SqlTable/dbo.Usuarios.sql",
-              "ToolTip": "dbo.Usuarios [Datos]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-05-01T22:27:47.601Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "BuscarUsuario.cs",
-              "DocumentMoniker": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaAplicacion\\ImplementacionCasosUso\\Usuarios\\BuscarUsuario.cs",
-              "RelativeDocumentMoniker": "Papeleria.LogicaAplicacion\\ImplementacionCasosUso\\Usuarios\\BuscarUsuario.cs",
-              "ToolTip": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaAplicacion\\ImplementacionCasosUso\\Usuarios\\BuscarUsuario.cs",
-              "RelativeToolTip": "Papeleria.LogicaAplicacion\\ImplementacionCasosUso\\Usuarios\\BuscarUsuario.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABkAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T22:22:03.133Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IBorrarUsuario.cs",
-              "DocumentMoniker": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaAplicacion\\InterfacesCasosUso\\Usuarios\\IBorrarUsuario.cs",
-              "RelativeDocumentMoniker": "Papeleria.LogicaAplicacion\\InterfacesCasosUso\\Usuarios\\IBorrarUsuario.cs",
-              "ToolTip": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaAplicacion\\InterfacesCasosUso\\Usuarios\\IBorrarUsuario.cs",
-              "RelativeToolTip": "Papeleria.LogicaAplicacion\\InterfacesCasosUso\\Usuarios\\IBorrarUsuario.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T22:17:29.38Z",
+              "WhenOpened": "2024-05-02T05:21:46.428Z",
               "EditorCaption": ""
             },
             {
@@ -127,50 +51,11 @@
               "Title": "UsuariosController.cs",
               "DocumentMoniker": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.MVC\\Controllers\\UsuariosController.cs",
               "RelativeDocumentMoniker": "Papeleria.MVC\\Controllers\\UsuariosController.cs",
-              "ToolTip": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.MVC\\Controllers\\UsuariosController.cs*",
-              "RelativeToolTip": "Papeleria.MVC\\Controllers\\UsuariosController.cs*",
-              "ViewState": "AQIAADkAAAAAAAAAAAAEwD4AAAAjAAAA",
+              "ToolTip": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.MVC\\Controllers\\UsuariosController.cs",
+              "RelativeToolTip": "Papeleria.MVC\\Controllers\\UsuariosController.cs",
+              "ViewState": "AQIAAHQAAAAAAAAAAAAuwB8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T01:19:20.947Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.MVC\\Views\\Usuarios\\Index.cshtml",
-              "RelativeDocumentMoniker": "Papeleria.MVC\\Views\\Usuarios\\Index.cshtml",
-              "ToolTip": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.MVC\\Views\\Usuarios\\Index.cshtml",
-              "RelativeToolTip": "Papeleria.MVC\\Views\\Usuarios\\Index.cshtml",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAADYAAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-01T22:28:40.098Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BorrarUsuario.cs",
-              "DocumentMoniker": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaAplicacion\\ImplementacionCasosUso\\Usuarios\\BorrarUsuario.cs",
-              "RelativeDocumentMoniker": "Papeleria.LogicaAplicacion\\ImplementacionCasosUso\\Usuarios\\BorrarUsuario.cs",
-              "ToolTip": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaAplicacion\\ImplementacionCasosUso\\Usuarios\\BorrarUsuario.cs",
-              "RelativeToolTip": "Papeleria.LogicaAplicacion\\ImplementacionCasosUso\\Usuarios\\BorrarUsuario.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T22:06:34.269Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UsuariosMappers.cs",
-              "DocumentMoniker": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaAplicacion\\DataTransferObjects\\MapeosDatos\\UsuariosMappers.cs",
-              "RelativeDocumentMoniker": "Papeleria.LogicaAplicacion\\DataTransferObjects\\MapeosDatos\\UsuariosMappers.cs",
-              "ToolTip": "D:\\ORT\\ATI\\P3\\P3_OBL_Papeleria\\Papeleria.LogicaAplicacion\\DataTransferObjects\\MapeosDatos\\UsuariosMappers.cs",
-              "RelativeToolTip": "Papeleria.LogicaAplicacion\\DataTransferObjects\\MapeosDatos\\UsuariosMappers.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAqwBUAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T22:18:23.729Z",
+              "WhenOpened": "2024-05-02T03:31:46.043Z",
               "EditorCaption": ""
             }
           ]

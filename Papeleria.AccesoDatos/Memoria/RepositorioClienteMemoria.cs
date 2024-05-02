@@ -36,17 +36,22 @@ namespace Papeleria.AccesoDatos.Memoria
             throw new NotImplementedException();
         }
 
-        public Cliente GetClientePorRazon(RazonSocial rsocial)
+        public Cliente GetClientePorRazon(string rsocial)
         {
             throw new NotImplementedException();
         }
 
-        public Cliente GetClientePorRUT(RUT rut)
+        public Cliente GetClientePorRUT(long rut)
         {
             throw new NotImplementedException();
         }
 
         public IEnumerable<Cliente> GetClientes()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Cliente> GetClientesPedidoSupereMonto(double monto)
         {
             throw new NotImplementedException();
         }
