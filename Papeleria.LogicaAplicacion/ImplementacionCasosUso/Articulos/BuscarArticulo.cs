@@ -2,6 +2,7 @@
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Articulos;
 using Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos;
 using Papeleria.LogicaAplicacion.InterfacesCasosUso.Articulos;
+using Papeleria.LogicaNegocio.Entidades.ValueObjects.Articulos;
 using Papeleria.LogicaNegocio.Excepciones.Articulo;
 using Papeleria.LogicaNegocio.InterfacesRepositorio;
 using System;
@@ -31,6 +32,22 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Articulos
             }
             var articuloReturn = ArticulosMappers.ToDto(articulo);
             return articuloReturn;
+        }
+
+        public ArticuloListadosDto GetArticuloPorCodigo(CodigoProveedorArticulos codigoProveedor)
+        {
+            var articulo = _repoArticulos.GetArticuloByCodigo(codigoProveedor);
+            if(articulo == null)
+            {
+                throw new ArticuloNuloException("Articulo no encontrado con el codigo especificado");
+            }
+            var articuloReturn = ArticulosMappers.ToDto(articulo);
+            return articuloReturn;
+        }
+
+        public IEnumerable<ArticuloListadosDto> GetArticulosPorNombre(string nombre)
+        {
+            throw new NotImplementedException();
         }
     }
 }

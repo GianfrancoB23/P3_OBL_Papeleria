@@ -55,6 +55,15 @@ namespace Empresa.LogicaDeNegocio.Entidades
         public void CambiarPrecioVP(int nuevoPrecio){
             PrecioVP = nuevoPrecio;
         }
+
+        public void ModificarDatos(Articulo obj)
+        {
+            this.CodigoProveedor = obj.CodigoProveedor;
+            this.NombreArticulo = obj.NombreArticulo;
+            this.Descripcion = obj.Descripcion;
+            this.PrecioVP = obj.PrecioVP;
+            this.Stock = obj.Stock;
+        }
     }
 }
 

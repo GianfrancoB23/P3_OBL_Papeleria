@@ -2,6 +2,7 @@
 using Papeleria.LogicaNegocio.Entidades;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Articulos;
 using Papeleria.LogicaNegocio.Excepciones.Articulo;
+using Papeleria.LogicaNegocio.Excepciones.Usuario;
 using Papeleria.LogicaNegocio.InterfacesRepositorio;
 using System;
 using System.Collections.Generic;
@@ -58,17 +59,41 @@ namespace Papeleria.AccesoDatos.EF
 
         public void Remove(int id)
         {
-            throw new NotImplementedException();
+            var articulo = _db.Articulos.FirstOrDefault(u => u.Id == id);
+            if (articulo != null)
+            {
+                _db.Articulos.Remove(articulo);
+                _db.SaveChanges();
+            }
         }
 
         public void Remove(Articulo obj)
         {
-            throw new NotImplementedException();
+            _db.Articulos.Remove(obj);
+            _db.SaveChanges();
         }
 
         public void Update(int id, Articulo obj)
         {
-            throw new NotImplementedException();
+            var articulo = _db.Articulos.FirstOrDefault(u => u.Id == id);
+
+            if (articulo != null)
+            {
+                try
+                {
+                    articulo.ModificarDatos(obj);
+                    _db.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+
+                    throw new ArticuloNoValidoException(ex.Message);
+                }
+            }
+            else
+            {
+                throw new ArticuloNuloException("El articulo no existe");
+            }
         }
     }
 }

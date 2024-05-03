@@ -18,7 +18,7 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
         public static Articulo FromDto(ArticuloAltaDto dto)
         {
             if (dto == null) throw new ArticuloNuloException(nameof(dto));
-            return new Articulo();
+            return new Articulo(dto.CodigoProveedor, dto.NombreArticulo, dto.Descripcion, dto.PrecioVP, dto.Stock);
         }
         public static Articulo FromDtoUpdate(ArticuloModificarDTO dto)
         {

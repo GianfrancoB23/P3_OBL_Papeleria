@@ -1,5 +1,7 @@
 ﻿using Empresa.LogicaDeNegocio.Entidades;
+using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Articulos;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
+using Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos;
 using Papeleria.LogicaAplicacion.InterfacesCasosUso.Articulos;
 using Papeleria.LogicaNegocio.Excepciones.Articulo;
 using Papeleria.LogicaNegocio.InterfacesRepositorio;
@@ -19,17 +21,32 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Articulos
         {
             _repoArticulos = repo;
         }
-        public void Ejecutar(int id, ArticuloBorrarDto articuloDel) 
+        public void Ejecutar(int id) 
         {
-            if(articuloDel == null)
+            var articulo = _repoArticulos.GetById(id);
+            if(articulo == null)
             {
                 throw new ArticuloNuloException("Articulo no puede ser nulo");
             }
             try
             {
-                var articulo = _repoArticulos.GetById(articuloDel.Id);
                 _repoArticulos.Remove(articulo);
             } catch (Exception ex)
+            {
+                throw new ArticuloNoValidoException(ex.Message);
+            }
+        }
+        public void Ejecutar(Articulo articulo)
+        {
+            if (articulo == null)
+            {
+                throw new ArticuloNuloException("Articulo no puede ser nulo");
+            }
+            try
+            {
+                _repoArticulos.Remove(articulo);
+            }
+            catch (Exception ex)
             {
                 throw new ArticuloNoValidoException(ex.Message);
             }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Papeleria.LogicaNegocio.Entidades.ValueObjects.Articulos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
