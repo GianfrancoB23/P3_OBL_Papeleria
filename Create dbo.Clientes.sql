@@ -1,7 +1,7 @@
 ﻿USE [PapeleriaOBL]
 GO
 
-/****** Objeto: Table [dbo].[Clientes] Fecha del script: 02/05/2024 1:04:32 ******/
+/****** Object: Table [dbo].[Clientes] Script Date: 2/5/2024 21:04:01 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -18,7 +18,6 @@ CREATE TABLE [dbo].[Clientes] (
     [rut_Rut]              BIGINT         NOT NULL
 );
 
-
 INSERT INTO [dbo].[Clientes] ([direccion_Calle], [direccion_Ciudad], [direccion_Distancia], [direccion_Numero], [razonSocial_RazonSoc], [rut_Rut])
 VALUES 
 ('Calle A', 'Ciudad A', 5, 123, 'Razón Social 1', 1234567890123),
@@ -31,3 +30,4 @@ VALUES
 ('Calle H', 'Ciudad H', 40, 222324, 'Razón Social 8', 8901234567890),
 ('Calle I', 'Ciudad I', 45, 252627, 'Razón Social 9', 9012345678901),
 ('Calle J', 'Ciudad J', 50, 282930, 'Razón Social 10', 1234567890128);
+

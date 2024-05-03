@@ -1,4 +1,5 @@
 using Empresa.LogicaDeNegocio.Entidades;
+using Microsoft.EntityFrameworkCore;
 using Papeleria.Comun;
 using Papeleria.LogicaNegocio.Excepciones.Cliente.ClienteValueObjects.RazonSocial;
 using Papeleria.LogicaNegocio.InterfacesEntidades;

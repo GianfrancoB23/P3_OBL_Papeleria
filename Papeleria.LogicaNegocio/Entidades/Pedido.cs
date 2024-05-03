@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 using Papeleria.LogicaNegocio.Entidades;
+using Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Pedidos;
 using Papeleria.LogicaNegocio.Excepciones.Cliente;
 using Papeleria.LogicaNegocio.Excepciones.Pedido;
@@ -8,6 +10,7 @@ using Papeleria.LogicaNegocio.InterfacesEntidades;
 
 namespace Empresa.LogicaDeNegocio.Entidades
 {
+    [Index(nameof(precioFinal))]
     public abstract class Pedido : IValidable<Pedido>, IEquatable<Pedido>, IEntity
 	{
         public int Id { get; set; }

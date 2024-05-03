@@ -1,9 +1,11 @@
 using Empresa.LogicaDeNegocio.Sistema;
+using Microsoft.EntityFrameworkCore;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes;
 using Papeleria.LogicaNegocio.Excepciones.Cliente.ClienteValueObjects.Direccion;
 using Papeleria.LogicaNegocio.Excepciones.Cliente.ClienteValueObjects.RazonSocial;
 using Papeleria.LogicaNegocio.Excepciones.Cliente.ClienteValueObjects.RUT;
 using Papeleria.LogicaNegocio.InterfacesEntidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
