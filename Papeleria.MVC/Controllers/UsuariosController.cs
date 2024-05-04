@@ -113,7 +113,7 @@ namespace Papeleria.MVC.Controllers
             if (HttpContext.Session.GetInt32("LogueadoID") != null)
             {
                 UsuarioListadosDto dto = _getUsuario.GetById(id.GetValueOrDefault());
-                ArticuloBorrarDto borrar = new ArticuloBorrarDto() 
+                UsuarioBorrarDto borrar = new UsuarioBorrarDto() 
                 {
                     Id = dto.Id,
                     Nombre = dto.Nombre,
@@ -134,7 +134,7 @@ namespace Papeleria.MVC.Controllers
         // POST: UsuariosController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, ArticuloBorrarDto borrar, bool IsChecked)
+        public ActionResult Delete(int id, UsuarioBorrarDto borrar, bool IsChecked)
         {
             try
             {
