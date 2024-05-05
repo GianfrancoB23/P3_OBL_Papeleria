@@ -8,6 +8,9 @@ using Empresa.LogicaDeNegocio.Entidades;
 using Empresa.LogicaDeNegocio.Sistema;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Pedidos;
 using Papeleria.LogicaNegocio.Entidades;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes;
+using Papeleria.AccesoDatos.Configuraciones;
 
 namespace Papeleria.AccesoDatos.EF
 {
@@ -24,6 +27,12 @@ namespace Papeleria.AccesoDatos.EF
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"SERVER=(localDB)\Mssqllocaldb;DATABASE=PapeleriaOBL;INTEGRATED SECURITY=True; encrypt=false");
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            new ClienteConfiguraciones().Configure(modelBuilder.Entity<Cliente>());
+            modelBuilder.ApplyConfiguration(new ClienteConfiguraciones());
         }
     }
 }
