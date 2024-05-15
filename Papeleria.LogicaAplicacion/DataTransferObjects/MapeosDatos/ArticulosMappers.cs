@@ -47,7 +47,7 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
             {
                 throw new ArticuloNuloException("La lista de articulos no puede ser nula");
             }
-            return articulos.Select(usuario => ToDto(usuario));
+            return articulos.Select(articulo => ToDto(articulo));
         }
     }
 }

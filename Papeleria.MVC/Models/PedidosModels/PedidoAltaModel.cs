@@ -16,5 +16,9 @@ namespace Papeleria.MVC.Models.PedidosModels
         [Required(ErrorMessage = "La fecha de entrega es obligatoria")]
         [DataType(DataType.Date)]
         public DateTime FechaEntrega { get; set; }
+        public Articulo Articulo { get; set; }
+        public int Cantidad { get; set; }
+        public double PrecioUnitario { get; set; }
+        public double Subtotal { get; set; }
     }
 }

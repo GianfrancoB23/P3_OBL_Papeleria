@@ -7,6 +7,9 @@ using Papeleria.AccesoDatos.EF;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Usuario;
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Pedidos;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Papeleria.Test
 {
@@ -20,11 +23,11 @@ namespace Papeleria.Test
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
-
             Articulo a = new Articulo(1234567898765, "papa", "ssssssssss", 1500, 20);
             AgregarArticulo(a);
 
             Cliente c = new Cliente(123456789101, "Pepsi Sociedad Anonima", "Avenida Millan", 5285, "Montevideo");
+            AgregarCliente(c);
             //Express pedido = new Express(c, 3, new IVA(22), new LineaPedido(a, 10), true);
 
             Console.WriteLine("Email");
@@ -38,7 +41,6 @@ namespace Papeleria.Test
             Usuario usuario = new Usuario(email,nom,ape,pass);
 
             AgregarUsuario(usuario);
-            //AgregarCliente(c);
            // AgregarPedido((Pedido) pedido);
         }
         static void AgregarUsuario(Usuario usuario)

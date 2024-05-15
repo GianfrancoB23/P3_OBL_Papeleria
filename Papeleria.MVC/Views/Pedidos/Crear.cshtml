@@ -7,7 +7,7 @@
 
     <div class="form-group">
         <label asp-for="ClienteId">Cliente:</label>
-        <select asp-for="ClienteId" class="form-control" asp-items="@(new SelectList(ViewBag.Clientes, "Id", "Nombre"))">
+        <select asp-for="ClienteId" class="form-control" asp-items="@(new SelectList(ViewBag.Clientes, "Id", "rut"))">
             <option value="">Seleccionar cliente...</option>
         </select>
         <span asp-validation-for="ClienteId" class="text-danger"></span>
@@ -33,7 +33,7 @@
                 {
                     <tr>
                         <td>
-                            <select asp-for="@linea.ArticuloId" class="form-control" asp-items="@(new SelectList(ViewBag.Articulos, "Id", "Nombre"))">
+                            <select asp-for="@linea.ArticuloId" class="form-control" asp-items="@(new SelectList(ViewBag.Articulos, "Id", "NombreArticulo"))">
                                 <option value="">Seleccionar artículo...</option>
                             </select>
                         </td>

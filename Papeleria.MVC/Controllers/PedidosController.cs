@@ -2,7 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Papeleria.AccesoDatos.EF;
+using Papeleria.LogicaAplicacion.ImplementacionCasosUso.Articulos;
 using Papeleria.LogicaAplicacion.ImplementacionCasosUso.Clientes;
+using Papeleria.LogicaAplicacion.InterfacesCasosUso.Articulos;
 using Papeleria.LogicaAplicacion.InterfacesCasosUso.Clientes;
 using Papeleria.LogicaNegocio.Entidades;
 using Papeleria.LogicaNegocio.InterfacesRepositorio;
@@ -14,16 +16,30 @@ namespace Papeleria.MVC.Controllers
     {
         private static IRepositorioPedido _pedidos = new RepositorioPedidoEF(new PapeleriaContext());
         private static IRepositorioCliente _clientesRepo = new RepositorioClienteEF(new PapeleriaContext(), _pedidos);
+        private static IRepositorioArticulo _articulos = new RepositorioArticuloEF(new PapeleriaContext());
         private static IBuscarClientes _buscarClientes;
+        private static IGetArticulo _getArticulo;
+        private static IGetAllArticulos _getAllArticulos;
 
         public PedidosController()
         {
             _buscarClientes = new BuscarClientes(_clientesRepo);
+            _getAllArticulos = new GetAllArticulos(_articulos);
+        }
+        public IActionResult Index()
+        {
+            ViewBag.Clientes = _buscarClientes.GetAll();
+            ViewBag.Articulos = _getAllArticulos.Ejecutar();
+            Console.WriteLine(ViewBag.Articulos);
+            Console.WriteLine(ViewBag.Clientes);
+            return View();
         }
 
         [HttpGet]
-        public IActionResult Create()
+        public IActionResult Crear()
         {
+            ViewBag.Clientes = _buscarClientes.GetAll();
+            ViewBag.Articulos = _getAllArticulos.Ejecutar();
             var viewModel = new PedidoAltaModel
             {
                 LineasPedido = new List<LineaPedidoModel> { new LineaPedidoModel() } // Al menos una línea de pedido
