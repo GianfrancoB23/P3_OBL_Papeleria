@@ -23,7 +23,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Articulos
             _repoArticulos = repo;
         }
 
-        public ArticuloDTO GetById(int id)
+        public ArticuloDTO GetByIdDTO(int id)
         {
             var articulo = _repoArticulos.GetById(id);
             if (articulo == null) 
@@ -32,6 +32,10 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Articulos
             }
             var articuloReturn = ArticulosMappers.ToDto(articulo);
             return articuloReturn;
+        }
+        public Articulo GetById(int id)
+        {
+            return _repoArticulos.GetById(id);
         }
 
         public ArticuloDTO GetArticuloPorCodigo(CodigoProveedorArticulos codigoProveedor)

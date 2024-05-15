@@ -23,7 +23,7 @@ namespace Papeleria.AccesoDatos.EF
         {
             try
             {
-                _db.Pedidos.Add(obj);
+                _db.Pedidos.Attach(obj);
                 _db.SaveChanges();
             }
             catch (Exception ex)

@@ -1,4 +1,5 @@
-﻿using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Articulos;
+﻿using Empresa.LogicaDeNegocio.Entidades;
+using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Articulos;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Articulos;
 using System;
@@ -11,7 +12,8 @@ namespace Papeleria.LogicaAplicacion.InterfacesCasosUso.Articulos
 {
     public interface IGetArticulo
     {
-        ArticuloDTO GetById(int id);
+        ArticuloDTO GetByIdDTO(int id);
+        Articulo GetById(int id);
         ArticuloDTO GetArticuloPorCodigo(CodigoProveedorArticulos codigoProveedor);
         IEnumerable<ArticuloDTO> GetArticulosPorNombre(string nombre);
     }

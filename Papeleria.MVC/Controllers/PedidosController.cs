@@ -110,7 +110,7 @@ namespace Papeleria.MVC.Controllers
         {
             try
             {
-                ArticuloDTO articulo = _getArticulo.GetById(ArticuloId);
+                ArticuloDTO articulo = _getArticulo.GetByIdDTO(ArticuloId);
                 LineaPedidoDTO altaLinea = new LineaPedidoDTO { idArticulo = articulo.Id, CodigoProveedor = articulo.CodigoProveedor, NombreArticulo = articulo.NombreArticulo, Descripcion = articulo.Descripcion, PrecioVP = articulo.PrecioVP, Stock = articulo.Stock, PrecioUnitario = articulo.PrecioVP, Cantidad = Cantidad, Subtotal = Cantidad * articulo.PrecioVP };
                 if (tempPedido == null)
                 {

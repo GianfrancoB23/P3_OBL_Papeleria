@@ -27,8 +27,7 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
             {
                 throw new PedidoNuloException("LinePedido nula");
             }
-            ArticuloDTO articuloDto = _getArticulo.GetById(dto.idArticulo);
-            Articulo articulo = ArticulosMappers.FromDto(articuloDto);
+            Articulo articulo = _getArticulo.GetById(dto.idArticulo);
             return new LineaPedido(articulo, dto.Cantidad);
         }
         public static LineaPedido FromDTOUpdate(LineaPedidoDTO dto)
@@ -38,8 +37,7 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
             {
                 throw new PedidoNuloException("LinePedido nula");
             }
-            ArticuloDTO articuloDto = _getArticulo.GetById(dto.idArticulo);
-            Articulo articulo = ArticulosMappers.FromDto(articuloDto);
+            Articulo articulo = _getArticulo.GetById(dto.idArticulo);
             LineaPedido linea = new LineaPedido(articulo, dto.Cantidad);
             linea.Id = dto.id;
             return linea;
