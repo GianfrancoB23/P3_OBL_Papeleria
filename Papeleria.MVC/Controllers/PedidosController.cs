@@ -27,22 +27,34 @@ namespace Papeleria.MVC.Controllers
         private static IBuscarClientes _buscarClientes;
         private static IGetArticulo _getArticulo = new BuscarArticulo(_articulos);
         private static IGetAllArticulos _getAllArticulos;
+        private static IGetAllPedidos _getAllPedidos;
         private static PedidoDTO tempPedido;
 
         public PedidosController()
         {
             _buscarClientes = new BuscarClientes(_clientesRepo);
             _getAllArticulos = new GetAllArticulos(_articulos);
+            _getAllPedidos = new GetAllPedidos(_pedidos);
             _altaPedido = new AltaPedidos(_pedidos);
         }
         public IActionResult Index()
         {
             ViewBag.Clientes = _buscarClientes.GetAll();
-            ViewBag.Articulos = _getAllArticulos.Ejecutar();
+            ViewBag.Articulos = _getAllPedidos.Ejecutar();
             tempPedido = null;
             Console.WriteLine(ViewBag.Articulos);
-            Console.WriteLine(ViewBag.Clientes);
-            return View();
+            Console.WriteLine(ViewBag.Clientes); 
+            if (HttpContext.Session.GetInt32("LogueadoID") != null)
+            {
+                var pedidos = _getAllPedidos.Ejecutar();
+                if (pedidos == null || pedidos.Count() == 0)
+                {
+                    ViewBag.Mensaje = "No existen pedido";
+                }
+                ViewBag.Mensaje = $"Articulos en total: {pedidos.Count()}.";
+                return View(pedidos);
+            }
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpGet]
