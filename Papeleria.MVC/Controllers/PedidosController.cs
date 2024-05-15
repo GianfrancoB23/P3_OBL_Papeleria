@@ -42,8 +42,6 @@ namespace Papeleria.MVC.Controllers
             ViewBag.Clientes = _buscarClientes.GetAll();
             ViewBag.Articulos = _getAllPedidos.Ejecutar();
             tempPedido = null;
-            Console.WriteLine(ViewBag.Articulos);
-            Console.WriteLine(ViewBag.Clientes); 
             if (HttpContext.Session.GetInt32("LogueadoID") != null)
             {
                 var pedidos = _getAllPedidos.Ejecutar();

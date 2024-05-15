@@ -105,6 +105,30 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
                 precioFinal = pedido.precioFinal
             };
         }
+        public static PedidoDTO ToDto(Pedido pedido)
+        {
+            if (pedido == null) throw new PedidoNuloException();
+            return new PedidoDTO()
+            {
+                Id = pedido.Id,
+                FechaPedido = pedido.fechaPedido,
+                FechaEntrega = pedido.fechaPedido.AddDays(pedido.entregaPrometida),
+                ClienteID = pedido.cliente.Id,
+                LineasPedido = LineaPedidoMappers.FromLista(pedido.lineas).ToList(),
+                recargo = pedido.recargo,
+                iva = pedido.iva.valor,
+                precioFinal = pedido.precioFinal
+            };
+        }
+
+        public static IEnumerable<PedidoDTO> FromLista(IEnumerable<Pedido> pedidos)
+        {
+            if (pedidos == null)
+            {
+                throw new PedidoNuloException("La lista de pedidos no puede ser nula");
+            }
+            return pedidos.Select(pedido => ToDto(pedido));
+        }
 
         public static IEnumerable<PedidoDTO> FromListaExpress(IEnumerable<Express> pedidos)
         {

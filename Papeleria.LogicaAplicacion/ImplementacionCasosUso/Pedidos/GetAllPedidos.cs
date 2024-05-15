@@ -28,7 +28,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Pedidos
             {
                 throw new PedidoNuloException("No hay autores registrados");
             }
-            return PedidosMappers.FromListaExpress((IEnumerable<Empresa.LogicaDeNegocio.Entidades.Express>)pedidosOrigen);
+            return PedidosMappers.FromLista(pedidosOrigen);
         }
 
     }
