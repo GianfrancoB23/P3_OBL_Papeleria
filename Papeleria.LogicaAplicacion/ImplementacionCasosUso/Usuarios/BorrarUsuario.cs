@@ -20,7 +20,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Usuarios
             _repoUsuarios = repo;
         }
 
-        public void Ejecutar(int id, UsuarioBorrarDto usuarioBorrar)
+        public void Ejecutar(int id, UsuarioDTO usuarioBorrar)
         {
             if (usuarioBorrar == null)
                 throw new UsuarioNuloExcepcion("Usuario no puede ser nulo.");

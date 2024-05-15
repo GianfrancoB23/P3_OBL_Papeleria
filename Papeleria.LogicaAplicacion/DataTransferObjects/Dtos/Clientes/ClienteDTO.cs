@@ -1,14 +1,17 @@
 ﻿using Empresa.LogicaDeNegocio.Entidades;
+using Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Clientes
 {
-    public class ClienteAltaDto
+    public class ClienteDTO
     {
+        public int Id { get; set; }
         public long rut { get; set; }
 
         public string razonSocial { get; set; }
@@ -21,6 +24,5 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Clientes
 
         public int Distancia { get; init; }
 
-        public List<Pedido> pedidos { get; set; }
     }
 }

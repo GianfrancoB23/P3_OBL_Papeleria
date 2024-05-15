@@ -18,7 +18,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Usuarios
         {
             _repositorioUsuarios = repo;
         }
-        public IEnumerable<UsuarioListadosDto> Ejecutar()
+        public IEnumerable<UsuarioDTO> Ejecutar()
         {
             var usuariosOrigen = _repositorioUsuarios.GetAll();
             if (usuariosOrigen == null || usuariosOrigen.Count() == 0)

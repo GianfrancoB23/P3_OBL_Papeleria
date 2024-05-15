@@ -21,7 +21,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Articulos
             _repoArticulos = repo;
         }
 
-        public void Ejecutar(int id, ArticuloModificarDTO articuloMod)
+        public void Ejecutar(int id, ArticuloDTO articuloMod)
         {
             if (articuloMod == null) { throw new ArticuloNuloException("Articulo modificado no puede ser nulo"); }
             try

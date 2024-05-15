@@ -19,7 +19,6 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Runtime.Intrinsics.Arm;
 using System.Text.Json.Serialization;
 using System.Text.Json;
-using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuario;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
 
 namespace Papeleria.MVC.Controllers
@@ -69,7 +68,7 @@ namespace Papeleria.MVC.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(ArticuloAltaDto articulo)
+        public ActionResult Create(ArticuloDTO articulo)
         {
             try
             {
@@ -87,8 +86,8 @@ namespace Papeleria.MVC.Controllers
         {
             if (HttpContext.Session.GetInt32("LogueadoID") != null)
             {
-                ArticuloListadosDto dto = _getArticulo.GetById(id.GetValueOrDefault());
-                ArticuloModificarDTO mod = new ArticuloModificarDTO()
+                ArticuloDTO dto = _getArticulo.GetById(id.GetValueOrDefault());
+                ArticuloDTO mod = new ArticuloDTO()
                 {
                     Id = dto.Id,
                     CodigoProveedor = dto.CodigoProveedor,
@@ -105,7 +104,7 @@ namespace Papeleria.MVC.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, ArticuloModificarDTO articulo)
+        public ActionResult Edit(int id, ArticuloDTO articulo)
         {
             try
             {
@@ -122,8 +121,8 @@ namespace Papeleria.MVC.Controllers
         {
             if (HttpContext.Session.GetInt32("LogueadoID") != null)
             {
-                ArticuloListadosDto dto = _getArticulo.GetById(id.GetValueOrDefault());
-                ArticuloBorrarDTO borrar = new ArticuloBorrarDTO()
+                ArticuloDTO dto = _getArticulo.GetById(id.GetValueOrDefault());
+                ArticuloDTO borrar = new ArticuloDTO()
                 {
                     Id = dto.Id,
                     CodigoProveedor = dto.CodigoProveedor,
@@ -141,7 +140,7 @@ namespace Papeleria.MVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, ArticuloBorrarDTO borrar, bool IsChecked)
+        public ActionResult Delete(int id, ArticuloDTO borrar, bool IsChecked)
         {
             try
             {

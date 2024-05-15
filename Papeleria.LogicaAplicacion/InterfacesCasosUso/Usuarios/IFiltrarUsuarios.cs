@@ -9,6 +9,6 @@ namespace Papeleria.LogicaAplicacion.InterfacesCasosUso.Usuarios
 {
     public interface IFiltrarUsuarios
     {
-        IEnumerable<UsuarioListadosDto> GetUsuarioPorEmail(string email);
+        IEnumerable<UsuarioDTO> GetUsuarioPorEmail(string email);
     }
 }

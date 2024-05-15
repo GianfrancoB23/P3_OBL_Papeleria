@@ -21,7 +21,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Usuarios
         {
             _repoUsuarios = repo;
         }
-        public UsuarioListadosDto GetById(int id)
+        public UsuarioDTO GetById(int id)
         {
             var usu = _repoUsuarios.GetById(id);
             if (usu == null)

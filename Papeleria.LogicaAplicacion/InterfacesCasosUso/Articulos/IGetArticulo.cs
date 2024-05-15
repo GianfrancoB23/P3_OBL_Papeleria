@@ -11,8 +11,8 @@ namespace Papeleria.LogicaAplicacion.InterfacesCasosUso.Articulos
 {
     public interface IGetArticulo
     {
-        ArticuloListadosDto GetById(int id);
-        ArticuloListadosDto GetArticuloPorCodigo(CodigoProveedorArticulos codigoProveedor);
-        IEnumerable<ArticuloListadosDto> GetArticulosPorNombre(string nombre);
+        ArticuloDTO GetById(int id);
+        ArticuloDTO GetArticuloPorCodigo(CodigoProveedorArticulos codigoProveedor);
+        IEnumerable<ArticuloDTO> GetArticulosPorNombre(string nombre);
     }
 }

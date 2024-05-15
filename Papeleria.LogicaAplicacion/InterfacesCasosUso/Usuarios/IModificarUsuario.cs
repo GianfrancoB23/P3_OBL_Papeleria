@@ -9,6 +9,6 @@ namespace Papeleria.LogicaAplicacion.InterfacesCasosUso.Usuarios
 {
     public interface IModificarUsuario
     {
-        void Ejecutar(int id, UsuarioModificarDto usuarioModificado);
+        void Ejecutar(int id, UsuarioDTO usuarioModificado);
     }
 }

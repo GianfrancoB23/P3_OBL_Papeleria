@@ -21,7 +21,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Clientes
         {
             _repoClientes = repo;
         }
-        public IEnumerable<ClienteListadosDto> GetAll()
+        public IEnumerable<ClienteDTO> GetAll()
         {
             var clientesOrigen = _repoClientes.GetAll();
             if (clientesOrigen == null || clientesOrigen.Count() == 0)
@@ -31,7 +31,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Clientes
             return ClientesMappers.FromLista(clientesOrigen);
         }
 
-        public IEnumerable<ClienteListadosDto> GetXMontoSuperado(double monto)
+        public IEnumerable<ClienteDTO> GetXMontoSuperado(double monto)
         {
             var clientesOrigen = _repoClientes.GetClientesPedidoSupereMonto(monto);
             if (clientesOrigen == null || clientesOrigen.Count() == 0)
@@ -41,7 +41,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Clientes
             return ClientesMappers.FromLista(clientesOrigen);
         }
 
-        public ClienteListadosDto GetXRazonSocial(string razon)
+        public ClienteDTO GetXRazonSocial(string razon)
         {
             var clientesOrigen = _repoClientes.GetClientePorRazon(razon);
             if (clientesOrigen == null)

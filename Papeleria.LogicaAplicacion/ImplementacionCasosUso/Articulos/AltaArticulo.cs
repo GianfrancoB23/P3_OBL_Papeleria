@@ -1,5 +1,5 @@
 ﻿using Empresa.LogicaDeNegocio.Sistema;
-using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuario;
+using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
 using Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos;
 using Papeleria.LogicaNegocio.Excepciones.Articulo;
 using Papeleria.LogicaNegocio.Excepciones.Usuario;
@@ -24,7 +24,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Articulos
             _repoArticulos = repo;
         }
 
-        public void Ejecutar(ArticuloAltaDto dto)
+        public void Ejecutar(ArticuloDTO dto)
         {
             if (dto == null)
                 throw new ArticuloNuloException("Nulo");

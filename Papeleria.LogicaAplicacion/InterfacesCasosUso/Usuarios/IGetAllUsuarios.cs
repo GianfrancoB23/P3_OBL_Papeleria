@@ -9,6 +9,6 @@ namespace Papeleria.LogicaAplicacion.InterfacesCasosUso.Usuarios
 {
     public interface IGetAllUsuarios
     {
-        public IEnumerable<UsuarioListadosDto> Ejecutar();
+        public IEnumerable<UsuarioDTO> Ejecutar();
     }
 }

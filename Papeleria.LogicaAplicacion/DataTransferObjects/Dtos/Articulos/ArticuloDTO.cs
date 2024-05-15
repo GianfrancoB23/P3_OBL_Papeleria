@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Articulos
 {
-    public class ArticuloListadosDto
+    public class ArticuloDTO
     {
         public int Id { get; set; }
         public long CodigoProveedor { get; set; }

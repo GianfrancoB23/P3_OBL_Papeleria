@@ -20,7 +20,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Articulos
             _repoArticulos = repo;
         }
 
-        public IEnumerable<ArticuloListadosDto> Ejecutar()
+        public IEnumerable<ArticuloDTO> Ejecutar()
         {
             var articulos = _repoArticulos.GetAll();
             if (articulos == null || articulos.Count() == 0)

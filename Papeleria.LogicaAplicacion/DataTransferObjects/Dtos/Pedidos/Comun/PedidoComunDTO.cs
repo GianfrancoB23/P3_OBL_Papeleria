@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Pedidos.Comun
 {
-    internal class PedidoComunListadosDto
+    internal class PedidoComunDTO
     {
     }
 }

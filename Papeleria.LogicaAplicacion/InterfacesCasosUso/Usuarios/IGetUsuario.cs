@@ -9,6 +9,6 @@ namespace Papeleria.LogicaAplicacion.InterfacesCasosUso.Usuarios
 {
     public interface IGetUsuario
     {
-        UsuarioListadosDto GetById(int id);
+        UsuarioDTO GetById(int id);
     }
 }

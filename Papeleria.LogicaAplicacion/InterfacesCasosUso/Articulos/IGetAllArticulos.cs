@@ -10,6 +10,6 @@ namespace Papeleria.LogicaAplicacion.InterfacesCasosUso.Articulos
 {
     public interface IGetAllArticulos
     {
-        public IEnumerable<ArticuloListadosDto> Ejecutar();
+        public IEnumerable<ArticuloDTO> Ejecutar();
     }
 }

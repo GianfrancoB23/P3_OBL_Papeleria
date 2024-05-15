@@ -9,8 +9,8 @@ namespace Papeleria.LogicaAplicacion.InterfacesCasosUso.Clientes
 {
     public interface IBuscarClientes
     {
-        public IEnumerable<ClienteListadosDto> GetAll();
-        public ClienteListadosDto GetXRazonSocial(string razon);
-        public IEnumerable<ClienteListadosDto> GetXMontoSuperado(double monto);
+        public IEnumerable<ClienteDTO> GetAll();
+        public ClienteDTO GetXRazonSocial(string razon);
+        public IEnumerable<ClienteDTO> GetXMontoSuperado(double monto);
     }
 }

@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Papeleria.AccesoDatos.EF;
-using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuario;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
 using Papeleria.LogicaAplicacion.ImplementacionCasosUso.Usuarios;
 using Papeleria.LogicaAplicacion.InterfacesCasosUso.Usuarios;
@@ -55,7 +54,7 @@ namespace Papeleria.MVC.Controllers
         // POST: UsuariosController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(UsuarioAltaDto autorDto)
+        public ActionResult Create(UsuarioDTO autorDto)
         {
             try
             {
@@ -75,8 +74,8 @@ namespace Papeleria.MVC.Controllers
         {
             if (HttpContext.Session.GetInt32("LogueadoID") != null)
             {
-                UsuarioListadosDto dto = _getUsuario.GetById(id.GetValueOrDefault());
-                UsuarioModificarDto mod = new UsuarioModificarDto()
+                UsuarioDTO dto = _getUsuario.GetById(id.GetValueOrDefault());
+                UsuarioDTO mod = new UsuarioDTO()
                 {
                     Id = dto.Id,
                     Nombre = dto.Nombre,
@@ -94,7 +93,7 @@ namespace Papeleria.MVC.Controllers
         // POST: UsuariosController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, UsuarioModificarDto usu)
+        public ActionResult Edit(int id, UsuarioDTO usu)
         {
             try
             {
@@ -112,8 +111,8 @@ namespace Papeleria.MVC.Controllers
         {
             if (HttpContext.Session.GetInt32("LogueadoID") != null)
             {
-                UsuarioListadosDto dto = _getUsuario.GetById(id.GetValueOrDefault());
-                UsuarioBorrarDto borrar = new UsuarioBorrarDto() 
+                UsuarioDTO dto = _getUsuario.GetById(id.GetValueOrDefault());
+                UsuarioDTO borrar = new UsuarioDTO() 
                 {
                     Id = dto.Id,
                     Nombre = dto.Nombre,
@@ -134,7 +133,7 @@ namespace Papeleria.MVC.Controllers
         // POST: UsuariosController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, UsuarioBorrarDto borrar, bool IsChecked)
+        public ActionResult Delete(int id, UsuarioDTO borrar, bool IsChecked)
         {
             try
             {

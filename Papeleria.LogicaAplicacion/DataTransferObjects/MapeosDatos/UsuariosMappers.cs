@@ -9,26 +9,25 @@ using Empresa.LogicaDeNegocio.Entidades;
 using Empresa.LogicaDeNegocio.Sistema;
 using Papeleria.LogicaNegocio.Excepciones.Usuario;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
-using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuario;
 
 namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
 {
     public class UsuariosMappers
     {
-        public static Usuario FromDto(UsuarioAltaDto dto) {
+        public static Usuario FromDto(UsuarioDTO dto) {
             if (dto == null) throw new UsuarioNuloExcepcion(nameof(dto));
             return new Usuario(dto.Email,dto.Nombre,dto.Apellido,dto.Contrasenia);
         }
-        public static Usuario FromDtoUpdate(UsuarioModificarDto dto)
+        public static Usuario FromDtoUpdate(UsuarioDTO dto)
         {
             if (dto == null) throw new UsuarioNuloExcepcion(nameof(dto));
             var usuario = new Usuario(dto.Email, dto.Nombre, dto.Apellido, dto.Contrasenia);
             usuario.Id = dto.Id;
             return usuario;
         }
-        public static UsuarioListadosDto ToDto(Usuario usuario) {
+        public static UsuarioDTO ToDto(Usuario usuario) {
             if (usuario == null) throw new UsuarioNuloExcepcion();
-            return new UsuarioListadosDto()
+            return new UsuarioDTO()
             {
                 Id = usuario.Id,
                 Email = usuario.Email.Direccion,
@@ -38,7 +37,7 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
             };
         }
 
-        public static IEnumerable<UsuarioListadosDto> FromLista(IEnumerable<Usuario> usuarios) {
+        public static IEnumerable<UsuarioDTO> FromLista(IEnumerable<Usuario> usuarios) {
             if (usuarios == null) { 
                 throw new UsuarioNuloExcepcion("La lista de usuarios no puede ser nula");
             }

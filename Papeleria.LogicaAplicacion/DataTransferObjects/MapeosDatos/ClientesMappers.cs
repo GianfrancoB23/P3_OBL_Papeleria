@@ -1,7 +1,6 @@
 ﻿using Empresa.LogicaDeNegocio.Entidades;
 using Empresa.LogicaDeNegocio.Sistema;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Clientes;
-using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuario;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
 using Papeleria.LogicaNegocio.Excepciones.Cliente;
 using Papeleria.LogicaNegocio.Excepciones.Usuario;
@@ -15,16 +14,16 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
 {
     public class ClientesMappers
     {
-        public static Cliente FromDto(ClienteListadosDto dto)
+        public static Cliente FromDto(ClienteDTO dto)
         {
             if (dto == null) throw new UsuarioNuloExcepcion(nameof(dto));
             return new Cliente(dto.rut, dto.razonSocial, dto.Calle, dto.Numero, dto.Ciudad);
         }
-        public static ClienteListadosDto ToDto(Cliente cliente)
+        public static ClienteDTO ToDto(Cliente cliente)
         {
             if (cliente == null)
                 throw new ClienteNuloException("El cliente no puede ser nulo.");
-            return new ClienteListadosDto()
+            return new ClienteDTO()
             {
                 Id = cliente.Id,
                 rut = cliente.rut.Rut,
@@ -37,7 +36,7 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
             };
         }
 
-        public static IEnumerable<ClienteListadosDto> FromLista(IEnumerable<Cliente> clientes)
+        public static IEnumerable<ClienteDTO> FromLista(IEnumerable<Cliente> clientes)
         {
             if (clientes == null)
             {

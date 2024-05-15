@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
 {
-    internal class PedidosMappers
+    public class PedidosMappers
     {
     }
 }

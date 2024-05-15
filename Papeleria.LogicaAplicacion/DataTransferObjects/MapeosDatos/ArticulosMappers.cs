@@ -1,6 +1,5 @@
 ﻿using Empresa.LogicaDeNegocio.Sistema;
 using Empresa.LogicaDeNegocio.Entidades; 
-using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuario;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
 using Papeleria.LogicaNegocio.Excepciones.Usuario;
 using System;
@@ -15,22 +14,22 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
 {
     public class ArticulosMappers
     {   
-        public static Articulo FromDto(ArticuloAltaDto dto)
+        public static Articulo FromDto(ArticuloDTO dto)
         {
             if (dto == null) throw new ArticuloNuloException(nameof(dto));
             return new Articulo(dto.CodigoProveedor, dto.NombreArticulo, dto.Descripcion, dto.PrecioVP, dto.Stock);
         }
-        public static Articulo FromDtoUpdate(ArticuloModificarDTO dto)
+        public static Articulo FromDtoUpdate(ArticuloDTO dto)
         {
             if (dto == null) throw new ArticuloNuloException(nameof(dto));
             var articulo = new Articulo(dto.CodigoProveedor, dto.NombreArticulo, dto.Descripcion, dto.PrecioVP, dto.Stock);
             articulo.Id = dto.Id;
             return articulo;
         }
-        public static ArticuloListadosDto ToDto(Articulo articulo)
+        public static ArticuloDTO ToDto(Articulo articulo)
         {
             if (articulo == null) throw new ArticuloNuloException();
-            return new ArticuloListadosDto()
+            return new ArticuloDTO()
             {
                 Id = articulo.Id,
                 CodigoProveedor = articulo.CodigoProveedor.codigo,
@@ -41,7 +40,7 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
             };
         }
 
-        public static IEnumerable<ArticuloListadosDto> FromLista(IEnumerable<Articulo> articulos)
+        public static IEnumerable<ArticuloDTO> FromLista(IEnumerable<Articulo> articulos)
         {
             if (articulos == null)
             {

@@ -10,8 +10,8 @@ namespace Papeleria.LogicaAplicacion.InterfacesCasosUso.Articulos
 {
     public interface IFiltrarArticulo
     {
-        IEnumerable<ArticuloListadosDto> GetArticuloPorCodigo(long codigoProveedor);
-        IEnumerable<ArticuloListadosDto> GetArticulosPorNombre(string nombre);
+        IEnumerable<ArticuloDTO> GetArticuloPorCodigo(long codigoProveedor);
+        IEnumerable<ArticuloDTO> GetArticulosPorNombre(string nombre);
 
     }
 }

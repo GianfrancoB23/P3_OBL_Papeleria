@@ -1,6 +1,6 @@
 ﻿using Empresa.LogicaDeNegocio.Sistema;
 using Papeleria.AccesoDatos.EF;
-using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuario;
+using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
 using Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos;
 using Papeleria.LogicaAplicacion.Interaces;
 using Papeleria.LogicaAplicacion.InterfacesCasosUso.Usuarios;
@@ -23,7 +23,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Usuarios
             _repoUsuarios = repo;
         }
 
-        public void Ejecutar(UsuarioAltaDto dto)
+        public void Ejecutar(UsuarioDTO dto)
         {
             if (dto == null)
                 throw new UsuarioNuloExcepcion("Nulo");

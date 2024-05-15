@@ -33,7 +33,7 @@ namespace Papeleria.WebApi.Controllers
         }
         // GET: api/<ArticulosController>
         [HttpGet]
-        public ActionResult<IEnumerable<ArticuloListadosDto>> Get()
+        public ActionResult<IEnumerable<ArticuloDTO>> Get()
         {
             try
             {
@@ -53,7 +53,7 @@ namespace Papeleria.WebApi.Controllers
 
         // GET api/<ArticulosController>/5
         [HttpGet("{id}", Name = "GetAutorByID")]
-        public ActionResult<ArticuloListadosDto> Get(int id)
+        public ActionResult<ArticuloDTO> Get(int id)
         {
             try
             {
@@ -72,7 +72,7 @@ namespace Papeleria.WebApi.Controllers
 
         // POST api/<ArticulosController>
         [HttpPost]
-        public ActionResult<ArticuloAltaDto> Post(ArticuloAltaDto articulo)
+        public ActionResult<ArticuloDTO> Post(ArticuloDTO articulo)
         {
             try
             {
@@ -92,7 +92,7 @@ namespace Papeleria.WebApi.Controllers
 
         // PUT api/<ArticulosController>/5
         [HttpPut("{id}")]
-        public ActionResult<ArticuloModificarDTO> Put(int id, ArticuloModificarDTO articulo)
+        public ActionResult<ArticuloDTO> Put(int id, ArticuloDTO articulo)
         {
             try
             {
@@ -111,7 +111,7 @@ namespace Papeleria.WebApi.Controllers
 
         // DELETE api/<ArticulosController>/5
         [HttpDelete("{id}")]
-        public ActionResult<ArticuloBorrarDTO> Delete(int id)
+        public ActionResult<ArticuloDTO> Delete(int id)
         {
             try
             {

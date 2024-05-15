@@ -1,5 +1,5 @@
 ﻿using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Articulos;
-using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuario;
+using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +10,6 @@ namespace Papeleria.LogicaAplicacion.InterfacesCasosUso.Articulos
 {
     public interface IAltaArticulo
     {
-        void Ejecutar(ArticuloAltaDto dto);
+        void Ejecutar(ArticuloDTO dto);
     }
 }

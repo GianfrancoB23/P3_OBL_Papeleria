@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios
 {
-    public class UsuarioModificarDto
+    public class UsuarioDTO
     {
         public int Id { get; set; }
         public string Email { get; set; }

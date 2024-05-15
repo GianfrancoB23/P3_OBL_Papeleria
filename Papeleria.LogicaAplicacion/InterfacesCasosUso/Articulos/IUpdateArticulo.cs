@@ -10,6 +10,6 @@ namespace Papeleria.LogicaAplicacion.InterfacesCasosUso.Articulos
 {
     public interface IUpdateArticulo
     {
-        void Ejecutar(int id, ArticuloModificarDTO articuloModificado);
+        void Ejecutar(int id, ArticuloDTO articuloModificado);
     }
 }

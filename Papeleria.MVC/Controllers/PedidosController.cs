@@ -2,6 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Papeleria.AccesoDatos.EF;
+using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Articulos;
+using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Pedidos;
+using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
 using Papeleria.LogicaAplicacion.ImplementacionCasosUso.Articulos;
 using Papeleria.LogicaAplicacion.ImplementacionCasosUso.Clientes;
 using Papeleria.LogicaAplicacion.InterfacesCasosUso.Articulos;
@@ -16,10 +19,12 @@ namespace Papeleria.MVC.Controllers
     {
         private static IRepositorioPedido _pedidos = new RepositorioPedidoEF(new PapeleriaContext());
         private static IRepositorioCliente _clientesRepo = new RepositorioClienteEF(new PapeleriaContext(), _pedidos);
+        private static IRepositorioLineaPedido _lineaPedido = new RepositorioLineaPedidoEF(new PapeleriaContext());
         private static IRepositorioArticulo _articulos = new RepositorioArticuloEF(new PapeleriaContext());
         private static IBuscarClientes _buscarClientes;
-        private static IGetArticulo _getArticulo;
+        private static IGetArticulo _getArticulo = new BuscarArticulo(_articulos);
         private static IGetAllArticulos _getAllArticulos;
+        private static PedidoDTO tempPedido;
 
         public PedidosController()
         {
@@ -38,69 +43,59 @@ namespace Papeleria.MVC.Controllers
         [HttpGet]
         public IActionResult Crear()
         {
-            ViewBag.Clientes = _buscarClientes.GetAll();
-            ViewBag.Articulos = _getAllArticulos.Ejecutar();
-            var viewModel = new PedidoAltaModel
+            if (HttpContext.Session.GetInt32("LogueadoID") != null)
             {
-                LineasPedido = new List<LineaPedidoModel> { new LineaPedidoModel() } // Al menos una línea de pedido
-            };
-            return View(viewModel);
+                ViewBag.Clientes = _buscarClientes.GetAll();
+                ViewBag.Articulos = _getAllArticulos.Ejecutar();
+                if (tempPedido != null)
+                {
+                    ViewBag.LineasPedido = tempPedido.LineasPedido;
+                }
+                var viewModel = new PedidoAltaModel
+                {
+                    LineasPedido = new List<LineaPedidoModel> { new LineaPedidoModel() } // Al menos una línea de pedido
+                };
+                return View(viewModel);
+            }
+            return RedirectToAction("Index", "Home");
         }
 
-        //[HttpPost]
-        //public async Task<IActionResult> Crear(PedidoAltaModel viewModel)
-        //{
-        //    if (!ModelState.IsValid)
-        //    {
-        //        return View(viewModel);
-        //    }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Crear(PedidoDTO pedidoAlta)
+        {
+            if (pedidoAlta == null)
+            {
+                ViewBag.Error = "El pedido es invalido";
+                return View();
+            }
 
-        //    var cliente = await _context.Clientes.FindAsync(viewModel.ClienteId);
-        //    if (cliente == null)
-        //    {
-        //        ModelState.AddModelError(string.Empty, "El cliente especificado no existe");
-        //        return View(viewModel);
-        //    }
+            //Articulo articulo = _getArticulo.GetById();
 
-        //    var pedido = new Pedido
-        //    {
-        //        Cliente = cliente,
-        //        FechaPedido = DateTime.Now,
-        //        FechaEntrega = viewModel.FechaEntrega
-        //    };
+            try
+            {
+                TempData["MensajeOK"] = "Usuario creado";
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message;
+                return View();
+            }
+        }
 
-        //    foreach (var lineaViewModel in viewModel.LineasPedido)
-        //    {
-        //        var articulo = await _context.Articulos.FindAsync(lineaViewModel.ArticuloId);
-        //        if (articulo == null)
-        //        {
-        //            ModelState.AddModelError(string.Empty, $"El artículo con ID {lineaViewModel.ArticuloId} no existe");
-        //            return View(viewModel);
-        //        }
+        [HttpPost]
+        public ActionResult AddArticulo(PedidoDTO pedido, int ArticuloId, int Cantidad)
+        {
+            ArticuloDTO articulo = _getArticulo.GetById(ArticuloId);
+            LineaPedidoDTO altaLinea = new LineaPedidoDTO { idArticulo = articulo.Id, CodigoProveedor = articulo.CodigoProveedor, NombreArticulo = articulo.NombreArticulo, Descripcion = articulo.Descripcion, PrecioVP = articulo.PrecioVP, Stock = articulo.Stock, PrecioUnitario = articulo.PrecioVP, Cantidad = Cantidad, Subtotal = Cantidad * articulo.PrecioVP };
+            if (tempPedido == null)
+            {
+                tempPedido = new PedidoDTO { LineasPedido = new List<LineaPedidoDTO>() };
+            }
+            tempPedido.LineasPedido.Add(altaLinea);
+            return RedirectToAction(nameof(Crear));
+        }
 
-        //        if (articulo.Stock < lineaViewModel.Cantidad)
-        //        {
-        //            ModelState.AddModelError(string.Empty, $"No hay suficiente stock para el artículo '{articulo.Nombre}'");
-        //            return View(viewModel);
-        //        }
-
-        //        pedido.LineasPedido.Add(new LineaPedido
-        //        {
-        //            Articulo = articulo,
-        //            Cantidad = lineaViewModel.Cantidad
-        //        });
-        //    }
-
-        //    _context.Pedidos.Add(pedido);
-        //    await _context.SaveChangesAsync();
-
-        //    // Calcular el monto total con impuestos
-        //    var montoTotal = pedido.LineasPedido.Sum(linea => linea.Cantidad * linea.Articulo.PrecioVP);
-        //    // Suponiendo que IVA es una constante
-        //    var montoTotalConImpuestos = montoTotal * (1 + Constantes.IVA);
-
-        //    // Puedes redirigir a una vista de confirmación mostrando el monto total con impuestos
-        //    return RedirectToAction("Confirmacion", new { montoTotal = montoTotalConImpuestos });
-        //}
     }
 }

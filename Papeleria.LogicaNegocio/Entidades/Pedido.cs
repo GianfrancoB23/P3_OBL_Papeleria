@@ -21,7 +21,7 @@ namespace Empresa.LogicaDeNegocio.Entidades
 		public ICollection<LineaPedido> lineas { get; set; }
 		public double recargo{ get; set; }
 		public IVA iva { get; set; }
-        public TimeSpan entregaPrometida { get; set; }
+        public int entregaPrometida { get; set; }
 		public double precioFinal{ get; set; }
 
 
@@ -45,7 +45,7 @@ namespace Empresa.LogicaDeNegocio.Entidades
         }
 
         public abstract double CalcularYFijarPrecio(IVA iva, LineaPedido linea);
-        public abstract TimeSpan FijarEntregaPrometida(int dias);
+        public abstract int FijarEntregaPrometida(int dias);
         public abstract void CambiarEntregaPrometida(int dias);
 
         public abstract double CalcularRecargoYFijar();

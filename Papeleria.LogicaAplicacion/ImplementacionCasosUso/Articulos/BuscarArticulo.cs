@@ -23,7 +23,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Articulos
             _repoArticulos = repo;
         }
 
-        public ArticuloListadosDto GetById(int id)
+        public ArticuloDTO GetById(int id)
         {
             var articulo = _repoArticulos.GetById(id);
             if (articulo == null) 
@@ -34,7 +34,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Articulos
             return articuloReturn;
         }
 
-        public ArticuloListadosDto GetArticuloPorCodigo(CodigoProveedorArticulos codigoProveedor)
+        public ArticuloDTO GetArticuloPorCodigo(CodigoProveedorArticulos codigoProveedor)
         {
             var articulo = _repoArticulos.GetArticuloByCodigo(codigoProveedor);
             if(articulo == null)
@@ -45,7 +45,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Articulos
             return articuloReturn;
         }
 
-        public IEnumerable<ArticuloListadosDto> GetArticulosPorNombre(string nombre)
+        public IEnumerable<ArticuloDTO> GetArticulosPorNombre(string nombre)
         {
             throw new NotImplementedException();
         }
