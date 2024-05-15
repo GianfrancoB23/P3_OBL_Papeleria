@@ -8,6 +8,7 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Pedidos
 {
     public class LineaPedidoDTO
     {
+        public int id { get; set; }
         public int idArticulo { get; set; }
         public long CodigoProveedor { get; set; }
         public string NombreArticulo { get; set; }

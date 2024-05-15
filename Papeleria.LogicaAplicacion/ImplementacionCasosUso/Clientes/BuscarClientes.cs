@@ -10,6 +10,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Articulos;
+using Papeleria.LogicaNegocio.Excepciones.Articulo;
 
 namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Clientes
 {
@@ -29,6 +31,17 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Clientes
                 throw new ClienteNuloException("No hay clientes registrados");
             }
             return ClientesMappers.FromLista(clientesOrigen);
+        }
+
+        public ClienteDTO GetById(int id)
+        {
+            var cliente = _repoClientes.GetById(id);
+            if (cliente == null)
+            {
+                throw new ClienteNuloException("Articulo no encontrado con el ID especificado");
+            }
+            var clienteReturn = ClientesMappers.ToDto(cliente);
+            return clienteReturn;
         }
 
         public IEnumerable<ClienteDTO> GetXMontoSuperado(double monto)

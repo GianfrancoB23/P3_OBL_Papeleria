@@ -11,10 +11,10 @@ namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Pedidos
 
         public IVA(double valor)
         {
-            /*if (valor >= 100)
+            if (valor >= 1)
             {
-                valor / 100;
-            }*/
+               valor = valor / 100;
+            }
             this.valor = valor;
         }
         public IVA() { }

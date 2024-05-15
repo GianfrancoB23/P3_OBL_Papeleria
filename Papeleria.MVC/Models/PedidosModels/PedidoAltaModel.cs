@@ -18,6 +18,7 @@ namespace Papeleria.MVC.Models.PedidosModels
         public DateTime FechaEntrega { get; set; }
         public int ArticuloId { get; set; }
         public int Cantidad { get; set; }
+        public double iva { get; set; }
         public double PrecioUnitario { get; set; }
         public double Subtotal { get; set; }
     }

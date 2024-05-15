@@ -21,33 +21,27 @@ namespace Empresa.LogicaDeNegocio.Entidades
             // Recargo del 5% si la distancia a la dirección de entrega supera los 100 km
             if (cliente.direccion.Distancia > 100)
             {
+                this.recargo = 0.05;
                 return 0.05;
             }
+            this.recargo = 0;
             return 0;
         }
 
         public override double CalcularYFijarPrecio(IVA iva)
         {
+            this.iva = iva;
             double subtotal = 0;
             foreach (LineaPedido line in lineas)
             {
                 subtotal += line.PrecioUnitarioVigente * line.Cantidad;
             }
-            double recargoDistancia = CalcularRecargoYFijar();
-            this.precioFinal = (subtotal * (1 + iva.valor)) * (1 + recargoDistancia);
+            this.precioFinal = (subtotal * (1 + recargo)) * (1 + iva.valor);
             return precioFinal;
         }
 
         public override void CambiarEntregaPrometida(int dias)
         {
-            if (dias < 7)
-            {
-                throw new PedidoNoValidoException("No puede haber entregas 'COMUN' menor a una semana.");
-            }
-            if (dias == null)
-            {
-                throw new PedidoNuloException("La cantidad de días no puede ser nula en un pedido COMUN.");
-            }
             entregaPrometida = dias;
         }
 
@@ -68,14 +62,7 @@ namespace Empresa.LogicaDeNegocio.Entidades
 
         public override int FijarEntregaPrometida(int dias)
         {
-            if (dias < 7)
-            {
-                throw new PedidoNoValidoException("No puede haber entregas 'COMUN' menor a una semana.");
-            }
-            if (dias == null)
-            {
-                throw new PedidoNuloException("La cantidad de dias no puede ser nulo en un pedido COMUN.");
-            }
+            this.entregaPrometida = dias;
             return dias;
         }
 

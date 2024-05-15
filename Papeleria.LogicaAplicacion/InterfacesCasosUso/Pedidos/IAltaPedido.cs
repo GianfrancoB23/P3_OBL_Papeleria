@@ -10,6 +10,7 @@ namespace Papeleria.LogicaAplicacion.InterfacesCasosUso.Pedidos
 {
     public interface IAltaPedido
     {
-        void Ejecutar(PedidoDTO dto);
+        void EjecutarExpress(PedidoDTO dto);
+        void EjecutarComunes(PedidoDTO dto);
     }
 }

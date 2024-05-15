@@ -21,12 +21,23 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Pedidos
             _repoPedidos = _repositorioPedidos; 
         }
 
-        public void Ejecutar(PedidoDTO dto)
+        public void EjecutarExpress(PedidoDTO dto)
         {
             if (dto == null) {
                 throw new PedidoNoValidoException("");
             }
-            Pedido pedido = PedidosMappers.FromDto(dto);
+            Pedido pedido = PedidosMappers.FromExpress(dto);
+            
+            _repoPedidos.Add(pedido);
+        }
+
+        public void EjecutarComunes(PedidoDTO dto)
+        {
+            if (dto == null)
+            {
+                throw new PedidoNoValidoException("");
+            }
+            Pedido pedido = PedidosMappers.FromComunes(dto);
             _repoPedidos.Add(pedido);
         }
     }

@@ -7,6 +7,7 @@ using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Pedidos;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
 using Papeleria.LogicaAplicacion.ImplementacionCasosUso.Articulos;
 using Papeleria.LogicaAplicacion.ImplementacionCasosUso.Clientes;
+using Papeleria.LogicaAplicacion.ImplementacionCasosUso.Pedidos;
 using Papeleria.LogicaAplicacion.InterfacesCasosUso.Articulos;
 using Papeleria.LogicaAplicacion.InterfacesCasosUso.Clientes;
 using Papeleria.LogicaAplicacion.InterfacesCasosUso.Pedidos;
@@ -32,11 +33,13 @@ namespace Papeleria.MVC.Controllers
         {
             _buscarClientes = new BuscarClientes(_clientesRepo);
             _getAllArticulos = new GetAllArticulos(_articulos);
+            _altaPedido = new AltaPedidos(_pedidos);
         }
         public IActionResult Index()
         {
             ViewBag.Clientes = _buscarClientes.GetAll();
             ViewBag.Articulos = _getAllArticulos.Ejecutar();
+            tempPedido = null;
             Console.WriteLine(ViewBag.Articulos);
             Console.WriteLine(ViewBag.Clientes);
             return View();
@@ -66,18 +69,34 @@ namespace Papeleria.MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Crear(PedidoDTO pedidoAlta)
         {
+            ViewBag.Clientes = _buscarClientes.GetAll();
+            ViewBag.Articulos = _getAllArticulos.Ejecutar();
             if (pedidoAlta == null)
             {
                 ViewBag.Error = "El pedido es invalido";
                 return View();
             }
+            if(pedidoAlta.FechaEntrega < DateTime.Now)
+            {
+                ViewBag.Error = "Fecha de entrega invalida";
+                return View();
+            }
+            pedidoAlta.FechaPedido = DateTime.Now;
             try
             {
                 if (tempPedido != null)
                 {
                     ViewBag.LineasPedido = tempPedido.LineasPedido;
                 }
-                _pedidos.Add(pedidoAlta);
+                pedidoAlta.LineasPedido = tempPedido.LineasPedido;
+                if((pedidoAlta.FechaEntrega.Subtract(pedidoAlta.FechaPedido)).Days < 5)
+                {
+                    _altaPedido.EjecutarExpress(pedidoAlta);
+                } else
+                {
+                    _altaPedido.EjecutarComunes(pedidoAlta);
+                }
+                return RedirectToAction("Index", "Pedidos");
             }
             catch (Exception ex)
             {

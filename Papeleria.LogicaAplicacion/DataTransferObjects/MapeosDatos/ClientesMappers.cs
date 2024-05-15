@@ -1,9 +1,13 @@
 ﻿using Empresa.LogicaDeNegocio.Entidades;
 using Empresa.LogicaDeNegocio.Sistema;
+using Papeleria.AccesoDatos.EF;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Clientes;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
+using Papeleria.LogicaAplicacion.ImplementacionCasosUso.Clientes;
+using Papeleria.LogicaAplicacion.InterfacesCasosUso.Clientes;
 using Papeleria.LogicaNegocio.Excepciones.Cliente;
 using Papeleria.LogicaNegocio.Excepciones.Usuario;
+using Papeleria.LogicaNegocio.InterfacesRepositorio;
 using System;
 using System.Collections.Generic;
 using System.Linq;

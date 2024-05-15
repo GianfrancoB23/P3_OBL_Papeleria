@@ -135,8 +135,8 @@ namespace Papeleria.AccesoDatos.Migrations
                     b.Property<int>("clienteId")
                         .HasColumnType("int");
 
-                    b.Property<TimeSpan>("entregaPrometida")
-                        .HasColumnType("time");
+                    b.Property<int>("entregaPrometida")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("fechaPedido")
                         .HasColumnType("datetime2");
@@ -251,9 +251,6 @@ namespace Papeleria.AccesoDatos.Migrations
             modelBuilder.Entity("Empresa.LogicaDeNegocio.Entidades.Express", b =>
                 {
                     b.HasBaseType("Empresa.LogicaDeNegocio.Entidades.Pedido");
-
-                    b.Property<bool>("EntregaEnElDia")
-                        .HasColumnType("bit");
 
                     b.HasDiscriminator().HasValue("Express");
                 });

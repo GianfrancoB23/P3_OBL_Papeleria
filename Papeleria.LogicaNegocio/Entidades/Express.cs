@@ -12,7 +12,7 @@ namespace Empresa.LogicaDeNegocio.Entidades
         {
             
         }
-
+            
         public Express(Cliente cliente, int dias, IVA iva, List<LineaPedido> lista):base(cliente,dias,iva,lista)
         {
             this.fechaPedido = DateTime.Now;
@@ -36,12 +36,13 @@ namespace Empresa.LogicaDeNegocio.Entidades
 
         public override double CalcularYFijarPrecio(IVA iva)
         {
+            this.iva = iva;
             double subtotal = 0;
             foreach(LineaPedido line in lineas)
             {
                 subtotal += line.PrecioUnitarioVigente * line.Cantidad;
             }
-            this.precioFinal = (subtotal * (1+iva.valor)) * (1 + recargo);
+            this.precioFinal = (subtotal * (1 + recargo)) * (1 + iva.valor);
             return precioFinal;
         }
 
@@ -71,37 +72,12 @@ namespace Empresa.LogicaDeNegocio.Entidades
 
         public override int FijarEntregaPrometida(int dias)
         {
-            if (dias < 0)
-            {
-                throw new PedidoNoValidoException("No puede haber dias negativos para la entrega");
-            }
-            //if (dias > 5 && !EntregaEnElDia || dias>5)
-            if (dias > 5)
-            {
-                throw new PedidoNoValidoException("La entrega prometida no puede ser superior a 5 dias en pedidos express");
-            }
-            if (dias == 0) { 
-                return 0;
-            }
-            if (dias == null)
-            {
-                throw new PedidoNuloException("La cantidad de dias no puede ser nulo si NO se entrega en el dia.");
-            }
+            this.entregaPrometida = dias;
             return dias;
         }
 
         public override void CambiarEntregaPrometida(int dias)
         {
-            if (dias<0) {
-                throw new PedidoNoValidoException("No puede haber dias negativos para la entrega");
-            }
-            if (dias == null) {
-                throw new PedidoNuloException("La cantidad de dias no puede ser nulo si NO se entrega en el dia.");
-            }
-            if (dias < 5)
-            {
-                throw new PedidoNoValidoException("La entrega prometida no puede ser superior a 5 dias en pedidos express");
-            }
             entregaPrometida = dias;
         }
     }

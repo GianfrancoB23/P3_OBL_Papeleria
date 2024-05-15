@@ -12,6 +12,7 @@ namespace Papeleria.LogicaNegocio.InterfacesRepositorio
     {
         IEnumerable<Cliente> GetClientesPorPedido(int idPedido);
         public IEnumerable<Cliente> GetClientes();
+        public Cliente GetById(int id);
         public Cliente GetClientePorRUT(long rut);
         public Cliente GetClientePorRazon(string rsocial);
         public Cliente GetClientePorDireccion(DireccionCliente direccionCliente);
