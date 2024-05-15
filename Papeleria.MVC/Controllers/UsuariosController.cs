@@ -74,7 +74,7 @@ namespace Papeleria.MVC.Controllers
         {
             if (HttpContext.Session.GetInt32("LogueadoID") != null)
             {
-                UsuarioDTO dto = _getUsuario.GetById(id.GetValueOrDefault());
+                UsuarioDTO dto = _getUsuario.GetByIdDTO(id.GetValueOrDefault());
                 UsuarioDTO mod = new UsuarioDTO()
                 {
                     Id = dto.Id,
@@ -111,7 +111,7 @@ namespace Papeleria.MVC.Controllers
         {
             if (HttpContext.Session.GetInt32("LogueadoID") != null)
             {
-                UsuarioDTO dto = _getUsuario.GetById(id.GetValueOrDefault());
+                UsuarioDTO dto = _getUsuario.GetByIdDTO(id.GetValueOrDefault());
                 UsuarioDTO borrar = new UsuarioDTO() 
                 {
                     Id = dto.Id,

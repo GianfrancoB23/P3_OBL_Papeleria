@@ -32,8 +32,8 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
             }
             var pedidoFinal = new Express();
             pedidoFinal.Id = pedido.Id;
-            ClienteDTO cliente = _buscarClientes.GetById(pedido.ClienteID);
-            pedidoFinal.cliente = ClientesMappers.FromDto(cliente);
+            Cliente cliente = _buscarClientes.GetById(pedido.ClienteID);
+            pedidoFinal.cliente = cliente;
             pedidoFinal.lineas = lineasFinal;
             pedidoFinal.CalcularRecargoYFijar();
             pedidoFinal.FijarEntregaPrometida((pedido.FechaEntrega - pedido.FechaPedido).Days);
@@ -59,8 +59,8 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
             }
             var pedidoFinal = new Comunes();
             pedidoFinal.Id = pedido.Id;
-            ClienteDTO cliente = _buscarClientes.GetById(pedido.ClienteID);
-            pedidoFinal.cliente = ClientesMappers.FromDto(cliente);
+            Cliente cliente = _buscarClientes.GetById(pedido.ClienteID);
+            pedidoFinal.cliente = cliente;
             pedidoFinal.lineas = lineasFinal;
             pedidoFinal.CalcularRecargoYFijar();
             pedidoFinal.FijarEntregaPrometida((pedido.FechaEntrega - pedido.FechaPedido).Days);

@@ -21,7 +21,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Usuarios
         {
             _repoUsuarios = repo;
         }
-        public UsuarioDTO GetById(int id)
+        public UsuarioDTO GetByIdDTO(int id)
         {
             var usu = _repoUsuarios.GetById(id);
             if (usu == null)
@@ -30,6 +30,10 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Usuarios
             }
             var usuDto = UsuariosMappers.ToDto(usu);
             return usuDto;
+        }
+        public Usuario GetById(int id)
+        {
+            return _repoUsuarios.GetById(id);
         }
     }
         

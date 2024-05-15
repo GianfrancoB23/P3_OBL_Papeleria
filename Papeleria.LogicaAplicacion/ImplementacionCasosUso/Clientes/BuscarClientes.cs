@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Articulos;
 using Papeleria.LogicaNegocio.Excepciones.Articulo;
+using Empresa.LogicaDeNegocio.Entidades;
 
 namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Clientes
 {
@@ -33,7 +34,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Clientes
             return ClientesMappers.FromLista(clientesOrigen);
         }
 
-        public ClienteDTO GetById(int id)
+        public ClienteDTO GetByIdDTO(int id)
         {
             var cliente = _repoClientes.GetById(id);
             if (cliente == null)
@@ -42,6 +43,10 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Clientes
             }
             var clienteReturn = ClientesMappers.ToDto(cliente);
             return clienteReturn;
+        }
+        public Cliente GetById(int id)
+        {
+            return _repoClientes.GetById(id);
         }
 
         public IEnumerable<ClienteDTO> GetXMontoSuperado(double monto)
