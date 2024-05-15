@@ -23,26 +23,23 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
-        {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.FechaPedido)
+                    @Html.DisplayFor(model => model.FechaPedido)
                 </td>
-                <td>
+                @* <td>
                     @foreach (var cliente in ViewBag.Clientes)
                     {
-                        if (cliente.Id.Equals(item.ClienteID))
+                        if (cliente.Id.Equals(model => model.ClienteID))
                         {
                             @cliente.razonSocial
                             ;
                         }
                     }
-                </td>
+                </td> *@
                 <td>
-                    @Html.DisplayFor(modelItem => item.precioFinal)
+                    @Html.DisplayFor(model => model.precioFinal)
                 </td>
             </tr>
-        }
     </tbody>
 </table>
