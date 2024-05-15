@@ -35,6 +35,7 @@ namespace Papeleria.AccesoDatos.EF
 
         public IEnumerable<Pedido> GetAll()
         {
+            List<Cliente> clientes = _db.Clientes.ToList(); // NO TOCAR :)
             return _db.Pedidos.ToList();
         }
 

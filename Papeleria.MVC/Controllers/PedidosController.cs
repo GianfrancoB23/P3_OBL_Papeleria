@@ -36,11 +36,13 @@ namespace Papeleria.MVC.Controllers
             _getAllArticulos = new GetAllArticulos(_articulos);
             _getAllPedidos = new GetAllPedidos(_pedidos);
             _altaPedido = new AltaPedidos(_pedidos);
+            ViewBag.Clientes = _buscarClientes.GetAll();
+            ViewBag.Articulos = _getAllPedidos.Ejecutar();
         }
         public IActionResult Index()
         {
-            ViewBag.Clientes = _buscarClientes.GetAll();
-            ViewBag.Articulos = _getAllPedidos.Ejecutar();
+            /*ViewBag.Clientes = _buscarClientes.GetAll();
+            ViewBag.Articulos = _getAllPedidos.Ejecutar();*/
             tempPedido = null;
             if (HttpContext.Session.GetInt32("LogueadoID") != null)
             {
@@ -49,7 +51,7 @@ namespace Papeleria.MVC.Controllers
                 {
                     ViewBag.Mensaje = "No existen pedido";
                 }
-                ViewBag.Mensaje = $"Articulos en total: {pedidos.Count()}.";
+                ViewBag.Mensaje = $"Pedidos en total: {pedidos.Count()}.";
                 return View(pedidos);
             }
             return RedirectToAction("Index", "Home");
