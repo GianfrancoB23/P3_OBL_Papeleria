@@ -16,5 +16,6 @@ namespace Papeleria.LogicaNegocio.InterfacesRepositorio
         public IEnumerable<Pedido> GetPedidosPorDireccion(DireccionCliente direccionPedido);
         public Pedido GetPedido(Pedido pedido);
         public IEnumerable<Pedido> GetPedidosQueSuperenMonto(double monto);
+        public IEnumerable<Pedido> GetPedidosPorFecha(DateTime date);
     }
 }

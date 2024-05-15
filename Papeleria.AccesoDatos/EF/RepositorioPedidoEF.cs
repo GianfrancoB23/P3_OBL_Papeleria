@@ -35,6 +35,7 @@ namespace Papeleria.AccesoDatos.EF
 
         public IEnumerable<Pedido> GetAll()
         {
+            List<Cliente> clientes = _db.Clientes.ToList(); // NO TOCAR :)
             return _db.Pedidos.ToList();
         }
 
@@ -88,6 +89,12 @@ namespace Papeleria.AccesoDatos.EF
             return pedidos;
         }
 
+        public IEnumerable<Pedido> GetPedidosPorFecha(DateTime date)
+        {
+
+            IEnumerable<Pedido> pedidos = _db.Pedidos.Where(pedido => pedido.fechaPedido >= date);
+            return pedidos;
+        }
         public void Remove(int id)
         {
             var pedido = _db.Pedidos.FirstOrDefault(p => p.Id == id);

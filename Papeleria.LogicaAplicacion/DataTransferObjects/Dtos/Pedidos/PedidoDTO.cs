@@ -20,5 +20,7 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Pedidos
         public double recargo { get; set; }
         public double iva { get; set; }
         public double precioFinal { get; set; }
+        public bool entregado { get; set; }
+        public bool anulado { get; set; }
     }
 }

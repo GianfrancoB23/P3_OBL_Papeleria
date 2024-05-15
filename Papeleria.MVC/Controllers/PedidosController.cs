@@ -1,10 +1,12 @@
 ﻿using Empresa.LogicaDeNegocio.Entidades;
+using Humanizer;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Papeleria.AccesoDatos.EF;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Articulos;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Pedidos;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
+using Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos;
 using Papeleria.LogicaAplicacion.ImplementacionCasosUso.Articulos;
 using Papeleria.LogicaAplicacion.ImplementacionCasosUso.Clientes;
 using Papeleria.LogicaAplicacion.ImplementacionCasosUso.Pedidos;
@@ -28,6 +30,7 @@ namespace Papeleria.MVC.Controllers
         private static IGetArticulo _getArticulo = new BuscarArticulo(_articulos);
         private static IGetAllArticulos _getAllArticulos;
         private static IGetAllPedidos _getAllPedidos;
+        private static IGetPedido _getPedidos;
         private static PedidoDTO tempPedido;
 
         public PedidosController()
@@ -35,15 +38,16 @@ namespace Papeleria.MVC.Controllers
             _buscarClientes = new BuscarClientes(_clientesRepo);
             _getAllArticulos = new GetAllArticulos(_articulos);
             _getAllPedidos = new GetAllPedidos(_pedidos);
+            _getPedidos = new GetPedidos(_pedidos);
             _altaPedido = new AltaPedidos(_pedidos);
+            ViewBag.Clientes = _buscarClientes.GetAll();
+            ViewBag.Articulos = _getAllPedidos.Ejecutar();
         }
         public IActionResult Index()
         {
             ViewBag.Clientes = _buscarClientes.GetAll();
             ViewBag.Articulos = _getAllPedidos.Ejecutar();
             tempPedido = null;
-            Console.WriteLine(ViewBag.Articulos);
-            Console.WriteLine(ViewBag.Clientes); 
             if (HttpContext.Session.GetInt32("LogueadoID") != null)
             {
                 var pedidos = _getAllPedidos.Ejecutar();
@@ -51,8 +55,47 @@ namespace Papeleria.MVC.Controllers
                 {
                     ViewBag.Mensaje = "No existen pedido";
                 }
-                ViewBag.Mensaje = $"Articulos en total: {pedidos.Count()}.";
+                ViewBag.Mensaje = $"Pedidos en total: {pedidos.Count()}.";
                 return View(pedidos);
+            }
+            return RedirectToAction("Index", "Home");
+        }
+        [HttpPost]
+        public IActionResult Index(DateTime date)
+        {
+            ViewBag.Clientes = _buscarClientes.GetAll();
+            ViewBag.Articulos = _getAllPedidos.Ejecutar();
+            tempPedido = null;
+            if (HttpContext.Session.GetInt32("LogueadoID") != null)
+            {
+                if (date != null)
+                {
+                    var pedidos = _getPedidos.GetPedidosPorFecha(date);
+                    if (pedidos == null || pedidos.Count() == 0)
+                    {
+                        ViewBag.Mensaje = "No existen pedido desde la fecha indicada";
+                    }
+                    ViewBag.Mensaje = $"Pedidos en total: {pedidos.Count()}.";
+                    return View(pedidos);
+                }
+                else
+                {
+                    RedirectToAction("Index", "Pedidos");
+                }
+            }
+            return RedirectToAction("Index", "Home");
+        }
+        public IActionResult Details(int id)
+        {
+            ViewBag.Clientes = _buscarClientes.GetAll();
+            ViewBag.Articulos = _getAllPedidos.Ejecutar();
+            tempPedido = null;
+            if (HttpContext.Session.GetInt32("LogueadoID") != null)
+            {
+                PedidoDTO pedido = PedidosMappers.ToDto(_getPedidos.GetById(id));
+                if (pedido == null)
+                { return RedirectToAction("Index", "Pedidos"); }
+                return View(pedido);
             }
             return RedirectToAction("Index", "Home");
         }
@@ -88,7 +131,7 @@ namespace Papeleria.MVC.Controllers
                 ViewBag.Error = "El pedido es invalido";
                 return View();
             }
-            if(pedidoAlta.FechaEntrega < DateTime.Now)
+            if (pedidoAlta.FechaEntrega < DateTime.Now)
             {
                 ViewBag.Error = "Fecha de entrega invalida";
                 return View();
@@ -101,10 +144,11 @@ namespace Papeleria.MVC.Controllers
                     ViewBag.LineasPedido = tempPedido.LineasPedido;
                 }
                 pedidoAlta.LineasPedido = tempPedido.LineasPedido;
-                if((pedidoAlta.FechaEntrega.Subtract(pedidoAlta.FechaPedido)).Days < 5)
+                if ((pedidoAlta.FechaEntrega.Subtract(pedidoAlta.FechaPedido)).Days < 5)
                 {
                     _altaPedido.EjecutarExpress(pedidoAlta);
-                } else
+                }
+                else
                 {
                     _altaPedido.EjecutarComunes(pedidoAlta);
                 }

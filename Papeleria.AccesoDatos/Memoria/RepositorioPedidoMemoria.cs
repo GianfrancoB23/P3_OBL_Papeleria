@@ -86,6 +86,11 @@ namespace Papeleria.AccesoDatos.Memoria
             throw new NotImplementedException();
         }
 
+        public IEnumerable<Pedido> GetPedidosPorFecha(DateTime date)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<Pedido> GetPedidosPorRazon(RazonSocial rsocial)
         {
             throw new NotImplementedException();

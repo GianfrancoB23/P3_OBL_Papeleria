@@ -132,11 +132,17 @@ namespace Papeleria.AccesoDatos.Migrations
                         .HasMaxLength(8)
                         .HasColumnType("nvarchar(8)");
 
+                    b.Property<bool>("anulado")
+                        .HasColumnType("bit");
+
                     b.Property<int>("clienteId")
                         .HasColumnType("int");
 
                     b.Property<int>("entregaPrometida")
                         .HasColumnType("int");
+
+                    b.Property<bool>("entregado")
+                        .HasColumnType("bit");
 
                     b.Property<DateTime>("fechaPedido")
                         .HasColumnType("datetime2");

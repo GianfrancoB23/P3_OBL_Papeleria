@@ -9,6 +9,9 @@ namespace Empresa.LogicaDeNegocio.Entidades
     {
         public Comunes(): base()
         {
+            this.fechaPedido = DateTime.Now;
+            this.entregado = false;
+            this.anulado = false;
 
         }
         public override void AgregarLineaPedido(Articulo articulo, int cantidad)
@@ -53,6 +56,14 @@ namespace Empresa.LogicaDeNegocio.Entidades
         public override bool Equals(Pedido? other)
         {
             return base.Equals(other);
+        }
+        public override void SetearEntregado()
+        {
+            base.SetearEntregado();
+        }
+        public override void AnularPedido()
+        {
+            base.AnularPedido();
         }
 
         public override void esValido()
