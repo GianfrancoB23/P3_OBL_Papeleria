@@ -13,16 +13,15 @@ namespace Empresa.LogicaDeNegocio.Entidades
             
         }
 
-        public Express(Cliente cliente, int dias, IVA iva, LineaPedido linea):base(cliente,dias,iva,linea)
+        public Express(Cliente cliente, int dias, IVA iva, List<LineaPedido> lista):base(cliente,dias,iva,lista)
         {
             this.fechaPedido = DateTime.Now;
             this.cliente = cliente;
-            this.lineas = new List<LineaPedido>();
-            AgregarLineaPedido(linea);
+            this.lineas = lista;
             this.recargo = CalcularRecargoYFijar();
             this.iva = iva;
             this.entregaPrometida = FijarEntregaPrometida(dias);
-            this.precioFinal = CalcularYFijarPrecio(iva, linea);
+            this.precioFinal = CalcularYFijarPrecio(iva);
             esValido();
         }
 
@@ -35,10 +34,14 @@ namespace Empresa.LogicaDeNegocio.Entidades
             return recargo;
         }
 
-        public override double CalcularYFijarPrecio(IVA iva, LineaPedido linea)
+        public override double CalcularYFijarPrecio(IVA iva)
         {
-            double precioInicial = linea.PrecioUnitarioVigente * linea.Cantidad;
-            this.precioFinal = (precioInicial * (1+iva.valor)) * (1 + recargo);
+            double subtotal = 0;
+            foreach(LineaPedido line in lineas)
+            {
+                subtotal += line.PrecioUnitarioVigente * line.Cantidad;
+            }
+            this.precioFinal = (subtotal * (1+iva.valor)) * (1 + recargo);
             return precioFinal;
         }
 

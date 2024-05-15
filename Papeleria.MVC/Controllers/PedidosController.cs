@@ -9,6 +9,7 @@ using Papeleria.LogicaAplicacion.ImplementacionCasosUso.Articulos;
 using Papeleria.LogicaAplicacion.ImplementacionCasosUso.Clientes;
 using Papeleria.LogicaAplicacion.InterfacesCasosUso.Articulos;
 using Papeleria.LogicaAplicacion.InterfacesCasosUso.Clientes;
+using Papeleria.LogicaAplicacion.InterfacesCasosUso.Pedidos;
 using Papeleria.LogicaNegocio.Entidades;
 using Papeleria.LogicaNegocio.InterfacesRepositorio;
 using Papeleria.MVC.Models.PedidosModels;
@@ -21,6 +22,7 @@ namespace Papeleria.MVC.Controllers
         private static IRepositorioCliente _clientesRepo = new RepositorioClienteEF(new PapeleriaContext(), _pedidos);
         private static IRepositorioLineaPedido _lineaPedido = new RepositorioLineaPedidoEF(new PapeleriaContext());
         private static IRepositorioArticulo _articulos = new RepositorioArticuloEF(new PapeleriaContext());
+        private static IAltaPedido _altaPedido;
         private static IBuscarClientes _buscarClientes;
         private static IGetArticulo _getArticulo = new BuscarArticulo(_articulos);
         private static IGetAllArticulos _getAllArticulos;
@@ -69,13 +71,13 @@ namespace Papeleria.MVC.Controllers
                 ViewBag.Error = "El pedido es invalido";
                 return View();
             }
-
-            //Articulo articulo = _getArticulo.GetById();
-
             try
             {
-                TempData["MensajeOK"] = "Usuario creado";
-                return RedirectToAction(nameof(Index));
+                if (tempPedido != null)
+                {
+                    ViewBag.LineasPedido = tempPedido.LineasPedido;
+                }
+                _pedidos.Add(pedidoAlta);
             }
             catch (Exception ex)
             {
@@ -87,14 +89,23 @@ namespace Papeleria.MVC.Controllers
         [HttpPost]
         public ActionResult AddArticulo(PedidoDTO pedido, int ArticuloId, int Cantidad)
         {
-            ArticuloDTO articulo = _getArticulo.GetById(ArticuloId);
-            LineaPedidoDTO altaLinea = new LineaPedidoDTO { idArticulo = articulo.Id, CodigoProveedor = articulo.CodigoProveedor, NombreArticulo = articulo.NombreArticulo, Descripcion = articulo.Descripcion, PrecioVP = articulo.PrecioVP, Stock = articulo.Stock, PrecioUnitario = articulo.PrecioVP, Cantidad = Cantidad, Subtotal = Cantidad * articulo.PrecioVP };
-            if (tempPedido == null)
+            try
             {
-                tempPedido = new PedidoDTO { LineasPedido = new List<LineaPedidoDTO>() };
+                ArticuloDTO articulo = _getArticulo.GetById(ArticuloId);
+                LineaPedidoDTO altaLinea = new LineaPedidoDTO { idArticulo = articulo.Id, CodigoProveedor = articulo.CodigoProveedor, NombreArticulo = articulo.NombreArticulo, Descripcion = articulo.Descripcion, PrecioVP = articulo.PrecioVP, Stock = articulo.Stock, PrecioUnitario = articulo.PrecioVP, Cantidad = Cantidad, Subtotal = Cantidad * articulo.PrecioVP };
+                if (tempPedido == null)
+                {
+                    tempPedido = new PedidoDTO { LineasPedido = new List<LineaPedidoDTO>() };
+                }
+                tempPedido.LineasPedido.Add(altaLinea);
+                return RedirectToAction(nameof(Crear));
+
             }
-            tempPedido.LineasPedido.Add(altaLinea);
-            return RedirectToAction(nameof(Crear));
+            catch (Exception ex)
+            {
+                ViewBag.Error = ex.Message;
+                return View();
+            }
         }
 
     }

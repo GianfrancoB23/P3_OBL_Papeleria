@@ -13,7 +13,6 @@
     <Folder Include="InterfacesCasosUso\Comunes\" />
     <Folder Include="InterfacesCasosUso\Expresses\" />
     <Folder Include="InterfacesCasosUso\LineasPedidos\" />
-    <Folder Include="InterfacesCasosUso\Pedidos\" />
   </ItemGroup>
 
   <ItemGroup>

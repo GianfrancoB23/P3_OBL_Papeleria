@@ -26,11 +26,15 @@ namespace Empresa.LogicaDeNegocio.Entidades
             return 0;
         }
 
-        public override double CalcularYFijarPrecio(IVA iva, LineaPedido linea)
+        public override double CalcularYFijarPrecio(IVA iva)
         {
-            double precioInicial = linea.PrecioUnitarioVigente * linea.Cantidad;
+            double subtotal = 0;
+            foreach (LineaPedido line in lineas)
+            {
+                subtotal += line.PrecioUnitarioVigente * line.Cantidad;
+            }
             double recargoDistancia = CalcularRecargoYFijar();
-            this.precioFinal = (precioInicial * (1 + iva.valor)) * (1 + recargoDistancia);
+            this.precioFinal = (subtotal * (1 + iva.valor)) * (1 + recargoDistancia);
             return precioFinal;
         }
 
@@ -44,7 +48,7 @@ namespace Empresa.LogicaDeNegocio.Entidades
             {
                 throw new PedidoNuloException("La cantidad de días no puede ser nula en un pedido COMUN.");
             }
-            entregaPrometida = new TimeSpan(dias, 0, 0, 0);
+            entregaPrometida = dias;
         }
 
         public override bool Equals(object? obj)
@@ -62,7 +66,7 @@ namespace Empresa.LogicaDeNegocio.Entidades
             base.esValido();
         }
 
-        public override TimeSpan FijarEntregaPrometida(int dias)
+        public override int FijarEntregaPrometida(int dias)
         {
             if (dias < 7)
             {
@@ -72,7 +76,7 @@ namespace Empresa.LogicaDeNegocio.Entidades
             {
                 throw new PedidoNuloException("La cantidad de dias no puede ser nulo en un pedido COMUN.");
             }
-            return new TimeSpan(dias, 0, 0, 0);
+            return dias;
         }
 
         public override string? ToString()
