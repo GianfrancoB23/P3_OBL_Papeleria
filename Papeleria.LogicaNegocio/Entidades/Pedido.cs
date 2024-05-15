@@ -12,18 +12,19 @@ namespace Empresa.LogicaDeNegocio.Entidades
 {
     [Index(nameof(precioFinal))]
     public abstract class Pedido : IValidable<Pedido>, IEquatable<Pedido>, IEntity
-	{
+    {
         public int Id { get; set; }
-		public DateTime fechaPedido{ get; set; }
+        public DateTime fechaPedido { get; set; }
 
-		public Cliente cliente{ get; set; }
+        public Cliente cliente { get; set; }
 
-		public List<LineaPedido> lineas { get; set; }
-		public double recargo{ get; set; }
-		public IVA iva { get; set; }
+        public List<LineaPedido> lineas { get; set; }
+        public double recargo { get; set; }
+        public IVA iva { get; set; }
         public int entregaPrometida { get; set; }
-		public double precioFinal{ get; set; }
+        public double precioFinal { get; set; }
         public bool entregado { get; set; }
+        public bool anulado { get; set; }
 
 
         public Pedido()
@@ -31,6 +32,7 @@ namespace Empresa.LogicaDeNegocio.Entidades
             this.fechaPedido = DateTime.Now;
             this.lineas = new List<LineaPedido>();
             this.entregado = false;
+            this.anulado = false;
         }
 
         public Pedido(Cliente cliente, int dias, IVA iva, List<LineaPedido> lista)
@@ -53,7 +55,27 @@ namespace Empresa.LogicaDeNegocio.Entidades
 
         public virtual void SetearEntregado()
         {
-            this.entregado= true;
+            if (this.anulado)
+            {
+                throw new Exception("No se puede entregar un pedido que haya sido anulado"); ;
+            }
+            else
+            {
+                this.entregado = true;
+
+            }
+        }
+
+        public virtual void AnularPedido()
+        {
+            if (this.entregado)
+            {
+                throw new Exception("No se puede anular un pedido ya entregado");
+            }
+            else
+            {
+                this.anulado = true;
+            }
         }
 
         public virtual void AgregarLineaPedido(Articulo articulo, int cantidad)
@@ -84,7 +106,8 @@ namespace Empresa.LogicaDeNegocio.Entidades
 
         public virtual void esValido()
         {
-            if (cliente == null) {
+            if (cliente == null)
+            {
                 throw new ClienteNuloException("El cliente no puede ser nulo.");
             }
         }

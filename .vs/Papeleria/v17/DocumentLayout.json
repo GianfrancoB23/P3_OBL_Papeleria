@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EDFEE3E7-7AB1-4081-B5EA-6248C9BAF702}|Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj|c:\\users\\moreno\\documents\\github\\p3_obl_papeleria\\papeleria.logicaaplicacion\\datatransferobjects\\mapeosdatos\\pedidosmappers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDFEE3E7-7AB1-4081-B5EA-6248C9BAF702}|Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj|solutionrelative:papeleria.logicaaplicacion\\datatransferobjects\\mapeosdatos\\pedidosmappers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDFEE3E7-7AB1-4081-B5EA-6248C9BAF702}|Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj|c:\\users\\moreno\\documents\\github\\p3_obl_papeleria\\papeleria.logicaaplicacion\\datatransferobjects\\dtos\\pedidos\\pedidodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDFEE3E7-7AB1-4081-B5EA-6248C9BAF702}|Papeleria.LogicaAplicacion\\Papeleria.LogicaAplicacion.csproj|solutionrelative:papeleria.logicaaplicacion\\datatransferobjects\\dtos\\pedidos\\pedidodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F26EA81B-6699-4965-A722-8F222CD6030F}|Papeleria.MVC\\Papeleria.MVC.csproj|c:\\users\\moreno\\documents\\github\\p3_obl_papeleria\\papeleria.mvc\\views\\pedidos\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F26EA81B-6699-4965-A722-8F222CD6030F}|Papeleria.MVC\\Papeleria.MVC.csproj|solutionrelative:papeleria.mvc\\views\\pedidos\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F26EA81B-6699-4965-A722-8F222CD6030F}|Papeleria.MVC\\Papeleria.MVC.csproj|c:\\users\\moreno\\documents\\github\\p3_obl_papeleria\\papeleria.mvc\\views\\pedidos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F26EA81B-6699-4965-A722-8F222CD6030F}|Papeleria.MVC\\Papeleria.MVC.csproj|solutionrelative:papeleria.mvc\\views\\pedidos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F26EA81B-6699-4965-A722-8F222CD6030F}|Papeleria.MVC\\Papeleria.MVC.csproj|c:\\users\\moreno\\documents\\github\\p3_obl_papeleria\\papeleria.mvc\\views\\pedidos\\crear.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F26EA81B-6699-4965-A722-8F222CD6030F}|Papeleria.MVC\\Papeleria.MVC.csproj|solutionrelative:papeleria.mvc\\views\\pedidos\\crear.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F26EA81B-6699-4965-A722-8F222CD6030F}|Papeleria.MVC\\Papeleria.MVC.csproj|c:\\users\\moreno\\documents\\github\\p3_obl_papeleria\\papeleria.mvc\\controllers\\pedidoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F26EA81B-6699-4965-A722-8F222CD6030F}|Papeleria.MVC\\Papeleria.MVC.csproj|solutionrelative:papeleria.mvc\\controllers\\pedidoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F26EA81B-6699-4965-A722-8F222CD6030F}|Papeleria.MVC\\Papeleria.MVC.csproj|c:\\users\\moreno\\documents\\github\\p3_obl_papeleria\\papeleria.mvc\\controllers\\articuloscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F26EA81B-6699-4965-A722-8F222CD6030F}|Papeleria.MVC\\Papeleria.MVC.csproj|solutionrelative:papeleria.mvc\\controllers\\articuloscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EA76E32-13B6-4BE9-BE7B-9CBA4979719B}|Papeleria.AccesoDatos\\Papeleria.AccesoDatos.csproj|c:\\users\\moreno\\documents\\github\\p3_obl_papeleria\\papeleria.accesodatos\\ef\\repositorioclienteef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6EA76E32-13B6-4BE9-BE7B-9CBA4979719B}|Papeleria.AccesoDatos\\Papeleria.AccesoDatos.csproj|solutionrelative:papeleria.accesodatos\\ef\\repositorioclienteef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,41 +50,81 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PedidosMappers.cs",
-              "DocumentMoniker": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\Papeleria.LogicaAplicacion\\DataTransferObjects\\MapeosDatos\\PedidosMappers.cs",
-              "RelativeDocumentMoniker": "Papeleria.LogicaAplicacion\\DataTransferObjects\\MapeosDatos\\PedidosMappers.cs",
-              "ToolTip": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\Papeleria.LogicaAplicacion\\DataTransferObjects\\MapeosDatos\\PedidosMappers.cs",
-              "RelativeToolTip": "Papeleria.LogicaAplicacion\\DataTransferObjects\\MapeosDatos\\PedidosMappers.cs",
+              "DocumentIndex": 2,
+              "Title": "Crear.cshtml",
+              "DocumentMoniker": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\Papeleria.MVC\\Views\\Pedidos\\Crear.cshtml",
+              "RelativeDocumentMoniker": "Papeleria.MVC\\Views\\Pedidos\\Crear.cshtml",
+              "ToolTip": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\Papeleria.MVC\\Views\\Pedidos\\Crear.cshtml",
+              "RelativeToolTip": "Papeleria.MVC\\Views\\Pedidos\\Crear.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T21:59:33.963Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-15T23:24:15.367Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\Papeleria.MVC\\Views\\Pedidos\\Details.cshtml",
+              "RelativeDocumentMoniker": "Papeleria.MVC\\Views\\Pedidos\\Details.cshtml",
+              "ToolTip": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\Papeleria.MVC\\Views\\Pedidos\\Details.cshtml",
+              "RelativeToolTip": "Papeleria.MVC\\Views\\Pedidos\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACsAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-15T23:23:54.017Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PedidoDTO.cs",
-              "DocumentMoniker": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\Papeleria.LogicaAplicacion\\DataTransferObjects\\Dtos\\Pedidos\\PedidoDTO.cs",
-              "RelativeDocumentMoniker": "Papeleria.LogicaAplicacion\\DataTransferObjects\\Dtos\\Pedidos\\PedidoDTO.cs",
-              "ToolTip": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\Papeleria.LogicaAplicacion\\DataTransferObjects\\Dtos\\Pedidos\\PedidoDTO.cs",
-              "RelativeToolTip": "Papeleria.LogicaAplicacion\\DataTransferObjects\\Dtos\\Pedidos\\PedidoDTO.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T21:31:46.564Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\Papeleria.MVC\\Views\\Pedidos\\Index.cshtml",
               "RelativeDocumentMoniker": "Papeleria.MVC\\Views\\Pedidos\\Index.cshtml",
               "ToolTip": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\Papeleria.MVC\\Views\\Pedidos\\Index.cshtml",
               "RelativeToolTip": "Papeleria.MVC\\Views\\Pedidos\\Index.cshtml",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAAC4AAABNAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAADwAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-15T19:34:57.581Z"
+              "WhenOpened": "2024-05-15T23:13:45.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ArticulosController.cs",
+              "DocumentMoniker": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\Papeleria.MVC\\Controllers\\ArticulosController.cs",
+              "RelativeDocumentMoniker": "Papeleria.MVC\\Controllers\\ArticulosController.cs",
+              "ToolTip": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\Papeleria.MVC\\Controllers\\ArticulosController.cs",
+              "RelativeToolTip": "Papeleria.MVC\\Controllers\\ArticulosController.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAQwIQAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T23:19:00.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PedidosController.cs",
+              "DocumentMoniker": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\Papeleria.MVC\\Controllers\\PedidosController.cs",
+              "RelativeDocumentMoniker": "Papeleria.MVC\\Controllers\\PedidosController.cs",
+              "ToolTip": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\Papeleria.MVC\\Controllers\\PedidosController.cs",
+              "RelativeToolTip": "Papeleria.MVC\\Controllers\\PedidosController.cs",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAqwF8AAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T22:54:11.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RepositorioClienteEF.cs",
+              "DocumentMoniker": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\Papeleria.AccesoDatos\\EF\\RepositorioClienteEF.cs",
+              "RelativeDocumentMoniker": "Papeleria.AccesoDatos\\EF\\RepositorioClienteEF.cs",
+              "ToolTip": "C:\\Users\\moreno\\Documents\\GitHub\\P3_OBL_Papeleria\\Papeleria.AccesoDatos\\EF\\RepositorioClienteEF.cs",
+              "RelativeToolTip": "Papeleria.AccesoDatos\\EF\\RepositorioClienteEF.cs",
+              "ViewState": "AQIAADIAAAAAAAAAAAA8wD8AAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T23:15:42.909Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -9,6 +9,15 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+<h1>BUSCAR PEDIDOS DESDE FECHA</h1>
+<hr />
+
+<form method="post">
+    <input type="date" placeholder="Ingrese fecha para buscar pedidos desde la misma" name="date" />
+    <input type="submit" value="Filtrar" name="submitButton" />
+</form>
+
+<br />
 <table class="table">
     <thead>
         <tr>
@@ -43,9 +52,8 @@
                 @Html.DisplayFor(modelItem => item.precioFinal)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Details" asp-route-id="@item.Id">Detalle</a> |
+                <a asp-action="Anular" asp-route-id="@item.Id">Anular</a>
             </td>
         </tr>
 }

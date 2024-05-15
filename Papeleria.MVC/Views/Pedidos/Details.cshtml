@@ -1,0 +1,48 @@
+﻿@model Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Pedidos.PedidoDTO
+
+@{
+    ViewData["Title"] = "Detalle del pedido";
+}
+<p>
+    <a asp-action="Index">Volver a la lista</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaPedido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClienteID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.precioFinal)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaPedido)
+                </td>
+                <td>
+                    @foreach (var cliente in ViewBag.Clientes)
+                    {
+                        if (cliente.Id.Equals(item.ClienteID))
+                        {
+                            @cliente.razonSocial
+                            ;
+                        }
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.precioFinal)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
