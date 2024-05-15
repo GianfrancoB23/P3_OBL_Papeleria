@@ -16,6 +16,9 @@
                 @Html.DisplayNameFor(model => model.FechaPedido)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.ClienteID)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.precioFinal)
             </th>
             <th></th>
@@ -26,6 +29,15 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.FechaPedido)
+            </td>
+            <td>
+                    @foreach (var cliente in ViewBag.Clientes)
+                    {
+                        if(cliente.Id.Equals(item.ClienteID))
+                        {
+                            @cliente.razonSocial;
+                        }
+                    }
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.precioFinal)

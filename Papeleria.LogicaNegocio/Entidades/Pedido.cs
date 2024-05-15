@@ -23,12 +23,14 @@ namespace Empresa.LogicaDeNegocio.Entidades
 		public IVA iva { get; set; }
         public int entregaPrometida { get; set; }
 		public double precioFinal{ get; set; }
+        public bool entregado { get; set; }
 
 
         public Pedido()
         {
             this.fechaPedido = DateTime.Now;
             this.lineas = new List<LineaPedido>();
+            this.entregado = false;
         }
 
         public Pedido(Cliente cliente, int dias, IVA iva, List<LineaPedido> lista)
@@ -48,6 +50,11 @@ namespace Empresa.LogicaDeNegocio.Entidades
         public abstract void CambiarEntregaPrometida(int dias);
 
         public abstract double CalcularRecargoYFijar();
+
+        public virtual void SetearEntregado()
+        {
+            this.entregado= true;
+        }
 
         public virtual void AgregarLineaPedido(Articulo articulo, int cantidad)
         {

@@ -87,7 +87,8 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
                 LineasPedido = LineaPedidoMappers.FromLista(pedido.lineas).ToList(),
                 recargo = pedido.recargo,
                 iva = pedido.iva.valor,
-                precioFinal = pedido.precioFinal
+                precioFinal = pedido.precioFinal,
+                entregado = false
             };
         }
         public static PedidoDTO ToComunesDto(Comunes pedido)
@@ -102,7 +103,8 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
                 LineasPedido = LineaPedidoMappers.FromLista(pedido.lineas).ToList(),
                 recargo = pedido.recargo,
                 iva = pedido.iva.valor,
-                precioFinal = pedido.precioFinal
+                precioFinal = pedido.precioFinal,
+                entregado = false
             };
         }
         public static PedidoDTO ToDto(Pedido pedido)
@@ -117,7 +119,8 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
                 LineasPedido = LineaPedidoMappers.FromLista(pedido.lineas).ToList(),
                 recargo = pedido.recargo,
                 iva = pedido.iva.valor,
-                precioFinal = pedido.precioFinal
+                precioFinal = pedido.precioFinal,
+                entregado = false
             };
         }
 

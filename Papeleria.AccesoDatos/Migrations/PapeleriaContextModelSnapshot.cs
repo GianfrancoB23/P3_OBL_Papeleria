@@ -138,6 +138,9 @@ namespace Papeleria.AccesoDatos.Migrations
                     b.Property<int>("entregaPrometida")
                         .HasColumnType("int");
 
+                    b.Property<bool>("entregado")
+                        .HasColumnType("bit");
+
                     b.Property<DateTime>("fechaPedido")
                         .HasColumnType("datetime2");
 

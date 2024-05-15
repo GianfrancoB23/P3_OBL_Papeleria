@@ -41,8 +41,8 @@ namespace Papeleria.MVC.Controllers
         }
         public IActionResult Index()
         {
-            /*ViewBag.Clientes = _buscarClientes.GetAll();
-            ViewBag.Articulos = _getAllPedidos.Ejecutar();*/
+            ViewBag.Clientes = _buscarClientes.GetAll();
+            ViewBag.Articulos = _getAllPedidos.Ejecutar();
             tempPedido = null;
             if (HttpContext.Session.GetInt32("LogueadoID") != null)
             {

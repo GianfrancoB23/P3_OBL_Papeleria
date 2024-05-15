@@ -22,6 +22,7 @@ namespace Empresa.LogicaDeNegocio.Entidades
             this.iva = iva;
             this.entregaPrometida = FijarEntregaPrometida(dias);
             this.precioFinal = CalcularYFijarPrecio(iva);
+            this.entregado = false;
             esValido();
         }
 
@@ -49,6 +50,10 @@ namespace Empresa.LogicaDeNegocio.Entidades
         public override void AgregarLineaPedido(Articulo articulo, int cantidad)
         {
             base.AgregarLineaPedido(articulo, cantidad);
+        }
+        public override void SetearEntregado()
+        {
+            base.SetearEntregado();
         }
         public override void AgregarLineaPedido(LineaPedido linea)
         {
