@@ -1,9 +1,9 @@
 ﻿@model IEnumerable<Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Clientes.ClienteDTO>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">CREAR NUEVO CLIENTE</a>
 </p>
-<h1>BUSCAR PUBLICACIONES</h1>
+<h1>BUSCAR CLIENTES</h1>
 <hr />
 @* <form method="post">
     <input type="text" placeholder="Ingrese razon social" name="razonSocial" /><input type="submit" value="Filtrar" />
@@ -36,25 +36,25 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Id)
+                ID
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.rut)
+                RUT
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.razonSocial)
+                Razón Social
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Calle)
+                Calle
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Numero)
+                Número
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Ciudad)
+                Ciudad
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Distancia)
+                Distancia en KM
             </th>
             <th></th>
         </tr>

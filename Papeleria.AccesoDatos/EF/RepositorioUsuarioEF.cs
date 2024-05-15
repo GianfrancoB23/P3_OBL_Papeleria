@@ -138,5 +138,11 @@ namespace Papeleria.AccesoDatos.EF
                 throw new UsuarioNoValidoExcepcion("");
             }
         }
+
+        public bool ExisteUsuarioConEmail(string email)
+        {
+            Usuario usuario = GetUsuarioPorEmail(email);
+            return usuario != null;
+        }
     }
 }

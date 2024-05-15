@@ -23,6 +23,11 @@ namespace Papeleria.AccesoDatos.Memoria
             _usuarios.Add(obj);
         }
 
+        public bool ExisteUsuarioConEmail(string email)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<Usuario> GetAll()
         {
             throw new NotImplementedException();

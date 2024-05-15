@@ -6,13 +6,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Articulos
 {
     [ComplexType]
-    public record StockArticulo
+    public record StockArticulo:IValidable<StockArticulo>
     {
         public int cantidad { get; set; }
 
         public StockArticulo(int cantidad)
         {
             this.cantidad = cantidad;
+            esValido();
         }
 
         public StockArticulo()
@@ -56,6 +57,13 @@ namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Articulos
             }
             else { 
                 cantidad += ctd;
+            }
+        }
+
+        public void esValido()
+        {
+            if (cantidad < 0) {
+                throw new StockArticuloNoValidoException("El stock no puede ser menor a 0");
             }
         }
     }

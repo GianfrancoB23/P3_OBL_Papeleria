@@ -79,7 +79,7 @@ namespace Papeleria.MVC.Controllers
             catch (Exception ex)
             {
                 ViewBag.Error = ex.Message;
-                return RedirectToAction(nameof(Index));
+                return View();
             }
         }
         public ActionResult Edit(int? id)

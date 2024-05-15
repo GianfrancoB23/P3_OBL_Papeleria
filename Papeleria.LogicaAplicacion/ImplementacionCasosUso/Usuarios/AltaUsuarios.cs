@@ -5,6 +5,7 @@ using Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos;
 using Papeleria.LogicaAplicacion.Interaces;
 using Papeleria.LogicaAplicacion.InterfacesCasosUso.Usuarios;
 using Papeleria.LogicaNegocio.Excepciones.Usuario;
+using Papeleria.LogicaNegocio.Excepciones.Usuario.UsuarioExcepcions.Email;
 using Papeleria.LogicaNegocio.InterfacesRepositorio;
 using System;
 using System.Collections.Generic;
@@ -26,10 +27,18 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Usuarios
         public void Ejecutar(UsuarioDTO dto)
         {
             if (dto == null)
-                throw new UsuarioNuloExcepcion("Nulo");
+                throw new UsuarioNuloExcepcion("No han llegado datos.");
 
-            Usuario usuario = UsuariosMappers.FromDto(dto);
-            _repoUsuarios.Add(usuario);
+            bool emailExistente = _repoUsuarios.ExisteUsuarioConEmail(dto.Email);
+            if (emailExistente)
+            {
+                throw new EmailNoValidoException("El email ya está en uso.");
+            }
+            else
+            {
+                Usuario usuario = UsuariosMappers.FromDto(dto);
+                _repoUsuarios.Add(usuario);
+            }
         }
     }
 }

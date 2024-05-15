@@ -60,8 +60,20 @@ namespace Papeleria.AccesoDatos.EF
 
         public Cliente GetClientePorRazon(string rsocial)
         {
-            var cliente = _db.Clientes.FirstOrDefault(cli => cli.razonSocial.RazonSoc.Equals(rsocial));
-            return cliente;
+            try
+            {
+                //No tocar, funciona...
+                var clientes = _db.Clientes.ToList();
+                var cliente = clientes.FirstOrDefault(c => c.razonSocial.RazonSoc.Equals(rsocial, StringComparison.OrdinalIgnoreCase)); //OrdinalIngnore case para que ignero mayusculas
+
+                return cliente;
+            }
+            catch (Exception ex)
+            {
+
+                throw new ClienteNoValidoException("Error al buscar el cliente.");
+            }
+
         }
 
         public Cliente GetClientePorRUT(long rut)

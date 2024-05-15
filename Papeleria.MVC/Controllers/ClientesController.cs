@@ -1,8 +1,11 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Papeleria.AccesoDatos.EF;
+using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Clientes;
 using Papeleria.LogicaAplicacion.ImplementacionCasosUso.Clientes;
+using Papeleria.LogicaAplicacion.ImplementacionCasosUso.Usuarios;
 using Papeleria.LogicaAplicacion.InterfacesCasosUso.Clientes;
+using Papeleria.LogicaAplicacion.InterfacesCasosUso.Usuarios;
 using Papeleria.LogicaNegocio.InterfacesRepositorio;
 
 namespace Papeleria.MVC.Controllers
@@ -12,10 +15,15 @@ namespace Papeleria.MVC.Controllers
         private static IRepositorioPedido _pedidos = new RepositorioPedidoEF(new PapeleriaContext());
         private static IRepositorioCliente _clientesRepo = new RepositorioClienteEF(new PapeleriaContext(), _pedidos);
         private static IBuscarClientes _buscarClientes;
-
+        private static IAltaCliente _altaCliente;
+        private static IModificarCliente _modificarCliente;
+        private static IBorrarCliente _borrarCliente;
         public ClientesController()
         {
             _buscarClientes = new BuscarClientes(_clientesRepo);
+            _altaCliente = new AltaClientes(_clientesRepo);
+            _modificarCliente = new ModificarCliente(_clientesRepo);
+            _borrarCliente = new BorrarCliente(_clientesRepo);
         }
         // GET: ClientesController
         public ActionResult Index()
@@ -32,38 +40,6 @@ namespace Papeleria.MVC.Controllers
             }
             return RedirectToAction("Index", "Home");
         }
-
-        //[HttpPost]
-        //public IActionResult Index(string razonSocial)
-        //{
-
-        //    TempData["ResultadoBuscarCliente"] = "";
-        //    try
-        //    {
-        //        if (!string.IsNullOrEmpty(razonSocial))
-        //        {
-        //            var clienteRazonSocial = _buscarClientes.GetXRazonSocial(razonSocial);
-        //            if (clienteRazonSocial == null)
-        //            {
-        //                TempData["ResultadoBuscarClientes"] = "No se ha encontrado ninguna coincidencia.";
-        //                return RedirectToAction("Index", "Clientes");
-        //            }
-        //            return View(clienteRazonSocial);
-        //        }
-        //        else
-        //        {
-        //            TempData["ResultadoBuscarClientes"] = "No se encontraron coincidencias de busqueda";
-        //            return RedirectToAction("Index", "Clientes");
-        //        }
-
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        TempData["ResultadoBuscarClientes"] = e.Message;
-        //        return RedirectToAction("Index", "Clientes");
-        //    }
-
-        //}
 
         [HttpPost]
         public IActionResult Index(string razonSocial, double? monto, string submitButton)
@@ -131,20 +107,27 @@ namespace Papeleria.MVC.Controllers
         // GET: ClientesController/Create
         public ActionResult Create()
         {
-            return View();
+            if (HttpContext.Session.GetInt32("LogueadoID") != null)
+            {
+                return View();
+            }
+            return RedirectToAction("Index", "Home");
         }
 
         // POST: ClientesController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(ClienteDTO cliente)
         {
             try
             {
+                _altaCliente.Ejecutar(cliente);
+                TempData["MensajeOK"] = "Cliente creado";
                 return RedirectToAction(nameof(Index));
             }
-            catch
+            catch (Exception ex)
             {
+                ViewBag.Error = ex.Message;
                 return View();
             }
         }

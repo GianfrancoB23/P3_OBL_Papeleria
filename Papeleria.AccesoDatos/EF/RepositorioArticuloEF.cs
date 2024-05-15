@@ -95,5 +95,14 @@ namespace Papeleria.AccesoDatos.EF
                 throw new ArticuloNuloException("El articulo no existe");
             }
         }
+
+        public bool ExisteArticuloConNombre(string nombre)
+        {
+            Articulo? articulo = _db.Articulos.FirstOrDefault(art => art.NombreArticulo.Nombre == nombre);
+            if (articulo != null) {
+                return true;
+            }
+            return false;
+        }
     }
 }

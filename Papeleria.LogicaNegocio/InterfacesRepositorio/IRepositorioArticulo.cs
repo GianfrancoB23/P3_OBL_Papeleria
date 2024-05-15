@@ -12,5 +12,6 @@ namespace Papeleria.LogicaNegocio.InterfacesRepositorio
     {
         public IEnumerable<Articulo> GetArticulosOrdenadosAlfabeticamente();
         public Articulo GetArticuloByCodigo(CodigoProveedorArticulos codigo);
+        public bool ExisteArticuloConNombre(string nombre);
     }
 }

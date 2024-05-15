@@ -15,5 +15,6 @@ namespace Papeleria.LogicaNegocio.InterfacesRepositorio
         public Usuario GetUsuarioPorEmail(string email);
         public void ModificarContrasenia(int id, ContraseniaUsuario contraseniaNueva);
         public Usuario Login(string email, string contrasenia);
+        bool ExisteUsuarioConEmail(string email);
     }
 }

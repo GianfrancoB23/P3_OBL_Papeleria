@@ -100,8 +100,9 @@ namespace Papeleria.MVC.Controllers
                 _modificarUsuario.Ejecutar(id, usu);
                 return RedirectToAction(nameof(Index));
             }
-            catch
+            catch (Exception ex)
             {
+                ViewBag.Error = ex.Message;
                 return View();
             }
         }
@@ -122,9 +123,10 @@ namespace Papeleria.MVC.Controllers
                 };
                 if (dto == null)
                     return RedirectToAction("Index", "Usuarios");
-                if (dto.Id == HttpContext.Session.GetInt32("LogueadoID"))
+                if (dto.Id == HttpContext.Session.GetInt32("LogueadoID")) { 
                     TempData["Error"] = "No se puede borrar el usuario loggueado";
                     return RedirectToAction(nameof(Index));
+                }
                 return View(borrar);
             }
             return RedirectToAction("Index", "Home");
@@ -143,12 +145,13 @@ namespace Papeleria.MVC.Controllers
                 }
                 else
                 {
-                    ViewBag.msg = "Debe seleccionar el checkbox";
+                    TempData["Error"] = "Debe seleccionar el checkbox";
                 }
                 return RedirectToAction("Index", "Usuarios");
             }
-            catch
+            catch (Exception ex)
             {
+                ViewBag.Error = ex.Message;
                 return View();
             }
         }

@@ -60,5 +60,10 @@ namespace Papeleria.AccesoDatos.Memoria
         {
             throw new NotImplementedException();
         }
+
+        public bool ExisteArticuloConNombre(string nombre)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -1,10 +1,7 @@
-﻿using Empresa.LogicaDeNegocio.Entidades;
-using Empresa.LogicaDeNegocio.Sistema;
-using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Clientes;
+﻿using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Clientes;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
 using Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos;
 using Papeleria.LogicaAplicacion.InterfacesCasosUso.Clientes;
-using Papeleria.LogicaAplicacion.InterfacesCasosUso.Usuarios;
 using Papeleria.LogicaNegocio.Excepciones.Cliente;
 using Papeleria.LogicaNegocio.Excepciones.Usuario;
 using Papeleria.LogicaNegocio.InterfacesRepositorio;
@@ -16,22 +13,29 @@ using System.Threading.Tasks;
 
 namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Clientes
 {
-    public class AltaClientes : IAltaCliente
+    public class ModificarCliente : IModificarCliente
     {
         private IRepositorioCliente _repoClientes;
 
-        public AltaClientes(IRepositorioCliente repo)
+        public ModificarCliente(IRepositorioCliente repo)
         {
             _repoClientes = repo;
         }
 
-        public void Ejecutar(ClienteDTO dto)
+        public void Ejecutar(int id, ClienteDTO clienteModificado)
         {
-            if (dto == null)
-                throw new ClienteNuloException("Nulo");
+            if (clienteModificado == null)
+                throw new ClienteNoValidoException("Cliente no puede ser nulo.");
+            try
+            {
+                var cliente = ClientesMappers.FromDtoUpdate(clienteModificado);
+                _repoClientes.Update(id, cliente);
+            }
+            catch (Exception ex)
+            {
+                throw new UsuarioNoValidoExcepcion(ex.Message);
+            }
 
-            Cliente cliente= ClientesMappers.FromDto(dto);
-            _repoClientes.Add(cliente);
         }
     }
 }
