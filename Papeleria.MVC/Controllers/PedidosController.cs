@@ -65,7 +65,6 @@ namespace Papeleria.MVC.Controllers
         {
             ViewBag.Clientes = _buscarClientes.GetAll();
             ViewBag.Articulos = _getAllPedidos.Ejecutar();
-            tempPedido = null;
             if (HttpContext.Session.GetInt32("LogueadoID") != null)
             {
                 if (date != null)
@@ -89,7 +88,6 @@ namespace Papeleria.MVC.Controllers
         {
             ViewBag.Clientes = _buscarClientes.GetAll();
             ViewBag.Articulos = _getAllPedidos.Ejecutar();
-            tempPedido = null;
             if (HttpContext.Session.GetInt32("LogueadoID") != null)
             {
                 PedidoDTO pedido = PedidosMappers.ToDto(_getPedidos.GetById(id));
@@ -152,12 +150,13 @@ namespace Papeleria.MVC.Controllers
                 {
                     _altaPedido.EjecutarComunes(pedidoAlta);
                 }
+                tempPedido = null;
                 return RedirectToAction("Index", "Pedidos");
             }
             catch (Exception ex)
             {
                 ViewBag.Error = ex.Message;
-                return View();
+                return RedirectToAction("Index","Pedidos");
             }
         }
 

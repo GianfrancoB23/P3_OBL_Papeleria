@@ -7,39 +7,38 @@
     <a asp-action="Index">Volver a la lista</a>
 </p>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.FechaPedido)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ClienteID)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.precioFinal)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-            <tr>
-                <td>
-                    @Html.DisplayFor(model => model.FechaPedido)
-                </td>
-                @* <td>
-                    @foreach (var cliente in ViewBag.Clientes)
-                    {
-                        if (cliente.Id.Equals(model => model.ClienteID))
-                        {
-                            @cliente.razonSocial
-                            ;
-                        }
-                    }
-                </td> *@
-                <td>
-                    @Html.DisplayFor(model => model.precioFinal)
-                </td>
-            </tr>
-    </tbody>
-</table>
+<div class="div">
+    <h4>Pedido</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FechaPedido)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FechaPedido)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FechaEntrega)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FechaEntrega)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClienteID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClienteID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.precioFinal)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.precioFinal)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.entregado)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.entregado)
+        </dd>
+</div>

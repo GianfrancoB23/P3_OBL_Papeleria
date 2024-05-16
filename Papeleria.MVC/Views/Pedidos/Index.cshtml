@@ -7,7 +7,7 @@
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Crear">Create New</a>
 </p>
 <h1>BUSCAR PEDIDOS DESDE FECHA</h1>
 <hr />
@@ -37,7 +37,7 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.FechaPedido)
+                    @Html.DisplayFor(modelItem => item.FechaPedido)
             </td>
             <td>
                     @foreach (var cliente in ViewBag.Clientes)
