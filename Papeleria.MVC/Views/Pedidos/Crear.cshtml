@@ -2,6 +2,7 @@
 @model Papeleria.MVC.Models.PedidosModels.PedidoAltaModel
 
 <h1>Crear Pedido</h1>
+<p>@ViewBag.Error</p>
 
 <form asp-action="Crear" method="post">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>

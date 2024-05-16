@@ -39,6 +39,7 @@ namespace Papeleria.AccesoDatos.EF
         public IEnumerable<Pedido> GetAll()
         {
             List<Cliente> clientes = _db.Clientes.ToList(); // NO TOCAR :)
+            List<Articulo> articulos = _db.Articulos.ToList();
             List<Pedido> pedidos = _db.Pedidos.ToList();
             var lineas = _db.LineasPedidos.ToList();
             foreach (Pedido pedido in pedidos)

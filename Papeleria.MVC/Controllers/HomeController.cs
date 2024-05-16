@@ -24,8 +24,8 @@ namespace Papeleria.MVC.Controllers
         public IActionResult Index()
         {
             //Comentar si no queres entrar directo 
-            Usuario usuLogin = _repoUsuarios.Login("prueba@prueba.com", "Prueba123!");
-            HttpContext.Session.SetInt32("LogueadoID", usuLogin.Id);
+           /* Usuario usuLogin = _repoUsuarios.Login("prueba@prueba.com", "Prueba123!");
+            HttpContext.Session.SetInt32("LogueadoID", usuLogin.Id);*/
 
             if (HttpContext.Session.GetInt32("LogueadoID") != null)
             {

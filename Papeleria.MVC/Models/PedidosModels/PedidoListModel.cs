@@ -4,6 +4,7 @@ namespace Papeleria.MVC.Models.PedidosModels
 {
     public class PedidoListModel
     {
+        public int Id { get; set; }
         [Required(ErrorMessage = "El cliente es obligatorio")]
         public int ClienteId { get; set; }
 

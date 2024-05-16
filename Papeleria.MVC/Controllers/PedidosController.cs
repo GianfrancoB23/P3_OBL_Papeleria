@@ -126,7 +126,7 @@ namespace Papeleria.MVC.Controllers
                 { return RedirectToAction("Index", "Pedidos"); }
                 try
                 {
-                    if(isChecked)
+                    if (isChecked)
                     {
                         _anularPedido.Ejecutar(id);
                     }
@@ -171,22 +171,27 @@ namespace Papeleria.MVC.Controllers
         {
             ViewBag.Clientes = _buscarClientes.GetAll();
             ViewBag.Articulos = _getAllArticulos.Ejecutar();
-            if (pedidoAlta == null)
-            {
-                ViewBag.Error = "El pedido es invalido";
-                return View();
-            }
-            if (pedidoAlta.FechaEntrega < DateTime.Now)
-            {
-                ViewBag.Error = "Fecha de entrega invalida";
-                return View();
-            }
-            pedidoAlta.FechaPedido = DateTime.Now;
             try
             {
+                if (pedidoAlta == null)
+                {
+                    ViewBag.Error = "El pedido es invalido";
+                    return View();
+                }
+                if (pedidoAlta.FechaEntrega < DateTime.Now)
+                {
+                    ViewBag.Error = "Fecha de entrega invalida";
+                    return View();
+                }
+                pedidoAlta.FechaPedido = DateTime.Now;
                 if (tempPedido != null)
                 {
                     ViewBag.LineasPedido = tempPedido.LineasPedido;
+                }
+                if (ViewBag.LineasPedido.Count() == 0)
+                {
+                    ViewBag.Error = "Debe agregar al menos un articulo al pedido";
+                    return View();
                 }
                 pedidoAlta.LineasPedido = tempPedido.LineasPedido;
                 if ((pedidoAlta.FechaEntrega.Subtract(pedidoAlta.FechaPedido)).Days < 5)

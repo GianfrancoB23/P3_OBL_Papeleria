@@ -51,7 +51,7 @@ namespace Papeleria.WebApi.Controllers
                         pedidosFinal.Add(pedido);
                     }
                 }
-                return Ok(pedidosDto);
+                return Ok(pedidosFinal);
             }
             catch (PedidoNoValidoException ex)
             {
