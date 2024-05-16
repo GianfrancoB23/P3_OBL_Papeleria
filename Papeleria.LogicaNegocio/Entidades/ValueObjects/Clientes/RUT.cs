@@ -24,7 +24,7 @@ namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes
         {
             if (Rut.ToString().Length != 12)
             {
-                throw new RutNoValidoException("RUT Invalido");
+                throw new RutNoValidoException("RUT Invalido, tiene que tener un largo de 12.");
             }
         }
 

@@ -24,12 +24,12 @@ namespace Empresa.LogicaDeNegocio.Entidades
 
 		public List<Pedido> pedidos{ get; set; }
 
-        public Cliente(long rut, string razonSocial, string calle, int numero, string ciudad)
+        public Cliente(long rut, string razonSocial, string calle, int numero, string ciudad,int distancia)
         {
             this.rut = new RUT(rut);
             this.razonSocial = new RazonSocial(razonSocial);
-            this.direccion = new DireccionCliente(calle, numero, ciudad);
-           this.pedidos = new List<Pedido>();
+            this.direccion = new DireccionCliente(calle, numero, ciudad, distancia);
+            this.pedidos = new List<Pedido>();
             esValido();
         }
 

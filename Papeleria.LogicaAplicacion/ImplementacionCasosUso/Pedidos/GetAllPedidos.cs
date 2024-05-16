@@ -26,7 +26,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Pedidos
             var pedidosOrigen = _repositorioPedido.GetAll();
             if (pedidosOrigen == null || pedidosOrigen.Count() == 0)
             {
-                throw new PedidoNuloException("No hay autores registrados");
+                throw new PedidoNuloException("No hay pedidos registrados");
             }
             return PedidosMappers.FromLista(pedidosOrigen);
         }

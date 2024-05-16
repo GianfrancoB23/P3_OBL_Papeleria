@@ -5,6 +5,7 @@
 </p>
 <h1>BUSCAR CLIENTES</h1>
 <hr />
+<partial name="_Mensajes" />
 @* <form method="post">
     <input type="text" placeholder="Ingrese razon social" name="razonSocial" /><input type="submit" value="Filtrar" />
 </form>
@@ -84,9 +85,8 @@
                 @Html.DisplayFor(modelItem => item.Distancia)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id=item.Id })
             </td>
         </tr>
 }

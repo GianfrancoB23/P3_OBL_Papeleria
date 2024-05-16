@@ -1,4 +1,5 @@
 using Empresa.LogicaDeNegocio.Entidades;
+using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 using Papeleria.LogicaNegocio.Excepciones.Cliente.ClienteValueObjects.Direccion;
 using Papeleria.LogicaNegocio.InterfacesEntidades;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -17,33 +18,32 @@ namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes
 
         public int Distancia { get; init; }
 
-        public DireccionCliente(string calle, int numero, string ciudad)
+        public DireccionCliente(string calle, int numero, string ciudad, int distancia)
         {
             if (calle == null || ciudad == null || numero == null) { throw new DireccionNuloException("Debe ingresar todos los campos para direccion"); }
             Calle = calle;
             Numero = numero;
             Ciudad = ciudad;
-            Distancia = CalcularYFijarDistancia();
-
+            //Distancia = CalcularYFijarDistancia();
+            Distancia = distancia;
+            esValido();
         }
         public DireccionCliente()
         {
             
         }
 
-        public int CalcularYFijarDistancia()
-        {
-            return 20;
-        }
+        //public int CalcularYFijarDistancia()
+        //{
+        //    return 20;
+        //}
 
         public void esValido()
         {
             if(Calle == null || Ciudad == null) { throw new DireccionNuloException("Debe ingresar todos los campos para direccion"); }
             if(Numero <= 0) { throw new DireccionNoValidoException("El número debe ser 1 o mayor");  }
-            if(!Calle.Any(c => char.IsDigit(c))) { 
-                throw new DireccionNoValidoException("Nombre de la calle no puede contener números"); 
-            }
-            if(!Ciudad.Any(c => char.IsDigit(c))) { throw new DireccionNoValidoException("Ciudad no puede contener números"); }
+            if(Ciudad.Any(char.IsDigit)) { throw new DireccionNoValidoException("Ciudad no puede contener números"); }
+            if (Distancia < 0) { throw new DireccionNoValidoException("La distancia no puede ser menor a 0km"); }
         }
     }
 

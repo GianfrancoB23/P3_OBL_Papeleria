@@ -24,7 +24,7 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
         public static Cliente FromDto(ClienteDTO dto)
         {
             if (dto == null) throw new UsuarioNuloExcepcion(nameof(dto));
-            return new Cliente(dto.rut, dto.razonSocial, dto.Calle, dto.Numero, dto.Ciudad);
+            return new Cliente(dto.rut, dto.razonSocial, dto.Calle, dto.Numero, dto.Ciudad, dto.Distancia);
         }
         public static ClienteDTO ToDto(Cliente cliente)
         {
@@ -56,7 +56,7 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
         {
             if (dto == null) 
                 throw new ClienteNuloException(nameof(dto));
-            var cliente = new Cliente(dto.rut, dto.razonSocial, dto.Calle,dto.Numero,dto.Ciudad);
+            var cliente = new Cliente(dto.rut, dto.razonSocial, dto.Calle,dto.Numero,dto.Ciudad, dto.Distancia);
             cliente.Id = dto.Id;
             return cliente;
         }

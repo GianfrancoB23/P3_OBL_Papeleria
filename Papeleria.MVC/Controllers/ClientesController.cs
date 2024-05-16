@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Empresa.LogicaDeNegocio.Entidades;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Papeleria.AccesoDatos.EF;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Clientes;
+using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
 using Papeleria.LogicaAplicacion.ImplementacionCasosUso.Clientes;
 using Papeleria.LogicaAplicacion.ImplementacionCasosUso.Usuarios;
 using Papeleria.LogicaAplicacion.InterfacesCasosUso.Clientes;
@@ -135,20 +137,39 @@ namespace Papeleria.MVC.Controllers
         // GET: ClientesController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            if (HttpContext.Session.GetInt32("LogueadoID") != null)
+            {
+                ClienteDTO dto = _buscarClientes.GetByIdDTO(id);
+                ClienteDTO mod = new ClienteDTO()
+                {
+                    Id = dto.Id,
+                    rut = dto.rut,
+                    razonSocial = dto.razonSocial,
+                    Calle = dto.Calle,
+                    Numero = dto.Numero,
+                    Ciudad = dto.Ciudad,
+                    Distancia = dto.Distancia
+                };
+                if (dto == null)
+                    return View();
+                return View(mod);
+            }
+            return RedirectToAction("Index", "Home");
         }
 
         // POST: ClientesController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id, ClienteDTO mod)
         {
             try
             {
+                _modificarCliente.Ejecutar(id, mod);
                 return RedirectToAction(nameof(Index));
             }
-            catch
+            catch (Exception ex)
             {
+                ViewBag.Error = ex.Message;
                 return View();
             }
         }
@@ -156,20 +177,46 @@ namespace Papeleria.MVC.Controllers
         // GET: ClientesController/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            if (HttpContext.Session.GetInt32("LogueadoID") != null)
+            {
+                ClienteDTO dto = _buscarClientes.GetByIdDTO(id);
+                ClienteDTO borrar = new ClienteDTO()
+                {
+                    Id = dto.Id,
+                    rut = dto.rut,
+                    razonSocial = dto.razonSocial,
+                    Calle = dto.Calle,
+                    Numero = dto.Numero,
+                    Ciudad = dto.Ciudad,
+                    Distancia = dto.Distancia
+                };
+                if (dto == null)
+                    return RedirectToAction("Index", "Cliente");
+                return View(borrar);
+            }
+            return RedirectToAction("Index", "Home");
         }
 
         // POST: ClientesController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(int id, ClienteDTO borrar, bool IsChecked)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                if (IsChecked)
+                {
+                    _borrarCliente.Ejecutar(id, borrar);
+                }
+                else
+                {
+                    TempData["Error"] = "Debe seleccionar el checkbox";
+                }
+                return RedirectToAction("Index", "Clientes");
             }
-            catch
+            catch (Exception ex)
             {
+                ViewBag.Error = ex.Message;
                 return View();
             }
         }
