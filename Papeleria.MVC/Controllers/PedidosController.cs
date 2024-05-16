@@ -96,6 +96,34 @@ namespace Papeleria.MVC.Controllers
             }
             return RedirectToAction("Index", "Home");
         }
+        [HttpGet]
+        public IActionResult Anular(int id)
+        {
+            ViewBag.Clientes = _buscarClientes.GetAll();
+            ViewBag.Articulos = _getAllArticulos.Ejecutar();
+            if (HttpContext.Session.GetInt32("LogueadoID") != null)
+            {
+                PedidoDTO pedido = PedidosMappers.ToDto(_getPedidos.GetById(id));
+                if (pedido == null)
+                { return RedirectToAction("Index", "Pedidos"); }
+                return View(pedido);
+            }
+            return RedirectToAction("Index", "Home");
+        }
+        [HttpPost]
+        public IActionResult AnularPedido(int id)
+        {
+            ViewBag.Clientes = _buscarClientes.GetAll();
+            ViewBag.Articulos = _getAllArticulos.Ejecutar();
+            if (HttpContext.Session.GetInt32("LogueadoID") != null)
+            {
+                PedidoDTO pedido = PedidosMappers.ToDto(_getPedidos.GetById(id));
+                if (pedido == null)
+                { return RedirectToAction("Index", "Pedidos"); }
+                return View(pedido);
+            }
+            return RedirectToAction("Index", "Home");
+        }
 
         [HttpGet]
         public IActionResult Crear()

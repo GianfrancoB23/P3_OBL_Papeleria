@@ -34,28 +34,34 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                    @Html.DisplayFor(modelItem => item.FechaPedido)
-            </td>
-            <td>
-                    @foreach (var cliente in ViewBag.Clientes)
-                    {
-                        if(cliente.Id.Equals(item.ClienteID))
+        @foreach (var item in Model)
+        {
+            if (!item.anulado)
+            {
+
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FechaPedido)
+                    </td>
+                    <td>
+                        @foreach (var cliente in ViewBag.Clientes)
                         {
-                            @cliente.razonSocial;
+                            if (cliente.Id.Equals(item.ClienteID))
+                            {
+                                @cliente.razonSocial
+                                ;
+                            }
                         }
-                    }
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.precioFinal)
-            </td>
-            <td>
-                <a asp-action="Details" asp-route-id="@item.Id">Detalle</a> |
-                <a asp-action="Anular" asp-route-id="@item.Id">Anular</a>
-            </td>
-        </tr>
-}
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.precioFinal)
+                    </td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@item.Id">Detalle</a> |
+                        <a asp-action="Anular" asp-route-id="@item.Id">Anular</a>
+                    </td>
+                </tr>
+            }
+        }
     </tbody>
 </table>
