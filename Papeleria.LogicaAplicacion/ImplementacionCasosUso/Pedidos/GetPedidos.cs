@@ -17,8 +17,8 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Pedidos
 {
     public class GetPedidos : IGetPedido
     {
-        private static IRepositorioPedido _repoPedidos = new RepositorioPedidoEF(new PapeleriaContext());
-        private static IRepositorioCliente _clientesRepo = new RepositorioClienteEF(new PapeleriaContext(), _repoPedidos);
+        private static IRepositorioPedido _repoPedidos = new RepositorioPedidoEF();
+        private static IRepositorioCliente _clientesRepo = new RepositorioClienteEF(_repoPedidos);
         public GetPedidos(IRepositorioPedido repo)
         {
             _repoPedidos = repo;

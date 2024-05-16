@@ -24,10 +24,6 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Pedidos
         public IEnumerable<PedidoDTO> Ejecutar()
         {
             var pedidosOrigen = _repositorioPedido.GetAll();
-            if (pedidosOrigen == null || pedidosOrigen.Count() == 0)
-            {
-                throw new PedidoNuloException("No hay pedidos registrados");
-            }
             return PedidosMappers.FromLista(pedidosOrigen);
         }
 

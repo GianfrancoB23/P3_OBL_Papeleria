@@ -18,7 +18,7 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
 {
     internal class LineaPedidoMappers
     {
-        private static IRepositorioArticulo _repoArticulos = new RepositorioArticuloEF(new PapeleriaContext());
+        private static IRepositorioArticulo _repoArticulos = new RepositorioArticuloEF();
         private static IGetArticulo _getArticulo;
         public static LineaPedido FromDTO(LineaPedidoDTO dto)
         {

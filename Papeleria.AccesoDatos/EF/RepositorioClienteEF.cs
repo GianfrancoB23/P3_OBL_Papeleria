@@ -15,11 +15,11 @@ namespace Papeleria.AccesoDatos.EF
 {
     public class RepositorioClienteEF : IRepositorioCliente
     {
-        private PapeleriaContext _db { get; set; }
+        private PapeleriaContext _db;
         private IRepositorioPedido _repositorioPedido { get; set; }
-        public RepositorioClienteEF(PapeleriaContext db, IRepositorioPedido repositorioPedido)
+        public RepositorioClienteEF(IRepositorioPedido repositorioPedido)
         {
-            _db = db;
+            _db = new PapeleriaContext();
             _repositorioPedido = repositorioPedido;
         }
 

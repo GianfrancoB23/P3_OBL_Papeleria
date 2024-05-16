@@ -21,10 +21,10 @@ namespace Papeleria.MVC.Controllers
 {
     public class PedidosController : Controller
     {
-        private static IRepositorioPedido _pedidos = new RepositorioPedidoEF(new PapeleriaContext());
-        private static IRepositorioCliente _clientesRepo = new RepositorioClienteEF(new PapeleriaContext(), _pedidos);
-        private static IRepositorioLineaPedido _lineaPedido = new RepositorioLineaPedidoEF(new PapeleriaContext());
-        private static IRepositorioArticulo _articulos = new RepositorioArticuloEF(new PapeleriaContext());
+        private static IRepositorioPedido _pedidos = new RepositorioPedidoEF();
+        private static IRepositorioCliente _clientesRepo = new RepositorioClienteEF(_pedidos);
+        private static IRepositorioLineaPedido _lineaPedido = new RepositorioLineaPedidoEF();
+        private static IRepositorioArticulo _articulos = new RepositorioArticuloEF();
         private static IAltaPedido _altaPedido;
         private static IBuscarClientes _buscarClientes;
         private static IGetArticulo _getArticulo = new BuscarArticulo(_articulos);
@@ -41,21 +41,20 @@ namespace Papeleria.MVC.Controllers
             _getPedidos = new GetPedidos(_pedidos);
             _altaPedido = new AltaPedidos(_pedidos);
             ViewBag.Clientes = _buscarClientes.GetAll();
-            ViewBag.Articulos = _getAllPedidos.Ejecutar();
+            ViewBag.Articulos = _getAllArticulos.Ejecutar();
         }
         public IActionResult Index()
         {
             ViewBag.Clientes = _buscarClientes.GetAll();
-            ViewBag.Articulos = _getAllPedidos.Ejecutar();
+            ViewBag.Articulos = _getAllArticulos.Ejecutar();
             tempPedido = null;
             if (HttpContext.Session.GetInt32("LogueadoID") != null)
             {
                 var pedidos = _getAllPedidos.Ejecutar();
                 if (pedidos == null || pedidos.Count() == 0)
                 {
-                    ViewBag.Mensaje = "No existen pedido";
-                }
-                ViewBag.Mensaje = $"Pedidos en total: {pedidos.Count()}.";
+                    ViewBag.Mensaje = "No hay pedidos registrados";
+                } 
                 return View(pedidos);
             }
             return RedirectToAction("Index", "Home");
@@ -64,7 +63,7 @@ namespace Papeleria.MVC.Controllers
         public IActionResult Index(DateTime date)
         {
             ViewBag.Clientes = _buscarClientes.GetAll();
-            ViewBag.Articulos = _getAllPedidos.Ejecutar();
+            ViewBag.Articulos = _getAllArticulos.Ejecutar();
             if (HttpContext.Session.GetInt32("LogueadoID") != null)
             {
                 if (date != null)
@@ -87,7 +86,7 @@ namespace Papeleria.MVC.Controllers
         public IActionResult Details(int id)
         {
             ViewBag.Clientes = _buscarClientes.GetAll();
-            ViewBag.Articulos = _getAllPedidos.Ejecutar();
+            ViewBag.Articulos = _getAllArticulos.Ejecutar();
             if (HttpContext.Session.GetInt32("LogueadoID") != null)
             {
                 PedidoDTO pedido = PedidosMappers.ToDto(_getPedidos.GetById(id));

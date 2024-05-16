@@ -18,8 +18,8 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
 {
     public class PedidosMappers
     {
-        private static IRepositorioPedido _pedidos = new RepositorioPedidoEF(new PapeleriaContext());
-        private static IRepositorioCliente _clientesRepo = new RepositorioClienteEF(new PapeleriaContext(), _pedidos);
+        private static IRepositorioPedido _pedidos = new RepositorioPedidoEF();
+        private static IRepositorioCliente _clientesRepo = new RepositorioClienteEF(_pedidos);
         private static IBuscarClientes _buscarClientes = new BuscarClientes(_clientesRepo);
         public static Pedido FromExpress(PedidoDTO pedido)
         {

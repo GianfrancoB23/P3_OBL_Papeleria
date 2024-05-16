@@ -10,8 +10,8 @@ namespace Papeleria.MVC.Controllers
 {
     public class HomeController : Controller
     {
-        private static IRepositorioUsuario _repoUsuarios = new RepositorioUsuarioEF(new PapeleriaContext());
-        private static IRepositorioArticulo _repoArticulo = new RepositorioArticuloEF(new PapeleriaContext());
+        private static IRepositorioUsuario _repoUsuarios = new RepositorioUsuarioEF();
+        private static IRepositorioArticulo _repoArticulo = new RepositorioArticuloEF();
 
 
         private readonly ILogger<HomeController> _logger;

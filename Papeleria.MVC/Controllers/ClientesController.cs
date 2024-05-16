@@ -14,8 +14,8 @@ namespace Papeleria.MVC.Controllers
 {
     public class ClientesController : Controller
     {
-        private static IRepositorioPedido _pedidos = new RepositorioPedidoEF(new PapeleriaContext());
-        private static IRepositorioCliente _clientesRepo = new RepositorioClienteEF(new PapeleriaContext(), _pedidos);
+        private static IRepositorioPedido _pedidos = new RepositorioPedidoEF();
+        private static IRepositorioCliente _clientesRepo = new RepositorioClienteEF(_pedidos);
         private static IBuscarClientes _buscarClientes;
         private static IAltaCliente _altaCliente;
         private static IModificarCliente _modificarCliente;

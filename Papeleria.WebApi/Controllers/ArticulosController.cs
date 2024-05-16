@@ -24,7 +24,7 @@ namespace Papeleria.WebApi.Controllers
 
         public ArticulosController()
         {
-            _repoArticulos = new RepositorioArticuloEF(new PapeleriaContext());
+            _repoArticulos = new RepositorioArticuloEF();
             _cuGetArticulos = new GetAllArticulos(_repoArticulos);
             _cuGetArticulo = new BuscarArticulo(_repoArticulos);
             _cuAltaArticulo = new AltaArticulo(_repoArticulos);

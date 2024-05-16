@@ -15,18 +15,18 @@ namespace Papeleria.Test
 {
     internal class Program
     {
-        static IRepositorioUsuario _repoUsuarios = new RepositorioUsuarioEF(new PapeleriaContext());
-        static IRepositorioPedido _repoPedidos = new RepositorioPedidoEF(new PapeleriaContext());
-        static IRepositorioCliente _repoClientes = new RepositorioClienteEF(new PapeleriaContext(), _repoPedidos);
-        static IRepositorioLineaPedido _repoLineasPedidos = new RepositorioLineaPedidoEF(new PapeleriaContext());
-        static IRepositorioArticulo _repoArticulo = new RepositorioArticuloEF(new PapeleriaContext());
+        static IRepositorioUsuario _repoUsuarios = new RepositorioUsuarioEF();
+        static IRepositorioPedido _repoPedidos = new RepositorioPedidoEF();
+        static IRepositorioCliente _repoClientes = new RepositorioClienteEF(_repoPedidos);
+        static IRepositorioLineaPedido _repoLineasPedidos = new RepositorioLineaPedidoEF();
+        static IRepositorioArticulo _repoArticulo = new RepositorioArticuloEF();
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
             Articulo a = new Articulo(1234567898765, "papa", "ssssssssss", 1500, 20);
             AgregarArticulo(a);
 
-            Cliente c = new Cliente(123456789101, "Pepsi Sociedad Anonima", "Avenida Millan", 5285, "Montevideo");
+            Cliente c = new Cliente(123456789101, "Pepsi Sociedad Anonima", "Avenida Millan", 5285, "Montevideo", 101);
             AgregarCliente(c);
             //Express pedido = new Express(c, 3, new IVA(22), new LineaPedido(a, 10), true);
 

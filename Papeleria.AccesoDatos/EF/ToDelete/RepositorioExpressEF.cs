@@ -1,5 +1,4 @@
 ﻿using Empresa.LogicaDeNegocio.Entidades;
-using Empresa.LogicaDeNegocio.Sistema;
 using Papeleria.LogicaNegocio.Excepciones.Pedido;
 using Papeleria.LogicaNegocio.InterfacesRepositorio;
 using System;
@@ -8,37 +7,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Papeleria.AccesoDatos.EF
+namespace Papeleria.AccesoDatos.EF.ToDelete
 {
-    public class RepositorioComunesEF : IRepositorioComun
+    public class RepositorioExpressEF : IRepositorioExpress
     {
         private PapeleriaContext _db = new PapeleriaContext();
-        public void Add(Comunes obj)
+        public void Add(Express obj)
         {
             try
             {
-                _db.Comuns.Add(obj);
+                _db.Expresses.Add(obj);
                 _db.SaveChanges();
             }
             catch (Exception ex)
             {
-
                 throw new PedidoNoValidoException(ex.Message);
             }
+
         }
 
-        public IEnumerable<Comunes> GetAll()
+        public IEnumerable<Express> GetAll()
         {
-            return _db.Comuns.ToList();
+            return _db.Expresses.ToList();
         }
 
-        public Comunes GetById(int id)
+        public Express GetById(int id)
         {
-            Comunes? comun = _db.Comuns.FirstOrDefault(pedido => pedido.Id == id);
-            return comun;
+            Express? express = _db.Expresses.FirstOrDefault(pedido => pedido.Id == id);
+            return express;
         }
 
-        public IEnumerable<Comunes> GetObjectsByID(List<int> ids)
+        public IEnumerable<Express> GetObjectsByID(List<int> ids)
         {
             throw new NotImplementedException();
         }
@@ -48,12 +47,12 @@ namespace Papeleria.AccesoDatos.EF
             throw new NotImplementedException();
         }
 
-        public void Remove(Comunes obj)
+        public void Remove(Express obj)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(int id, Comunes obj)
+        public void Update(int id, Express obj)
         {
             throw new NotImplementedException();
         }

@@ -27,7 +27,7 @@ namespace Papeleria.MVC.Controllers
     {
 
 
-        private static IRepositorioArticulo _repoArticulos = new RepositorioArticuloEF(new PapeleriaContext());
+        private static IRepositorioArticulo _repoArticulos = new RepositorioArticuloEF();
         private static IAltaArticulo _altaArticulo;
         private static IGetAllArticulos _getAllArticulos;
         private static IUpdateArticulo _modificarArticulo;

@@ -10,7 +10,7 @@ namespace Papeleria.MVC.Controllers
 {
     public class UsuariosController : Controller
     {
-        private static IRepositorioUsuario _repoUsuarios = new RepositorioUsuarioEF(new PapeleriaContext());
+        private static IRepositorioUsuario _repoUsuarios = new RepositorioUsuarioEF();
         private static IAltaUsuario _altaUsuario;
         private static IGetAllUsuarios _getAllUsuarios;
         private static IModificarUsuario _modificarUsuario;
