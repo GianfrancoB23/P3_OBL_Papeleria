@@ -12,6 +12,7 @@ namespace Papeleria.LogicaNegocio.Entidades
         public Articulo Articulo { get; set; }
         public int Cantidad { get; set; }
         public double PrecioUnitarioVigente { get; set; }
+        public Pedido pedido { get; set; }
 
         public LineaPedido(Articulo articulo, int cantidad)
         {
@@ -19,11 +20,17 @@ namespace Papeleria.LogicaNegocio.Entidades
             Cantidad = cantidad;
             PrecioUnitarioVigente = articulo.PrecioVP;
             esValido();
+            this.pedido = null;
         }
 
         public LineaPedido()
         {
 
+        }
+
+        public void AsignarPedido(Pedido pedido)
+        {
+            this.pedido = pedido;
         }
 
         public void esValido()

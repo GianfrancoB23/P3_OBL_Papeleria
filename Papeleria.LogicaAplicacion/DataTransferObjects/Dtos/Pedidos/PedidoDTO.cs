@@ -16,6 +16,7 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Pedidos
         public DateTime FechaPedido { get; set; }
         public DateTime FechaEntrega { get; set; }
         public int ClienteID { get; set; }
+        public int PedidoID { get; set; }
         public List<LineaPedidoDTO> LineasPedido { get; set; }
         public double recargo { get; set; }
         public double iva { get; set; }

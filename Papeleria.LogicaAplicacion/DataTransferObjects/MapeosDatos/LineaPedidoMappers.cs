@@ -49,6 +49,7 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
             return new LineaPedidoDTO()
             {
                 id = linea.Id,
+                PedidoID = linea.pedido.Id,
                 idArticulo = articulo.Id,
                 CodigoProveedor = articulo.CodigoProveedor,
                 NombreArticulo = articulo.NombreArticulo,
