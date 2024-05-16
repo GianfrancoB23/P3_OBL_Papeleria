@@ -38,6 +38,10 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
             pedidoFinal.CalcularRecargoYFijar();
             pedidoFinal.FijarEntregaPrometida((pedido.FechaEntrega - pedido.FechaPedido).Days);
             pedidoFinal.CalcularYFijarPrecio(new IVA(pedido.iva));
+            foreach (LineaPedido linea in lineasFinal)
+            {
+                linea.AsignarPedido(pedidoFinal);
+            }
             try
             {
                 pedidoFinal.esValido();
@@ -65,6 +69,10 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
             pedidoFinal.CalcularRecargoYFijar();
             pedidoFinal.FijarEntregaPrometida((pedido.FechaEntrega - pedido.FechaPedido).Days);
             pedidoFinal.CalcularYFijarPrecio(new IVA(pedido.iva));
+            foreach(LineaPedido linea in lineasFinal)
+            {
+                linea.AsignarPedido(pedidoFinal);
+            }
             try
             {
                 pedidoFinal.esValido();

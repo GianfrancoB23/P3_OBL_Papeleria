@@ -232,17 +232,17 @@ namespace Papeleria.AccesoDatos.Migrations
                     b.Property<int>("Cantidad")
                         .HasColumnType("int");
 
-                    b.Property<int?>("PedidoId")
-                        .HasColumnType("int");
-
                     b.Property<double>("PrecioUnitarioVigente")
                         .HasColumnType("float");
+
+                    b.Property<int>("pedidoId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("ArticuloId");
 
-                    b.HasIndex("PedidoId");
+                    b.HasIndex("pedidoId");
 
                     b.ToTable("LineasPedidos");
                 });
@@ -280,11 +280,15 @@ namespace Papeleria.AccesoDatos.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Empresa.LogicaDeNegocio.Entidades.Pedido", null)
+                    b.HasOne("Empresa.LogicaDeNegocio.Entidades.Pedido", "pedido")
                         .WithMany("lineas")
-                        .HasForeignKey("PedidoId");
+                        .HasForeignKey("pedidoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Articulo");
+
+                    b.Navigation("pedido");
                 });
 
             modelBuilder.Entity("Empresa.LogicaDeNegocio.Entidades.Cliente", b =>

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Papeleria.AccesoDatos.Migrations
 {
     /// <inheritdoc />
-    public partial class UltimateTest : Migration
+    public partial class initialization : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -73,6 +73,8 @@ namespace Papeleria.AccesoDatos.Migrations
                     recargo = table.Column<double>(type: "float", nullable: false),
                     entregaPrometida = table.Column<int>(type: "int", nullable: false),
                     precioFinal = table.Column<double>(type: "float", nullable: false),
+                    entregado = table.Column<bool>(type: "bit", nullable: false),
+                    anulado = table.Column<bool>(type: "bit", nullable: false),
                     Discriminator = table.Column<string>(type: "nvarchar(8)", maxLength: 8, nullable: false),
                     iva_valor = table.Column<double>(type: "float", nullable: false)
                 },
@@ -96,7 +98,7 @@ namespace Papeleria.AccesoDatos.Migrations
                     ArticuloId = table.Column<int>(type: "int", nullable: false),
                     Cantidad = table.Column<int>(type: "int", nullable: false),
                     PrecioUnitarioVigente = table.Column<double>(type: "float", nullable: false),
-                    PedidoId = table.Column<int>(type: "int", nullable: true)
+                    pedidoId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -108,10 +110,11 @@ namespace Papeleria.AccesoDatos.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_LineasPedidos_Pedidos_PedidoId",
-                        column: x => x.PedidoId,
+                        name: "FK_LineasPedidos_Pedidos_pedidoId",
+                        column: x => x.pedidoId,
                         principalTable: "Pedidos",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
@@ -125,9 +128,9 @@ namespace Papeleria.AccesoDatos.Migrations
                 column: "ArticuloId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_LineasPedidos_PedidoId",
+                name: "IX_LineasPedidos_pedidoId",
                 table: "LineasPedidos",
-                column: "PedidoId");
+                column: "pedidoId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Pedidos_clienteId",
