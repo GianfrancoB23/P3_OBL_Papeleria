@@ -35,6 +35,10 @@ namespace Papeleria.WebApi.Controllers
             _anularPedido = new AnularPedido(_repoPedidos);
         }
         // GET: api/<ArticulosController>
+        /// <summary>
+        /// Listar pedidos anulados
+        /// </summary>
+        /// <returns>200 - Retorna la lista con los pedidos anulados en orden descendente por Fecha | Status correspondiente al error</returns>
         [HttpGet]
         public ActionResult<IEnumerable<PedidoDTO>> Get()
         {
@@ -64,28 +68,6 @@ namespace Papeleria.WebApi.Controllers
             }
 
         }
-       /* 
-        // GET: api/<ArticulosController>
-        [HttpGet]
-        public ActionResult<IEnumerable<PedidoDTO>> GetAll()
-        {
-            try
-            {
-                _repoPedidos = new RepositorioPedidoEF(); 
-                var clientes = _buscarClientes.GetAll();
-                var pedidosDto = _getAllPedidos.Ejecutar();
-                return Ok(pedidosDto);
-            }
-            catch (PedidoNoValidoException ex)
-            {
-                return BadRequest(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, ex.Message);
-            }
-
-        }*/
 
     }
 }

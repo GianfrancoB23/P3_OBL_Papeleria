@@ -32,6 +32,10 @@ namespace Papeleria.WebApi.Controllers
             _cuModificarArticulo = new UpdateArticulo(_repoArticulos);
         }
         // GET: api/<ArticulosController>
+        /// <summary>
+        /// Listar todos los articulos
+        /// </summary>
+        /// <returns>Lista de articulos ordenados alfabeticamente.</returns>
         [HttpGet]
         public ActionResult<IEnumerable<ArticuloDTO>> Get()
         {
@@ -53,6 +57,11 @@ namespace Papeleria.WebApi.Controllers
         }
 
         // GET api/<ArticulosController>/5
+        /// <summary>
+        /// Listar articulo particuloar
+        /// </summary>
+        /// <param name="id">Número entero con el valor Id del articulo a buscar</param>
+        /// <returns>Articulo correspondiente al ID - Code 200 | Error 400 (Bad Request) si parametro/articulo es invalido |  500 - Error con la DB / Excepcion particular</returns>
         [HttpGet("{id}", Name = "GetAutorByID")]
         public ActionResult<ArticuloDTO> Get(int id)
         {
@@ -70,8 +79,12 @@ namespace Papeleria.WebApi.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
-
         // POST api/<ArticulosController>
+        /// <summary>
+        /// Agregar articulo
+        /// </summary>
+        /// <param name="articulo">Parametro que toma el articulo armado con sus respectivos atributos y lo pasa a la aplicacion para registrarlo</param>
+        /// <returns>201 - Si el Articulo fue creado satisfactoriamente | 400 - Si el Articulo suministrado no es valido | 500 - Error con la DB / Excepcion particular</returns>
         [HttpPost]
         public ActionResult<ArticuloDTO> Post(ArticuloDTO articulo)
         {
@@ -92,6 +105,12 @@ namespace Papeleria.WebApi.Controllers
         }
 
         // PUT api/<ArticulosController>/5
+        /// <summary>
+        /// Modificar articulo
+        /// </summary>
+        /// <param name="id">Proporciona el ID del objeto a modificar</param>
+        /// <param name="articulo">Proporciona el cuerpo del articulo que va a reemplazar al existente</param>
+        /// <returns>200 - Articulo modificado correctamente | 400 - ID/Articulo nuevo invalido | 500 - Error en la DB / Excepcion particular</returns>
         [HttpPut("{id}")]
         public ActionResult<ArticuloDTO> Put(int id, ArticuloDTO articulo)
         {
@@ -111,13 +130,18 @@ namespace Papeleria.WebApi.Controllers
         }
 
         // DELETE api/<ArticulosController>/5
+        /// <summary>
+        /// Borrar articulo
+        /// </summary>
+        /// <param name="id">Proporciona el ID del articulo a borrar</param>
+        /// <returns>200 - Articulo borrado correctamente | 400 - ID Invalido o Articulo no valido | 500 - Error de la DB / Excepcion particular</returns>
         [HttpDelete("{id}")]
         public ActionResult<ArticuloDTO> Delete(int id)
         {
             try
             {
                 _cuBorrarArticulo.Ejecutar(id);
-                return Ok("foobar");
+                return Ok();
             }
             catch (ArticuloNoValidoException ex)
             {

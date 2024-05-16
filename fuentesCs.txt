@@ -1,6 +1,6 @@
 ﻿***********************************
 Archivo: UtilidadesString.cs
-Localizacion: Papeleria.Comun\UtilidadesString.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.Comun\UtilidadesString.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -29,7 +29,7 @@ namespace Papeleria.Comun
 
 ***********************************
 Archivo: ClienteConfiguraciones.cs
-Localizacion: Papeleria.AccesoDatos\Configuraciones\ClienteConfiguraciones.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.AccesoDatos\Configuraciones\ClienteConfiguraciones.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Microsoft.EntityFrameworkCore;
@@ -61,7 +61,7 @@ namespace Papeleria.AccesoDatos.Configuraciones
 
 ***********************************
 Archivo: PapeleriaContext.cs
-Localizacion: Papeleria.AccesoDatos\EF\PapeleriaContext.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.AccesoDatos\EF\PapeleriaContext.cs
 ***********************************
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -104,7 +104,7 @@ namespace Papeleria.AccesoDatos.EF
 
 ***********************************
 Archivo: RepositorioArticuloEF.cs
-Localizacion: Papeleria.AccesoDatos\EF\RepositorioArticuloEF.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.AccesoDatos\EF\RepositorioArticuloEF.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaNegocio.Entidades;
@@ -217,7 +217,7 @@ namespace Papeleria.AccesoDatos.EF
 
 ***********************************
 Archivo: RepositorioClienteEF.cs
-Localizacion: Papeleria.AccesoDatos\EF\RepositorioClienteEF.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.AccesoDatos\EF\RepositorioClienteEF.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Empresa.LogicaDeNegocio.Sistema;
@@ -368,7 +368,7 @@ namespace Papeleria.AccesoDatos.EF
 
 ***********************************
 Archivo: RepositorioLineaPedidoEF.cs
-Localizacion: Papeleria.AccesoDatos\EF\RepositorioLineaPedidoEF.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.AccesoDatos\EF\RepositorioLineaPedidoEF.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Empresa.LogicaDeNegocio.Sistema;
@@ -450,7 +450,7 @@ namespace Papeleria.AccesoDatos.EF
 
 ***********************************
 Archivo: RepositorioPedidoEF.cs
-Localizacion: Papeleria.AccesoDatos\EF\RepositorioPedidoEF.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.AccesoDatos\EF\RepositorioPedidoEF.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Microsoft.EntityFrameworkCore;
@@ -559,7 +559,7 @@ namespace Papeleria.AccesoDatos.EF
         public IEnumerable<Pedido> GetPedidosPorFecha(DateTime date)
         {
 
-            IEnumerable<Pedido> pedidos = _db.Pedidos.Where(pedido => pedido.fechaPedido >= date);
+            IEnumerable<Pedido> pedidos = _db.Pedidos.Where(pedido => pedido.fechaPedido.Date == date);
             return pedidos;
         }
         public void Remove(int id)
@@ -609,7 +609,7 @@ namespace Papeleria.AccesoDatos.EF
 
 ***********************************
 Archivo: RepositorioUsuarioEF.cs
-Localizacion: Papeleria.AccesoDatos\EF\RepositorioUsuarioEF.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.AccesoDatos\EF\RepositorioUsuarioEF.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Empresa.LogicaDeNegocio.Sistema;
@@ -762,7 +762,7 @@ namespace Papeleria.AccesoDatos.EF
 
 ***********************************
 Archivo: ArgumentNullRepositorioException.cs
-Localizacion: Papeleria.AccesoDatos\Excepciones\ArgumentNullRepositorioException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.AccesoDatos\Excepciones\ArgumentNullRepositorioException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -781,7 +781,7 @@ namespace Papeleria.AccesoDatos.Excepciones
 
 ***********************************
 Archivo: InfraException.cs
-Localizacion: Papeleria.AccesoDatos\Excepciones\InfraException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.AccesoDatos\Excepciones\InfraException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -801,7 +801,7 @@ namespace Papeleria.AccesoDatos.Excepciones
 
 ***********************************
 Archivo: RepositorioException.cs
-Localizacion: Papeleria.AccesoDatos\Excepciones\RepositorioException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.AccesoDatos\Excepciones\RepositorioException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -820,7 +820,7 @@ namespace Papeleria.AccesoDatos.Excepciones
 
 ***********************************
 Archivo: RepositorioArticuloMemoria.cs
-Localizacion: Papeleria.AccesoDatos\Memoria\RepositorioArticuloMemoria.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.AccesoDatos\Memoria\RepositorioArticuloMemoria.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Articulos;
@@ -894,7 +894,7 @@ namespace Papeleria.AccesoDatos.Memoria
 
 ***********************************
 Archivo: RepositorioClienteMemoria.cs
-Localizacion: Papeleria.AccesoDatos\Memoria\RepositorioClienteMemoria.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.AccesoDatos\Memoria\RepositorioClienteMemoria.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes;
@@ -983,7 +983,7 @@ namespace Papeleria.AccesoDatos.Memoria
 
 ***********************************
 Archivo: RepositorioComunesMemoria.cs
-Localizacion: Papeleria.AccesoDatos\Memoria\RepositorioComunesMemoria.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.AccesoDatos\Memoria\RepositorioComunesMemoria.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaNegocio.InterfacesRepositorio;
@@ -1036,7 +1036,7 @@ namespace Papeleria.AccesoDatos.Memoria
 
 ***********************************
 Archivo: RepositorioExpressMemoria.cs
-Localizacion: Papeleria.AccesoDatos\Memoria\RepositorioExpressMemoria.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.AccesoDatos\Memoria\RepositorioExpressMemoria.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaNegocio.InterfacesRepositorio;
@@ -1089,7 +1089,7 @@ namespace Papeleria.AccesoDatos.Memoria
 
 ***********************************
 Archivo: RepositorioLineaPedidoMemoria.cs
-Localizacion: Papeleria.AccesoDatos\Memoria\RepositorioLineaPedidoMemoria.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.AccesoDatos\Memoria\RepositorioLineaPedidoMemoria.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaNegocio.Entidades;
@@ -1153,7 +1153,7 @@ namespace Papeleria.AccesoDatos.Memoria
 
 ***********************************
 Archivo: RepositorioPedidoMemoria.cs
-Localizacion: Papeleria.AccesoDatos\Memoria\RepositorioPedidoMemoria.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.AccesoDatos\Memoria\RepositorioPedidoMemoria.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes;
@@ -1287,7 +1287,7 @@ namespace Papeleria.AccesoDatos.Memoria
 
 ***********************************
 Archivo: RepositorioUsuarioMemoria.cs
-Localizacion: Papeleria.AccesoDatos\Memoria\RepositorioUsuarioMemoria.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.AccesoDatos\Memoria\RepositorioUsuarioMemoria.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Empresa.LogicaDeNegocio.Sistema;
@@ -1383,7 +1383,7 @@ namespace Papeleria.AccesoDatos.Memoria
 
 ***********************************
 Archivo: 20240516144751_initialization.cs
-Localizacion: Papeleria.AccesoDatos\Migrations\20240516144751_initialization.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.AccesoDatos\Migrations\20240516144751_initialization.cs
 ***********************************
 using System;
 using Microsoft.EntityFrameworkCore.Migrations;
@@ -1553,7 +1553,7 @@ namespace Papeleria.AccesoDatos.Migrations
 
 ***********************************
 Archivo: 20240516144751_initialization.Designer.cs
-Localizacion: Papeleria.AccesoDatos\Migrations\20240516144751_initialization.Designer.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.AccesoDatos\Migrations\20240516144751_initialization.Designer.cs
 ***********************************
 // <auto-generated />
 using System;
@@ -1867,7 +1867,7 @@ namespace Papeleria.AccesoDatos.Migrations
 
 ***********************************
 Archivo: PapeleriaContextModelSnapshot.cs
-Localizacion: Papeleria.AccesoDatos\Migrations\PapeleriaContextModelSnapshot.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.AccesoDatos\Migrations\PapeleriaContextModelSnapshot.cs
 ***********************************
 // <auto-generated />
 using System;
@@ -2178,7 +2178,7 @@ namespace Papeleria.AccesoDatos.Migrations
 
 ***********************************
 Archivo: IAlta.cs
-Localizacion: Papeleria.LogicaAplicacion\InterfacesCasoDeUsoGeneral\IAlta.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\InterfacesCasoDeUsoGeneral\IAlta.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -2196,7 +2196,7 @@ namespace Papeleria.LogicaAplicacion.Interaces
 
 ***********************************
 Archivo: IListar.cs
-Localizacion: Papeleria.LogicaAplicacion\InterfacesCasoDeUsoGeneral\IListar.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\InterfacesCasoDeUsoGeneral\IListar.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -2217,7 +2217,7 @@ namespace Papeleria.LogicaAplicacion.Interaces
 }
 ***********************************
 Archivo: IRemove.cs
-Localizacion: Papeleria.LogicaAplicacion\InterfacesCasoDeUsoGeneral\IRemove.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\InterfacesCasoDeUsoGeneral\IRemove.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -2235,7 +2235,7 @@ namespace Papeleria.LogicaAplicacion.Interaces
 
 ***********************************
 Archivo: IUpdate.cs
-Localizacion: Papeleria.LogicaAplicacion\InterfacesCasoDeUsoGeneral\IUpdate.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\InterfacesCasoDeUsoGeneral\IUpdate.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -2253,7 +2253,7 @@ namespace Papeleria.LogicaAplicacion.Interaces
 
 ***********************************
 Archivo: Articulo.cs
-Localizacion: Papeleria.LogicaNegocio\Entidades\Articulo.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Entidades\Articulo.cs
 ***********************************
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Articulos;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Pedidos;
@@ -2327,7 +2327,7 @@ namespace Empresa.LogicaDeNegocio.Entidades
 
 ***********************************
 Archivo: Cliente.cs
-Localizacion: Papeleria.LogicaNegocio\Entidades\Cliente.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Entidades\Cliente.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Sistema;
 using Microsoft.EntityFrameworkCore;
@@ -2410,7 +2410,7 @@ namespace Empresa.LogicaDeNegocio.Entidades
 
 ***********************************
 Archivo: Comunes.cs
-Localizacion: Papeleria.LogicaNegocio\Entidades\Comunes.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Entidades\Comunes.cs
 ***********************************
 using Papeleria.LogicaNegocio.Entidades;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Pedidos;
@@ -2503,7 +2503,7 @@ namespace Empresa.LogicaDeNegocio.Entidades
 
 ***********************************
 Archivo: Express.cs
-Localizacion: Papeleria.LogicaNegocio\Entidades\Express.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Entidades\Express.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaNegocio.Entidades;
@@ -2604,7 +2604,7 @@ namespace Empresa.LogicaDeNegocio.Entidades
 
 ***********************************
 Archivo: LineaPedido.cs
-Localizacion: Papeleria.LogicaNegocio\Entidades\LineaPedido.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Entidades\LineaPedido.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaNegocio.Excepciones.Articulo;
@@ -2659,7 +2659,7 @@ namespace Papeleria.LogicaNegocio.Entidades
 
 ***********************************
 Archivo: Pedido.cs
-Localizacion: Papeleria.LogicaNegocio\Entidades\Pedido.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Entidades\Pedido.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -2791,7 +2791,7 @@ namespace Empresa.LogicaDeNegocio.Entidades
 
 ***********************************
 Archivo: Usuario.cs
-Localizacion: Papeleria.LogicaNegocio\Entidades\Usuario.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Entidades\Usuario.cs
 ***********************************
 
 
@@ -2869,7 +2869,7 @@ namespace Empresa.LogicaDeNegocio.Sistema
 
 ***********************************
 Archivo: IEntity.cs
-Localizacion: Papeleria.LogicaNegocio\InterfacesEntidades\IEntity.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\InterfacesEntidades\IEntity.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Sistema;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects;
@@ -2886,7 +2886,7 @@ namespace Empresa.LogicaDeNegocio.Entidades
 
 ***********************************
 Archivo: IValidable.cs
-Localizacion: Papeleria.LogicaNegocio\InterfacesEntidades\IValidable.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\InterfacesEntidades\IValidable.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects;
@@ -2906,7 +2906,7 @@ namespace Papeleria.LogicaNegocio.InterfacesEntidades
 
 ***********************************
 Archivo: IRepositorio.cs
-Localizacion: Papeleria.LogicaNegocio\InterfacesRepositorio\IRepositorio.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\InterfacesRepositorio\IRepositorio.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -2930,7 +2930,7 @@ namespace Papeleria.LogicaNegocio.InterfacesRepositorio
 
 ***********************************
 Archivo: IRepositorioArticulo.cs
-Localizacion: Papeleria.LogicaNegocio\InterfacesRepositorio\IRepositorioArticulo.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\InterfacesRepositorio\IRepositorioArticulo.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Articulos;
@@ -2952,7 +2952,7 @@ namespace Papeleria.LogicaNegocio.InterfacesRepositorio
 
 ***********************************
 Archivo: IRepositorioCliente.cs
-Localizacion: Papeleria.LogicaNegocio\InterfacesRepositorio\IRepositorioCliente.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\InterfacesRepositorio\IRepositorioCliente.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes;
@@ -2979,7 +2979,7 @@ namespace Papeleria.LogicaNegocio.InterfacesRepositorio
 
 ***********************************
 Archivo: IRepositorioComun.cs
-Localizacion: Papeleria.LogicaNegocio\InterfacesRepositorio\IRepositorioComun.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\InterfacesRepositorio\IRepositorioComun.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using System;
@@ -2997,7 +2997,7 @@ namespace Papeleria.LogicaNegocio.InterfacesRepositorio
 
 ***********************************
 Archivo: IRepositorioExpress.cs
-Localizacion: Papeleria.LogicaNegocio\InterfacesRepositorio\IRepositorioExpress.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\InterfacesRepositorio\IRepositorioExpress.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using System;
@@ -3015,7 +3015,7 @@ namespace Papeleria.LogicaNegocio.InterfacesRepositorio
 
 ***********************************
 Archivo: IRepositorioLineaPedido.cs
-Localizacion: Papeleria.LogicaNegocio\InterfacesRepositorio\IRepositorioLineaPedido.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\InterfacesRepositorio\IRepositorioLineaPedido.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaNegocio.Entidades;
@@ -3038,7 +3038,7 @@ namespace Papeleria.LogicaNegocio.InterfacesRepositorio
 
 ***********************************
 Archivo: IRepositorioPedido.cs
-Localizacion: Papeleria.LogicaNegocio\InterfacesRepositorio\IRepositorioPedido.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\InterfacesRepositorio\IRepositorioPedido.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes;
@@ -3065,7 +3065,7 @@ namespace Papeleria.LogicaNegocio.InterfacesRepositorio
 
 ***********************************
 Archivo: IRepositorioUsuario.cs
-Localizacion: Papeleria.LogicaNegocio\InterfacesRepositorio\IRepositorioUsuario.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\InterfacesRepositorio\IRepositorioUsuario.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Empresa.LogicaDeNegocio.Sistema;
@@ -3090,7 +3090,7 @@ namespace Papeleria.LogicaNegocio.InterfacesRepositorio
 
 ***********************************
 Archivo: ArticulosController.cs
-Localizacion: Papeleria.MVC\Controllers\ArticulosController.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Controllers\ArticulosController.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -3258,7 +3258,7 @@ namespace Papeleria.MVC.Controllers
 
 ***********************************
 Archivo: ClientesController.cs
-Localizacion: Papeleria.MVC\Controllers\ClientesController.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Controllers\ClientesController.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Microsoft.AspNetCore.Http;
@@ -3480,7 +3480,7 @@ namespace Papeleria.MVC.Controllers
 
 ***********************************
 Archivo: HomeController.cs
-Localizacion: Papeleria.MVC\Controllers\HomeController.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Controllers\HomeController.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Sistema;
 using Microsoft.AspNetCore.Mvc;
@@ -3566,7 +3566,7 @@ namespace Papeleria.MVC.Controllers
 
 ***********************************
 Archivo: PedidosController.cs
-Localizacion: Papeleria.MVC\Controllers\PedidosController.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Controllers\PedidosController.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Humanizer;
@@ -3646,7 +3646,6 @@ namespace Papeleria.MVC.Controllers
                     {
                         ViewBag.Mensaje = "No existen pedido desde la fecha indicada";
                     }
-                    ViewBag.Mensaje = $"Pedidos en total: {pedidos.Count()}.";
                     return View(pedidos);
                 }
                 else
@@ -3809,7 +3808,7 @@ namespace Papeleria.MVC.Controllers
 
 ***********************************
 Archivo: UsuariosController.cs
-Localizacion: Papeleria.MVC\Controllers\UsuariosController.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Controllers\UsuariosController.cs
 ***********************************
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -3974,7 +3973,7 @@ namespace Papeleria.MVC.Controllers
 
 ***********************************
 Archivo: ArticuloModel.cs
-Localizacion: Papeleria.MVC\Models\ArticuloModel.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Models\ArticuloModel.cs
 ***********************************
 namespace Papeleria.MVC.Models
 {
@@ -3992,7 +3991,7 @@ namespace Papeleria.MVC.Models
 
 ***********************************
 Archivo: ErrorViewModel.cs
-Localizacion: Papeleria.MVC\Models\ErrorViewModel.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Models\ErrorViewModel.cs
 ***********************************
 namespace Papeleria.MVC.Models
 {
@@ -4006,7 +4005,7 @@ namespace Papeleria.MVC.Models
 
 ***********************************
 Archivo: ArticulosController.cs
-Localizacion: Papeleria.WebApi\Controllers\ArticulosController.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebApi\Controllers\ArticulosController.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Microsoft.AspNetCore.Mvc;
@@ -4042,13 +4041,18 @@ namespace Papeleria.WebApi.Controllers
             _cuModificarArticulo = new UpdateArticulo(_repoArticulos);
         }
         // GET: api/<ArticulosController>
+        /// <summary>
+        /// Listar todos los articulos
+        /// </summary>
+        /// <returns>Lista de articulos ordenados alfabeticamente.</returns>
         [HttpGet]
         public ActionResult<IEnumerable<ArticuloDTO>> Get()
         {
             try
             {
                 var articulosDto = _cuGetArticulos.Ejecutar();
-                return Ok(articulosDto);
+                var ordenada = articulosDto.OrderBy(articulo => articulo.NombreArticulo);
+                return Ok(ordenada);
             }
             catch (ArticuloNoValidoException ex)
             {
@@ -4062,6 +4066,11 @@ namespace Papeleria.WebApi.Controllers
         }
 
         // GET api/<ArticulosController>/5
+        /// <summary>
+        /// Listar articulo particuloar
+        /// </summary>
+        /// <param name="id">Número entero con el valor Id del articulo a buscar</param>
+        /// <returns>Articulo correspondiente al ID - Code 200 | Error 400 (Bad Request) si parametro/articulo es invalido |  500 - Error con la DB / Excepcion particular</returns>
         [HttpGet("{id}", Name = "GetAutorByID")]
         public ActionResult<ArticuloDTO> Get(int id)
         {
@@ -4079,8 +4088,12 @@ namespace Papeleria.WebApi.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
-
         // POST api/<ArticulosController>
+        /// <summary>
+        /// Agregar articulo
+        /// </summary>
+        /// <param name="articulo">Parametro que toma el articulo armado con sus respectivos atributos y lo pasa a la aplicacion para registrarlo</param>
+        /// <returns>201 - Si el Articulo fue creado satisfactoriamente | 400 - Si el Articulo suministrado no es valido | 500 - Error con la DB / Excepcion particular</returns>
         [HttpPost]
         public ActionResult<ArticuloDTO> Post(ArticuloDTO articulo)
         {
@@ -4101,6 +4114,12 @@ namespace Papeleria.WebApi.Controllers
         }
 
         // PUT api/<ArticulosController>/5
+        /// <summary>
+        /// Modificar articulo
+        /// </summary>
+        /// <param name="id">Proporciona el ID del objeto a modificar</param>
+        /// <param name="articulo">Proporciona el cuerpo del articulo que va a reemplazar al existente</param>
+        /// <returns>200 - Articulo modificado correctamente | 400 - ID/Articulo nuevo invalido | 500 - Error en la DB / Excepcion particular</returns>
         [HttpPut("{id}")]
         public ActionResult<ArticuloDTO> Put(int id, ArticuloDTO articulo)
         {
@@ -4120,13 +4139,18 @@ namespace Papeleria.WebApi.Controllers
         }
 
         // DELETE api/<ArticulosController>/5
+        /// <summary>
+        /// Borrar articulo
+        /// </summary>
+        /// <param name="id">Proporciona el ID del articulo a borrar</param>
+        /// <returns>200 - Articulo borrado correctamente | 400 - ID Invalido o Articulo no valido | 500 - Error de la DB / Excepcion particular</returns>
         [HttpDelete("{id}")]
         public ActionResult<ArticuloDTO> Delete(int id)
         {
             try
             {
                 _cuBorrarArticulo.Ejecutar(id);
-                return Ok("foobar");
+                return Ok();
             }
             catch (ArticuloNoValidoException ex)
             {
@@ -4142,7 +4166,7 @@ namespace Papeleria.WebApi.Controllers
 
 ***********************************
 Archivo: PedidosController.cs
-Localizacion: Papeleria.WebApi\Controllers\PedidosController.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebApi\Controllers\PedidosController.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Microsoft.AspNetCore.Mvc;
@@ -4181,6 +4205,10 @@ namespace Papeleria.WebApi.Controllers
             _anularPedido = new AnularPedido(_repoPedidos);
         }
         // GET: api/<ArticulosController>
+        /// <summary>
+        /// Listar pedidos anulados
+        /// </summary>
+        /// <returns>200 - Retorna la lista con los pedidos anulados en orden descendente por Fecha | Status correspondiente al error</returns>
         [HttpGet]
         public ActionResult<IEnumerable<PedidoDTO>> Get()
         {
@@ -4189,8 +4217,9 @@ namespace Papeleria.WebApi.Controllers
                 _repoPedidos = new RepositorioPedidoEF();
                 var clientes = _buscarClientes.GetAll();
                 var pedidosDto = _getAllPedidos.Ejecutar();
+                var ordenada = pedidosDto.OrderByDescending(pedido => pedido.FechaPedido);
                 var pedidosFinal = new List<PedidoDTO>();
-                foreach (var pedido in pedidosDto)
+                foreach (var pedido in ordenada)
                 {
                     if(pedido.anulado)
                     {
@@ -4209,35 +4238,13 @@ namespace Papeleria.WebApi.Controllers
             }
 
         }
-       /* 
-        // GET: api/<ArticulosController>
-        [HttpGet]
-        public ActionResult<IEnumerable<PedidoDTO>> GetAll()
-        {
-            try
-            {
-                _repoPedidos = new RepositorioPedidoEF(); 
-                var clientes = _buscarClientes.GetAll();
-                var pedidosDto = _getAllPedidos.Ejecutar();
-                return Ok(pedidosDto);
-            }
-            catch (PedidoNoValidoException ex)
-            {
-                return BadRequest(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, ex.Message);
-            }
-
-        }*/
 
     }
 }
 
 ***********************************
 Archivo: ArticulosController.cs
-Localizacion: Papeleria.WebMvc\Controllers\ArticulosController.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebMvc\Controllers\ArticulosController.cs
 ***********************************
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -4325,7 +4332,7 @@ namespace Papeleria.WebMvc.Controllers
 
 ***********************************
 Archivo: ClientesController.cs
-Localizacion: Papeleria.WebMvc\Controllers\ClientesController.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebMvc\Controllers\ClientesController.cs
 ***********************************
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -4413,7 +4420,7 @@ namespace Papeleria.WebMvc.Controllers
 
 ***********************************
 Archivo: HomeController.cs
-Localizacion: Papeleria.WebMvc\Controllers\HomeController.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebMvc\Controllers\HomeController.cs
 ***********************************
 using Microsoft.AspNetCore.Mvc;
 using Papeleria.WebMvc.Models;
@@ -4450,7 +4457,7 @@ namespace Papeleria.WebMvc.Controllers
 
 ***********************************
 Archivo: PedidosController.cs
-Localizacion: Papeleria.WebMvc\Controllers\PedidosController.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebMvc\Controllers\PedidosController.cs
 ***********************************
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -4538,7 +4545,7 @@ namespace Papeleria.WebMvc.Controllers
 
 ***********************************
 Archivo: UsuariosController.cs
-Localizacion: Papeleria.WebMvc\Controllers\UsuariosController.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebMvc\Controllers\UsuariosController.cs
 ***********************************
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -4626,7 +4633,7 @@ namespace Papeleria.WebMvc.Controllers
 
 ***********************************
 Archivo: ErrorViewModel.cs
-Localizacion: Papeleria.WebMvc\Models\ErrorViewModel.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebMvc\Models\ErrorViewModel.cs
 ***********************************
 namespace Papeleria.WebMvc.Models
 {
@@ -4640,7 +4647,7 @@ namespace Papeleria.WebMvc.Models
 
 ***********************************
 Archivo: ArticulosMappers.cs
-Localizacion: Papeleria.LogicaAplicacion\DataTransferObjects\MapeosDatos\ArticulosMappers.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\DataTransferObjects\MapeosDatos\ArticulosMappers.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Sistema;
 using Empresa.LogicaDeNegocio.Entidades; 
@@ -4697,7 +4704,7 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
 
 ***********************************
 Archivo: ClientesMappers.cs
-Localizacion: Papeleria.LogicaAplicacion\DataTransferObjects\MapeosDatos\ClientesMappers.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\DataTransferObjects\MapeosDatos\ClientesMappers.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Empresa.LogicaDeNegocio.Sistema;
@@ -4766,7 +4773,7 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
 
 ***********************************
 Archivo: LineaPedidoMappers.cs
-Localizacion: Papeleria.LogicaAplicacion\DataTransferObjects\MapeosDatos\LineaPedidoMappers.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\DataTransferObjects\MapeosDatos\LineaPedidoMappers.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.AccesoDatos.EF;
@@ -4845,7 +4852,7 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
 
 ***********************************
 Archivo: PedidosMappers.cs
-Localizacion: Papeleria.LogicaAplicacion\DataTransferObjects\MapeosDatos\PedidosMappers.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\DataTransferObjects\MapeosDatos\PedidosMappers.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.AccesoDatos.EF;
@@ -5015,7 +5022,7 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
 
 ***********************************
 Archivo: UsuariosMappers.cs
-Localizacion: Papeleria.LogicaAplicacion\DataTransferObjects\MapeosDatos\UsuariosMappers.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\DataTransferObjects\MapeosDatos\UsuariosMappers.cs
 ***********************************
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Articulos;
 using System;
@@ -5070,7 +5077,7 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
 
 ***********************************
 Archivo: AltaArticulo.cs
-Localizacion: Papeleria.LogicaAplicacion\ImplementacionCasosUso\Articulos\AltaArticulo.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\ImplementacionCasosUso\Articulos\AltaArticulo.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Sistema;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
@@ -5120,7 +5127,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Articulos
 
 ***********************************
 Archivo: BorrarArticulo.cs
-Localizacion: Papeleria.LogicaAplicacion\ImplementacionCasosUso\Articulos\BorrarArticulo.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\ImplementacionCasosUso\Articulos\BorrarArticulo.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Articulos;
@@ -5180,7 +5187,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Articulos
 
 ***********************************
 Archivo: BuscarArticulo.cs
-Localizacion: Papeleria.LogicaAplicacion\ImplementacionCasosUso\Articulos\BuscarArticulo.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\ImplementacionCasosUso\Articulos\BuscarArticulo.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Articulos;
@@ -5242,7 +5249,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Articulos
 
 ***********************************
 Archivo: GetAllArticulos.cs
-Localizacion: Papeleria.LogicaAplicacion\ImplementacionCasosUso\Articulos\GetAllArticulos.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\ImplementacionCasosUso\Articulos\GetAllArticulos.cs
 ***********************************
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Articulos;
 using Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos;
@@ -5280,7 +5287,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Articulos
 
 ***********************************
 Archivo: UpdateArticulo.cs
-Localizacion: Papeleria.LogicaAplicacion\ImplementacionCasosUso\Articulos\UpdateArticulo.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\ImplementacionCasosUso\Articulos\UpdateArticulo.cs
 ***********************************
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Articulos;
 using Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos;
@@ -5320,7 +5327,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Articulos
 
 ***********************************
 Archivo: AltaClientes.cs
-Localizacion: Papeleria.LogicaAplicacion\ImplementacionCasosUso\Clientes\AltaClientes.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\ImplementacionCasosUso\Clientes\AltaClientes.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Empresa.LogicaDeNegocio.Sistema;
@@ -5362,7 +5369,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Clientes
 
 ***********************************
 Archivo: BorrarCliente.cs
-Localizacion: Papeleria.LogicaAplicacion\ImplementacionCasosUso\Clientes\BorrarCliente.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\ImplementacionCasosUso\Clientes\BorrarCliente.cs
 ***********************************
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Clientes;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
@@ -5407,7 +5414,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Clientes
 
 ***********************************
 Archivo: BuscarClientes.cs
-Localizacion: Papeleria.LogicaAplicacion\ImplementacionCasosUso\Clientes\BuscarClientes.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\ImplementacionCasosUso\Clientes\BuscarClientes.cs
 ***********************************
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Clientes;
 using Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos;
@@ -5484,7 +5491,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Clientes
 
 ***********************************
 Archivo: ModificarCliente.cs
-Localizacion: Papeleria.LogicaAplicacion\ImplementacionCasosUso\Clientes\ModificarCliente.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\ImplementacionCasosUso\Clientes\ModificarCliente.cs
 ***********************************
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Clientes;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
@@ -5530,7 +5537,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Clientes
 
 ***********************************
 Archivo: AltaPedidos.cs
-Localizacion: Papeleria.LogicaAplicacion\ImplementacionCasosUso\Pedidos\AltaPedidos.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\ImplementacionCasosUso\Pedidos\AltaPedidos.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Pedidos;
@@ -5579,7 +5586,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Pedidos
 
 ***********************************
 Archivo: AnularPedido.cs
-Localizacion: Papeleria.LogicaAplicacion\ImplementacionCasosUso\Pedidos\AnularPedido.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\ImplementacionCasosUso\Pedidos\AnularPedido.cs
 ***********************************
 using Papeleria.LogicaAplicacion.InterfacesCasosUso.Pedidos;
 using Papeleria.LogicaNegocio.InterfacesRepositorio;
@@ -5608,7 +5615,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Pedidos
 
 ***********************************
 Archivo: GetAllPedidos.cs
-Localizacion: Papeleria.LogicaAplicacion\ImplementacionCasosUso\Pedidos\GetAllPedidos.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\ImplementacionCasosUso\Pedidos\GetAllPedidos.cs
 ***********************************
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Pedidos;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
@@ -5644,7 +5651,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Pedidos
 
 ***********************************
 Archivo: GetPedidos.cs
-Localizacion: Papeleria.LogicaAplicacion\ImplementacionCasosUso\Pedidos\GetPedidos.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\ImplementacionCasosUso\Pedidos\GetPedidos.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.AccesoDatos.EF;
@@ -5702,7 +5709,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Pedidos
 
 ***********************************
 Archivo: AltaUsuarios.cs
-Localizacion: Papeleria.LogicaAplicacion\ImplementacionCasosUso\Usuarios\AltaUsuarios.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\ImplementacionCasosUso\Usuarios\AltaUsuarios.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Sistema;
 using Papeleria.AccesoDatos.EF;
@@ -5751,7 +5758,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Usuarios
 
 ***********************************
 Archivo: BorrarUsuario.cs
-Localizacion: Papeleria.LogicaAplicacion\ImplementacionCasosUso\Usuarios\BorrarUsuario.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\ImplementacionCasosUso\Usuarios\BorrarUsuario.cs
 ***********************************
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
 using Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos;
@@ -5794,7 +5801,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Usuarios
 
 ***********************************
 Archivo: BuscarUsuario.cs
-Localizacion: Papeleria.LogicaAplicacion\ImplementacionCasosUso\Usuarios\BuscarUsuario.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\ImplementacionCasosUso\Usuarios\BuscarUsuario.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Sistema;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
@@ -5841,7 +5848,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Usuarios
 
 ***********************************
 Archivo: GetAllUsuarios.cs
-Localizacion: Papeleria.LogicaAplicacion\ImplementacionCasosUso\Usuarios\GetAllUsuarios.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\ImplementacionCasosUso\Usuarios\GetAllUsuarios.cs
 ***********************************
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
 using Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos;
@@ -5877,7 +5884,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Usuarios
 
 ***********************************
 Archivo: ModificarUsuario.cs
-Localizacion: Papeleria.LogicaAplicacion\ImplementacionCasosUso\Usuarios\ModificarUsuario.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\ImplementacionCasosUso\Usuarios\ModificarUsuario.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Sistema;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
@@ -5923,7 +5930,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Usuarios
 
 ***********************************
 Archivo: IAltaArticulo.cs
-Localizacion: Papeleria.LogicaAplicacion\InterfacesCasosUso\Articulos\IAltaArticulo.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\InterfacesCasosUso\Articulos\IAltaArticulo.cs
 ***********************************
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Articulos;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
@@ -5943,7 +5950,7 @@ namespace Papeleria.LogicaAplicacion.InterfacesCasosUso.Articulos
 
 ***********************************
 Archivo: IBorrarArticulo.cs
-Localizacion: Papeleria.LogicaAplicacion\InterfacesCasosUso\Articulos\IBorrarArticulo.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\InterfacesCasosUso\Articulos\IBorrarArticulo.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Articulos;
@@ -5965,7 +5972,7 @@ namespace Papeleria.LogicaAplicacion.InterfacesCasosUso.Articulos
 
 ***********************************
 Archivo: IFiltrarArticulo.cs
-Localizacion: Papeleria.LogicaAplicacion\InterfacesCasosUso\Articulos\IFiltrarArticulo.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\InterfacesCasosUso\Articulos\IFiltrarArticulo.cs
 ***********************************
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Articulos;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
@@ -5987,7 +5994,7 @@ namespace Papeleria.LogicaAplicacion.InterfacesCasosUso.Articulos
 
 ***********************************
 Archivo: IGetAllArticulos.cs
-Localizacion: Papeleria.LogicaAplicacion\InterfacesCasosUso\Articulos\IGetAllArticulos.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\InterfacesCasosUso\Articulos\IGetAllArticulos.cs
 ***********************************
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Articulos;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
@@ -6007,7 +6014,7 @@ namespace Papeleria.LogicaAplicacion.InterfacesCasosUso.Articulos
 
 ***********************************
 Archivo: IGetArticulo.cs
-Localizacion: Papeleria.LogicaAplicacion\InterfacesCasosUso\Articulos\IGetArticulo.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\InterfacesCasosUso\Articulos\IGetArticulo.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Articulos;
@@ -6032,7 +6039,7 @@ namespace Papeleria.LogicaAplicacion.InterfacesCasosUso.Articulos
 
 ***********************************
 Archivo: IUpdateArticulo.cs
-Localizacion: Papeleria.LogicaAplicacion\InterfacesCasosUso\Articulos\IUpdateArticulo.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\InterfacesCasosUso\Articulos\IUpdateArticulo.cs
 ***********************************
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Articulos;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
@@ -6052,7 +6059,7 @@ namespace Papeleria.LogicaAplicacion.InterfacesCasosUso.Articulos
 
 ***********************************
 Archivo: IAltaCliente.cs
-Localizacion: Papeleria.LogicaAplicacion\InterfacesCasosUso\Clientes\IAltaCliente.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\InterfacesCasosUso\Clientes\IAltaCliente.cs
 ***********************************
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Clientes;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
@@ -6072,7 +6079,7 @@ namespace Papeleria.LogicaAplicacion.InterfacesCasosUso.Clientes
 
 ***********************************
 Archivo: IBorrarCliente.cs
-Localizacion: Papeleria.LogicaAplicacion\InterfacesCasosUso\Clientes\IBorrarCliente.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\InterfacesCasosUso\Clientes\IBorrarCliente.cs
 ***********************************
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Clientes;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
@@ -6092,7 +6099,7 @@ namespace Papeleria.LogicaAplicacion.InterfacesCasosUso.Clientes
 
 ***********************************
 Archivo: IBuscarClientes.cs
-Localizacion: Papeleria.LogicaAplicacion\InterfacesCasosUso\Clientes\IBuscarClientes.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\InterfacesCasosUso\Clientes\IBuscarClientes.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Clientes;
@@ -6117,7 +6124,7 @@ namespace Papeleria.LogicaAplicacion.InterfacesCasosUso.Clientes
 
 ***********************************
 Archivo: IModificarCliente.cs
-Localizacion: Papeleria.LogicaAplicacion\InterfacesCasosUso\Clientes\IModificarCliente.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\InterfacesCasosUso\Clientes\IModificarCliente.cs
 ***********************************
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Clientes;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
@@ -6137,7 +6144,7 @@ namespace Papeleria.LogicaAplicacion.InterfacesCasosUso.Clientes
 
 ***********************************
 Archivo: IAltaPedido.cs
-Localizacion: Papeleria.LogicaAplicacion\InterfacesCasosUso\Pedidos\IAltaPedido.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\InterfacesCasosUso\Pedidos\IAltaPedido.cs
 ***********************************
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Articulos;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Pedidos;
@@ -6158,7 +6165,7 @@ namespace Papeleria.LogicaAplicacion.InterfacesCasosUso.Pedidos
 
 ***********************************
 Archivo: IAnularPedido.cs
-Localizacion: Papeleria.LogicaAplicacion\InterfacesCasosUso\Pedidos\IAnularPedido.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\InterfacesCasosUso\Pedidos\IAnularPedido.cs
 ***********************************
 using Microsoft.EntityFrameworkCore.Metadata;
 using System;
@@ -6177,7 +6184,7 @@ namespace Papeleria.LogicaAplicacion.InterfacesCasosUso.Pedidos
 
 ***********************************
 Archivo: IGetAllPedidos.cs
-Localizacion: Papeleria.LogicaAplicacion\InterfacesCasosUso\Pedidos\IGetAllPedidos.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\InterfacesCasosUso\Pedidos\IGetAllPedidos.cs
 ***********************************
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Pedidos;
 using System;
@@ -6196,7 +6203,7 @@ namespace Papeleria.LogicaAplicacion.InterfacesCasosUso.Pedidos
 
 ***********************************
 Archivo: IGetPedido.cs
-Localizacion: Papeleria.LogicaAplicacion\InterfacesCasosUso\Pedidos\IGetPedido.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\InterfacesCasosUso\Pedidos\IGetPedido.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Articulos;
@@ -6220,7 +6227,7 @@ namespace Papeleria.LogicaAplicacion.InterfacesCasosUso.Pedidos
 
 ***********************************
 Archivo: IAltaUsuario.cs
-Localizacion: Papeleria.LogicaAplicacion\InterfacesCasosUso\Usuarios\IAltaUsuario.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\InterfacesCasosUso\Usuarios\IAltaUsuario.cs
 ***********************************
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Articulos;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
@@ -6240,7 +6247,7 @@ namespace Papeleria.LogicaAplicacion.InterfacesCasosUso.Usuarios
 
 ***********************************
 Archivo: IBorrarUsuario.cs
-Localizacion: Papeleria.LogicaAplicacion\InterfacesCasosUso\Usuarios\IBorrarUsuario.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\InterfacesCasosUso\Usuarios\IBorrarUsuario.cs
 ***********************************
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
 using System;
@@ -6259,7 +6266,7 @@ namespace Papeleria.LogicaAplicacion.InterfacesCasosUso.Usuarios
 
 ***********************************
 Archivo: IFiltrarUsuarios.cs
-Localizacion: Papeleria.LogicaAplicacion\InterfacesCasosUso\Usuarios\IFiltrarUsuarios.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\InterfacesCasosUso\Usuarios\IFiltrarUsuarios.cs
 ***********************************
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
 using System;
@@ -6278,7 +6285,7 @@ namespace Papeleria.LogicaAplicacion.InterfacesCasosUso.Usuarios
 
 ***********************************
 Archivo: IGetAllUsuarios.cs
-Localizacion: Papeleria.LogicaAplicacion\InterfacesCasosUso\Usuarios\IGetAllUsuarios.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\InterfacesCasosUso\Usuarios\IGetAllUsuarios.cs
 ***********************************
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
 using System;
@@ -6297,7 +6304,7 @@ namespace Papeleria.LogicaAplicacion.InterfacesCasosUso.Usuarios
 
 ***********************************
 Archivo: IGetUsuario.cs
-Localizacion: Papeleria.LogicaAplicacion\InterfacesCasosUso\Usuarios\IGetUsuario.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\InterfacesCasosUso\Usuarios\IGetUsuario.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Sistema;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
@@ -6318,7 +6325,7 @@ namespace Papeleria.LogicaAplicacion.InterfacesCasosUso.Usuarios
 
 ***********************************
 Archivo: IModificarUsuario.cs
-Localizacion: Papeleria.LogicaAplicacion\InterfacesCasosUso\Usuarios\IModificarUsuario.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\InterfacesCasosUso\Usuarios\IModificarUsuario.cs
 ***********************************
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios;
 using System;
@@ -6337,7 +6344,7 @@ namespace Papeleria.LogicaAplicacion.InterfacesCasosUso.Usuarios
 
 ***********************************
 Archivo: ArticuloDuplicadoException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Articulo\ArticuloDuplicadoException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Articulo\ArticuloDuplicadoException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -6354,7 +6361,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Articulo
 
 ***********************************
 Archivo: ArticuloNoValidoException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Articulo\ArticuloNoValidoException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Articulo\ArticuloNoValidoException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -6387,7 +6394,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Articulo
 
 ***********************************
 Archivo: ArticuloNuloException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Articulo\ArticuloNuloException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Articulo\ArticuloNuloException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -6420,7 +6427,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Articulo
 
 ***********************************
 Archivo: ClienteDuplicadoException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Cliente\ClienteDuplicadoException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Cliente\ClienteDuplicadoException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -6453,7 +6460,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Cliente
 
 ***********************************
 Archivo: ClienteNoValidoException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Cliente\ClienteNoValidoException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Cliente\ClienteNoValidoException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -6486,7 +6493,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Cliente
 
 ***********************************
 Archivo: ClienteNuloException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Cliente\ClienteNuloException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Cliente\ClienteNuloException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -6519,7 +6526,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Cliente
 
 ***********************************
 Archivo: PedidoDuplicadoException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Pedido\PedidoDuplicadoException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Pedido\PedidoDuplicadoException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -6552,7 +6559,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Pedido
 
 ***********************************
 Archivo: PedidoNoValidoException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Pedido\PedidoNoValidoException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Pedido\PedidoNoValidoException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -6585,7 +6592,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Pedido
 
 ***********************************
 Archivo: PedidoNuloException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Pedido\PedidoNuloException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Pedido\PedidoNuloException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -6618,7 +6625,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Pedido
 
 ***********************************
 Archivo: UsuarioDuplicadoExcepcion.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Usuario\UsuarioDuplicadoExcepcion.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Usuario\UsuarioDuplicadoExcepcion.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -6651,7 +6658,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Usuario
 
 ***********************************
 Archivo: UsuarioNoValidoExcepcion.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Usuario\UsuarioNoValidoExcepcion.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Usuario\UsuarioNoValidoExcepcion.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -6684,7 +6691,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Usuario
 
 ***********************************
 Archivo: UsuarioNuloExcepcion.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Usuario\UsuarioNuloExcepcion.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Usuario\UsuarioNuloExcepcion.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -6717,7 +6724,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Usuario
 
 ***********************************
 Archivo: LineaPedidoModel.cs
-Localizacion: Papeleria.MVC\Models\PedidosModels\LineaPedidoModel.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Models\PedidosModels\LineaPedidoModel.cs
 ***********************************
 using System.ComponentModel.DataAnnotations;
 
@@ -6736,7 +6743,7 @@ namespace Papeleria.MVC.Models.PedidosModels
 
 ***********************************
 Archivo: PedidoAltaModel.cs
-Localizacion: Papeleria.MVC\Models\PedidosModels\PedidoAltaModel.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Models\PedidosModels\PedidoAltaModel.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Pedidos;
@@ -6766,7 +6773,7 @@ namespace Papeleria.MVC.Models.PedidosModels
 
 ***********************************
 Archivo: PedidoListModel.cs
-Localizacion: Papeleria.MVC\Models\PedidosModels\PedidoListModel.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Models\PedidosModels\PedidoListModel.cs
 ***********************************
 using System.ComponentModel.DataAnnotations;
 
@@ -6794,7 +6801,7 @@ namespace Papeleria.MVC.Models.PedidosModels
 
 ***********************************
 Archivo: ArticuloDTO.cs
-Localizacion: Papeleria.LogicaAplicacion\DataTransferObjects\Dtos\Articulos\ArticuloDTO.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\DataTransferObjects\Dtos\Articulos\ArticuloDTO.cs
 ***********************************
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Articulos;
 using System;
@@ -6818,7 +6825,7 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Articulos
 
 ***********************************
 Archivo: ClienteDTO.cs
-Localizacion: Papeleria.LogicaAplicacion\DataTransferObjects\Dtos\Clientes\ClienteDTO.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\DataTransferObjects\Dtos\Clientes\ClienteDTO.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes;
@@ -6851,7 +6858,7 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Clientes
 
 ***********************************
 Archivo: LineaPedidoDTO.cs
-Localizacion: Papeleria.LogicaAplicacion\DataTransferObjects\Dtos\Pedidos\LineaPedidoDTO.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\DataTransferObjects\Dtos\Pedidos\LineaPedidoDTO.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -6879,7 +6886,7 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Pedidos
 
 ***********************************
 Archivo: PedidoDTO.cs
-Localizacion: Papeleria.LogicaAplicacion\DataTransferObjects\Dtos\Pedidos\PedidoDTO.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\DataTransferObjects\Dtos\Pedidos\PedidoDTO.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Clientes;
@@ -6911,7 +6918,7 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Pedidos
 
 ***********************************
 Archivo: UsuarioDTO.cs
-Localizacion: Papeleria.LogicaAplicacion\DataTransferObjects\Dtos\Usuarios\UsuarioDTO.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaAplicacion\DataTransferObjects\Dtos\Usuarios\UsuarioDTO.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -6933,7 +6940,7 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios
 
 ***********************************
 Archivo: CodigoProveedorArticulos.cs
-Localizacion: Papeleria.LogicaNegocio\Entidades\ValueObjects\Articulos\CodigoProveedorArticulos.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Entidades\ValueObjects\Articulos\CodigoProveedorArticulos.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaNegocio.Excepciones.Articulo.ArticulosValueObjects.CodigoProveedor;
@@ -6973,7 +6980,7 @@ namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Articulos
 
 ***********************************
 Archivo: DescripcionArticulo.cs
-Localizacion: Papeleria.LogicaNegocio\Entidades\ValueObjects\Articulos\DescripcionArticulo.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Entidades\ValueObjects\Articulos\DescripcionArticulo.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaNegocio.Excepciones.Articulo.ArticulosValueObjects.DescripcionArticulo;
@@ -7012,7 +7019,7 @@ namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Articulos
 
 ***********************************
 Archivo: NombreArticulo.cs
-Localizacion: Papeleria.LogicaNegocio\Entidades\ValueObjects\Articulos\NombreArticulo.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Entidades\ValueObjects\Articulos\NombreArticulo.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaNegocio.Excepciones.Articulo;
@@ -7051,7 +7058,7 @@ namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Articulos
 
 ***********************************
 Archivo: StockArticulo.cs
-Localizacion: Papeleria.LogicaNegocio\Entidades\ValueObjects\Articulos\StockArticulo.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Entidades\ValueObjects\Articulos\StockArticulo.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaNegocio.Excepciones.Articulo.ArticulosValueObjects.StockArticulo;
@@ -7128,7 +7135,7 @@ namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Articulos
 
 ***********************************
 Archivo: DireccionCliente.cs
-Localizacion: Papeleria.LogicaNegocio\Entidades\ValueObjects\Clientes\DireccionCliente.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Entidades\ValueObjects\Clientes\DireccionCliente.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Microsoft.EntityFrameworkCore.Metadata.Conventions;
@@ -7184,7 +7191,7 @@ namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes
 
 ***********************************
 Archivo: RazonSocial.cs
-Localizacion: Papeleria.LogicaNegocio\Entidades\ValueObjects\Clientes\RazonSocial.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Entidades\ValueObjects\Clientes\RazonSocial.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Microsoft.EntityFrameworkCore;
@@ -7222,7 +7229,7 @@ namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes
 
 ***********************************
 Archivo: RUT.cs
-Localizacion: Papeleria.LogicaNegocio\Entidades\ValueObjects\Clientes\RUT.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Entidades\ValueObjects\Clientes\RUT.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaNegocio.Excepciones.Cliente.ClienteValueObjects.RUT;
@@ -7272,7 +7279,7 @@ namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes
 
 ***********************************
 Archivo: IVA.cs
-Localizacion: Papeleria.LogicaNegocio\Entidades\ValueObjects\Pedidos\IVA.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Entidades\ValueObjects\Pedidos\IVA.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaNegocio.Excepciones.Pedido.PedidoValueObjects;
@@ -7317,7 +7324,7 @@ namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Pedidos
 
 ***********************************
 Archivo: ContraseniaUsuario.cs
-Localizacion: Papeleria.LogicaNegocio\Entidades\ValueObjects\Usuarios\ContraseniaUsuario.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Entidades\ValueObjects\Usuarios\ContraseniaUsuario.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaNegocio.Excepciones.Usuario.UsuarioExcepcions.Constrasenia;
@@ -7392,7 +7399,7 @@ namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Usuario
 
 ***********************************
 Archivo: EmailUsuario.cs
-Localizacion: Papeleria.LogicaNegocio\Entidades\ValueObjects\Usuarios\EmailUsuario.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Entidades\ValueObjects\Usuarios\EmailUsuario.cs
 ***********************************
 using Empresa.LogicaDeNegocio.Entidades;
 using Papeleria.LogicaNegocio.Excepciones.Usuario.UsuarioExcepcions.Email;
@@ -7439,7 +7446,7 @@ namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Usuario
 
 ***********************************
 Archivo: NombreCompleto.cs
-Localizacion: Papeleria.LogicaNegocio\Entidades\ValueObjects\Usuarios\NombreCompleto.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Entidades\ValueObjects\Usuarios\NombreCompleto.cs
 ***********************************
 using Papeleria.LogicaNegocio.Excepciones.Usuario.UsuarioExcepcions.Nombre;
 using Papeleria.LogicaNegocio.InterfacesEntidades;
@@ -7509,7 +7516,7 @@ namespace Papeleria.LogicaNegocio.Entidades.ValueObjects.Usuario
 
 ***********************************
 Archivo: IvaNoValidoException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Pedido\PedidoValueObjects\IvaNoValidoException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Pedido\PedidoValueObjects\IvaNoValidoException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -7542,7 +7549,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Pedido.PedidoValueObjects
 
 ***********************************
 Archivo: IvaNuloException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Pedido\PedidoValueObjects\IvaNuloException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Pedido\PedidoValueObjects\IvaNuloException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -7575,7 +7582,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Pedido.PedidoValueObjects
 
 ***********************************
 Archivo: CodigoProveedorDuplicadoException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Articulo\ArticulosValueObjects\CodigoProveedor\CodigoProveedorDuplicadoException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Articulo\ArticulosValueObjects\CodigoProveedor\CodigoProveedorDuplicadoException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -7608,7 +7615,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Articulo.ArticulosValueObjects.Cod
 
 ***********************************
 Archivo: CodigoProveedorNoValidoException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Articulo\ArticulosValueObjects\CodigoProveedor\CodigoProveedorNoValidoException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Articulo\ArticulosValueObjects\CodigoProveedor\CodigoProveedorNoValidoException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -7641,7 +7648,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Articulo.ArticulosValueObjects.Cod
 
 ***********************************
 Archivo: CodigoProveedorNuloException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Articulo\ArticulosValueObjects\CodigoProveedor\CodigoProveedorNuloException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Articulo\ArticulosValueObjects\CodigoProveedor\CodigoProveedorNuloException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -7674,7 +7681,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Articulo.ArticulosValueObjects.Cod
 
 ***********************************
 Archivo: DescripcionArticuloDuplicadoException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Articulo\ArticulosValueObjects\DescripcionArticulo\DescripcionArticuloDuplicadoException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Articulo\ArticulosValueObjects\DescripcionArticulo\DescripcionArticuloDuplicadoException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -7707,7 +7714,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Articulo.ArticulosValueObjects.Des
 
 ***********************************
 Archivo: DescripcionArticuloNoValidoException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Articulo\ArticulosValueObjects\DescripcionArticulo\DescripcionArticuloNoValidoException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Articulo\ArticulosValueObjects\DescripcionArticulo\DescripcionArticuloNoValidoException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -7740,7 +7747,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Articulo.ArticulosValueObjects.Des
 
 ***********************************
 Archivo: DescripcionArticuloNuloException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Articulo\ArticulosValueObjects\DescripcionArticulo\DescripcionArticuloNuloException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Articulo\ArticulosValueObjects\DescripcionArticulo\DescripcionArticuloNuloException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -7773,7 +7780,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Articulo.ArticulosValueObjects.Des
 
 ***********************************
 Archivo: LineaDuplicadoException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Articulo\ArticulosValueObjects\Linea\LineaDuplicadoException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Articulo\ArticulosValueObjects\Linea\LineaDuplicadoException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -7790,7 +7797,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Articulo.ArticulosValueObjects.Lin
 
 ***********************************
 Archivo: LineaNoValidoException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Articulo\ArticulosValueObjects\Linea\LineaNoValidoException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Articulo\ArticulosValueObjects\Linea\LineaNoValidoException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -7807,7 +7814,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Articulo.ArticulosValueObjects.Lin
 
 ***********************************
 Archivo: LineaNuloException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Articulo\ArticulosValueObjects\Linea\LineaNuloException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Articulo\ArticulosValueObjects\Linea\LineaNuloException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -7840,7 +7847,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Articulo.ArticulosValueObjects.Lin
 
 ***********************************
 Archivo: NombreArticuloDuplicadoException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Articulo\ArticulosValueObjects\NombreArticulo\NombreArticuloDuplicadoException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Articulo\ArticulosValueObjects\NombreArticulo\NombreArticuloDuplicadoException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -7873,7 +7880,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Articulo.ArticulosValueObjects.Nom
 
 ***********************************
 Archivo: NombreArticuloNoValidoException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Articulo\ArticulosValueObjects\NombreArticulo\NombreArticuloNoValidoException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Articulo\ArticulosValueObjects\NombreArticulo\NombreArticuloNoValidoException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -7906,7 +7913,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Articulo.ArticulosValueObjects.Nom
 
 ***********************************
 Archivo: NombreArticuloNuloException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Articulo\ArticulosValueObjects\NombreArticulo\NombreArticuloNuloException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Articulo\ArticulosValueObjects\NombreArticulo\NombreArticuloNuloException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -7939,7 +7946,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Articulo.ArticulosValueObjects.Nom
 
 ***********************************
 Archivo: StockArticuloDuplicadoException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Articulo\ArticulosValueObjects\StockArticulo\StockArticuloDuplicadoException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Articulo\ArticulosValueObjects\StockArticulo\StockArticuloDuplicadoException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -7972,7 +7979,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Articulo.ArticulosValueObjects.Sto
 
 ***********************************
 Archivo: StockArticuloNoValidoException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Articulo\ArticulosValueObjects\StockArticulo\StockArticuloNoValidoException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Articulo\ArticulosValueObjects\StockArticulo\StockArticuloNoValidoException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -8005,7 +8012,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Articulo.ArticulosValueObjects.Sto
 
 ***********************************
 Archivo: StockArticuloNuloException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Articulo\ArticulosValueObjects\StockArticulo\StockArticuloNuloException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Articulo\ArticulosValueObjects\StockArticulo\StockArticuloNuloException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -8038,7 +8045,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Articulo.ArticulosValueObjects.Sto
 
 ***********************************
 Archivo: DireccionDuplicadoException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Cliente\ClienteValueObjects\Direccion\DireccionDuplicadoException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Cliente\ClienteValueObjects\Direccion\DireccionDuplicadoException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -8063,7 +8070,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Cliente.ClienteValueObjects.Direcc
 
 ***********************************
 Archivo: DireccionNoValidoException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Cliente\ClienteValueObjects\Direccion\DireccionNoValidoException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Cliente\ClienteValueObjects\Direccion\DireccionNoValidoException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -8088,7 +8095,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Cliente.ClienteValueObjects.Direcc
 
 ***********************************
 Archivo: DireccionNuloException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Cliente\ClienteValueObjects\Direccion\DireccionNuloException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Cliente\ClienteValueObjects\Direccion\DireccionNuloException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -8113,7 +8120,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Cliente.ClienteValueObjects.Direcc
 
 ***********************************
 Archivo: RazonSocialDuplicadoException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Cliente\ClienteValueObjects\RazonSocial\RazonSocialDuplicadoException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Cliente\ClienteValueObjects\RazonSocial\RazonSocialDuplicadoException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -8139,7 +8146,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Cliente.ClienteValueObjects.RazonS
 
 ***********************************
 Archivo: RazonSocialNoValidoException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Cliente\ClienteValueObjects\RazonSocial\RazonSocialNoValidoException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Cliente\ClienteValueObjects\RazonSocial\RazonSocialNoValidoException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -8164,7 +8171,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Cliente.ClienteValueObjects.RazonS
 
 ***********************************
 Archivo: RazonSocialNuloException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Cliente\ClienteValueObjects\RazonSocial\RazonSocialNuloException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Cliente\ClienteValueObjects\RazonSocial\RazonSocialNuloException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -8197,7 +8204,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Cliente.ClienteValueObjects.RazonS
 
 ***********************************
 Archivo: RutDuplicadoException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Cliente\ClienteValueObjects\RUT\RutDuplicadoException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Cliente\ClienteValueObjects\RUT\RutDuplicadoException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -8222,7 +8229,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Cliente.ClienteValueObjects.RUT
 
 ***********************************
 Archivo: RutNoValidoException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Cliente\ClienteValueObjects\RUT\RutNoValidoException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Cliente\ClienteValueObjects\RUT\RutNoValidoException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -8247,7 +8254,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Cliente.ClienteValueObjects.RUT
 
 ***********************************
 Archivo: RutNuloException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Cliente\ClienteValueObjects\RUT\RutNuloException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Cliente\ClienteValueObjects\RUT\RutNuloException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -8272,7 +8279,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Cliente.ClienteValueObjects.RUT
 
 ***********************************
 Archivo: ContraseniaNoValidoException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Usuario\UsuarioExcepcions\Constrasenia\ContraseniaNoValidoException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Usuario\UsuarioExcepcions\Constrasenia\ContraseniaNoValidoException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -8305,7 +8312,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Usuario.UsuarioExcepcions.Constras
 
 ***********************************
 Archivo: ContraseniaNuloException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Usuario\UsuarioExcepcions\Constrasenia\ContraseniaNuloException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Usuario\UsuarioExcepcions\Constrasenia\ContraseniaNuloException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -8338,7 +8345,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Usuario.UsuarioExcepcions.Constras
 
 ***********************************
 Archivo: EmailDuplicadoException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Usuario\UsuarioExcepcions\Email\EmailDuplicadoException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Usuario\UsuarioExcepcions\Email\EmailDuplicadoException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -8371,7 +8378,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Usuario.UsuarioExcepcions.Email
 
 ***********************************
 Archivo: EmailNoValidoException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Usuario\UsuarioExcepcions\Email\EmailNoValidoException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Usuario\UsuarioExcepcions\Email\EmailNoValidoException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -8404,7 +8411,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Usuario.UsuarioExcepcions.Email
 
 ***********************************
 Archivo: EmailNuloException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Usuario\UsuarioExcepcions\Email\EmailNuloException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Usuario\UsuarioExcepcions\Email\EmailNuloException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -8437,7 +8444,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Usuario.UsuarioExcepcions.Email
 
 ***********************************
 Archivo: NombreNoValidoException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Usuario\UsuarioExcepcions\Nombre\NombreNoValidoException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Usuario\UsuarioExcepcions\Nombre\NombreNoValidoException.cs
 ***********************************
 using System;
 using System.Collections.Generic;
@@ -8470,7 +8477,7 @@ namespace Papeleria.LogicaNegocio.Excepciones.Usuario.UsuarioExcepcions.Nombre
 
 ***********************************
 Archivo: NombreNuloException.cs
-Localizacion: Papeleria.LogicaNegocio\Excepciones\Usuario\UsuarioExcepcions\Nombre\NombreNuloException.cs
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.LogicaNegocio\Excepciones\Usuario\UsuarioExcepcions\Nombre\NombreNuloException.cs
 ***********************************
 using System;
 using System.Collections.Generic;

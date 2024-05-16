@@ -1,6 +1,6 @@
 ﻿***********************************
 Archivo: _ViewImports.cshtml
-Localizacion: Papeleria.MVC\Views\_ViewImports.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Views\_ViewImports.cshtml
 ***********************************
 @using Papeleria.MVC
 @using Papeleria.MVC.Models
@@ -8,7 +8,7 @@ Localizacion: Papeleria.MVC\Views\_ViewImports.cshtml
 
 ***********************************
 Archivo: _ViewStart.cshtml
-Localizacion: Papeleria.MVC\Views\_ViewStart.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Views\_ViewStart.cshtml
 ***********************************
 @{
     Layout = "_Layout";
@@ -16,7 +16,7 @@ Localizacion: Papeleria.MVC\Views\_ViewStart.cshtml
 
 ***********************************
 Archivo: _ViewImports.cshtml
-Localizacion: Papeleria.WebMvc\Views\_ViewImports.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebMvc\Views\_ViewImports.cshtml
 ***********************************
 @using Papeleria.WebMvc
 @using Papeleria.WebMvc.Models
@@ -24,7 +24,7 @@ Localizacion: Papeleria.WebMvc\Views\_ViewImports.cshtml
 
 ***********************************
 Archivo: _ViewStart.cshtml
-Localizacion: Papeleria.WebMvc\Views\_ViewStart.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebMvc\Views\_ViewStart.cshtml
 ***********************************
 @{
     Layout = "_Layout";
@@ -32,7 +32,7 @@ Localizacion: Papeleria.WebMvc\Views\_ViewStart.cshtml
 
 ***********************************
 Archivo: Create.cshtml
-Localizacion: Papeleria.MVC\Views\Articulos\Create.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Views\Articulos\Create.cshtml
 ***********************************
 @model Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Articulos.ArticuloDTO
 
@@ -85,7 +85,7 @@ Localizacion: Papeleria.MVC\Views\Articulos\Create.cshtml
 
 ***********************************
 Archivo: Delete.cshtml
-Localizacion: Papeleria.MVC\Views\Articulos\Delete.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Views\Articulos\Delete.cshtml
 ***********************************
 @model Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Articulos.ArticuloDTO
 
@@ -141,7 +141,7 @@ Localizacion: Papeleria.MVC\Views\Articulos\Delete.cshtml
 
 ***********************************
 Archivo: Edit.cshtml
-Localizacion: Papeleria.MVC\Views\Articulos\Edit.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Views\Articulos\Edit.cshtml
 ***********************************
 @model Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Articulos.ArticuloDTO
 
@@ -192,7 +192,7 @@ Localizacion: Papeleria.MVC\Views\Articulos\Edit.cshtml
 
 ***********************************
 Archivo: Index.cshtml
-Localizacion: Papeleria.MVC\Views\Articulos\Index.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Views\Articulos\Index.cshtml
 ***********************************
 @model IEnumerable<Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Articulos.ArticuloDTO>
 
@@ -255,7 +255,7 @@ Localizacion: Papeleria.MVC\Views\Articulos\Index.cshtml
 
 ***********************************
 Archivo: Create.cshtml
-Localizacion: Papeleria.MVC\Views\Clientes\Create.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Views\Clientes\Create.cshtml
 ***********************************
 @model Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Clientes.ClienteDTO
 
@@ -319,7 +319,7 @@ Localizacion: Papeleria.MVC\Views\Clientes\Create.cshtml
 
 ***********************************
 Archivo: Delete.cshtml
-Localizacion: Papeleria.MVC\Views\Clientes\Delete.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Views\Clientes\Delete.cshtml
 ***********************************
 @model Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Clientes.ClienteDTO
 
@@ -381,7 +381,7 @@ Localizacion: Papeleria.MVC\Views\Clientes\Delete.cshtml
 
 ***********************************
 Archivo: Details.cshtml
-Localizacion: Papeleria.MVC\Views\Clientes\Details.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Views\Clientes\Details.cshtml
 ***********************************
 @model Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Clientes.ClienteDTO
 
@@ -439,7 +439,7 @@ Localizacion: Papeleria.MVC\Views\Clientes\Details.cshtml
 
 ***********************************
 Archivo: Edit.cshtml
-Localizacion: Papeleria.MVC\Views\Clientes\Edit.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Views\Clientes\Edit.cshtml
 ***********************************
 @model Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Clientes.ClienteDTO
 
@@ -499,7 +499,7 @@ Localizacion: Papeleria.MVC\Views\Clientes\Edit.cshtml
 
 ***********************************
 Archivo: Index.cshtml
-Localizacion: Papeleria.MVC\Views\Clientes\Index.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Views\Clientes\Index.cshtml
 ***********************************
 @model IEnumerable<Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Clientes.ClienteDTO>
 
@@ -598,7 +598,7 @@ Localizacion: Papeleria.MVC\Views\Clientes\Index.cshtml
 
 ***********************************
 Archivo: ListaSuperaronMonto.cshtml
-Localizacion: Papeleria.MVC\Views\Clientes\ListaSuperaronMonto.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Views\Clientes\ListaSuperaronMonto.cshtml
 ***********************************
 @model IEnumerable<Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Clientes.ClienteDTO>
 
@@ -669,7 +669,7 @@ Localizacion: Papeleria.MVC\Views\Clientes\ListaSuperaronMonto.cshtml
 
 ***********************************
 Archivo: Index.cshtml
-Localizacion: Papeleria.MVC\Views\Home\Index.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Views\Home\Index.cshtml
 ***********************************
 @model Empresa.LogicaDeNegocio.Sistema.Usuario;
 
@@ -705,7 +705,7 @@ Localizacion: Papeleria.MVC\Views\Home\Index.cshtml
 
 ***********************************
 Archivo: Anular.cshtml
-Localizacion: Papeleria.MVC\Views\Pedidos\Anular.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Views\Pedidos\Anular.cshtml
 ***********************************
 @model Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Pedidos.PedidoDTO
 
@@ -759,7 +759,7 @@ Localizacion: Papeleria.MVC\Views\Pedidos\Anular.cshtml
 </div>
 ***********************************
 Archivo: Crear.cshtml
-Localizacion: Papeleria.MVC\Views\Pedidos\Crear.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Views\Pedidos\Crear.cshtml
 ***********************************
 @using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Pedidos
 @model Papeleria.MVC.Models.PedidosModels.PedidoAltaModel
@@ -862,7 +862,7 @@ Localizacion: Papeleria.MVC\Views\Pedidos\Crear.cshtml
 
 ***********************************
 Archivo: Details.cshtml
-Localizacion: Papeleria.MVC\Views\Pedidos\Details.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Views\Pedidos\Details.cshtml
 ***********************************
 @model Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Pedidos.PedidoDTO
 
@@ -911,7 +911,7 @@ Localizacion: Papeleria.MVC\Views\Pedidos\Details.cshtml
 </div>
 ***********************************
 Archivo: Index.cshtml
-Localizacion: Papeleria.MVC\Views\Pedidos\Index.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Views\Pedidos\Index.cshtml
 ***********************************
 @model IEnumerable<Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Pedidos.PedidoDTO>
 
@@ -989,7 +989,7 @@ Localizacion: Papeleria.MVC\Views\Pedidos\Index.cshtml
 
 ***********************************
 Archivo: Error.cshtml
-Localizacion: Papeleria.MVC\Views\Shared\Error.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Views\Shared\Error.cshtml
 ***********************************
 @model ErrorViewModel
 @{
@@ -1019,7 +1019,7 @@ Localizacion: Papeleria.MVC\Views\Shared\Error.cshtml
 
 ***********************************
 Archivo: _Layout.cshtml
-Localizacion: Papeleria.MVC\Views\Shared\_Layout.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Views\Shared\_Layout.cshtml
 ***********************************
 <!DOCTYPE html>
 <html lang="en">
@@ -1092,7 +1092,7 @@ Localizacion: Papeleria.MVC\Views\Shared\_Layout.cshtml
 
 ***********************************
 Archivo: _Mensajes.cshtml
-Localizacion: Papeleria.MVC\Views\Shared\_Mensajes.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Views\Shared\_Mensajes.cshtml
 ***********************************
 
 @*
@@ -1123,14 +1123,14 @@ Localizacion: Papeleria.MVC\Views\Shared\_Mensajes.cshtml
 }
 ***********************************
 Archivo: _ValidationScriptsPartial.cshtml
-Localizacion: Papeleria.MVC\Views\Shared\_ValidationScriptsPartial.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Views\Shared\_ValidationScriptsPartial.cshtml
 ***********************************
 <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
 <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
 
 ***********************************
 Archivo: Create.cshtml
-Localizacion: Papeleria.MVC\Views\Usuarios\Create.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Views\Usuarios\Create.cshtml
 ***********************************
 @model Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios.UsuarioDTO
 
@@ -1184,7 +1184,7 @@ Localizacion: Papeleria.MVC\Views\Usuarios\Create.cshtml
 
 ***********************************
 Archivo: Delete.cshtml
-Localizacion: Papeleria.MVC\Views\Usuarios\Delete.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Views\Usuarios\Delete.cshtml
 ***********************************
 @model Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios.UsuarioDTO
 
@@ -1235,7 +1235,7 @@ Localizacion: Papeleria.MVC\Views\Usuarios\Delete.cshtml
 
 ***********************************
 Archivo: Edit.cshtml
-Localizacion: Papeleria.MVC\Views\Usuarios\Edit.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Views\Usuarios\Edit.cshtml
 ***********************************
 @model Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios.UsuarioDTO
 
@@ -1293,7 +1293,7 @@ Localizacion: Papeleria.MVC\Views\Usuarios\Edit.cshtml
 
 ***********************************
 Archivo: Index.cshtml
-Localizacion: Papeleria.MVC\Views\Usuarios\Index.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.MVC\Views\Usuarios\Index.cshtml
 ***********************************
 @model IEnumerable<Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios.UsuarioDTO>
 
@@ -1358,7 +1358,7 @@ Localizacion: Papeleria.MVC\Views\Usuarios\Index.cshtml
 
 ***********************************
 Archivo: Create.cshtml
-Localizacion: Papeleria.WebMvc\Views\Articulos\Create.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebMvc\Views\Articulos\Create.cshtml
 ***********************************
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -1368,7 +1368,7 @@ Localizacion: Papeleria.WebMvc\Views\Articulos\Create.cshtml
 
 ***********************************
 Archivo: Delete.cshtml
-Localizacion: Papeleria.WebMvc\Views\Articulos\Delete.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebMvc\Views\Articulos\Delete.cshtml
 ***********************************
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -1378,7 +1378,7 @@ Localizacion: Papeleria.WebMvc\Views\Articulos\Delete.cshtml
 
 ***********************************
 Archivo: Details.cshtml
-Localizacion: Papeleria.WebMvc\Views\Articulos\Details.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebMvc\Views\Articulos\Details.cshtml
 ***********************************
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -1388,7 +1388,7 @@ Localizacion: Papeleria.WebMvc\Views\Articulos\Details.cshtml
 
 ***********************************
 Archivo: Edit.cshtml
-Localizacion: Papeleria.WebMvc\Views\Articulos\Edit.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebMvc\Views\Articulos\Edit.cshtml
 ***********************************
 @page
 @model Papeleria.WebMvc.Views.Articulos.EditModel
@@ -1397,7 +1397,7 @@ Localizacion: Papeleria.WebMvc\Views\Articulos\Edit.cshtml
 
 ***********************************
 Archivo: Index.cshtml
-Localizacion: Papeleria.WebMvc\Views\Articulos\Index.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebMvc\Views\Articulos\Index.cshtml
 ***********************************
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -1407,7 +1407,7 @@ Localizacion: Papeleria.WebMvc\Views\Articulos\Index.cshtml
 
 ***********************************
 Archivo: Create.cshtml
-Localizacion: Papeleria.WebMvc\Views\Clientes\Create.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebMvc\Views\Clientes\Create.cshtml
 ***********************************
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -1417,7 +1417,7 @@ Localizacion: Papeleria.WebMvc\Views\Clientes\Create.cshtml
 
 ***********************************
 Archivo: Delete.cshtml
-Localizacion: Papeleria.WebMvc\Views\Clientes\Delete.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebMvc\Views\Clientes\Delete.cshtml
 ***********************************
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -1427,7 +1427,7 @@ Localizacion: Papeleria.WebMvc\Views\Clientes\Delete.cshtml
 
 ***********************************
 Archivo: Details.cshtml
-Localizacion: Papeleria.WebMvc\Views\Clientes\Details.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebMvc\Views\Clientes\Details.cshtml
 ***********************************
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -1437,7 +1437,7 @@ Localizacion: Papeleria.WebMvc\Views\Clientes\Details.cshtml
 
 ***********************************
 Archivo: Edit.cshtml
-Localizacion: Papeleria.WebMvc\Views\Clientes\Edit.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebMvc\Views\Clientes\Edit.cshtml
 ***********************************
 @page
 @model Papeleria.WebMvc.Views.Articulos.EditModel
@@ -1446,7 +1446,7 @@ Localizacion: Papeleria.WebMvc\Views\Clientes\Edit.cshtml
 
 ***********************************
 Archivo: Index.cshtml
-Localizacion: Papeleria.WebMvc\Views\Clientes\Index.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebMvc\Views\Clientes\Index.cshtml
 ***********************************
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -1456,7 +1456,7 @@ Localizacion: Papeleria.WebMvc\Views\Clientes\Index.cshtml
 
 ***********************************
 Archivo: Index.cshtml
-Localizacion: Papeleria.WebMvc\Views\Home\Index.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebMvc\Views\Home\Index.cshtml
 ***********************************
 @{
     ViewData["Title"] = "Home Page";
@@ -1469,7 +1469,7 @@ Localizacion: Papeleria.WebMvc\Views\Home\Index.cshtml
 
 ***********************************
 Archivo: Privacy.cshtml
-Localizacion: Papeleria.WebMvc\Views\Home\Privacy.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebMvc\Views\Home\Privacy.cshtml
 ***********************************
 @{
     ViewData["Title"] = "Privacy Policy";
@@ -1480,7 +1480,7 @@ Localizacion: Papeleria.WebMvc\Views\Home\Privacy.cshtml
 
 ***********************************
 Archivo: Create.cshtml
-Localizacion: Papeleria.WebMvc\Views\Pedidos\Create.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebMvc\Views\Pedidos\Create.cshtml
 ***********************************
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -1490,7 +1490,7 @@ Localizacion: Papeleria.WebMvc\Views\Pedidos\Create.cshtml
 
 ***********************************
 Archivo: Delete.cshtml
-Localizacion: Papeleria.WebMvc\Views\Pedidos\Delete.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebMvc\Views\Pedidos\Delete.cshtml
 ***********************************
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -1500,7 +1500,7 @@ Localizacion: Papeleria.WebMvc\Views\Pedidos\Delete.cshtml
 
 ***********************************
 Archivo: Details.cshtml
-Localizacion: Papeleria.WebMvc\Views\Pedidos\Details.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebMvc\Views\Pedidos\Details.cshtml
 ***********************************
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -1510,7 +1510,7 @@ Localizacion: Papeleria.WebMvc\Views\Pedidos\Details.cshtml
 
 ***********************************
 Archivo: Edit.cshtml
-Localizacion: Papeleria.WebMvc\Views\Pedidos\Edit.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebMvc\Views\Pedidos\Edit.cshtml
 ***********************************
 @page
 @model Papeleria.WebMvc.Views.Articulos.EditModel
@@ -1519,7 +1519,7 @@ Localizacion: Papeleria.WebMvc\Views\Pedidos\Edit.cshtml
 
 ***********************************
 Archivo: Index.cshtml
-Localizacion: Papeleria.WebMvc\Views\Pedidos\Index.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebMvc\Views\Pedidos\Index.cshtml
 ***********************************
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -1529,7 +1529,7 @@ Localizacion: Papeleria.WebMvc\Views\Pedidos\Index.cshtml
 
 ***********************************
 Archivo: _Error.cshtml
-Localizacion: Papeleria.WebMvc\Views\Shared\_Error.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebMvc\Views\Shared\_Error.cshtml
 ***********************************
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -1539,7 +1539,7 @@ Localizacion: Papeleria.WebMvc\Views\Shared\_Error.cshtml
 
 ***********************************
 Archivo: _Layout.cshtml
-Localizacion: Papeleria.WebMvc\Views\Shared\_Layout.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebMvc\Views\Shared\_Layout.cshtml
 ***********************************
 <!DOCTYPE html>
 <html lang="en">
@@ -1593,7 +1593,7 @@ Localizacion: Papeleria.WebMvc\Views\Shared\_Layout.cshtml
 
 ***********************************
 Archivo: _Mensajes.cshtml
-Localizacion: Papeleria.WebMvc\Views\Shared\_Mensajes.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebMvc\Views\Shared\_Mensajes.cshtml
 ***********************************
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -1603,14 +1603,14 @@ Localizacion: Papeleria.WebMvc\Views\Shared\_Mensajes.cshtml
 
 ***********************************
 Archivo: _ValidationScriptsPartial.cshtml
-Localizacion: Papeleria.WebMvc\Views\Shared\_ValidationScriptsPartial.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebMvc\Views\Shared\_ValidationScriptsPartial.cshtml
 ***********************************
 <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
 <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
 
 ***********************************
 Archivo: Create.cshtml
-Localizacion: Papeleria.WebMvc\Views\Usuarios\Create.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebMvc\Views\Usuarios\Create.cshtml
 ***********************************
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -1620,7 +1620,7 @@ Localizacion: Papeleria.WebMvc\Views\Usuarios\Create.cshtml
 
 ***********************************
 Archivo: Delete.cshtml
-Localizacion: Papeleria.WebMvc\Views\Usuarios\Delete.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebMvc\Views\Usuarios\Delete.cshtml
 ***********************************
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -1630,7 +1630,7 @@ Localizacion: Papeleria.WebMvc\Views\Usuarios\Delete.cshtml
 
 ***********************************
 Archivo: Details.cshtml
-Localizacion: Papeleria.WebMvc\Views\Usuarios\Details.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebMvc\Views\Usuarios\Details.cshtml
 ***********************************
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -1640,7 +1640,7 @@ Localizacion: Papeleria.WebMvc\Views\Usuarios\Details.cshtml
 
 ***********************************
 Archivo: Edit.cshtml
-Localizacion: Papeleria.WebMvc\Views\Usuarios\Edit.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebMvc\Views\Usuarios\Edit.cshtml
 ***********************************
 @page
 @model Papeleria.WebMvc.Views.Articulos.EditModel
@@ -1649,7 +1649,7 @@ Localizacion: Papeleria.WebMvc\Views\Usuarios\Edit.cshtml
 
 ***********************************
 Archivo: Index.cshtml
-Localizacion: Papeleria.WebMvc\Views\Usuarios\Index.cshtml
+Carpeta: C:\Users\moreno\Documents\GitHub\P3_OBL_Papeleria\Papeleria.WebMvc\Views\Usuarios\Index.cshtml
 ***********************************
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
