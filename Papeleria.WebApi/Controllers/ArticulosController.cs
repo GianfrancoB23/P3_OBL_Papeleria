@@ -38,7 +38,8 @@ namespace Papeleria.WebApi.Controllers
             try
             {
                 var articulosDto = _cuGetArticulos.Ejecutar();
-                return Ok(articulosDto);
+                var ordenada = articulosDto.OrderBy(articulo => articulo.NombreArticulo);
+                return Ok(ordenada);
             }
             catch (ArticuloNoValidoException ex)
             {

@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Papeleria.Comun", "Papeleri
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Papeleria.MVC", "Papeleria.MVC\Papeleria.MVC.csproj", "{F26EA81B-6699-4965-A722-8F222CD6030F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Papeleria.WebApi", "Papeleria.WebApi\Papeleria.WebApi.csproj", "{FD91CEA6-9A6B-4B40-A47D-268A7661ACF7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Papeleria.WebApi", "Papeleria.WebApi\Papeleria.WebApi.csproj", "{FD91CEA6-9A6B-4B40-A47D-268A7661ACF7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -43,8 +43,9 @@ namespace Papeleria.WebApi.Controllers
                 _repoPedidos = new RepositorioPedidoEF();
                 var clientes = _buscarClientes.GetAll();
                 var pedidosDto = _getAllPedidos.Ejecutar();
+                var ordenada = pedidosDto.OrderByDescending(pedido => pedido.FechaPedido);
                 var pedidosFinal = new List<PedidoDTO>();
-                foreach (var pedido in pedidosDto)
+                foreach (var pedido in ordenada)
                 {
                     if(pedido.anulado)
                     {

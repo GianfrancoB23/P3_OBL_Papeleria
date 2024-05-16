@@ -76,7 +76,6 @@ namespace Papeleria.MVC.Controllers
                     {
                         ViewBag.Mensaje = "No existen pedido desde la fecha indicada";
                     }
-                    ViewBag.Mensaje = $"Pedidos en total: {pedidos.Count()}.";
                     return View(pedidos);
                 }
                 else

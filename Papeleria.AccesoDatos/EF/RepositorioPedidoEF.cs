@@ -105,7 +105,7 @@ namespace Papeleria.AccesoDatos.EF
         public IEnumerable<Pedido> GetPedidosPorFecha(DateTime date)
         {
 
-            IEnumerable<Pedido> pedidos = _db.Pedidos.Where(pedido => pedido.fechaPedido >= date);
+            IEnumerable<Pedido> pedidos = _db.Pedidos.Where(pedido => pedido.fechaPedido.Date == date);
             return pedidos;
         }
         public void Remove(int id)

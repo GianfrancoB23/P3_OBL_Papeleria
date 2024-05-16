@@ -1,0 +1,1658 @@
+﻿***********************************
+Archivo: _ViewImports.cshtml
+Localizacion: Papeleria.MVC\Views\_ViewImports.cshtml
+***********************************
+@using Papeleria.MVC
+@using Papeleria.MVC.Models
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+***********************************
+Archivo: _ViewStart.cshtml
+Localizacion: Papeleria.MVC\Views\_ViewStart.cshtml
+***********************************
+@{
+    Layout = "_Layout";
+}
+
+***********************************
+Archivo: _ViewImports.cshtml
+Localizacion: Papeleria.WebMvc\Views\_ViewImports.cshtml
+***********************************
+@using Papeleria.WebMvc
+@using Papeleria.WebMvc.Models
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+***********************************
+Archivo: _ViewStart.cshtml
+Localizacion: Papeleria.WebMvc\Views\_ViewStart.cshtml
+***********************************
+@{
+    Layout = "_Layout";
+}
+
+***********************************
+Archivo: Create.cshtml
+Localizacion: Papeleria.MVC\Views\Articulos\Create.cshtml
+***********************************
+@model Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Articulos.ArticuloDTO
+
+@{
+    ViewData["Title"] = "Crear articulo";
+}
+
+<h1>Crear articulo</h1>
+
+<h4>Articulo</h4>
+<hr />
+<partial name="_Mensajes" />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CodigoProveedor" class="control-label"></label>
+                <input asp-for="CodigoProveedor" class="form-control" />
+                <span asp-validation-for="CodigoProveedor" class="text-danger"></span>
+                <label asp-for="NombreArticulo" class="control-label"></label>
+                <input asp-for="NombreArticulo" class="form-control" />
+                <span asp-validation-for="NombreArticulo" class="text-danger"></span>
+                <label asp-for="Descripcion" class="control-label"></label>
+                <input asp-for="Descripcion" class="form-control" />
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
+                <label asp-for="PrecioVP" class="control-label"></label>
+                <input asp-for="PrecioVP" class="form-control" />
+                <span asp-validation-for="PrecioVP" class="text-danger"></span>
+                <label asp-for="Stock" class="control-label"></label>
+                <input asp-for="Stock" class="form-control" />
+                <span asp-validation-for="Stock" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+***********************************
+Archivo: Delete.cshtml
+Localizacion: Papeleria.MVC\Views\Articulos\Delete.cshtml
+***********************************
+@model Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Articulos.ArticuloDTO
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Articulo</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CodigoProveedor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CodigoProveedor)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NombreArticulo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NombreArticulo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PrecioVP)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PrecioVP)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Stock)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Stock)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        @Html.CheckBox("IsChecked") <span>Entiendo que esta operación es riesgosa</span>
+        <a asp-action="Index">Volver a la lista</a>
+    </form>
+</div>
+
+***********************************
+Archivo: Edit.cshtml
+Localizacion: Papeleria.MVC\Views\Articulos\Edit.cshtml
+***********************************
+@model Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Articulos.ArticuloDTO
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Articulo</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="CodigoProveedor" class="control-label"></label>
+                <input asp-for="CodigoProveedor" class="form-control" />
+                <span asp-validation-for="CodigoProveedor" class="text-danger"></span>
+                <label asp-for="NombreArticulo" class="control-label"></label>
+                <input asp-for="NombreArticulo" class="form-control" />
+                <span asp-validation-for="NombreArticulo" class="text-danger"></span>
+                <label asp-for="Descripcion" class="control-label"></label>
+                <input asp-for="Descripcion" class="form-control" />
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
+                <label asp-for="PrecioVP" class="control-label"></label>
+                <input asp-for="PrecioVP" class="form-control" />
+                <span asp-validation-for="PrecioVP" class="text-danger"></span>
+                <label asp-for="Stock" class="control-label"></label>
+                <input asp-for="Stock" class="form-control" />
+                <span asp-validation-for="Stock" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+***********************************
+Archivo: Index.cshtml
+Localizacion: Papeleria.MVC\Views\Articulos\Index.cshtml
+***********************************
+@model IEnumerable<Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Articulos.ArticuloDTO>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>ARTICULOS</h1>
+
+<p>
+    <a asp-action="Create">CREAR ARTICULOS</a>
+</p>
+<partial name="_Mensajes" />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CodigoProveedor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreArticulo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrecioVP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stock)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodigoProveedor)
+            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NombreArticulo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descripcion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PrecioVP)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Stock)
+                </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Borrar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+***********************************
+Archivo: Create.cshtml
+Localizacion: Papeleria.MVC\Views\Clientes\Create.cshtml
+***********************************
+@model Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Clientes.ClienteDTO
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Crear Cliente</h1>
+
+<h4>Ingrese los datos del cliente:</h4>
+<hr />
+<partial name="_Mensajes" />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="rut" class="control-label">RUT</label>
+                <input asp-for="rut" class="form-control" />
+                <span asp-validation-for="rut" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="razonSocial" class="control-label">Razon Social</label>
+                <input asp-for="razonSocial" class="form-control" />
+                <span asp-validation-for="razonSocial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Calle" class="control-label"></label>
+                <input asp-for="Calle" class="form-control" />
+                <span asp-validation-for="Calle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Numero" class="control-label"></label>
+                <input asp-for="Numero" class="form-control" />
+                <span asp-validation-for="Numero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ciudad" class="control-label"></label>
+                <input asp-for="Ciudad" class="form-control" />
+                <span asp-validation-for="Ciudad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Distancia" class="control-label"></label>
+                <input asp-for="Distancia" class="form-control" />
+                <span asp-validation-for="Distancia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Crear" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+***********************************
+Archivo: Delete.cshtml
+Localizacion: Papeleria.MVC\Views\Clientes\Delete.cshtml
+***********************************
+@model Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Clientes.ClienteDTO
+
+<h3>Estas seguro que deseas eliminar este cliente?</h3>
+<div>
+    <h4>ClienteDTO</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.rut)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.rut)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.razonSocial)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.razonSocial)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Calle)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Calle)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Numero)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Numero)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ciudad)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ciudad)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Distancia)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Distancia)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        @Html.CheckBox("IsChecked") <span>Entiendo que esta operación es riesgosa</span>
+        <a asp-action="Index">Volver a la lista</a>
+    </form>
+</div>
+
+***********************************
+Archivo: Details.cshtml
+Localizacion: Papeleria.MVC\Views\Clientes\Details.cshtml
+***********************************
+@model Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Clientes.ClienteDTO
+
+<div>
+    <h4>Detalles del cliente</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.rut)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.rut)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.razonSocial)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.razonSocial)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Calle)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Calle)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Numero)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Numero)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ciudad)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ciudad)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Distancia)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Distancia)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index">LISTA</a>
+</div>
+
+***********************************
+Archivo: Edit.cshtml
+Localizacion: Papeleria.MVC\Views\Clientes\Edit.cshtml
+***********************************
+@model Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Clientes.ClienteDTO
+
+<h4>Editar CLIENTE</h4>
+<hr />
+<partial name="_Mensajes" />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Id" class="control-label">ID</label>
+                <input asp-for="Id" class="form-control" readonly />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="rut" class="control-label">RUT</label>
+                <input asp-for="rut" class="form-control" />
+                <span asp-validation-for="rut" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="razonSocial" class="control-label">Razon Social</label>
+                <input asp-for="razonSocial" class="form-control" />
+                <span asp-validation-for="razonSocial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Calle" class="control-label"></label>
+                <input asp-for="Calle" class="form-control" />
+                <span asp-validation-for="Calle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Numero" class="control-label"></label>
+                <input asp-for="Numero" class="form-control" />
+                <span asp-validation-for="Numero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ciudad" class="control-label"></label>
+                <input asp-for="Ciudad" class="form-control" />
+                <span asp-validation-for="Ciudad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Distancia" class="control-label"></label>
+                <input asp-for="Distancia" class="form-control" />
+                <span asp-validation-for="Distancia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver a la lista</a>
+</div>
+
+
+***********************************
+Archivo: Index.cshtml
+Localizacion: Papeleria.MVC\Views\Clientes\Index.cshtml
+***********************************
+@model IEnumerable<Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Clientes.ClienteDTO>
+
+<p>
+    <a asp-action="Create">CREAR CLIENTE</a>
+</p>
+<h1>BUSCAR CLIENTES</h1>
+<hr />
+<partial name="_Mensajes" />
+@* <form method="post">
+    <input type="text" placeholder="Ingrese razon social" name="razonSocial" /><input type="submit" value="Filtrar" />
+</form>
+<br />
+<form method="post">
+    <input type="number" placeholder="Ingrese un monto" name="monto" /><input type="submit" value="Filtrar" />
+</form> *@
+
+<form method="post">
+    <input type="text" placeholder="Ingrese razón social" name="razonSocial" />
+    <input type="submit" value="Filtrar X Razon" name="submitButton" />
+</form>
+<br />
+<form method="post">
+    <input type="number" placeholder="Ingrese un monto" name="monto" />
+    <input type="submit" value="Filtrar X Monto" name="submitButton" />
+</form>
+
+
+
+<p>
+    @if (@TempData["ResultadoBuscarClientes"] != null)
+    {
+        @TempData["ResultadoBuscarClientes"].ToString()
+    }
+</p>
+<hr />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                RUT
+            </th>
+            <th>
+                Razón Social
+            </th>
+            <th>
+                Calle
+            </th>
+            <th>
+                Número
+            </th>
+            <th>
+                Ciudad
+            </th>
+            <th>
+                Distancia en KM
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rut)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.razonSocial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Calle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ciudad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Distancia)
+            </td>
+            <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id=item.Id })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+***********************************
+Archivo: ListaSuperaronMonto.cshtml
+Localizacion: Papeleria.MVC\Views\Clientes\ListaSuperaronMonto.cshtml
+***********************************
+@model IEnumerable<Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Clientes.ClienteDTO>
+
+@{
+    ViewData["Title"] = "ListaSuperaronMonto";
+}
+
+<h1>CLIENTES QUE SUPERARON MONTO DE $@ViewBag.Monto</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                RUT
+            </th>
+            <th>
+                Razon Social
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Calle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Numero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ciudad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Distancia)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rut)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.razonSocial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Calle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ciudad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Distancia)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<div>
+    <a asp-action="Index">Lista</a>
+</div>
+
+***********************************
+Archivo: Index.cshtml
+Localizacion: Papeleria.MVC\Views\Home\Index.cshtml
+***********************************
+@model Empresa.LogicaDeNegocio.Sistema.Usuario;
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>INICIO DE SESIÓN</h1>
+<hr />
+<partial name="_Mensajes" />
+<div class="row">
+
+    <div class="col-md-4">
+        <form asp-action="Login">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label">Email</label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contrasenia" class="control-label">Contraseña</label>
+                <input type="password" asp-for="Contrasenia" class="form-control" />
+                <span asp-validation-for="Contrasenia" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Iniciar sesión" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+***********************************
+Archivo: Anular.cshtml
+Localizacion: Papeleria.MVC\Views\Pedidos\Anular.cshtml
+***********************************
+@model Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Pedidos.PedidoDTO
+
+@{
+    ViewData["Title"] = "Detalle del pedido";
+}
+<p>
+    <a asp-action="Index">Volver a la lista</a>
+</p>
+
+<div class="div">
+    <h4>Pedido</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FechaPedido)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FechaPedido)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FechaEntrega)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FechaEntrega)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClienteID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClienteID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.precioFinal)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.precioFinal)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.entregado)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.entregado)
+        </dd>
+
+        <form asp-action="Anular">
+            <input type="submit" value="Anular" class="btn btn-danger" /> |
+            @Html.CheckBox("IsChecked") <span>Entiendo que esta operación es riesgosa</span>
+            <a asp-action="Index">Volver a la lista</a>
+        </form>
+</div>
+***********************************
+Archivo: Crear.cshtml
+Localizacion: Papeleria.MVC\Views\Pedidos\Crear.cshtml
+***********************************
+@using Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Pedidos
+@model Papeleria.MVC.Models.PedidosModels.PedidoAltaModel
+
+<h1>Crear Pedido</h1>
+<p>@ViewBag.Error</p>
+
+<form asp-action="Crear" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="ClienteId">Cliente:</label>
+        <select asp-for="ClienteId" class="form-control" asp-items="@(new SelectList(ViewBag.Clientes, "Id", "razonSocial"))">
+            <option value="">Seleccionar cliente...</option>
+        </select>
+        <span asp-validation-for="ClienteId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="FechaEntrega">Fecha de Entrega:</label>
+        <input asp-for="FechaEntrega" class="form-control" type="date" />
+        <span asp-validation-for="FechaEntrega" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="iva">Valor IVA:</label>
+        <input asp-for="iva" class="form-control" type="number" value="22" />
+        <span asp-validation-for="iva" class="text-danger"></span>
+    </div>
+    @if (ViewBag.LineasPedido != null && ViewBag.LineasPedido.Count > 0)
+    {
+        <div class="form-group">
+            <label>Articulos pedidos:</label>
+            <table class="table table-bordered" id="lineasPedidoAgregados">
+                <thead>
+                    <tr>
+                        <th>Articulo</th>
+                        <th>Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                @foreach (LineaPedidoDTO linea in ViewBag.LineasPedido)
+                {
+                    <tr>
+                        <td>
+                            @linea.NombreArticulo
+
+                        </td>
+                        <td>
+                            Cantidad: @linea.Cantidad
+
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    }
+    <button type="submit" class="btn btn-success">Crear Pedido</button>
+</form>
+
+<div class="form-group">
+    <form asp-action="AddArticulo">
+
+        <label>Artículos:</label>
+        <table class="table table-bordered" id="lineasPedido">
+            <thead>
+                <tr>
+                    <th>Artículo</th>
+                    <th>Cantidad</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var linea in Model.LineasPedido)
+                {
+                    <tr>
+                        <td>
+                            <select asp-for="ArticuloId" class="form-control" asp-items="@(new SelectList(ViewBag.Articulos, "Id", "NombreArticulo"))">
+                                <option value="">Seleccionar artículo...</option>
+                            </select>
+                            <span asp-validation-for="ArticuloId" class="text-danger"></span>
+
+                        </td>
+                        <td><input asp-for="Cantidad" class="form-control" /></td>
+                        <span asp-validation-for="Cantidad" class="text-danger"></span>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <button type="submit" class="btn btn-primary" id="agregarLinea">Agregar Línea de Pedido</button>
+    </form>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+***********************************
+Archivo: Details.cshtml
+Localizacion: Papeleria.MVC\Views\Pedidos\Details.cshtml
+***********************************
+@model Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Pedidos.PedidoDTO
+
+@{
+    ViewData["Title"] = "Detalle del pedido";
+}
+<p>
+    <a asp-action="Index">Volver a la lista</a>
+</p>
+
+<div class="div">
+    <h4>Pedido</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FechaPedido)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FechaPedido)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FechaEntrega)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FechaEntrega)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ClienteID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ClienteID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.precioFinal)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.precioFinal)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.entregado)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.entregado)
+        </dd>
+    </dl>
+</div>
+***********************************
+Archivo: Index.cshtml
+Localizacion: Papeleria.MVC\Views\Pedidos\Index.cshtml
+***********************************
+@model IEnumerable<Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Pedidos.PedidoDTO>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Pedidos registrados</h1>
+
+<p>
+    <a asp-action="Crear">CREAR PEDIDO</a>
+</p>
+<h4>BUSCAR PEDIDOS DESDE FECHA</h4>
+<hr />
+
+<form method="post">
+    <input type="date" placeholder="Ingrese fecha para buscar pedidos desde la misma" name="date" />
+    <input type="submit" value="Filtrar" name="submitButton" />
+</form>
+
+<p>@ViewBag.Mensaje</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Fecha Pedido
+            </th>
+            <th>
+                Razon Social
+            </th>
+            <th>
+                Precio Final $
+            </th>
+            <th>
+                Entregado
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            if (!item.anulado)
+            {
+
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FechaPedido)
+                    </td>
+                    <td>
+                        @foreach (var cliente in ViewBag.Clientes)
+                        {
+                            if (cliente.Id.Equals(item.ClienteID))
+                            {
+                                @cliente.razonSocial
+                                ;
+                            }
+                        }
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.precioFinal)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.entregado)
+                    </td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@item.Id">Detalle</a> |
+                        <a asp-action="Anular" asp-route-id="@item.Id">Anular</a>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+***********************************
+Archivo: Error.cshtml
+Localizacion: Papeleria.MVC\Views\Shared\Error.cshtml
+***********************************
+@model ErrorViewModel
+@{
+    ViewData["Title"] = "Error";
+}
+
+<h1 class="text-danger">Error.</h1>
+<h2 class="text-danger">An error occurred while processing your request.</h2>
+
+@if (Model.ShowRequestId)
+{
+    <p>
+        <strong>Request ID:</strong> <code>@Model.RequestId</code>
+    </p>
+}
+
+<h3>Development Mode</h3>
+<p>
+    Swapping to <strong>Development</strong> environment will display more detailed information about the error that occurred.
+</p>
+<p>
+    <strong>The Development environment shouldn't be enabled for deployed applications.</strong>
+    It can result in displaying sensitive information from exceptions to end users.
+    For local debugging, enable the <strong>Development</strong> environment by setting the <strong>ASPNETCORE_ENVIRONMENT</strong> environment variable to <strong>Development</strong>
+    and restarting the app.
+</p>
+
+***********************************
+Archivo: _Layout.cshtml
+Localizacion: Papeleria.MVC\Views\Shared\_Layout.cshtml
+***********************************
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Papeleria.MVC</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Papeleria.MVC.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Papeleria</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        @if (Context.Session.GetInt32("LogueadoID") == null)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
+                            </li>
+                        }
+
+                        @if (Context.Session.GetInt32("LogueadoID") != null)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Usuarios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Clientes" asp-action="Index">Clientes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Articulos" asp-action="Index">Articulos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Pedidos" asp-action="Index">Pedidos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark btn btn-danger" asp-area="" asp-controller="Home" asp-action="Logout">LOGOUT</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - Papeleria.MVC - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
+***********************************
+Archivo: _Mensajes.cshtml
+Localizacion: Papeleria.MVC\Views\Shared\_Mensajes.cshtml
+***********************************
+
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger">@ViewBag.Error</div>
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+
+@if (ViewBag.Mensaje != null)
+{
+    <div class="alert alert-info">@ViewBag.Mensaje</div>
+}
+
+@if (TempData["Mensaje"] != null)
+{
+    <div class="alert alert-info">@TempData["Mensaje"]</div>
+}
+@if (TempData["MensajeOK"] != null)
+{
+    <div class="alert alert-success">@TempData["MensajeOK"]</div>
+}
+***********************************
+Archivo: _ValidationScriptsPartial.cshtml
+Localizacion: Papeleria.MVC\Views\Shared\_ValidationScriptsPartial.cshtml
+***********************************
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+***********************************
+Archivo: Create.cshtml
+Localizacion: Papeleria.MVC\Views\Usuarios\Create.cshtml
+***********************************
+@model Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios.UsuarioDTO
+
+@{
+    ViewData["Title"] = "Crear Usuario";
+}
+
+<h1>Crear Usuario</h1>
+
+<h4>Ingresa datos del usuario</h4>
+<hr />
+<partial name="_Mensajes"/>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Apellido" class="control-label"></label>
+                <input asp-for="Apellido" class="form-control" />
+                <span asp-validation-for="Apellido" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contrasenia" class="control-label">Contraseña</label>
+                <input asp-for="Contrasenia" class="form-control" />
+                <span asp-validation-for="Contrasenia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar usuario" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+***********************************
+Archivo: Delete.cshtml
+Localizacion: Papeleria.MVC\Views\Usuarios\Delete.cshtml
+***********************************
+@model Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios.UsuarioDTO
+
+<h3>Estas seguro que deseas eliminar el usuario?</h3>
+<partial name="_Mensajes" />
+<div>
+    <h4>UsuarioDTO</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Apellido)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Apellido)
+        </dd>
+        <dt class = "col-sm-2">
+            Contraseña
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Contrasenia)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        @Html.CheckBox("IsChecked") <span>Entiendo que esta operación es riesgosa</span>
+        <a asp-action="Index">Volver a la lista</a>
+    </form>
+</div>
+
+***********************************
+Archivo: Edit.cshtml
+Localizacion: Papeleria.MVC\Views\Usuarios\Edit.cshtml
+***********************************
+@model Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios.UsuarioDTO
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Editar Usuario</h1>
+
+<hr />
+<partial name="_Mensajes" />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" readonly/>
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" readonly/>
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Apellido" class="control-label"></label>
+                <input asp-for="Apellido" class="form-control" />
+                <span asp-validation-for="Apellido" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contrasenia" class="control-label"></label>
+                <input asp-for="Contrasenia" class="form-control" />
+                <span asp-validation-for="Contrasenia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+***********************************
+Archivo: Index.cshtml
+Localizacion: Papeleria.MVC\Views\Usuarios\Index.cshtml
+***********************************
+@model IEnumerable<Papeleria.LogicaAplicacion.DataTransferObjects.Dtos.Usuarios.UsuarioDTO>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Lista de usuarios</h1>
+
+<p>
+    <a asp-action="Create">CREAR USUARIO</a>
+</p>
+<partial name="_Mensajes" />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apellido)
+            </th>
+            <th>
+                Contraseña
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Apellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Contrasenia)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Borrar", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+***********************************
+Archivo: Create.cshtml
+Localizacion: Papeleria.WebMvc\Views\Articulos\Create.cshtml
+***********************************
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+***********************************
+Archivo: Delete.cshtml
+Localizacion: Papeleria.WebMvc\Views\Articulos\Delete.cshtml
+***********************************
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+***********************************
+Archivo: Details.cshtml
+Localizacion: Papeleria.WebMvc\Views\Articulos\Details.cshtml
+***********************************
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+***********************************
+Archivo: Edit.cshtml
+Localizacion: Papeleria.WebMvc\Views\Articulos\Edit.cshtml
+***********************************
+@page
+@model Papeleria.WebMvc.Views.Articulos.EditModel
+@{
+}
+
+***********************************
+Archivo: Index.cshtml
+Localizacion: Papeleria.WebMvc\Views\Articulos\Index.cshtml
+***********************************
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+***********************************
+Archivo: Create.cshtml
+Localizacion: Papeleria.WebMvc\Views\Clientes\Create.cshtml
+***********************************
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+***********************************
+Archivo: Delete.cshtml
+Localizacion: Papeleria.WebMvc\Views\Clientes\Delete.cshtml
+***********************************
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+***********************************
+Archivo: Details.cshtml
+Localizacion: Papeleria.WebMvc\Views\Clientes\Details.cshtml
+***********************************
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+***********************************
+Archivo: Edit.cshtml
+Localizacion: Papeleria.WebMvc\Views\Clientes\Edit.cshtml
+***********************************
+@page
+@model Papeleria.WebMvc.Views.Articulos.EditModel
+@{
+}
+
+***********************************
+Archivo: Index.cshtml
+Localizacion: Papeleria.WebMvc\Views\Clientes\Index.cshtml
+***********************************
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+***********************************
+Archivo: Index.cshtml
+Localizacion: Papeleria.WebMvc\Views\Home\Index.cshtml
+***********************************
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+***********************************
+Archivo: Privacy.cshtml
+Localizacion: Papeleria.WebMvc\Views\Home\Privacy.cshtml
+***********************************
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+
+***********************************
+Archivo: Create.cshtml
+Localizacion: Papeleria.WebMvc\Views\Pedidos\Create.cshtml
+***********************************
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+***********************************
+Archivo: Delete.cshtml
+Localizacion: Papeleria.WebMvc\Views\Pedidos\Delete.cshtml
+***********************************
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+***********************************
+Archivo: Details.cshtml
+Localizacion: Papeleria.WebMvc\Views\Pedidos\Details.cshtml
+***********************************
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+***********************************
+Archivo: Edit.cshtml
+Localizacion: Papeleria.WebMvc\Views\Pedidos\Edit.cshtml
+***********************************
+@page
+@model Papeleria.WebMvc.Views.Articulos.EditModel
+@{
+}
+
+***********************************
+Archivo: Index.cshtml
+Localizacion: Papeleria.WebMvc\Views\Pedidos\Index.cshtml
+***********************************
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+***********************************
+Archivo: _Error.cshtml
+Localizacion: Papeleria.WebMvc\Views\Shared\_Error.cshtml
+***********************************
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+***********************************
+Archivo: _Layout.cshtml
+Localizacion: Papeleria.WebMvc\Views\Shared\_Layout.cshtml
+***********************************
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Papeleria.WebMvc</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Papeleria.WebMvc.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Papeleria.WebMvc</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - Papeleria.WebMvc - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
+***********************************
+Archivo: _Mensajes.cshtml
+Localizacion: Papeleria.WebMvc\Views\Shared\_Mensajes.cshtml
+***********************************
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+***********************************
+Archivo: _ValidationScriptsPartial.cshtml
+Localizacion: Papeleria.WebMvc\Views\Shared\_ValidationScriptsPartial.cshtml
+***********************************
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+***********************************
+Archivo: Create.cshtml
+Localizacion: Papeleria.WebMvc\Views\Usuarios\Create.cshtml
+***********************************
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+***********************************
+Archivo: Delete.cshtml
+Localizacion: Papeleria.WebMvc\Views\Usuarios\Delete.cshtml
+***********************************
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+***********************************
+Archivo: Details.cshtml
+Localizacion: Papeleria.WebMvc\Views\Usuarios\Details.cshtml
+***********************************
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+***********************************
+Archivo: Edit.cshtml
+Localizacion: Papeleria.WebMvc\Views\Usuarios\Edit.cshtml
+***********************************
+@page
+@model Papeleria.WebMvc.Views.Articulos.EditModel
+@{
+}
+
+***********************************
+Archivo: Index.cshtml
+Localizacion: Papeleria.WebMvc\Views\Usuarios\Index.cshtml
+***********************************
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
