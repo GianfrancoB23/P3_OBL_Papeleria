@@ -1,5 +1,6 @@
 ﻿using Empresa.LogicaDeNegocio.Entidades;
 using Microsoft.EntityFrameworkCore;
+using Papeleria.LogicaNegocio.Entidades;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes;
 using Papeleria.LogicaNegocio.Excepciones.Pedido;
 using Papeleria.LogicaNegocio.Excepciones.Usuario;
@@ -38,7 +39,14 @@ namespace Papeleria.AccesoDatos.EF
         public IEnumerable<Pedido> GetAll()
         {
             List<Cliente> clientes = _db.Clientes.ToList(); // NO TOCAR :)
-            return _db.Pedidos.ToList();
+            List<Pedido> pedidos = _db.Pedidos.ToList();
+            var lineas = _db.LineasPedidos.ToList();
+            foreach (Pedido pedido in pedidos)
+            {
+                var filtrados = lineas;
+
+            }
+            return pedidos;
         }
 
         public Pedido GetById(int id)

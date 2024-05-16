@@ -64,6 +64,7 @@ namespace Papeleria.MVC.Controllers
         [HttpPost]
         public IActionResult Index(DateTime date)
         {
+            _pedidos = new RepositorioPedidoEF();
             ViewBag.Clientes = _buscarClientes.GetAll();
             ViewBag.Articulos = _getAllArticulos.Ejecutar();
             if (HttpContext.Session.GetInt32("LogueadoID") != null)

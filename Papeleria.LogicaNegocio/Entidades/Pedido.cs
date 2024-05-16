@@ -106,10 +106,12 @@ namespace Empresa.LogicaDeNegocio.Entidades
 
         public virtual void esValido()
         {
-            if (cliente == null)
+            /*if (cliente == null)
             {
                 throw new ClienteNuloException("El cliente no puede ser nulo.");
-            }
+            }*/
+            /*if(fechaPedido < DateTime.Now) { throw new PedidoNuloException("La fecha de pedido no puede ser inferior a la actual"); }*/
+            if(entregaPrometida < 0) { throw new PedidoNuloException("La fecha de entrega no puede ser anterior a la fecha del pedido"); }
         }
 
         public virtual bool Equals(Pedido? other)

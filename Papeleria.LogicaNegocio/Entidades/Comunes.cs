@@ -12,6 +12,7 @@ namespace Empresa.LogicaDeNegocio.Entidades
             this.fechaPedido = DateTime.Now;
             this.entregado = false;
             this.anulado = false;
+            esValido();
 
         }
         public override void AgregarLineaPedido(Articulo articulo, int cantidad)
