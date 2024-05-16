@@ -73,10 +73,12 @@ namespace Papeleria.MVC.Controllers
                     {
                         if (monto != null)
                         {
+                            ViewBag.Monto = monto;
                             var clientesSuperaronMonto = _buscarClientes.GetXMontoSuperado(monto.Value);
-                            if (clientesSuperaronMonto.Any())
+                            if (!clientesSuperaronMonto.Any())
                             {
                                 TempData["ResultadoBuscarClientes"] = "No se ha encontrado ninguna coincidencia para ese monto.";
+                                return View();
                             }
                             return View("ListaSuperaronMonto", clientesSuperaronMonto);
                         }
@@ -95,15 +97,6 @@ namespace Papeleria.MVC.Controllers
                 TempData["ResultadoBuscarClientes"] = e.Message;
                 return RedirectToAction("Index", "Clientes");
             }
-        }
-
-
-
-
-        // GET: ClientesController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
         }
 
         // GET: ClientesController/Create

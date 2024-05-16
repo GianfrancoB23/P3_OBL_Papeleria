@@ -93,9 +93,9 @@ namespace Papeleria.AccesoDatos.EF
 
         public IEnumerable<Cliente> GetClientesPedidoSupereMonto(double monto)
         {
-            var pedidos = _repositorioPedido.GetPedidosQueSuperenMonto(monto);
-            var clientes = pedidos.Select(pedido => pedido.cliente).Distinct();
-            return clientes;
+            var pedidosSuperaronMonto = _repositorioPedido.GetPedidosQueSuperenMonto(monto);
+            var clientesDePedidosQueSuperaronMonto = pedidosSuperaronMonto.Select(pedido => pedido.cliente).Distinct();
+            return clientesDePedidosQueSuperaronMonto;
         }
 
         public IEnumerable<Cliente> GetObjectsByID(List<int> ids)

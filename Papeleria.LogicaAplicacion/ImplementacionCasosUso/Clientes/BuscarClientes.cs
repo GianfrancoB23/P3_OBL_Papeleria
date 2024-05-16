@@ -54,7 +54,7 @@ namespace Papeleria.LogicaAplicacion.ImplementacionCasosUso.Clientes
             var clientesOrigen = _repoClientes.GetClientesPedidoSupereMonto(monto);
             if (clientesOrigen == null || clientesOrigen.Count() == 0)
             {
-                throw new ClienteNuloException("No hay clientes registrados");
+                throw new ClienteNuloException("No hay clientes registrados que hayan superado ese monto.");
             }
             return ClientesMappers.FromLista(clientesOrigen);
         }

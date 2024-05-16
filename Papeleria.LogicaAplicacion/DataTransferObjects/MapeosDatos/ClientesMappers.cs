@@ -47,7 +47,7 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
         {
             if (clientes == null)
             {
-                throw new UsuarioNuloExcepcion("La lista de usuarios no puede ser nula");
+                throw new UsuarioNuloExcepcion("La lista de clientes no puede ser nula");
             }
             return clientes.Select(cliente => ToDto(cliente));
         }

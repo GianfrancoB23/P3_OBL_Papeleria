@@ -86,9 +86,11 @@ namespace Papeleria.AccesoDatos.EF
 
         public IEnumerable<Pedido> GetPedidosQueSuperenMonto(double monto)
         {
-
-            IEnumerable<Pedido> pedidos = _db.Pedidos.Where(pedido => pedido.precioFinal >= monto);
-            return pedidos;
+            List<Cliente> clientes = _db.Clientes.ToList(); // NO TOCAR :)
+            var pedidos = _db.Pedidos.ToList();
+            var pedidosSuperaronMonto = pedidos.Where(pedido => pedido.precioFinal >= monto);
+            var cantidad = pedidosSuperaronMonto.Count();
+            return pedidosSuperaronMonto;
         }
 
         public IEnumerable<Pedido> GetPedidosPorFecha(DateTime date)
