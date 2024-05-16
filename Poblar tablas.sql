@@ -45,3 +45,8 @@ INSERT INTO Clientes (razonSocial, direccion_Calle, direccion_Ciudad, direccion_
 ('Nestlé SA', 'Vevey', 'Vaud', 310, 55, '456789012345'),
 ('Procter & Gamble', 'Procter Street', 'Cincinnati', 290, 1, '567890123456'),
 ('IBM Corp.', 'IBM Road', 'Armonk', 220, 5, '678901234567');
+
+INSERT INTO Pedidos (fechaPedido, clienteId, recargo, entregaPrometida, precioFinal, Discriminator, iva_valor, entregado, anulado) values
+('16/05/2024 11:45:12', 1, 0.05, 40, 877.485, 'Comunes', 0.22, false, false),
+('14/05/2024 11:45:12', 2, 0.05, 25, 2882.25, 'Comunes', 0.22, false, false),
+('12/05/2024 11:45:12', 3, 0.15, 3, 64.538, 'Express', 0.22, false, false),
