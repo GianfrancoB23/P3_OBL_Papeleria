@@ -76,7 +76,7 @@ namespace Papeleria.MVC.Controllers
                             {
                                 TempData["ResultadoBuscarClientes"] = "No se ha encontrado ninguna coincidencia para ese monto.";
                             }
-                            return View(clientesSuperaronMonto);
+                            return View("ListaSuperaronMonto", clientesSuperaronMonto);
                         }
                         else
                         {
