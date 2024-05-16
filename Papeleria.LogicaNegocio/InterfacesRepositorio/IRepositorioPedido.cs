@@ -17,5 +17,6 @@ namespace Papeleria.LogicaNegocio.InterfacesRepositorio
         public Pedido GetPedido(Pedido pedido);
         public IEnumerable<Pedido> GetPedidosQueSuperenMonto(double monto);
         public IEnumerable<Pedido> GetPedidosPorFecha(DateTime date);
+        public void Anular(int id);
     }
 }

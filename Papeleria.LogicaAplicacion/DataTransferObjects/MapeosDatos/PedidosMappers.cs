@@ -88,7 +88,8 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
                 recargo = pedido.recargo,
                 iva = pedido.iva.valor,
                 precioFinal = pedido.precioFinal,
-                entregado = false
+                entregado = pedido.entregado,
+                anulado = pedido.anulado
             };
         }
         public static PedidoDTO ToComunesDto(Comunes pedido)
@@ -104,7 +105,8 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
                 recargo = pedido.recargo,
                 iva = pedido.iva.valor,
                 precioFinal = pedido.precioFinal,
-                entregado = false
+                entregado = pedido.entregado,
+                anulado = pedido.anulado
             };
         }
         public static PedidoDTO ToDto(Pedido pedido)
@@ -120,7 +122,8 @@ namespace Papeleria.LogicaAplicacion.DataTransferObjects.MapeosDatos
                 recargo = pedido.recargo,
                 iva = pedido.iva.valor,
                 precioFinal = pedido.precioFinal,
-                entregado = false
+                entregado = pedido.entregado,
+                anulado = pedido.anulado
             };
         }
 

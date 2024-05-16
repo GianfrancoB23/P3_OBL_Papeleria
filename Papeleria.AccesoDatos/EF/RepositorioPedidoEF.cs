@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Papeleria.LogicaNegocio.Entidades.ValueObjects.Clientes;
 using Papeleria.LogicaNegocio.Excepciones.Pedido;
+using Papeleria.LogicaNegocio.Excepciones.Usuario;
 using Papeleria.LogicaNegocio.InterfacesRepositorio;
 using System;
 using System.Collections.Generic;
@@ -115,6 +116,28 @@ namespace Papeleria.AccesoDatos.EF
         public void Update(int id, Pedido obj)
         {
             throw new NotImplementedException();
+        }
+        public void Anular(int id)
+        {
+            var pedido = _db.Pedidos.FirstOrDefault(p => p.Id == id);
+
+            if (pedido != null)
+            {
+                try
+                {
+                    pedido.AnularPedido();
+                    _db.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+
+                    throw new PedidoNoValidoException(ex.Message);
+                }
+            }
+            else
+            {
+                throw new UsuarioNuloExcepcion("El pedido no existe");
+            }
         }
     }
 }

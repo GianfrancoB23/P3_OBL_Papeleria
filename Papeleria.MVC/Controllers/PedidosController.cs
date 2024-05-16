@@ -31,6 +31,7 @@ namespace Papeleria.MVC.Controllers
         private static IGetAllArticulos _getAllArticulos;
         private static IGetAllPedidos _getAllPedidos;
         private static IGetPedido _getPedidos;
+        private static IAnularPedido _anularPedido;
         private static PedidoDTO tempPedido;
 
         public PedidosController()
@@ -40,6 +41,7 @@ namespace Papeleria.MVC.Controllers
             _getAllPedidos = new GetAllPedidos(_pedidos);
             _getPedidos = new GetPedidos(_pedidos);
             _altaPedido = new AltaPedidos(_pedidos);
+            _anularPedido = new AnularPedido(_pedidos);
             ViewBag.Clientes = _buscarClientes.GetAll();
             ViewBag.Articulos = _getAllArticulos.Ejecutar();
         }
@@ -54,7 +56,7 @@ namespace Papeleria.MVC.Controllers
                 if (pedidos == null || pedidos.Count() == 0)
                 {
                     ViewBag.Mensaje = "No hay pedidos registrados";
-                } 
+                }
                 return View(pedidos);
             }
             return RedirectToAction("Index", "Home");
@@ -103,7 +105,8 @@ namespace Papeleria.MVC.Controllers
             ViewBag.Articulos = _getAllArticulos.Ejecutar();
             if (HttpContext.Session.GetInt32("LogueadoID") != null)
             {
-                PedidoDTO pedido = PedidosMappers.ToDto(_getPedidos.GetById(id));
+                //PedidoDTO pedido = PedidosMappers.ToDto(_getPedidos.GetById(id));
+                PedidoDTO pedido = _getPedidos.GetByIdDTO(id);
                 if (pedido == null)
                 { return RedirectToAction("Index", "Pedidos"); }
                 return View(pedido);
@@ -111,15 +114,31 @@ namespace Papeleria.MVC.Controllers
             return RedirectToAction("Index", "Home");
         }
         [HttpPost]
-        public IActionResult AnularPedido(int id)
+        public IActionResult Anular(int id, bool isChecked)
         {
-            ViewBag.Clientes = _buscarClientes.GetAll();
-            ViewBag.Articulos = _getAllArticulos.Ejecutar();
             if (HttpContext.Session.GetInt32("LogueadoID") != null)
             {
-                PedidoDTO pedido = PedidosMappers.ToDto(_getPedidos.GetById(id));
+                ViewBag.Clientes = _buscarClientes.GetAll();
+                ViewBag.Articulos = _getAllArticulos.Ejecutar();
+                Pedido pedido = _getPedidos.GetById(id);
                 if (pedido == null)
                 { return RedirectToAction("Index", "Pedidos"); }
+                try
+                {
+                    if(isChecked)
+                    {
+                        _anularPedido.Ejecutar(id);
+                    }
+                    else
+                    {
+                        ViewBag.msg = "Debe aceptar las responsabilidades (checkbox) antes de anular el pedido";
+                    }
+                    return RedirectToAction("Index", "Pedidos");
+                }
+                catch (Exception e)
+                {
+                    throw new Exception(e.Message);
+                }
                 return View(pedido);
             }
             return RedirectToAction("Index", "Home");
@@ -183,7 +202,7 @@ namespace Papeleria.MVC.Controllers
             catch (Exception ex)
             {
                 ViewBag.Error = ex.Message;
-                return RedirectToAction("Index","Pedidos");
+                return RedirectToAction("Index", "Pedidos");
             }
         }
 

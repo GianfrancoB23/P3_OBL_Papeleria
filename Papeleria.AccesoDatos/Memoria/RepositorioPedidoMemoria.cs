@@ -16,6 +16,11 @@ namespace Papeleria.AccesoDatos.Memoria
             throw new NotImplementedException();
         }
 
+        public void Anular(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<Pedido> GetAll()
         {
             throw new NotImplementedException();

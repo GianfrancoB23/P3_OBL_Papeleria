@@ -42,8 +42,8 @@
             @Html.DisplayFor(model => model.entregado)
         </dd>
 
-        <form asp-action="AnularPedido">
-            <input type="submit" value="AnularPedido" class="btn btn-danger" /> |
+        <form asp-action="Anular">
+            <input type="submit" value="Anular" class="btn btn-danger" /> |
             @Html.CheckBox("IsChecked") <span>Entiendo que esta operación es riesgosa</span>
             <a asp-action="Index">Volver a la lista</a>
         </form>
